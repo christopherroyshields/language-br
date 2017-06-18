@@ -3109,7 +3109,7 @@
     'body': 'OpenSubMenu(${1:Text.s})$2'
   'OpenWindow (#Window, x, y, InnerWidth, InnerHeight, Title$ [, Flags [, ParentID]]) - Opens a new window according to the specified parameters.':
     'prefix': 'OpenWindow'
-    'body': 'OpenWindow(${1:#Window}, ${2:x}, ${3:y}, ${4:InnerWidth}, ${5:InnerHeight})$6'
+    'body': 'OpenWindow(${1:#Window}, ${2:x}, ${3:y}, ${4:InnerWidth}, ${5:InnerHeight}, ${6:Title$})$7'
   'OpenWindow3D (#Window3D, x, y, width, height, Title$ [, Flags]) - Opens a new window according to the specified parameters.':
     'prefix': 'OpenWindow3D'
     'body': 'OpenWindow3D(${1:#Window3D}, ${2:x}, ${3:y}, ${4:width}, ${5:height})$6'
