@@ -4891,7 +4891,7 @@
     'body': 'WaterHeight(${1:#Camera}, ${2:x})$3'
   'WebGadget (#Gadget, x, y, Width, Heigth, URL$) - Create a Web gadget in the current GadgetList.':
     'prefix': 'WebGadget'
-    'body': 'WebGadget(${1:#Gadget}, ${2:x}, ${3:y}, ${4:Width}, ${5:Heigth})$6'
+    'body': 'WebGadget(${1:#Gadget}, ${2:x}, ${3:y}, ${4:Width}, ${5:Heigth}, ${6:URL$})$7'
   'WindowBounds (#Window, MinimumWidth, MinimumHeight, MaximumWidth, MaximumHeight) - Set the #Window bounds.':
     'prefix': 'WindowBounds'
     'body': 'WindowBounds(${1:#Window}, ${2:MinimumWidth}, ${3:MinimumHeight}, ${4:MaximumWidth})$5'
