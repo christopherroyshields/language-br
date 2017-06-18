@@ -1,5 +1,5 @@
 '.source.purebasic':
-  'AbortFTPFile (#Ftp) - Abort the current asyncrhonous file operation.':
+  'AbortFTPFile (#Ftp) - Abort the current asynchronous file operation.':
     'prefix': 'AbortFTPFile'
     'body': 'AbortFTPFile(${1:#Ftp})$2'
   'AbortHTTP (HttpConnection) - Abort the download of the specified HTTP connection.':
