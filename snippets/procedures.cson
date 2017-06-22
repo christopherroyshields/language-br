@@ -70,11 +70,11 @@
   'AddMailAttachment (#Mail, Description$, Filename$ [, MimeType$])':
     'prefix': 'AddMailAttachment'
     'body': 'AddMailAttachment(${1:#Mail}, ${2:Description.s})$3'
-    'description': 'Add a file attachement'
+    'description': 'Add a file attachment'
   'AddMailAttachmentData (#Mail, Description$, *Buffer, Size [, MimeType$])':
     'prefix': 'AddMailAttachmentData'
     'body': 'AddMailAttachmentData(${1:#Mail}, ${2:Description.s}, ${3:*Buffer})$4'
-    'description': 'Add a file attachement from a memory area'
+    'description': 'Add a file attachment from a memory area'
   'AddMailRecipient (#Mail, Address$, Flags)':
     'prefix': 'AddMailRecipient'
     'body': 'AddMailRecipient(${1:#Mail}, ${2:Address.s})$3'
@@ -170,7 +170,7 @@
   'AlphaBlend (Color1, Color2)':
     'prefix': 'AlphaBlend'
     'body': 'AlphaBlend(${1:Color1})$2'
-    'description': 'Returns the result of blending Color1 on Color2 with alphachannel'
+    'description': 'Returns the result of blending Color1 on Color2 with alpha channel'
   'AmbientColor (Color)':
     'prefix': 'AmbientColor'
     'body': 'AmbientColor(${1:Color})$2'
@@ -178,7 +178,7 @@
   'AntialiasingMode (Mode)':
     'prefix': 'AntialiasingMode'
     'body': 'AntialiasingMode(${1:Mode})$2'
-    'description': 'Set the fullscreen antialising mode for the 3D world'
+    'description': 'Set the fullscreen antialiasing mode for the 3D world'
   'ApplyEntityForce (#Entity, x, y, z [, PositionX, PositionY, PositionZ])':
     'prefix': 'ApplyEntityForce'
     'body': 'ApplyEntityForce(${1:#Entity}, ${2:x}, ${3:y})$4'
@@ -362,7 +362,7 @@
   'BoxedGradient (x, y, Width, Height)':
     'prefix': 'BoxedGradient'
     'body': 'BoxedGradient(${1:x}, ${2:y}, ${3:Width})$4'
-    'description': 'Use a box shaped gradient when gradint drawing is enabled'
+    'description': 'Use a box shaped gradient when gradient drawing is enabled'
   'BuildTerrain (#Terrain)':
     'prefix': 'BuildTerrain'
     'body': 'BuildTerrain(${1:#Terrain})$2'
@@ -726,7 +726,7 @@
   'ClosePath ()':
     'prefix': 'ClosePath'
     'body': 'ClosePath()$1'
-    'description': 'Close the currente vector drawing path by connecting start & end with a straight line'
+    'description': 'Close the current vector drawing path by connecting start & end with a straight line'
   'ClosePreferences ()':
     'prefix': 'ClosePreferences'
     'body': 'ClosePreferences()$1'
@@ -962,7 +962,7 @@
   'CreateCamera (#Camera, x, y, Width, Height [, VisibilityMask])':
     'prefix': 'CreateCamera'
     'body': 'CreateCamera(${1:#Camera}, ${2:x}, ${3:y}, ${4:Width})$5'
-    'description': 'Create a new #Camera. All the dimensions are in pourcents'
+    'description': 'Create a new #Camera. All the dimensions are in percent'
   'CreateCubeMapTexture (#Texture, Width, Height, TextureName$ [, BackColor])':
     'prefix': 'CreateCubeMapTexture'
     'body': 'CreateCubeMapTexture(${1:#Texture}, ${2:Width}, ${3:Height})$4'
@@ -1030,7 +1030,7 @@
   'CreateMutex ()':
     'prefix': 'CreateMutex'
     'body': 'CreateMutex()$1'
-    'description': 'Create a new mutex syncronisation object'
+    'description': 'Create a new mutex synchronisation object'
   'CreateNetworkServer (ServerID, Port [, Type [, BindedIP$]])':
     'prefix': 'CreateNetworkServer'
     'body': 'CreateNetworkServer(${1:ServerID}, ${2:Port})$3'
@@ -1078,7 +1078,7 @@
   'CreateSemaphore ([InitialCount])':
     'prefix': 'CreateSemaphore'
     'body': 'CreateSemaphore()$1'
-    'description': 'Create a new semaphore syncronisation object'
+    'description': 'Create a new semaphore synchronisation object'
   'CreateSpline (#Spline)':
     'prefix': 'CreateSpline'
     'body': 'CreateSpline(${1:#Spline})$2'
@@ -1174,11 +1174,11 @@
   'DatabaseDriverDescription ()':
     'prefix': 'DatabaseDriverDescription'
     'body': 'DatabaseDriverDescription()$1'
-    'description': 'Returns the description of the current databaser driver'
+    'description': 'Returns the description of the current database driver'
   'DatabaseDriverName ()':
     'prefix': 'DatabaseDriverName'
     'body': 'DatabaseDriverName()$1'
-    'description': 'Returns the name of the current databaser driver'
+    'description': 'Returns the name of the current database driver'
   'DatabaseError ()':
     'prefix': 'DatabaseError'
     'body': 'DatabaseError()$1'
@@ -1198,7 +1198,7 @@
   'Date ([Year, Month, Day, Hour, Minute, Second])':
     'prefix': 'Date'
     'body': 'Date()$1'
-    'description': 'Returns the number of seconds ellapsed since the 1st January 1970'
+    'description': 'Returns the number of seconds elapsed since the 1st January 1970'
   'DateGadget (#Gadget, x, y, Width, Height [, Mask$ [, Date [, Flags]]])':
     'prefix': 'DateGadget'
     'body': 'DateGadget(${1:#Gadget}, ${2:x}, ${3:y}, ${4:Width})$5'
@@ -1214,7 +1214,7 @@
   'DayOfYear (Date)':
     'prefix': 'DayOfYear'
     'body': 'DayOfYear(${1:Date})$2'
-    'description': 'Returns the number of days ellapsed since the beginning of the year of the specified date (betwenn 1 and 366)'
+    'description': 'Returns the number of days elapsed since the beginning of the year of the specified date (between 1 and 366)'
   'DefaultPrinter ()':
     'prefix': 'DefaultPrinter'
     'body': 'DefaultPrinter()$1'
@@ -1258,7 +1258,7 @@
   'DeleteXMLNode (Node)':
     'prefix': 'DeleteXMLNode'
     'body': 'DeleteXMLNode(${1:Node})$2'
-    'description': 'Delete the given XML node and all its childs from its XML tree'
+    'description': 'Delete the given XML node and all its children from its XML tree'
   'DESFingerprint (Password$, Key$)':
     'prefix': 'DESFingerprint'
     'body': 'DESFingerprint(${1:Password.s})$2'
@@ -1270,7 +1270,7 @@
   'DesktopFrequency (#Desktop)':
     'prefix': 'DesktopFrequency'
     'body': 'DesktopFrequency(${1:#Desktop})$2'
-    'description': 'Returns the frenquency (in Hz) of the specified desktop'
+    'description': 'Returns the frequency (in Hz) of the specified desktop'
   'DesktopHeight (#Desktop)':
     'prefix': 'DesktopHeight'
     'body': 'DesktopHeight(${1:#Desktop})$2'
@@ -1702,7 +1702,7 @@
   'EventDropFiles ()':
     'prefix': 'EventDropFiles'
     'body': 'EventDropFiles()$1'
-    'description': 'Return the Filenames received from a Drag and Drop event'
+    'description': 'Return the file names received from a Drag and Drop event'
   'EventDropImage (#Image [, Depth])':
     'prefix': 'EventDropImage'
     'body': 'EventDropImage(${1:#Image})$2'
@@ -1734,7 +1734,7 @@
   'EventGadget ()':
     'prefix': 'EventGadget'
     'body': 'EventGadget()$1'
-    'description': 'Returns which gadget has been pushed (return the #Gadget identifiant)'
+    'description': 'Returns which gadget has been pushed (return the #Gadget identifier)'
   'EventGadget3D ()':
     'prefix': 'EventGadget3D'
     'body': 'EventGadget3D()$1'
@@ -1742,11 +1742,11 @@
   'EventMenu ()':
     'prefix': 'EventMenu'
     'body': 'EventMenu()$1'
-    'description': 'Returns which menu item has been selected (return the #MenuItem identifiant)'
+    'description': 'Returns which menu item has been selected (return the #MenuItem identifier)'
   'EventServer ()':
     'prefix': 'EventServer'
     'body': 'EventServer()$1'
-    'description': 'Server side: allow to know on which server the data has been recieved'
+    'description': 'Server side: allow to know on which server the data has been received'
   'EventTimer ()':
     'prefix': 'EventTimer'
     'body': 'EventTimer()$1'
@@ -1762,7 +1762,7 @@
   'EventWindow ()':
     'prefix': 'EventWindow'
     'body': 'EventWindow()$1'
-    'description': 'Returns on which window the event has occured (return the #Window identifiant)'
+    'description': 'Returns on which window the event has occured (return the #Window identifier)'
   'EventWindow3D ()':
     'prefix': 'EventWindow3D'
     'body': 'EventWindow3D()$1'
@@ -1778,7 +1778,7 @@
   'ExamineDesktops ()':
     'prefix': 'ExamineDesktops'
     'body': 'ExamineDesktops()$1'
-    'description': 'Retrieves informations about user's desktops and returns the number of desktops'
+    'description': 'Retrieves information about user's desktops and returns the number of desktops'
   'ExamineDirectory (#Directory, DirectoryName$, Pattern$)':
     'prefix': 'ExamineDirectory'
     'body': 'ExamineDirectory(${1:#Directory}, ${2:DirectoryName.s})$3'
@@ -2518,15 +2518,15 @@
   'GetMenuItemState (#Menu, MenuItem)':
     'prefix': 'GetMenuItemState'
     'body': 'GetMenuItemState(${1:#Menu})$2'
-    'description': 'Retreive the current menu item state'
+    'description': 'Retrieve the current menu item state'
   'GetMenuItemText (#Menu, MenuItem)':
     'prefix': 'GetMenuItemText'
     'body': 'GetMenuItemText(${1:#Menu})$2'
-    'description': 'Retreive the current menu item text'
+    'description': 'Retrieve the current menu item text'
   'GetMenuTitleText (#Menu, Index)':
     'prefix': 'GetMenuTitleText'
     'body': 'GetMenuTitleText(${1:#Menu})$2'
-    'description': 'Retreive the current menu title text'
+    'description': 'Retrieve the current menu title text'
   'GetMusicPosition (#Music)':
     'prefix': 'GetMusicPosition'
     'body': 'GetMusicPosition(${1:#Music})$2'
@@ -2606,7 +2606,7 @@
   'GetScriptParticleEmitter (#ParticleEmitter, Name$)':
     'prefix': 'GetScriptParticleEmitter'
     'body': 'GetScriptParticleEmitter(${1:#ParticleEmitter})$2'
-    'description': 'Get a particule emitter defined in scripts files'
+    'description': 'Get a particle emitter defined in scripts files'
   'GetScriptTexture (#Texture, Name$)':
     'prefix': 'GetScriptTexture'
     'body': 'GetScriptTexture(${1:#Texture})$2'
@@ -2826,7 +2826,7 @@
   'InitAudioCD ()':
     'prefix': 'InitAudioCD'
     'body': 'InitAudioCD()$1'
-    'description': 'Initialize all CD-Audio ressources'
+    'description': 'Initialize all CD-Audio resources'
   'InitCGI ([MaxRequestSize])':
     'prefix': 'InitCGI'
     'body': 'InitCGI()$1'
@@ -3194,7 +3194,7 @@
   'KeyboardMode (Mode)':
     'prefix': 'KeyboardMode'
     'body': 'KeyboardMode(${1:Mode})$2'
-    'description': 'Changes the way the keyboard keys are interpretated'
+    'description': 'Changes the way the keyboard keys are interpreted'
   'KeyboardPushed (KeyID)':
     'prefix': 'KeyboardPushed'
     'body': 'KeyboardPushed(${1:KeyID})$2'
@@ -3390,7 +3390,7 @@
   'MakeIPAddress (Field0, Field1, Field2, Field3 [, Field4, Field5, Field6, Field7])':
     'prefix': 'MakeIPAddress'
     'body': 'MakeIPAddress(${1:Field0}, ${2:Field1}, ${3:Field2})$4'
-    'description': 'Return the value for the specifed IP'
+    'description': 'Return the value for the specified IP'
   'MatchRegularExpression (#RegularExpression, String$)':
     'prefix': 'MatchRegularExpression'
     'body': 'MatchRegularExpression(${1:#RegularExpression})$2'
@@ -3474,7 +3474,7 @@
   'MessageRequester (Title$, Text$ [, Flags])':
     'prefix': 'MessageRequester'
     'body': 'MessageRequester(${1:Title.s})$2'
-    'description': 'Open a blocking requester to display some informations'
+    'description': 'Open a blocking requester to display some information'
   'Mid (String$, StartPos [, Length])':
     'prefix': 'Mid'
     'body': 'Mid(${1:String.s})$2'
@@ -3590,7 +3590,7 @@
   'MovieInfo (#Movie, Flags)':
     'prefix': 'MovieInfo'
     'body': 'MovieInfo(${1:#Movie})$2'
-    'description': 'Returns an additionnal information about the movie'
+    'description': 'Returns an additional information about the movie'
   'MovieLength (#Movie)':
     'prefix': 'MovieLength'
     'body': 'MovieLength(${1:#Movie})$2'
@@ -3614,7 +3614,7 @@
   'NaN ()':
     'prefix': 'NaN'
     'body': 'NaN()$1'
-    'description': 'Returns the spechial \"Not a Number\ value'
+    'description': 'Returns the special \"Not a Number\ value'
   'NetworkClientEvent (Connection)':
     'prefix': 'NetworkClientEvent'
     'body': 'NetworkClientEvent(${1:Connection})$2'
@@ -3955,9 +3955,9 @@
     'prefix': 'ParticleSpeedFactor'
     'body': 'ParticleSpeedFactor(${1:#ParticleEmitter})$2'
     'description': 'Change the particles speed factor'
-  'ParticleTimeToLive (#ParticleEmitter, MininumTime, MaximumTime)':
+  'ParticleTimeToLive (#ParticleEmitter, MinimumTime, MaximumTime)':
     'prefix': 'ParticleTimeToLive'
-    'body': 'ParticleTimeToLive(${1:#ParticleEmitter}, ${2:MininumTime})$3'
+    'body': 'ParticleTimeToLive(${1:#ParticleEmitter}, ${2:MinimumTime})$3'
     'description': 'Change the particles time to live'
   'ParticleVelocity (#ParticleEmitter, Minimum, Maximum)':
     'prefix': 'ParticleVelocity'
@@ -4006,7 +4006,7 @@
   'PeekC (Memory)':
     'prefix': 'PeekC'
     'body': 'PeekC(${1:Memory})$2'
-    'description': 'Reads a character (1 bytes in ascii, 2 bytes in unicodee) from the specified memory address'
+    'description': 'Reads a character (1 bytes in ascii, 2 bytes in unicode) from the specified memory address'
   'PeekD (Memory)':
     'prefix': 'PeekD'
     'body': 'PeekD(${1:Memory})$2'
@@ -4054,7 +4054,7 @@
   'Pitch (ObjectID, Value.f, Mode)':
     'prefix': 'Pitch'
     'body': 'Pitch(${1:ObjectID}, ${2:Value.f})$3'
-    'description': 'Pitch the specifed object'
+    'description': 'Pitch the specified object'
   'PlayAudioCD (StartTrack, EndTrack)':
     'prefix': 'PlayAudioCD'
     'body': 'PlayAudioCD(${1:StartTrack})$2'
@@ -4178,11 +4178,11 @@
   'PrinterPageHeight ()':
     'prefix': 'PrinterPageHeight'
     'body': 'PrinterPageHeight()$1'
-    'description': 'Return the Heigt of the drawing area, in pixel'
+    'description': 'Return the Heigth of the drawing area, in pixel'
   'PrinterPageWidth ()':
     'prefix': 'PrinterPageWidth'
     'body': 'PrinterPageWidth()$1'
-    'description': 'Return the witdh of the drawing area, in pixel'
+    'description': 'Return the width of the drawing area, in pixel'
   'PrinterVectorOutput ([Unit])':
     'prefix': 'PrinterVectorOutput'
     'body': 'PrinterVectorOutput()$1'
@@ -4223,7 +4223,7 @@
     'prefix': 'ProgressBarGadget3D'
     'body': 'ProgressBarGadget3D(${1:#Gadget3D}, ${2:x}, ${3:y}, ${4:Width}, ${5:Height}, ${6:Minimum})$7'
     'description': 'Creates a ProgressBar gadget in the current gadgetList'
-  'PurifierGranularity (GlobalGranularity, LocalGranularity, StringGranularity, DymamicGranularity)':
+  'PurifierGranularity (GlobalGranularity, LocalGranularity, StringGranularity, DynamicGranularity)':
     'prefix': 'PurifierGranularity'
     'body': 'PurifierGranularity(${1:GlobalGranularity}, ${2:LocalGranularity}, ${3:StringGranularity})$4'
     'description': 'Change the Purifier check granularities'
@@ -4482,7 +4482,7 @@
   'RemoveMailRecipient (#Mail [, Address$ [, Flags]])':
     'prefix': 'RemoveMailRecipient'
     'body': 'RemoveMailRecipient(${1:#Mail})$2'
-    'description': 'Remove a recipient to the speicifed #Mail'
+    'description': 'Remove a recipient to the specified #Mail'
   'RemoveMaterialLayer (#Material)':
     'prefix': 'RemoveMaterialLayer'
     'body': 'RemoveMaterialLayer(${1:#Material})$2'
@@ -4558,7 +4558,7 @@
   'ResizeCamera (#Camera, x, y, Width, Height)':
     'prefix': 'ResizeCamera'
     'body': 'ResizeCamera(${1:#Camera}, ${2:x}, ${3:y}, ${4:Width})$5'
-    'description': 'Resize the #Camera. All the dimensions are in pourcents'
+    'description': 'Resize the #Camera. All the dimensions are in percents'
   'ResizeGadget (#Gadget, x, y, Width, Height)':
     'prefix': 'ResizeGadget'
     'body': 'ResizeGadget(${1:#Gadget}, ${2:x}, ${3:y}, ${4:Width})$5'
@@ -4638,7 +4638,7 @@
   'Roll (ObjectID, Value.f, Mode)':
     'prefix': 'Roll'
     'body': 'Roll(${1:ObjectID}, ${2:Value.f})$3'
-    'description': 'Roll the specifed object'
+    'description': 'Roll the specified object'
   'RootXMLNode (#XML)':
     'prefix': 'RootXMLNode'
     'body': 'RootXMLNode(${1:#XML})$2'
@@ -4826,7 +4826,7 @@
   'SelectedFilePattern ()':
     'prefix': 'SelectedFilePattern'
     'body': 'SelectedFilePattern()$1'
-    'description': 'Returns the selected pattern index choosen with OpenFileRequester() or SaveFileRequester()'
+    'description': 'Returns the selected pattern index chosen with OpenFileRequester() or SaveFileRequester()'
   'SelectedFontColor ()':
     'prefix': 'SelectedFontColor'
     'body': 'SelectedFontColor()$1'
@@ -5018,7 +5018,7 @@
   'SetGadgetItemImage (#Gadget, Item, ImageID)':
     'prefix': 'SetGadgetItemImage'
     'body': 'SetGadgetItemImage(${1:#Gadget}, ${2:Item})$3'
-    'description': 'Change the image of the speicified gadget item'
+    'description': 'Change the image of the specified gadget item'
   'SetGadgetItemState (#Gadget, Position, State)':
     'prefix': 'SetGadgetItemState'
     'body': 'SetGadgetItemState(${1:#Gadget}, ${2:Position})$3'
@@ -5199,9 +5199,9 @@
     'prefix': 'SetToolBarButtonState'
     'body': 'SetToolBarButtonState(${1:#ToolBar}, ${2:ButtonID})$3'
     'description': 'Change the state of the specified button'
-  'SetupTerrains (LigthID, CompositeMapDistance, Flags)':
+  'SetupTerrains (LightID, CompositeMapDistance, Flags)':
     'prefix': 'SetupTerrains'
-    'body': 'SetupTerrains(${1:LigthID}, ${2:CompositeMapDistance})$3'
+    'body': 'SetupTerrains(${1:LightID}, ${2:CompositeMapDistance})$3'
     'description': 'Setup the default options for all terrains'
   'SetURLPart (URL$, Parameter$, Value$)':
     'prefix': 'SetURLPart'
@@ -5290,7 +5290,7 @@
   'ShowWatchlist ()':
     'prefix': 'ShowWatchlist'
     'body': 'ShowWatchlist()$1'
-    'description': 'Show the waicthlist window'
+    'description': 'Show the watchlist window'
   'Sign (Number)':
     'prefix': 'Sign'
     'body': 'Sign(${1:Number})$2'
@@ -5338,7 +5338,7 @@
   'SoundID3D (#Sound3D)':
     'prefix': 'SoundID3D'
     'body': 'SoundID3D(${1:#Sound3D})$2'
-    'description': 'Returns the unique systeme identifiant for the sound'
+    'description': 'Returns the unique system identifier for the sound'
   'SoundLength (#Sound [, Mode])':
     'prefix': 'SoundLength'
     'body': 'SoundLength(${1:#Sound})$2'
@@ -5790,7 +5790,7 @@
   'TryLockMutex (Mutex)':
     'prefix': 'TryLockMutex'
     'body': 'TryLockMutex(${1:Mutex})$2'
-    'description': 'Try to get ownership of the mutex object. Returns 0 if unsucessfull'
+    'description': 'Try to get ownership of the mutex object. Returns 0 if unsuccessful'
   'TrySemaphore (Semaphore)':
     'prefix': 'TrySemaphore'
     'body': 'TrySemaphore(${1:Semaphore})$2'
@@ -6071,9 +6071,9 @@
     'prefix': 'WaterHeight'
     'body': 'WaterHeight(${1:#Camera}, ${2:x})$3'
     'description': 'Get the Y position of the water at the given coordinates'
-  'WebGadget (#Gadget, x, y, Width, Heigth, URL$)':
+  'WebGadget (#Gadget, x, y, Width, Height, URL$)':
     'prefix': 'WebGadget'
-    'body': 'WebGadget(${1:#Gadget}, ${2:x}, ${3:y}, ${4:Width}, ${5:Heigth}, ${6:URL$})$7'
+    'body': 'WebGadget(${1:#Gadget}, ${2:x}, ${3:y}, ${4:Width}, ${5:Height}, ${6:URL$})$7'
     'description': 'Create a Web gadget in the current GadgetList'
   'WindowBounds (#Window, MinimumWidth, MinimumHeight, MaximumWidth, MaximumHeight)':
     'prefix': 'WindowBounds'
@@ -6146,15 +6146,15 @@
   'WorldCollisionAppliedImpulse ()':
     'prefix': 'WorldCollisionAppliedImpulse'
     'body': 'WorldCollisionAppliedImpulse()$1'
-    'description': 'Get applied impulse vector of the current collison'
+    'description': 'Get applied impulse vector of the current collision'
   'WorldCollisionContact ()':
     'prefix': 'WorldCollisionContact'
     'body': 'WorldCollisionContact()$1'
-    'description': 'Get the contact vector of the current collison'
+    'description': 'Get the contact vector of the current collision'
   'WorldCollisionNormal ()':
     'prefix': 'WorldCollisionNormal'
     'body': 'WorldCollisionNormal()$1'
-    'description': 'Get the normal vector of the current collison'
+    'description': 'Get the normal vector of the current collision'
   'WorldDebug (Mode)':
     'prefix': 'WorldDebug'
     'body': 'WorldDebug(${1:Mode})$2'
@@ -6310,11 +6310,11 @@
   'XMLErrorLine (#XML)':
     'prefix': 'XMLErrorLine'
     'body': 'XMLErrorLine(${1:#XML})$2'
-    'description': 'Get the input line where a parsing error occoured'
+    'description': 'Get the input line where a parsing error occured'
   'XMLErrorPosition (#XML)':
     'prefix': 'XMLErrorPosition'
     'body': 'XMLErrorPosition(${1:#XML})$2'
-    'description': 'Get the input column where a parsing error occoured'
+    'description': 'Get the input column where a parsing error occured'
   'XMLNodeFromID (#XML, ID$)':
     'prefix': 'XMLNodeFromID'
     'body': 'XMLNodeFromID(${1:#XML})$2'
@@ -6338,7 +6338,7 @@
   'Yaw (ObjectID, Value.f, Mode)':
     'prefix': 'Yaw'
     'body': 'Yaw(${1:ObjectID}, ${2:Value.f})$3'
-    'description': 'Yaw the specifed object'
+    'description': 'Yaw the specified object'
   'Year (Date)':
     'prefix': 'Year'
     'body': 'Year(${1:Date})$2'
