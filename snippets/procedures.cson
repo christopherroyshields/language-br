@@ -1107,10 +1107,10 @@
     'prefix': 'CreateThread'
     'body': 'CreateThread(${1:@Procedure()})$2'
     'description': 'Create a new thread running in the application background'
-  'CreateToolBar (#ToolBar, WindowID)':
+  'CreateToolBar (#ToolBar, WindowID [, Flags])':
     'prefix': 'CreateToolBar'
-    'body': 'CreateToolBar(${1:#ToolBar})$2'
-    'description': 'Create an empty toolbar identified by the number '#ToolBar''
+    'body': 'CreateToolBar(${1:#ToolBar}, ${2:WindowID})$2'
+    'description': 'Create an empty toolbar identified by the number "#ToolBar"'
   'CreateVertexAnimation (#Mesh, Animation$, Length)':
     'prefix': 'CreateVertexAnimation'
     'body': 'CreateVertexAnimation(${1:#Mesh}, ${2:Animation.s})$3'
