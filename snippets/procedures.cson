@@ -770,7 +770,7 @@
   'CompareMemory (SourceMemory, DestinationMemory, Length)':
     'prefix': 'CompareMemory'
     'body': 'CompareMemory(${1:SourceMemory}, ${2:DestinationMemory})$3'
-    'description': 'Compares two memory areas and returns 1 if its equal or 0 if it doesn't match'
+    'description': 'Compares two memory areas and returns 1 if its equal or 0 if it doesn\'t match'
   'CompareMemoryString (*String1, *String2 [, Mode [, Length [, Flags]]])':
     'prefix': 'CompareMemoryString'
     'body': 'CompareMemoryString(${1:*String1})$2'
@@ -878,7 +878,7 @@
   'CopyMemory (SourceMemory, DestinationMemory, Length)':
     'prefix': 'CopyMemory'
     'body': 'CopyMemory(${1:SourceMemory}, ${2:DestinationMemory})$3'
-    'description': 'Copy a memory area from 'SourceMemory' to 'DestinationMemory''
+    'description': 'Copy a memory area from "SourceMemory" to "DestinationMemory"'
   'CopyMemoryString (*String [, DestinationMemory])':
     'prefix': 'CopyMemoryString'
     'body': 'CopyMemoryString(${1:*String})$2'
@@ -1778,7 +1778,7 @@
   'ExamineDesktops ()':
     'prefix': 'ExamineDesktops'
     'body': 'ExamineDesktops()$1'
-    'description': 'Retrieves information about user's desktops and returns the number of desktops'
+    'description': 'Retrieves information about user\'s desktops and returns the number of desktops'
   'ExamineDirectory (#Directory, DirectoryName$, Pattern$)':
     'prefix': 'ExamineDirectory'
     'body': 'ExamineDirectory(${1:#Directory}, ${2:DirectoryName.s})$3'
@@ -2646,7 +2646,7 @@
   'GetW ()':
     'prefix': 'GetW'
     'body': 'GetW()$1'
-    'description': 'Get the 'w' value of the last call'
+    'description': 'Get the "w" value of the last call'
   'GetWindowColor (#Window)':
     'prefix': 'GetWindowColor'
     'body': 'GetWindowColor(${1:#Window})$2'
@@ -2670,7 +2670,7 @@
   'GetX ()':
     'prefix': 'GetX'
     'body': 'GetX()$1'
-    'description': 'Get the 'x' value of the last call'
+    'description': 'Get the "x" value of the last call'
   'GetXMLAttribute (Node, Attribute$)':
     'prefix': 'GetXMLAttribute'
     'body': 'GetXMLAttribute(${1:Node})$2'
@@ -2698,11 +2698,11 @@
   'GetY ()':
     'prefix': 'GetY'
     'body': 'GetY()$1'
-    'description': 'Get the 'y' value of the last call'
+    'description': 'Get the "y" value of the last call'
   'GetZ ()':
     'prefix': 'GetZ'
     'body': 'GetZ()$1'
-    'description': 'Get the 'z' value of the last call'
+    'description': 'Get the "z" value of the last call'
   'GrabDrawingImage (#Image, x, y, Width, Height)':
     'prefix': 'GrabDrawingImage'
     'body': 'GrabDrawingImage(${1:#Image}, ${2:x}, ${3:y}, ${4:Width})$5'
@@ -3218,7 +3218,7 @@
   'Left (String$, Length)':
     'prefix': 'Left'
     'body': 'Left(${1:String.s})$2'
-    'description': 'Returns the first 'Length' number of characters from the left side of the string'
+    'description': 'Returns the first "Length" number of characters from the left side of the string'
   'Len (String$)':
     'prefix': 'Len'
     'body': 'Len(${1:String.s})$2'
@@ -3374,11 +3374,11 @@
   'LSet (String$, Length [, Character])':
     'prefix': 'LSet'
     'body': 'LSet(${1:String.s})$2'
-    'description': 'Pads a string to the left, and adds 'space' characters to fit the specified length'
+    'description': 'Pads a string to the left, and adds "space" characters to fit the specified length'
   'LTrim (String$ [, Character$])':
     'prefix': 'LTrim'
     'body': 'LTrim(${1:String.s})$2'
-    'description': 'Removes all the 'space' or given characters located at the beginning of a string'
+    'description': 'Removes all the "space" or given characters located at the beginning of a string'
   'MailProgress (#Mail)':
     'prefix': 'MailProgress'
     'body': 'MailProgress(${1:#Mail})$2'
@@ -3478,7 +3478,7 @@
   'Mid (String$, StartPos [, Length])':
     'prefix': 'Mid'
     'body': 'Mid(${1:String.s})$2'
-    'description': 'Extract a string at the specified position from the given 'String$''
+    'description': 'Extract a string at the specified position from the given String$'
   'Minute (Date)':
     'prefix': 'Minute'
     'body': 'Minute(${1:Date})$2'
@@ -3558,7 +3558,7 @@
   'MoveMemory (SourceMemory, DestinationMemory, Length)':
     'prefix': 'MoveMemory'
     'body': 'MoveMemory(${1:SourceMemory}, ${2:DestinationMemory})$3'
-    'description': 'Move a memory area from 'SourceMemory' to 'DestinationMemory''
+    'description': 'Move a memory area from "SourceMemory" to "DestinationMemory"'
   'MoveNode (#Node, x, y, z [, Mode])':
     'prefix': 'MoveNode'
     'body': 'MoveNode(${1:#Node}, ${2:x}, ${3:y})$4'
@@ -3614,7 +3614,7 @@
   'NaN ()':
     'prefix': 'NaN'
     'body': 'NaN()$1'
-    'description': 'Returns the special \"Not a Number\ value'
+    'description': 'Returns the special \"Not a Number\" value'
   'NetworkClientEvent (Connection)':
     'prefix': 'NetworkClientEvent'
     'body': 'NetworkClientEvent(${1:Connection})$2'
@@ -3782,7 +3782,7 @@
   'OpenFile (#File, FileName$ [, Flags])':
     'prefix': 'OpenFile'
     'body': 'OpenFile(${1:#File})$2'
-    'description': 'Open the designed file or create it if it doesn't exists'
+    'description': 'Open the designed file or create it if it doesn\'t exists'
   'OpenFileRequester (Title$, DefaultFile$, Pattern$, PatternPosition [, Flags])':
     'prefix': 'OpenFileRequester'
     'body': 'OpenFileRequester(${1:Title.s}, ${2:DefaultFile.s}, ${3:Pattern.s})$4'
@@ -3826,7 +3826,7 @@
   'OpenScreen (Width, Height, Depth, Title$ [, FlipMode [, RefreshRate]])':
     'prefix': 'OpenScreen'
     'body': 'OpenScreen(${1:Width}, ${2:Height}, ${3:Depth})$4'
-    'description': 'Open a new screen according to the specified 'Width', 'Height' and 'Depth''
+    'description': 'Open a new screen according to the specified "Width", "Height" and "Depth"'
   'OpenSerialPort (#SerialPort, SerialPortName$, Bauds, Parity, Data, Stop, HandshakeMode, InputBufferSize, OutputBufferSize)':
     'prefix': 'OpenSerialPort'
     'body': 'OpenSerialPort(${1:#SerialPort}, ${2:SerialPortName.s}, ${3:Bauds}, ${4:Parity}, ${5:Data}, ${6:Stop}, ${7:HandshakeMode}, ${8:InputBufferSize})$9'
@@ -4058,7 +4058,7 @@
   'PlayAudioCD (StartTrack, EndTrack)':
     'prefix': 'PlayAudioCD'
     'body': 'PlayAudioCD(${1:StartTrack})$2'
-    'description': 'Start to play the CD-Audio from 'StartTrack' until the end of 'EndTrack''
+    'description': 'Start to play the CD-Audio from "StartTrack" until the end of "EndTrack"'
   'PlayMovie (#Movie, WindowID)':
     'prefix': 'PlayMovie'
     'body': 'PlayMovie(${1:#Movie})$2'
@@ -4122,7 +4122,7 @@
   'PokeS (*MemoryBuffer, Text$ [, Length [, Flags]])':
     'prefix': 'PokeS'
     'body': 'PokeS(${1:*MemoryBuffer})$2'
-    'description': 'Write a string (including the ending '0') to the specified memory address'
+    'description': 'Write a string (including the ending "0") to the specified memory address'
   'PokeU (*MemoryBuffer, Unicode.U)':
     'prefix': 'PokeU'
     'body': 'PokeU(${1:*MemoryBuffer})$2'
@@ -4238,7 +4238,7 @@
   'Random (Maximum [, Minimum])':
     'prefix': 'Random'
     'body': 'Random(${1:Maximum})$2'
-    'description': 'Return a random number between 0 (unless 'Minimum' is specified) and the 'Maximum' value'
+    'description': 'Return a random number between 0 (unless "Minimum" is specified) and the "Maximum" value'
   'RandomData (*Buffer, Length)':
     'prefix': 'RandomData'
     'body': 'RandomData(${1:*Buffer})$2'
@@ -4498,7 +4498,7 @@
   'RemoveString (String$, RemoveString$ [, Mode [, StartPosition [, NbOccurences]]])':
     'prefix': 'RemoveString'
     'body': 'RemoveString(${1:String.s})$2'
-    'description': 'Finds occurrences of 'StringToRemove$' into the given 'String$' and removes them'
+    'description': 'Finds occurrences of "StringToRemove$" into the given "String$" and removes them'
   'RemoveSysTrayIcon (#SysTrayIcon)':
     'prefix': 'RemoveSysTrayIcon'
     'body': 'RemoveSysTrayIcon(${1:#SysTrayIcon})$2'
@@ -4530,7 +4530,7 @@
   'ReplaceString (String$, StringToFind$, StringToReplace$ [, Mode [, StartPosition [, NbOccurences]]])':
     'prefix': 'ReplaceString'
     'body': 'ReplaceString(${1:String.s}, ${2:StringToFind.s})$3'
-    'description': 'Replaces occurrences of 'StringToFind$' with 'StringToReplace$' in the given 'String$''
+    'description': 'Replaces occurrences of "StringToFind$" with "StringToReplace$" in the given "String$"'
   'ResetCoordinates ([System])':
     'prefix': 'ResetCoordinates'
     'body': 'ResetCoordinates()$1'
@@ -4634,7 +4634,7 @@
   'Right (String$, Length)':
     'prefix': 'Right'
     'body': 'Right(${1:String.s})$2'
-    'description': 'Returns the last 'Length' number of characters from the right side of the string'
+    'description': 'Returns the last "Length": number of characters from the right side of the string'
   'Roll (ObjectID, Value.f, Mode)':
     'prefix': 'Roll'
     'body': 'Roll(${1:ObjectID}, ${2:Value.f})$3'
@@ -4690,11 +4690,11 @@
   'RSet (String$, Length [, Character])':
     'prefix': 'RSet'
     'body': 'RSet(${1:String.s})$2'
-    'description': 'Pads a string to the right, and adds 'space' characters to fit the specified length'
+    'description': 'Pads a string to the right, and adds "space" characters to fit the specified length'
   'RTrim (String$ [, Character$])':
     'prefix': 'RTrim'
     'body': 'RTrim(${1:String.s})$2'
-    'description': 'Removes all the 'space' or given characters located at the end of a string'
+    'description': 'Removes all the "space" or given characters located at the end of a string'
   'RunProgram (ProgramName$ [, Parameter$, WorkingDirectory$ [, Flags [, SenderProgram]]])':
     'prefix': 'RunProgram'
     'body': 'RunProgram(${1:ProgramName.s})$2'
@@ -5370,7 +5370,7 @@
   'Space (Length)':
     'prefix': 'Space'
     'body': 'Space(${1:Length})$2'
-    'description': 'Create an empty string of the given 'Length' filled with 'space' characters'
+    'description': 'Create an empty string of the given "Length": filled with "space" characters'
   'SpinGadget (#Gadget, x, y, Width, Height, Minimum, Maximum [, Flags])':
     'prefix': 'SpinGadget'
     'body': 'SpinGadget(${1:#Gadget}, ${2:x}, ${3:y}, ${4:Width}, ${5:Height}, ${6:Minimum})$7'
@@ -5498,11 +5498,11 @@
   'StatusBarProgress (#StatusBar, Field, Value [, Appearance [, Min, Max]])':
     'prefix': 'StatusBarProgress'
     'body': 'StatusBarProgress(${1:#StatusBar}, ${2:Field})$3'
-    'description': 'Set the specified 'Field' to display a progressbar'
+    'description': 'Set the specified "Field" to display a progressbar'
   'StatusBarText (#StatusBar, Field, Text$ [, Appearance])':
     'prefix': 'StatusBarText'
     'body': 'StatusBarText(${1:#StatusBar}, ${2:Field})$3'
-    'description': 'Change the text of the specified 'Field' in the given '#StatusBar''
+    'description': 'Change the text of the specified "Field" in the given '#StatusBar''
   'StickyWindow (#Window, State)':
     'prefix': 'StickyWindow'
     'body': 'StickyWindow(${1:#Window})$2'
@@ -5782,7 +5782,7 @@
   'Trim (String$ [, Character$])':
     'prefix': 'Trim'
     'body': 'Trim(${1:String.s})$2'
-    'description': 'Removes all the 'space' or given characters located at the beginning and at the end of a string'
+    'description': 'Removes all the "space" or given characters located at the beginning and at the end of a string'
   'TruncateFile (#File)':
     'prefix': 'TruncateFile'
     'body': 'TruncateFile(${1:#File})$2'
@@ -6282,7 +6282,7 @@
   'WriteStringN (#File, Text$ [, Format])':
     'prefix': 'WriteStringN'
     'body': 'WriteStringN(${1:#File})$2'
-    'description': 'Write a string to the specified file and add the 'end of line' character'
+    'description': 'Write a string to the specified file and add the "end of line" character'
   'WriteUnicodeCharacter (#File, Number)':
     'prefix': 'WriteUnicodeCharacter'
     'body': 'WriteUnicodeCharacter(${1:#File})$2'
