@@ -1103,9 +1103,9 @@
     'prefix': 'CreateTexture'
     'body': 'CreateTexture(${1:#Texture}, ${2:Width})$3'
     'description': 'Create a new blank #Texture'
-  ', Parameter)':
+  'CreateThread(@ProcedureName(), *Value)':
     'prefix': 'CreateThread'
-    'body': 'CreateThread(${1:@Procedure()})$2'
+    'body': 'CreateThread(${1:@Procedure()}, ${2:*Value})$3'
     'description': 'Create a new thread running in the application background'
   'CreateToolBar (#ToolBar, WindowID [, Flags])':
     'prefix': 'CreateToolBar'
