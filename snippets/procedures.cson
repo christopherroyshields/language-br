@@ -1099,9 +1099,9 @@
     'prefix': 'CreateTerrainBody'
     'body': 'CreateTerrainBody(${1:#Terrain}, ${2:Restitution})$3'
     'description': 'Add a static physic body to the #Terrain'
-  'CreateTexture (#Texture, Width, Height)':
+  'CreateTexture (#Texture, Width, Height [, TextureName$])':
     'prefix': 'CreateTexture'
-    'body': 'CreateTexture(${1:#Texture}, ${2:Width})$3'
+    'body': 'CreateTexture(${1:#Texture}, ${2:Width}, ${3:Height})$4'
     'description': 'Create a new blank #Texture'
   'CreateThread(@ProcedureName(), *Value)':
     'prefix': 'CreateThread'
