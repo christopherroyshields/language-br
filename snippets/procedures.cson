@@ -195,10 +195,6 @@
     'prefix': 'ApplyEntityTorqueImpulse'
     'body': 'ApplyEntityTorqueImpulse(${1:#Entity}, ${2:x}, ${3:y})$4'
     'description': 'Apply a rotation force to the #Entity'
-  ' [, Dimension])':
-    'prefix': 'ArraySize'
-    'body': 'ArraySize(${1:Array()})$2'
-    'description': 'Returns the array size'
   'Asc (String)':
     'prefix': 'Asc'
     'body': 'Asc(${1:String})$2'
