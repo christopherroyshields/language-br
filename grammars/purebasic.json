@@ -17,7 +17,7 @@
       "name": "comment.line.purebasic"
     },
     {
-      "match": "\\b(Break|Case|Continue|Default|Else|End|EndIf|EndSelect|ElseIf|Else|ForEach|ForEver|If|Next|Repeat|Select|Until|Wend|While)\\b",
+      "match": "\\b(Break|Case|Continue|Default|Else|End|EndIf|EndSelect|ElseIf|Else|For|ForEach|ForEver|If|Next|Repeat|Select|To|Until|Wend|While)\\b",
       "name": "keyword.control.purebasic"
     },
     {
