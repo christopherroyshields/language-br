@@ -3,6 +3,9 @@
   "main": "./lib/language-purebasic",
   "version": "1.1.12",
   "description": "Adds syntax highlighting and snippets to PureBasic files in Atom.",
+  "keywords": [
+    "PureBasic"
+  ],
   "activationCommands": {
     "atom-text-editor": [
       "language-purebasic:toggle"
