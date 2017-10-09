@@ -8,7 +8,7 @@
       "language-purebasic:toggle"
     ]
   },
-  "repository": "https://github.com/alomvar/language-purebasic",
+  "repository": "https://github.com/peterthomashorn/language-purebasic",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
