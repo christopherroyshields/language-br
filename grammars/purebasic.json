@@ -9,6 +9,9 @@
   "patterns":
   [
     {
+      "include": "source.purebasic.pureunit"
+    },
+    {
       "match": "\\\"[^\"]*\\\"",
       "name": "string.quoted.double.purebasic"
     },
