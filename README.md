@@ -2,6 +2,8 @@
 
 Adds syntax highlighting and snippets to PureBasic files in Atom.
 
+![Screenshot of Atom with PureBasic example code](assets/screenshot.png)
+
 The snippets contain all constants, keywords and procedures which come with PureBasic by default. In addition basic code block snippets as for procedures are provided, too.
 
 ## Contributing
