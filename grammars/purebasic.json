@@ -20,11 +20,11 @@
       "name": "comment.line.purebasic"
     },
     {
-      "match": "\\b(Break|Case|Continue|Default|Else|End|EndIf|EndSelect|ElseIf|Else|For|ForEach|ForEver|If|Next|Repeat|Select|To|Until|Wend|While)\\b",
+      "match": "\\b(?i:Break|Case|Continue|Default|Else|End|EndIf|EndSelect|ElseIf|Else|For|ForEach|ForEver|If|Next|Repeat|Select|To|Until|Wend|While)\\b",
       "name": "keyword.control.purebasic"
     },
     {
-      "match": "\\b(And|Not|Or|XOr)\\b",
+      "match": "\\b(?i:And|Not|Or|XOr)\\b",
       "name": "keyword.operator.logical.purebasic"
     },
     {
@@ -36,11 +36,11 @@
       "name": "keyword.operator.assignment.purebasic"
     },
     {
-      "match": "\\b(Debug|EnableASM|EnableExplicit|NewList|Enumeration|EndEnumeration|Procedure|ProcedureDLL|ProcedureReturn|EndProcedure|Macro|EndMacro|DataSection|EndDataSection|Structure|Extends|EndStructure|IncludeFile|XIncludeFile|DeclareModule|EndDeclareModule|Module|EndModule|UseModule|UnuseModule)\\b",
+      "match": "\\b(?i:Debug|EnableASM|EnableExplicit|NewList|Enumeration|EndEnumeration|Procedure|ProcedureDLL|ProcedureReturn|EndProcedure|Macro|EndMacro|DataSection|EndDataSection|Structure|Extends|EndStructure|IncludeFile|XIncludeFile|DeclareModule|EndDeclareModule|Module|EndModule|UseModule|UnuseModule)\\b",
       "name": "keyword.other.purebasic"
     },
     {
-      "match": "\\b(Global|Protected|Static)\\b",
+      "match": "\\b(?i:Global|Protected|Static)\\b",
       "name": "storage.modifier.purebasic"
     },
     {
