@@ -5,6 +5,12 @@
       Debug ${1:Expression}
       $2
     '''
+  "EnableASM":
+    prefix: "EnableASM"
+    body: '''
+      EnableASM
+      ${1}
+    '''
   "EnableExplicit":
     prefix: "EnableExplicit"
     body: '''
