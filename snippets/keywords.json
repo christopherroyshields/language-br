@@ -28,6 +28,10 @@
       "prefix": "If",
       "body": "If ${1}\n\n\t${2}\n\nEndIf"
     },
+    "EndIf": {
+      "prefix": "EndIf",
+      "body": "EndIf"
+    },
     "Procedure implementation": {
       "prefix": "Procedure",
       "body": "Procedure${1} ${2:Unnamed}(${3})\n\n\t${4:; Not implemented yet.}\n\nEndProcedure"
