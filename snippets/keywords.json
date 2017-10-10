@@ -4,6 +4,10 @@
       "prefix": "Debug",
       "body": "Debug ${1:Expression}\n$2"
     },
+    "Data section": {
+      "prefix": "DataSection",
+      "body": "DataSection\n\t${1}\nEndDataSection"
+    },
     "EnableASM": {
       "prefix": "EnableASM",
       "body": "EnableASM\n${1}"
