@@ -7360,26 +7360,6 @@
       "body": "UseJCALG1Packer()$1",
       "description": "Add JCALG1 decompression support to the packer commandset"
     },
-    "UseJPEG2000ImageDecoder ()": {
-      "prefix": "UseJPEG2000ImageDecoder",
-      "body": "UseJPEG2000ImageDecoder()$1",
-      "description": "Enables the JPEG 2000 support for CatchImage(), LoadImage(), CatchSprite() and LoadSprite()"
-    },
-    "UseJPEG2000ImageEncoder ()": {
-      "prefix": "UseJPEG2000ImageEncoder",
-      "body": "UseJPEG2000ImageEncoder()$1",
-      "description": "Enables the JPEG 2000 support for SaveImage() and SaveSprite()"
-    },
-    "UseJPEGImageDecoder ()": {
-      "prefix": "UseJPEGImageDecoder",
-      "body": "UseJPEGImageDecoder()$1",
-      "description": "Enables the JPEG support for CatchImage(), LoadImage(), CatchSprite() and LoadSprite()"
-    },
-    "UseJPEGImageEncoder ()": {
-      "prefix": "UseJPEGImageEncoder",
-      "body": "UseJPEGImageEncoder()$1",
-      "description": "Enables the JPEG support for SaveImage() and SaveSprite()"
-    },
     "UseLZMAPacker ()": {
       "prefix": "UseLZMAPacker",
       "body": "UseLZMAPacker()$1",
@@ -7399,16 +7379,6 @@
       "prefix": "UseOGGSoundDecoder",
       "body": "UseOGGSoundDecoder()$1",
       "description": "Enables the OGG support for CatchSound(), LoadSound()"
-    },
-    "UsePNGImageDecoder ()": {
-      "prefix": "UsePNGImageDecoder",
-      "body": "UsePNGImageDecoder()$1",
-      "description": "Enables the PNG support for CatchImage(), LoadImage(), CatchSprite() and LoadSprite()"
-    },
-    "UsePNGImageEncoder ()": {
-      "prefix": "UsePNGImageEncoder",
-      "body": "UsePNGImageEncoder()$1",
-      "description": "Enables the PNG support for SaveImage() and SaveSprite()"
     },
     "UsePostgreSQLDatabase ()": {
       "prefix": "UsePostgreSQLDatabase",
@@ -7444,16 +7414,6 @@
       "prefix": "UseTARPacker",
       "body": "UseTARPacker()$1",
       "description": "Add TAR support to the packer commandset"
-    },
-    "UseTGAImageDecoder ()": {
-      "prefix": "UseTGAImageDecoder",
-      "body": "UseTGAImageDecoder()$1",
-      "description": "Enables the TGA support for CatchImage(), LoadImage(), CatchSprite() and LoadSprite()"
-    },
-    "UseTIFFImageDecoder ()": {
-      "prefix": "UseTIFFImageDecoder",
-      "body": "UseTIFFImageDecoder()$1",
-      "description": "Enables the TIFF support for CatchImage(), LoadImage(), CatchSprite() and LoadSprite()"
     },
     "UseZipPacker ()": {
       "prefix": "UseZipPacker",
