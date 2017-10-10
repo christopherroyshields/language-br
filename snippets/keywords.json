@@ -1,0 +1,64 @@
+{
+  ".source.purebasic": {
+    "Debug Expression": {
+      "prefix": "Debug",
+      "body": "Debug ${1:Expression}\n$2"
+    },
+    "EnableASM": {
+      "prefix": "EnableASM",
+      "body": "EnableASM\n${1}"
+    },
+    "EnableExplicit": {
+      "prefix": "EnableExplicit",
+      "body": "EnableExplicit\n${1}"
+    },
+    "Enumeration block": {
+      "prefix": "En",
+      "body": "Enumeration${1}\n\n\t${2}\n\nEndEnumeration"
+    },
+    "Foreach … Next": {
+      "prefix": "ForEach",
+      "body": "ForEach ${1:LinkedList}()\n\n\t${2}\n\nNext"
+    },
+    "IncludeFile": {
+      "prefix": "Inc",
+      "body": "IncludeFile \"${1}\""
+    },
+    "If … EndIf": {
+      "prefix": "If",
+      "body": "If ${1}\n\n\t${2}\n\nEndIf"
+    },
+    "Procedure implementation": {
+      "prefix": "Procedure",
+      "body": "Procedure${1} ${2:Unnamed}(${3})\n\n\t${4:; Not implemented yet.}\n\nEndProcedure"
+    },
+    "ProcedureDLL implementation": {
+      "prefix": "ProcedureDLL",
+      "body": "ProcedureDLL${1} ${2:Unnamed}(${3})\n\n\t${4:; Not implemented yet.}\n\nEndProcedure"
+    },
+    "Procedure return": {
+      "prefix": "",
+      "body": "ProcedureReturn ${1}"
+    },
+    "Repeat … ForEver": {
+      "prefix": "Re",
+      "body": "Repeat\n\n\t{$1}\n\nForEver"
+    },
+    "While … Wend": {
+      "prefix": "While",
+      "body": "While $1\n\n  $2\n\nWend"
+    },
+    "Structure … EndStructure": {
+      "prefix": "Structure",
+      "body": "Structure $1\n  $2\nEndStructure"
+    },
+    "Repeat … Until …": {
+      "prefix": "Re",
+      "body": "Repeat\n\n\t{$2}\n\nUntil ${1}"
+    },
+    "XIncludeFile": {
+      "prefix": "XInc",
+      "body": "XIncludeFile \"${1}\""
+    }
+  }
+}
