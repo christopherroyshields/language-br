@@ -1,0 +1,26 @@
+{
+  ".source.purebasic": {
+    "Module declaration": {
+      "prefix": "DeclareModule",
+      "body": "DeclareModule ${1:ModuleName}\n\t${2}\n\nEndDeclareModule",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/reference/module.html"
+    },
+    "Module implementation": {
+      "prefix": "Module",
+      "body": "Module ${1:ModuleName}\n\t${2}\n\nEndModule",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/reference/module.html"
+    },
+    "Module import": {
+      "prefix": "UseModule",
+      "body": "UseModule ${1:ModuleName}",
+      "description": "Imports all public symbols from the given module into the current scope.",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/reference/module.html"
+    },
+    "Module exclusion": {
+      "prefix": "UnuseModule",
+      "body": "UnuseModule ${1:ModuleName}",
+      "description": "Excludes all public symbols from the given module in the current scope.",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/reference/module.html"
+    }
+  }
+}
