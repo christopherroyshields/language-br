@@ -6,6 +6,8 @@ Adds syntax highlighting and snippets to PureBasic files in Atom.
 
 The snippets contain all constants, keywords and procedures which come with PureBasic by default. In addition basic code block snippets as for procedures are provided, too.
 
+If you use PureUnit, check out the [language-pureunit](https://atom.io/packages/language-pureunit) package.
+
 ## Contributing
 
 Contributions are greatly appreciated. Please fork this repository and open a pull request to add snippets or make grammar tweaks.
