@@ -1,5 +1,33 @@
 {
   ".source.purebasic": {
+    "CompilerError <string constant>": {
+      "prefix": "CompilerError",
+      "body": "CompilerError \"${1}\"",
+      "description": "Generates an error, as if it was a syntax error and display the associated message.",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/reference/compilerdirectives.html"
+    },
+    "CompilerIf … CompilerEndIf": {
+      "prefix": "CompilerIf",
+      "body": "CompilerIf ${1}\n\n\t${2}\n\nCompilerEndIf",
+      "description": "If the <constant expression> result is true, the code inside the CompilerIf will be compiled, else it will be totally ignored.",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/reference/compilerdirectives.html"
+    },
+    "CompilerEndIf": {
+      "prefix": "CompilerEndIf",
+      "body": "CompilerEndIf",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/reference/compilerdirectives.html"
+    },
+    "CompilerSelect": {
+      "prefix": "CompilerSelect",
+      "body": "CompilerSelect\n\tCompilerCase ${1:<numeric constant>}\n\t\t${2}\nCompilerEndSelect",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/reference/compilerdirectives.html"
+    },
+    "CompilerWarning <string constant>": {
+      "prefix": "CompilerWarning",
+      "body": "CompilerWarning \"${1}\"",
+      "description": "Generates a warning, as if it was a syntax error and display the associated message.",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/reference/compilerdirectives.html"
+    },
     "Debug Expression": {
       "prefix": "Debug",
       "body": "Debug ${1:Expression}\n$2"

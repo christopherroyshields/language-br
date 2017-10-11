@@ -40,6 +40,10 @@
       "name": "keyword.other.purebasic"
     },
     {
+      "match": "\\b(?i:CompilerSelect|CompilerIf|CompilerElse|CompilerError|CompilerWarning|CompilerEndIf|CompilerSelect|CompilerCase|CompilerDefault|CompilerEndSelect)\\b",
+      "name": "keyword.other.purebasic"
+    },
+    {
       "match": "\\b(?i:Global|Protected|Static)\\b",
       "name": "storage.modifier.purebasic"
     },
