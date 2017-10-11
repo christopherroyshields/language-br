@@ -19,7 +19,8 @@
     },
     "CompilerSelect": {
       "prefix": "CompilerSelect",
-      "body": "CompilerSelect\n\tCompilerCase ${1:<numeric constant>}\n\t\t${2}\nCompilerEndSelect",
+      "body": "CompilerSelect ${1:<numeric constant>}\n\tCompilerCase ${2:<numeric constant>}\n\t\t${3}\nCompilerEndSelect",
+      "description": "Works like a regular Select : EndSelect except that only one numeric value is allowed per case.",
       "descriptionMoreURL": "http://www.purebasic.com/documentation/reference/compilerdirectives.html"
     },
     "CompilerWarning <string constant>": {
@@ -83,6 +84,12 @@
     "Repeat … ForEver": {
       "prefix": "Re",
       "body": "Repeat\n\n\t{$1}\n\nForEver"
+    },
+    "Select <expression>": {
+      "prefix": "Select",
+      "body": "Select ${1:<expression>}\n\tCase ${2:<expression>}\n\t\t${3}\nEndSelect",
+      "description": "Select provides the ability to determine a quick choice.",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/reference/select_endselect.html"
     },
     "While … Wend": {
       "prefix": "While",
