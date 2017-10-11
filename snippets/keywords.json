@@ -8,6 +8,10 @@
       "prefix": "DataSection",
       "body": "DataSection\n\t${1}\nEndDataSection"
     },
+    "Declare[.<type>] name(<parameter1[.<type>]> [, <parameter2[.<type>] [= DefaultValue]>, ...])": {
+      "prefix": "Declare",
+      "body": "Declare ${1}"
+    },
     "EnableASM": {
       "prefix": "EnableASM",
       "body": "EnableASM\n${1}"
@@ -15,6 +19,10 @@
     "EnableExplicit": {
       "prefix": "EnableExplicit",
       "body": "EnableExplicit\n${1}"
+    },
+    "EndIf": {
+      "prefix": "EndIf",
+      "body": "EndIf"
     },
     "Enumeration block": {
       "prefix": "En",
@@ -31,10 +39,6 @@
     "If … EndIf": {
       "prefix": "If",
       "body": "If ${1}\n\n\t${2}\n\nEndIf"
-    },
-    "EndIf": {
-      "prefix": "EndIf",
-      "body": "EndIf"
     },
     "Procedure implementation": {
       "prefix": "Procedure",

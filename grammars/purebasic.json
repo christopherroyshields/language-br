@@ -36,7 +36,7 @@
       "name": "keyword.operator.assignment.purebasic"
     },
     {
-      "match": "\\b(?i:Debug|EnableASM|EnableExplicit|NewList|Enumeration|EndEnumeration|Procedure|ProcedureDLL|ProcedureReturn|EndProcedure|Macro|EndMacro|DataSection|EndDataSection|Structure|Extends|EndStructure|IncludeFile|XIncludeFile|DeclareModule|EndDeclareModule|Module|EndModule|UseModule|UnuseModule)\\b",
+      "match": "\\b(?i:Debug|Declare|EnableASM|EnableExplicit|NewList|Enumeration|EndEnumeration|Procedure|ProcedureDLL|ProcedureReturn|EndProcedure|Macro|EndMacro|DataSection|EndDataSection|Structure|Extends|EndStructure|IncludeFile|XIncludeFile|DeclareModule|EndDeclareModule|Module|EndModule|UseModule|UnuseModule)\\b",
       "name": "keyword.other.purebasic"
     },
     {
