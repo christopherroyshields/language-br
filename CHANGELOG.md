@@ -1,3 +1,10 @@
+## 1.1.15
+* Added compiler keywords to grammar and snippets
+* Added `Declare` keyword to grammar and snippets
+* Added `Select` keyword to grammar and snippets
+* Updated screenshot to contain preview of autocomplete
+* Updated copyright information
+
 ## 1.1.14
 * Added `EnableASM`, `DeclareModule`, `EndDeclareModule`, `Module`, `EndModule`, `UseModule`, `UnuseModule` keywords to grammar
 * Added module snippets
