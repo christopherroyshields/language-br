@@ -54,8 +54,12 @@
       "body": "EndIf"
     },
     "Enumeration block": {
-      "prefix": "En",
+      "prefix": "Enumeration",
       "body": "Enumeration${1}\n\n\t${2}\n\nEndEnumeration"
+    },
+    "EndEnumeration": {
+      "prefix": "EndEnumeration",
+      "body": "EndEnumeration"
     },
     "Foreach … Next": {
       "prefix": "ForEach",
