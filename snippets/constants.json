@@ -1360,6 +1360,10 @@
       "prefix": "PB_EventType_PopupWindow",
       "body": "#PB_EventType_PopupWindow${1}"
     },
+    "#PB_EventType_Resize": {
+      "prefix": "PB_EventType_Resize",
+      "body": "#PB_EventType_Resize${1}"
+    },
     "#PB_EventType_RightButtonDown": {
       "prefix": "PB_EventType_RightButtonDown",
       "body": "#PB_EventType_RightButtonDown${1}"
