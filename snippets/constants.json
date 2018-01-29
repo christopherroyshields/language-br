@@ -2680,6 +2680,10 @@
       "prefix": "PB_ListIcon_ColumnWidth",
       "body": "#PB_ListIcon_ColumnWidth${1}"
     },
+    "#PB_ListIcon_ColumnCount": {
+      "prefix": "PB_ListIcon_ColumnCount",
+      "body": "#PB_ListIcon_ColumnCount${1}"
+    },
     "#PB_ListIcon_DisplayMode": {
       "prefix": "PB_ListIcon_DisplayMode",
       "body": "#PB_ListIcon_DisplayMode${1}"
