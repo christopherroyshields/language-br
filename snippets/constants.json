@@ -2884,6 +2884,10 @@
       "prefix": "PB_Material_AlphaBlend",
       "body": "#PB_Material_AlphaBlend${1}"
     },
+    "#PB_Material_AlphaReject": {
+      "prefix": "PB_Material_AlphaReject",
+      "body": "#PB_Material_AlphaReject${1}"
+    },
     "#PB_Material_AmbientColor": {
       "prefix": "PB_Material_AmbientColor",
       "body": "#PB_Material_AmbientColor${1}"
@@ -2927,6 +2931,10 @@
     "#PB_Material_DiffuseColor": {
       "prefix": "PB_Material_DiffuseColor",
       "body": "#PB_Material_DiffuseColor${1}"
+    },
+    "#PB_Material_EnvironmentMap": {
+      "prefix": "PB_Material_EnvironmentMap",
+      "body": "#PB_Material_EnvironmentMap${1}"
     },
     "#PB_Material_Fixed": {
       "prefix": "PB_Material_Fixed",
@@ -2987,6 +2995,10 @@
     "#PB_Material_SpecularColor": {
       "prefix": "PB_Material_SpecularColor",
       "body": "#PB_Material_SpecularColor${1}"
+    },
+    "#PB_Material_TAM": {
+      "prefix": "PB_Material_TAM",
+      "body": "#PB_Material_TAM${1}"
     },
     "#PB_Material_TextureRotate": {
       "prefix": "PB_Material_TextureRotate",
