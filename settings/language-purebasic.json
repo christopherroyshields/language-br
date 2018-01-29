@@ -2,7 +2,8 @@
   ".source.purebasic": {
     "editor": {
       "tabLength": 4,
-      "tabType": "soft"
+      "tabType": "soft",
+      "commentStart": ";"
     }
   }
 }
