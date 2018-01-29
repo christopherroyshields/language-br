@@ -56,7 +56,7 @@
       "name": "constant.numeric.purebasic"
     },
     {
-      "match": "(\\b\\w[\\w\\d]*|[^\\w]@[\\w\\d]*)\\(",
+      "match": "[^\\.](\\b\\w[\\w\\d]*|[^\\w]@[\\w\\d]*)\\(",
       "captures":
       {
         "1":
