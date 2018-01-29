@@ -1,3 +1,10 @@
+## 1.1.16
+* Added editor defaults for soft indentation with 4 spaces
+* Added some constants introduced in recent PureBasic versions (in example color constants)
+* Added Atom support for toggling comments
+* Updated JSON snippets with new functions, references and return type hints
+* Fixed wrong highlighting of list declarations
+
 ## 1.1.15
 * Added compiler keywords to grammar and snippets
 * Added `Declare` keyword to grammar and snippets
