@@ -1,0 +1,354 @@
+{
+  ".source.purebasic": {
+    "AddJSONElement (*JSONValue [, Index])": {
+      "prefix": "AddJSONElement",
+      "body": "AddJSONElement(${1:*JSONValue})$2",
+      "description": "Add an element to a JSON array",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/addjsonelement.html",
+      "leftLabel": "Integer"
+    },
+    "AddJSONMember (*JSONValue, Key$)": {
+      "prefix": "AddJSONMember",
+      "body": "AddJSONMember(${1:*JSONValue})$2",
+      "description": "Add a member to a JSON object",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/addjsonmember.html",
+      "leftLabel": "Integer"
+    },
+    "CatchJSON (#JSON, *Buffer, Size [, Flags])": {
+      "prefix": "CatchJSON",
+      "body": "CatchJSON(${1:#JSON}, ${2:*Buffer})$3",
+      "description": "Parse JSON from a memory buffer",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/catchjson.html",
+      "leftLabel": "Integer"
+    },
+    "ClearJSONElements (*JSONValue)": {
+      "prefix": "ClearJSONElements",
+      "body": "ClearJSONElements(${1:*JSONValue})$2",
+      "description": "Clear the elements of a JSON array",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/clearjsonelements.html"
+    },
+    "ClearJSONMembers (*JSONValue)": {
+      "prefix": "ClearJSONMembers",
+      "body": "ClearJSONMembers(${1:*JSONValue})$2",
+      "description": "Clear the members of a JSON object",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/clearjsonmembers.html"
+    },
+    "ComposeJSON (#JSON [, Flags])": {
+      "prefix": "ComposeJSON",
+      "body": "ComposeJSON(${1:#JSON})$2",
+      "description": "Compose a JSON data into a string",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/composejson.html",
+      "leftLabel": "String"
+    },
+    "CreateJSON (#JSON [, Flags])": {
+      "prefix": "CreateJSON",
+      "body": "CreateJSON(${1:#JSON})$2",
+      "description": "Create new JSON data with a value of type #PB_JSON_Null",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/createjson.html",
+      "leftLabel": "Integer"
+    },
+    "ExamineJSONMembers (*JSONValue)": {
+      "prefix": "ExamineJSONMembers",
+      "body": "ExamineJSONMembers(${1:*JSONValue})$2",
+      "description": "Examine the members of a JSON object",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/examinejsonmembers.html",
+      "leftLabel": "Integer"
+    },
+    "ExportJSON (#JSON, *Buffer, Size [, Flags])": {
+      "prefix": "ExportJSON",
+      "body": "ExportJSON(${1:#JSON}, ${2:*Buffer})$3",
+      "description": "Export JSON data to a memory buffer",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/exportjson.html",
+      "leftLabel": "Integer"
+    },
+    "ExportJSONSize (#JSON [, Flags])": {
+      "prefix": "ExportJSONSize",
+      "body": "ExportJSONSize(${1:#JSON})$2",
+      "description": "Get the size that JSON data needs for the ExportJSON() function",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/exportjsonsize.html",
+      "leftLabel": "Integer"
+    },
+    "ExtractJSONArray (*JSONValue, Array())": {
+      "prefix": "ExtractJSONArray",
+      "body": "ExtractJSONArray(${1:*JSONValue}, ${2:Array()})$3",
+      "description": "Extract a JSON value into the specified array",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/extractjsonarray.html"
+    },
+    "ExtractJSONList (*JSONValue, List())": {
+      "prefix": "ExtractJSONList",
+      "body": "ExtractJSONList(${1:*JSONValue}, ${2:List()})$3",
+      "description": "Extract a JSON value into the specified List",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/extractjsonlist.html"
+    },
+    "ExtractJSONMap (*JSONValue, Map())": {
+      "prefix": "ExtractJSONMap",
+      "body": "ExtractJSONMap(${1:*JSONValue}, ${2:Map()})$3",
+      "description": "Extract a JSON value into the specified map",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/extractjsonmap.html"
+    },
+    "ExtractJSONStructure (*JSONValue, *Buffer, Structure)": {
+      "prefix": "ExtractJSONStructure",
+      "body": "ExtractJSONStructure(${1:*JSONValue}, ${2:*Buffer})$3",
+      "description": "Extract a JSON value into the specified structure",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/extractjsonstructure.html"
+    },
+    "FreeJSON (#JSON)": {
+      "prefix": "FreeJSON",
+      "body": "FreeJSON(${1:#JSON})$2",
+      "description": "Free JSON data",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/freejson.html"
+    },
+    "GetJSONBoolean (*JSONValue)": {
+      "prefix": "GetJSONBoolean",
+      "body": "GetJSONBoolean(${1:*JSONValue})$2",
+      "description": "Return the JSON value as a boolean",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/getjsonboolean.html",
+      "leftLabel": "Boolean"
+    },
+    "GetJSONDouble (*JSONValue)": {
+      "prefix": "GetJSONDouble",
+      "body": "GetJSONDouble(${1:*JSONValue})$2",
+      "description": "Return the JSON value as a double",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/getjsondouble.html",
+      "leftLabel": "Double"
+    },
+    "GetJSONElement (*JSONValue, Index)": {
+      "prefix": "GetJSONElement",
+      "body": "GetJSONElement(${1:*JSONValue})$2",
+      "description": "Return an element in a JSON array",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/getjsonelement.html",
+      "leftLabel": "Integer"
+    },
+    "GetJSONFloat (*JSONValue)": {
+      "prefix": "GetJSONFloat",
+      "body": "GetJSONFloat(${1:*JSONValue})$2",
+      "description": "Return the JSON value as a float",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/getjsonfloat.html",
+      "leftLabel": "Float"
+    },
+    "GetJSONInteger (*JSONValue)": {
+      "prefix": "GetJSONInteger",
+      "body": "GetJSONInteger(${1:*JSONValue})$2",
+      "description": "Return the JSON value as an integer",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/getjsoninteger.html",
+      "leftLabel": "Integer"
+    },
+    "GetJSONMember (*JSONValue, Key$)": {
+      "prefix": "GetJSONMember",
+      "body": "GetJSONMember(${1:*JSONValue})$2",
+      "description": "Return a member of a JSON object",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/getjsonmember.html",
+      "leftLabel": "Pointer"
+    },
+    "GetJSONQuad (*JSONValue)": {
+      "prefix": "GetJSONQuad",
+      "body": "GetJSONQuad(${1:*JSONValue})$2",
+      "description": "Return the JSON value as an quad",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/getjsonquad.html",
+      "leftLabel": "Quad"
+    },
+    "GetJSONString (*JSONValue)": {
+      "prefix": "GetJSONString",
+      "body": "GetJSONString(${1:*JSONValue})$2",
+      "description": "Return the JSON value as a string",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/getjsonstring.html",
+      "leftLabel": "String"
+    },
+    "InsertJSONArray (*JSONValue, *Buffer, Structure)": {
+      "prefix": "InsertJSONArray",
+      "body": "InsertJSONArray(${1:*JSONValue}, ${2:Array()})$3",
+      "description": "Insert the specified array data into the JSON value",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/insertjsonarray.html"
+    },
+    "InsertJSONList (*JSONValue, *Buffer, Structure)": {
+      "prefix": "InsertJSONList",
+      "body": "InsertJSONList(${1:*JSONValue}, ${2:List()})$3",
+      "description": "Insert the specified list data into the JSON value",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/insertjsonlist.html"
+    },
+    "InsertJSONMap (*JSONValue, *Buffer, Structure)": {
+      "prefix": "InsertJSONMap",
+      "body": "InsertJSONMap(${1:*JSONValue}, ${2:Map()})$3",
+      "description": "Insert the specified map data into the JSON value",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/insertjsonmap.html"
+    },
+    "InsertJSONStructure (*JSONValue, *Buffer, Structure)": {
+      "prefix": "InsertJSONStructure",
+      "body": "InsertJSONStructure(${1:*JSONValue}, ${2:*Buffer})$3",
+      "description": "Insert the specified structure data into the JSON value",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/insertjsonstructure.html"
+    },
+    "IsJSON (#JSON)": {
+      "prefix": "IsJSON",
+      "body": "IsJSON(${1:#JSON})$2",
+      "description": "Check if #JSON represents valid JSON data",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/isjson.html",
+      "leftLabel": "Integer"
+    },
+    "JSONArraySize (*JSONValue)": {
+      "prefix": "JSONArraySize",
+      "body": "JSONArraySize(${1:*JSONValue})$2",
+      "description": "Return the number elements in a JSON array",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/jsonarraysize.html",
+      "leftLabel": "Integer"
+    },
+    "JSONErrorLine ()": {
+      "prefix": "JSONErrorLine",
+      "body": "JSONErrorLine()$1",
+      "description": "Get the input line of the most recent JSON parsing error",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/jsonerrorline.html",
+      "leftLabel": "Integer"
+    },
+    "JSONErrorMessage ()": {
+      "prefix": "JSONErrorMessage",
+      "body": "JSONErrorMessage()$1",
+      "description": "Get a string description of the most recent JSON parsing error",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/jsonerrormessage.html",
+      "leftLabel": "String"
+    },
+    "JSONErrorPosition ()": {
+      "prefix": "JSONErrorPosition",
+      "body": "JSONErrorPosition()$1",
+      "description": "Get the input position of the most recent JSON parsing error",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/jsonerrorposition.html",
+      "leftLabel": "Integer"
+    },
+    "JSONMemberKey (*JSONValue)": {
+      "prefix": "JSONMemberKey",
+      "body": "JSONMemberKey(${1:*JSONValue})$2",
+      "description": "Get the key of the current examined member in the JSON object",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/jsonmemberkey.html",
+      "leftLabel": "String"
+    },
+    "JSONMemberValue (*JSONValue)": {
+      "prefix": "JSONMemberValue",
+      "body": "JSONMemberValue(${1:*JSONValue})$2",
+      "description": "Get the value of the current examined member in the JSON object",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/jsonmembervalue.html",
+      "leftLabel": "Pointer"
+    },
+    "JSONObjectSize (*JSONValue)": {
+      "prefix": "JSONObjectSize",
+      "body": "JSONObjectSize(${1:*JSONValue})$2",
+      "description": "Return the number of members in a JSON object",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/jsonobjectsize.html",
+      "leftLabel": "Integer"
+    },
+    "JSONType (*JSONValue)": {
+      "prefix": "JSONType",
+      "body": "JSONType(${1:*JSONValue})$2",
+      "description": "Return the type of a JSON value",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/jsontype.html",
+      "leftLabel": "Integer"
+    },
+    "JSONValue (#JSON)": {
+      "prefix": "JSONValue",
+      "body": "JSONValue(${1:#JSON})$2",
+      "description": "Return the main value of JSON data",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/jsonvalue.html",
+      "leftLabel": "Integer"
+    },
+    "LoadJSON (#JSON, FileName$ [, Flags])": {
+      "prefix": "LoadJSON",
+      "body": "LoadJSON(${1:#JSON})$2",
+      "description": "Load JSON data from a file",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/loadjson.html",
+      "leftLabel": "Integer"
+    },
+    "NextJSONMember (*JSONValue)": {
+      "prefix": "NextJSONMember",
+      "body": "NextJSONMember(${1:*JSONValue})$2",
+      "description": "Get the next member in the examined JSON object",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/nextjsonmember.html",
+      "leftLabel": "Integer"
+    },
+    "ParseJSON (#JSON, Input$ [, Flags])": {
+      "prefix": "ParseJSON",
+      "body": "ParseJSON(${1:#JSON})$2",
+      "description": "Parse JSON data from a string",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/parsejson.html",
+      "leftLabel": "Integer"
+    },
+    "RemoveJSONElement (*JSONValue, Index)": {
+      "prefix": "RemoveJSONElement",
+      "body": "RemoveJSONElement(${1:*JSONValue})$2",
+      "description": "Remove an element from a JSON array",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/removejsonelement.html"
+    },
+    "RemoveJSONMember (*JSONValue, Key$)": {
+      "prefix": "RemoveJSONMember",
+      "body": "RemoveJSONMember(${1:*JSONValue})$2",
+      "description": "Remove a member from a JSON object",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/removejsonmember.html"
+    },
+    "ResizeJSONElements (*JSONValue, Size)": {
+      "prefix": "ResizeJSONElements",
+      "body": "ResizeJSONElements(${1:*JSONValue})$2",
+      "description": "Resize a JSON array",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/resizejsonelements.html"
+    },
+    "SaveJSON (#JSON, FileName$ [, Flags])": {
+      "prefix": "SaveJSON",
+      "body": "SaveJSON(${1:#JSON})$2",
+      "description": "Save JSON data to a file",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/savejson.html",
+      "leftLabel": "Integer"
+    },
+    "SetJSONArray (*JSONValue)": {
+      "prefix": "SetJSONArray",
+      "body": "SetJSONArray(${1:*JSONValue})$2",
+      "description": "Set a JSON value to contain an (empty) array",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/setjsonarray.html",
+      "leftLabel": "Integer"
+    },
+    "SetJSONBoolean (*JSONValue, Value)": {
+      "prefix": "SetJSONBoolean",
+      "body": "SetJSONBoolean(${1:*JSONValue})$2",
+      "description": "Set a JSON value to contain a boolean",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/setjsonboolean.html"
+    },
+    "SetJSONDouble (*JSONValue, Value.d)": {
+      "prefix": "SetJSONDouble",
+      "body": "SetJSONDouble(${1:*JSONValue})$2",
+      "description": "Set a JSON value to contain a double",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/setjsondouble.html"
+    },
+    "SetJSONFloat (*JSONValue, Value.f)": {
+      "prefix": "SetJSONFloat",
+      "body": "SetJSONFloat(${1:*JSONValue})$2",
+      "description": "Set a JSON value to contain a float",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/setjsonfloat.html"
+    },
+    "SetJSONInteger (*JSONValue, Value)": {
+      "prefix": "SetJSONInteger",
+      "body": "SetJSONInteger(${1:*JSONValue})$2",
+      "description": "Set a JSON value to contain an integer",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/setjsoninteger.html"
+    },
+    "SetJSONNull (*JSONValue)": {
+      "prefix": "SetJSONNull",
+      "body": "SetJSONNull(${1:*JSONValue})$2",
+      "description": "Set a JSON value to contain a null",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/setjsonnull.html"
+    },
+    "SetJSONObject (*JSONValue)": {
+      "prefix": "SetJSONObject",
+      "body": "SetJSONObject(${1:*JSONValue})$2",
+      "description": "Set a JSON value to contain an (empty) object",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/setjsonobject.html",
+      "leftLabel": "Integer"
+    },
+    "SetJSONQuad (*JSONValue, Value.q)": {
+      "prefix": "SetJSONQuad",
+      "body": "SetJSONQuad(${1:*JSONValue})$2",
+      "description": "Set a JSON value to contain a quad",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/setjsonquad.html"
+    },
+    "SetJSONString (*JSONValue, String$)": {
+      "prefix": "SetJSONString",
+      "body": "SetJSONString(${1:*JSONValue})$2",
+      "description": "Set a JSON value to contain a string",
+      "descriptionMoreURL": "http://www.purebasic.com/documentation/json/setjsonstring.html"
+    }
+  }
+}
