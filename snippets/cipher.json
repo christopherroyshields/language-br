@@ -1,0 +1,32 @@
+{
+    ".source.purebasic": {
+        "Base64Decoder (Input$, *OutputBuffer, OutputSize)": {
+          "prefix": "Base64Decoder",
+          "body": "Base64Decoder(${1:Input$}, ${2:*OutputBuffer}, ${3:*OutputSize})$4",
+          "description": "Decodes the specified string using the Base64 algorithm",
+          "descriptionMoreURL": "http://www.purebasic.com/documentation/cipher/base64decoder.html",
+          "leftLabel": "Integer"
+        },
+        "Base64Encoder (*InputBuffer, InputSize [, Flags])": {
+          "prefix": "Base64Encoder",
+          "body": "Base64Encoder(${1:*InputBuffer}, ${2:InputSize}, ${3:, [Flags]})$4",
+          "description": "Encodes the specified buffer using the Base64 algorithm",
+          "descriptionMoreURL": "http://www.purebasic.com/documentation/cipher/base64encoder.html",
+          "leftLabel": "Integer"
+      },
+      "Base64DecoderBuffer (*Input, InputSize, *Output, OutputSize)": {
+        "prefix": "Base64DecoderBuffer",
+        "body": "Base64DecoderBuffer(${1:*Input}, ${2:InputSize}, ${3:*Output}, ${4:OutputSize})$5",
+        "description": "Decodes the specified buffer using the Base64 algorithm",
+        "descriptionMoreURL": "http://www.purebasic.com/documentation/cipher/base64decoderbuffer.html",
+        "leftLabel": "Integer"
+      },
+      "Base64EncoderBuffer (*Input, InputSize, *Output, OutputSize [, Flags])": {
+        "prefix": "Base64EncoderBuffer",
+        "body": "Base64EncoderBuffer(${1:*Input}, ${2:InputSize}, ${3:*Output}, ${4:OutputSize})$5",
+        "description": "Encodes the specified buffer using the Base64 algorithm",
+        "descriptionMoreURL": "http://www.purebasic.com/documentation/cipher/base64encoderbuffer.html",
+        "leftLabel": "Integer"
+      }
+    }
+}

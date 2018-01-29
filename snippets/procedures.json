@@ -330,16 +330,6 @@
       "body": "BackColor(${1:Color})$2",
       "description": "Set the default background color for graphic functions and text display"
     },
-    "Base64Decoder (*Input, InputSize, *Output, OutputSize)": {
-      "prefix": "Base64Decoder",
-      "body": "Base64Decoder(${1:*Input}, ${2:InputSize}, ${3:*Output})$4",
-      "description": "Decodes the specified buffer using the Base64 algorithm"
-    },
-    "Base64Encoder (*Input, InputSize, *Output, OutputSize [, Flags])": {
-      "prefix": "Base64Encoder",
-      "body": "Base64Encoder(${1:*Input}, ${2:InputSize}, ${3:*Output})$4",
-      "description": "Encodes the specified buffer using the Base64 algorithm"
-    },
     "BeginVectorLayer ([Alpha])": {
       "prefix": "BeginVectorLayer",
       "body": "BeginVectorLayer()$1",
