@@ -5611,6 +5611,42 @@
     "#PB_Xml_Root": {
       "prefix": "PB_Xml_Root",
       "body": "#PB_Xml_Root${1}"
+    },
+    "#Black": {
+      "prefix": "Black",
+      "body": "#Black${1}"
+    },
+    "#Blue": {
+      "prefix": "Blue",
+      "body": "#Blue${1}"
+    },
+    "#Green": {
+      "prefix": "Green",
+      "body": "#Green${1}"
+    },
+    "#Yellow": {
+      "prefix": "Yellow",
+      "body": "#Yellow${1}"
+    },
+    "#White": {
+      "prefix": "White",
+      "body": "#White${1}"
+    },
+    "#Gray": {
+      "prefix": "Gray",
+      "body": "#Gray${1}"
+    },
+    "#Red": {
+      "prefix": "Red",
+      "body": "#Red${1}"
+    },
+    "#Cyan": {
+      "prefix": "Cyan",
+      "body": "#Cyan${1}"
+    },
+    "#Magenta": {
+      "prefix": "Magenta",
+      "body": "#Magenta${1}"
     }
   }
 }
