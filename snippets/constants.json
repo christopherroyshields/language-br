@@ -376,6 +376,10 @@
       "prefix": "PB_Canvas_Command",
       "body": "#PB_Canvas_Command${1}"
     },
+    "#PB_Canvas_Container": {
+      "prefix": "PB_Canvas_Container",
+      "body": "#PB_Canvas_Container${1}"
+    },
     "#PB_Canvas_Control": {
       "prefix": "PB_Canvas_Control",
       "body": "#PB_Canvas_Control${1}"
