@@ -1,5 +1,5 @@
 {
-  ".source.purebasic": {
+  ".constant.language.purebasic": {
     "#PB_2DDrawing_AllChannels": {
       "prefix": "PB_2DDrawing_AllChannels",
       "body": "#PB_2DDrawing_AllChannels${1}"

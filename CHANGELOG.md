@@ -1,3 +1,7 @@
+## 1.1.17
+* Constants are now only suggested after typing a hash to clean up autocomplete
+* Updated snippets for base 64 encoding and decoding
+
 ## 1.1.16
 * Added editor defaults for soft indentation with 4 spaces
 * Added some constants introduced in recent PureBasic versions (in example color constants)
