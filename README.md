@@ -10,6 +10,6 @@ If you use PureUnit, check out the [language-pureunit](https://atom.io/packages/
 
 ## Contributing
 
-Contributions are greatly appreciated. Please fork this repository and open a pull request to add snippets or make grammar tweaks.
+Contributions are greatly appreciated! I can only work on this package occasionally. The work is easy but time consuming. Please fork this repository and open a pull request to add snippets or make grammar tweaks. Feel free to report problems, improvement suggestions or feature requests [in the GitHub issue tracker](https://github.com/peterthomashorn/language-purebasic/issues).
 
-See [TextMate language grammars](http://manual.macromates.com/en/language_grammars).
+For information on how to specify the language grammar see: [TextMate language grammars](http://manual.macromates.com/en/language_grammars).
