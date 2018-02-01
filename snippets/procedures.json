@@ -5862,7 +5862,7 @@
     },
     "SendMail (#Mail, Smtp$ [, Port [, Flags [, User$, Password$]]])": {
       "prefix": "SendMail",
-      "body": "SendMail(${1:#Mail})$2",
+      "body": "SendMail(${1:#Mail}, ${2:Smtp$})$3",
       "description": "Send the mail"
     },
     "SendNetworkData (ClientID, *MemoryBuffer, Length)": {
