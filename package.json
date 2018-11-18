@@ -1,17 +1,18 @@
 {
-  "name": "language-purebasic",
-  "main": "./lib/language-purebasic",
-  "version": "1.1.16",
-  "description": "Adds syntax highlighting and snippets to PureBasic files in Atom.",
+  "name": "language-br",
+  "main": "./lib/language-br",
+  "version": "0.0.1",
+  "description": "Adds syntax highlighting and snippets to BR files in Atom.",
   "keywords": [
-    "PureBasic"
+    "Business Rules",
+    "Workstation Basic"
   ],
   "activationCommands": {
     "atom-text-editor": [
-      "language-purebasic:toggle"
+      "language-br:toggle"
     ]
   },
-  "repository": "https://github.com/peterthomashorn/language-purebasic",
+  "repository": "https://github.com/snafoo972/language-br",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
