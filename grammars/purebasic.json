@@ -37,10 +37,10 @@
       "match": "=",
       "name": "keyword.operator.assignment.br"
     },
-    /* {
+    {
       "match": "\\b(?i:Debug|Declare|EnableASM|EnableExplicit|NewList|Enumeration|EndEnumeration|Procedure|ProcedureDLL|ProcedureReturn|EndProcedure|Macro|EndMacro|DataSection|EndDataSection|Structure|Extends|EndStructure|IncludeFile|XIncludeFile|DeclareModule|EndDeclareModule|Module|EndModule|UseModule|UnuseModule)\\b",
       "name": "keyword.other.br"
-    }, */
+    },
     {
       "match": "\\b(?i:CompilerSelect|CompilerIf|CompilerElse|CompilerError|CompilerWarning|CompilerEndIf|CompilerSelect|CompilerCase|CompilerDefault|CompilerEndSelect)\\b",
       "name": "keyword.other.br"
