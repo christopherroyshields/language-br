@@ -3,8 +3,10 @@
   "name": "PureBasic",
   "fileTypes":
   [
-    "pb",
-    "pbi"
+    "br",
+    "brs",
+    "wb",
+    "wbs"
   ],
   "patterns":
   [
@@ -16,7 +18,7 @@
       "name": "string.quoted.double.purebasic"
     },
     {
-      "match": "(;.*)$",
+      "match": "(!.*)$",
       "name": "comment.line.purebasic"
     },
     {
@@ -24,7 +26,7 @@
       "name": "keyword.control.purebasic"
     },
     {
-      "match": "\\b(?i:And|Not|Or|XOr)\\b",
+      "match": "\\b(?i:And|Not|Or|\\!)\\b",
       "name": "keyword.operator.logical.purebasic"
     },
     {
