@@ -1,6 +1,6 @@
 {
   "scopeName": "source.br",
-  "name": "br",
+  "name": "Business Rules",
   "fileTypes":
   [
     "br",
@@ -10,9 +10,6 @@
   ],
   "patterns":
   [
-    {
-      "include": "source.br.pureunit"
-    },
     {
       "match": "\\\"[^\"]*\\\"",
       "name": "string.quoted.double.br"
