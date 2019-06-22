@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## 1.1.17
 * Constants are now only suggested after typing a hash to clean up autocomplete
 * Updated snippets for base 64 encoding and decoding
@@ -70,3 +71,8 @@
 ## 1.0.0 - First Release
 * Most of the stuff was a raw export from the PureBasic compiler
 * Plus minor improvements
+=======
+## 0.1.0 - First Release
+* Every feature added
+* Every bug fixed
+>>>>>>> be676f2c0de5c001ccb2e2d70c618054c0ef786e

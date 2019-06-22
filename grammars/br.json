@@ -47,7 +47,7 @@
       "name": "constant.numeric.br"
     },
     {
-      "match": "^\\d{5}\\b",
+      "match": "^\\d{5}1?\\b",
       "name": "constant.linenumber.br"
     },
     {
