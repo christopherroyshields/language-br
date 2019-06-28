@@ -7,11 +7,7 @@
     "Business Rules",
     "Workstation Basic"
   ],
-  "activationCommands": {
-    "atom-text-editor": [
-      "language-br:toggle"
-    ]
-  },
+  "activationHooks": ["language-br:grammar-used"],
   "repository": "https://github.com/snafoo972/language-br",
   "license": "MIT",
   "engines": {

@@ -1,7 +1,7 @@
 {
   ".source.br": {
     "editor": {
-      "tabLength": 4,
+      "tabLength": 2,
       "tabType": "soft",
       "commentStart": "!"
     }

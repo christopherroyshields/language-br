@@ -1,0 +1,34 @@
+{
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Business Rules!",
+          "submenu": [
+            {
+              "label": "Compile",
+              "command": "language-br:compile"
+            },
+            {
+              "label": "Debug",
+              "command": "language-br:debug"
+            },
+            {
+              "label": "Run",
+              "command": "language-br:run"
+            },
+            {
+              "label": "Add Line Numbers",
+              "command": "language-br:add-line-numbers"
+            },
+            {
+              "label": "Remove Line Numbers",
+              "command": "language-br:strip-line-numbers"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
