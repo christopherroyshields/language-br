@@ -13,12 +13,6 @@
       "description": "Opens file using Fileio",
       "descriptionMoreURL": "http://www.purebasic.com/documentation/array/arraysize.html",
       "leftLabel": "Integer"
-    },
-    "FreeArray(Array())": {
-      "prefix": "FreeArray",
-      "body": "FreeArray(${1:Array()})$2",
-      "description": "Free the array. \"Dim\" has to be called to use it again.",
-      "descriptionMoreURL": "http://www.purebasic.com/documentation/array/freearray.html"
     }
   }
 }

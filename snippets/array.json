@@ -1,24 +1,11 @@
 {
-  ".source.purebasic": {
-    "ArraySize(Array() [, Dimension])": {
-      "prefix": "ArraySize",
-      "body": "ArraySize(${1:Array()})$2",
+  ".source.br": {
+    "udim(Array())": {
+      "prefix": "udim",
+      "body": "udim(${1:Array()})$2",
       "description": "Returns the array size",
       "descriptionMoreURL": "http://www.purebasic.com/documentation/array/arraysize.html",
       "leftLabel": "Integer"
-    },
-    "CopyArray(SourceArray(), DestinationArray())": {
-      "prefix": "CopyArray",
-      "body": "CopyArray(${1:SourceArray()}, ${2:DestinationArray()})$3",
-      "description": "Copy all the elements from the array to the destination array to have two identical arrays",
-      "descriptionMoreURL": "http://www.purebasic.com/documentation/array/copyarray.html",
-      "leftLabel": "Integer"
-    },
-    "FreeArray(Array())": {
-      "prefix": "FreeArray",
-      "body": "FreeArray(${1:Array()})$2",
-      "description": "Free the array. \"Dim\" has to be called to use it again.",
-      "descriptionMoreURL": "http://www.purebasic.com/documentation/array/freearray.html"
     }
   }
 }
