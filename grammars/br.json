@@ -8,6 +8,17 @@
     "wb",
     "wbs"
   ],
+  "folds":[
+    {
+      "type": "if_statement",
+      "start": {
+        "type": "\"then\""
+      },
+      "end": {
+        "type": "\"end if\""
+      }
+    }
+  ],
   "patterns":
   [
     {
@@ -15,60 +26,96 @@
       "name": "string.quoted.double.br"
     },
     {
+      "match": "'[^']*'",
+      "name": "string.quoted.double.br"
+    },
+    {
       "match": "(!.*)$",
       "name": "comment.line.br"
     },
     {
-      "match": "\\b(?i:break|Continue|Default|Else|End|EndIf|EndSelect|ElseIf|Else|For|If|Repeat|Until|While)\\b",
+      "match": "(^\\d{5}\\s*rem.*)$",
+      "name": "comment.line.br"
+    },
+    {
+      "match": "(^\\s*rem.*)$",
+      "name": "comment.line.br"
+    },
+    {
+      "match": "\\b(?i:if|then|else|end if|for|next|do|while|loop|until)\\b",
       "name": "keyword.control.br"
     },
     {
-      "match": "\\b(?i:And|Not|Or|\\!)\\b",
-      "name": "keyword.operator.logical.br"
-    },
-    {
-      "match": "(<|>|<>|<=|>=|!=)",
-      "name": "keyword.operator.comparison.br"
-    },
-    {
-      "match": "=",
+      "match": "(:=|\\+=|\\-=|\\*=|\\/=)",
       "name": "keyword.operator.assignment.br"
     },
     {
-      "match": "\\b(?i:ABS|AIDX|ALTERNATE|AND|ATN|ATTR|BASE|BELL|BORDER|CEIL|CFORM\\$|CHAIN|CHR\\$|CLOSE|CMDKEY|CNT|CNVRT\\$|CODE|COLLATE|CONTINUE|CONV|COS|CURCOL|CURFLD|CURROW|DATA|DATE|DATE\\$|DAYS|DEF|DELETE|DIDX|DIM|DISPLAY|DO|DROP|DUPREC|ELSE|END|ENV\\$|EOF|EOL|ERR|ERROR|EVENT|EXECUTE|EXISTS|EXIT|EXP|EXTERNAL|FIELDS|FILE|FILE\\$|FILENUM|FILES|FKEY|FNEND|FOR|FORM|FP|FREE|FREESP|GOSUB|GOTO|HELP|HELP\\$|HEX\\$|IF|IGNORE|INF|INPUT|INT|INTERNAL|INVP|IOERR|IP|KEY|KEYED|KLN|KPS|KREC|KSTAT\\$|LEN|LET|LIBRARY|LINE|LINES|LINPUT|LINSPP|LOCKED|LOG|LOGIN_NAME\\$|LOOP|LPAD\\$|LREC|LTRM\\$|LWRC\\$|MAT|MAX|MAX\\$|MIN|MIN\\$|MOD|MSG|MSG\\$|MSGBOX|NATIVE|NEWPAGE|NEXT|NOKEY|NONE|NOREC|NOT|OFLOW|ON|OPEN|OPTION|OR|ORD|OUTIN|OUTPUT|PAGEOFLOW|PAUSE|PI|PIC\\$|POS|PRINT|PROC|PROCIN|PROGRAM\\$|RANDOMIZE|READ|REC|RELATIVE|RELEASE|REM|REREAD|RESERVE|RESTORE|RESUME|RETAIN|RETRY|RETURN|REWRITE|RINPUT|RLN|RND|ROUND|RPAD\\$|RPT\\$|RTRM\\$|SEARCH|SELECT|SEQUENTIAL|SERIAL|SETENV|SGN|SHIFT|SIN|SLEEP|SOFLOW|SQR|SRCH|SREP\\$|STATUS|STEP|STOP|STR\\$|SUM|SYSTEM|TAN|TEXT|THEN|TIME\\$|TO|TRACE|UDIM|UNHEX\\$|UPRC\\$|USE|USING|VAL|VARIABLE\\$|VERSION|WBPLATFORM\\$|WBVERSION\\$|WRITE|WSID\\$|XLATE\\$|ZDIV)\\b",
-      "name": "keyword.other.br"
+      "match": "\\b(?i:And|Not|Or)\\b",
+      "name": "keyword.operator.logical.br"
     },
     {
-      "match": "#([\\w_]+)\\b",
+      "match": "(\\~)",
+      "name": "keyword.operator.logical.br"
+    },
+    {
+      "match": "(<|>|<>|<=|>=|~=|==|=)",
+      "name": "keyword.operator.comparison.br"
+    },
+    {
+      "match": "(\\+|\\-|\\*|\\/|\\&)",
+      "name": "keyword.operator.mathematical.br"
+    },
+    {
+      "match": "(\\b(?i:include|define|select|end select|case)\\b)",
       "name": "constant.language.br"
+    },
+    {
+      "match": "^\\d{5}\\b",
+      "name": "constant.linenumber.br"
     },
     {
       "match": "\\b\\d+(\\.\\d+)?\\b",
       "name": "constant.numeric.br"
     },
     {
-      "match": "^\\d{5}1?\\b",
-      "name": "constant.linenumber.br"
+      "match": "(\\b(?i:BR_FileName\\$|BRErr\\$|CForm\\$|Chr\\$|Cnvrt\\$|Date\\$|Decrypt\\$|Encrypt\\$|Env\\$|File\\$|Help\\$|Hex\\$|KStat\\$|Login_Name\\$|LPad\\$|LTrm\\$|Lwrc\\$|Max\\$|Min\\$|Msg\\$|OS_FileName\\$|Pic\\$|Program\\$|RPad\\$|Rpt\\$|RTrm\\$|Session\\$|SRep\\$|Str\\$|Time\\$|Trim\\$|UnHex\\$|UprC\\$|UserID\\$|Variable\\$|WBPlatform\\$|WBVersion\\$|WSID\\$|Xlate\\$))",
+      "name": "entity.name.function.br"
     },
     {
-      "match": "[^\\.](\\b\\w[\\w\\d]*|[^\\w]@[\\w+\\d]*)\\(",
-      "captures":
-      {
-        "1":
-        {
-          "name": "entity.name.function.br"
-        }
-      }
+      "match": "(\\b(?i:Abs|AIdx|Atn|Bell|Ceil|CmdKey|Cnt|Code|CoS|CurCol|CurFld|CurRow|CurTab|CurWindow|Date|Days|Debug_Str|DIdx|Err|Exists|Exp|File|FileNum|FKey|FP|FreeSp|Inf|Int|IP|KLn|KPs|KRec|Len|Line|Lines|LineSPP|Log|LRec|Mat2Str|Max|Min|Mod|Msg|MsgBox|NewPage|Next|NxtCol|Nxtfld|NxtRow|Ord|Pi|Pos|Printer_List|ProcIn|Rec|Rem|RLn|Rnd|Round|Serial|SetEnv|Sgn|Sin|Sleep|Sqr|Srch|Str2Mat|Sum|Tab|Tan|Timer|UDim|Val|Version)\\b)",
+      "name": "entity.name.function.br"
     },
     {
-      "match": "^((?i)def\\s \\bfn\\w+\\b)",
-      "captures":
-      {
-        "1":
-        {
-          "name": "entity.name.function.br"
-        }
-      }
+      "match": "\\b(?i:ALTERNATE|ATTR|BASE|BORDER|DISPLAY|DROP|EVENT|EXTERNAL|FILES|IGNORE|INTERNAL|INVP|KEYED|NATIVE|NOKEY|NONE|OUTIN|OUTPUT|RELATIVE|RELEASE|RESERVE|RESUME|RETAIN|SELECT|SEQUENTIAL|SHIFT|TO|USE|USING)\\b",
+      "name": "keyword.other.br"
+    },
+    {
+      "match": "\\b(?i:FREE|HELP|SEARCH|STATUS|STEP|SYSTEM|TRACE)\\b",
+      "name": "keyword.command.br"
+    },
+    {
+      "match": "\\b(?i:CONV|DUPREC|EOF|EOL|ERROR|IOERR|LOCKED|NOKEY|NOREC|OFLOW|PAGEOFLOW|SOFLOW|ZDIV)\\b",
+      "name": "keyword.errorcondition.br"
+    },
+    {
+      "match": "\\b(?i:CHAIN|CLOSE|COLLATE|CONTINUE|STOP|DATA|DEF|DELETE|DIM|END|EXECUTE|EXIT|FIELDS|FNEND|FORM|GOSUB|GOTO|INPUT|KEY|LET|LIBRARY|LINPUT|MAT|ON|OPEN|OPTION|PAUSE|PRINT|PROC|RANDOMIZE|READ|REREAD|RESTORE|RETRY|RETURN|REWRITE|RINPUT|WRITE)\\b",
+      "name": "keyword.statement.br"
+    },
+    {
+      "match": "(\\b(?i:fn)\\w[\\w\\d]*\\$)",
+      "name": "entity.name.function.br"
+    },
+    {
+      "match": "(\\b(?i:fn)\\w[\\w\\d]*\\b)",
+      "name": "entity.name.function.br"
+    },
+    {
+      "match": "(\\b(\\w[\\w\\d]*)\\$)",
+      "name": "variable.stringvar.br"
+    },
+    {
+      "match": "(\\b(\\w[\\w\\d]*)\\b)",
+      "name": "variable.numericvar.br"
     }
   ]
 }
