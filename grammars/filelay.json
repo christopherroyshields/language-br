@@ -1,74 +1,24 @@
 {
-  "scopeName": "source.br",
-  "name": "Business Rules",
+  "scopeName": "source.lay",
+  "name": "FileIO File Layouts",
   "fileTypes":
   [
-    "br",
-    "brs",
-    "wb",
-    "wbs"
+    "lay",
+    "fio"
   ],
   "patterns":
   [
-    {
-      "match": "\\\"[^\"]*\\\"",
-      "name": "string.quoted.double.br"
-    },
     {
       "match": "(!.*)$",
       "name": "comment.line.br"
     },
     {
-      "match": "\\b(?i:break|Continue|Default|Else|End|EndIf|EndSelect|ElseIf|Else|For|If|Repeat|Until|While)\\b",
+      "match": "\\b(?i:#EOF#)\\b",
       "name": "keyword.control.br"
     },
     {
-      "match": "\\b(?i:And|Not|Or|\\!)\\b",
-      "name": "keyword.operator.logical.br"
-    },
-    {
-      "match": "(<|>|<>|<=|>=|!=)",
-      "name": "keyword.operator.comparison.br"
-    },
-    {
-      "match": "=",
-      "name": "keyword.operator.assignment.br"
-    },
-    {
-      "match": "\\b(?i:ABS|AIDX|ALTERNATE|AND|ATN|ATTR|BASE|BELL|BORDER|CEIL|CFORM\\$|CHAIN|CHR\\$|CLOSE|CMDKEY|CNT|CNVRT\\$|CODE|COLLATE|CONTINUE|CONV|COS|CURCOL|CURFLD|CURROW|DATA|DATE|DATE\\$|DAYS|DEF|DELETE|DIDX|DIM|DISPLAY|DO|DROP|DUPREC|ELSE|END|ENV\\$|EOF|EOL|ERR|ERROR|EVENT|EXECUTE|EXISTS|EXIT|EXP|EXTERNAL|FIELDS|FILE|FILE\\$|FILENUM|FILES|FKEY|FNEND|FOR|FORM|FP|FREE|FREESP|GOSUB|GOTO|HELP|HELP\\$|HEX\\$|IF|IGNORE|INF|INPUT|INT|INTERNAL|INVP|IOERR|IP|KEY|KEYED|KLN|KPS|KREC|KSTAT\\$|LEN|LET|LIBRARY|LINE|LINES|LINPUT|LINSPP|LOCKED|LOG|LOGIN_NAME\\$|LOOP|LPAD\\$|LREC|LTRM\\$|LWRC\\$|MAT|MAX|MAX\\$|MIN|MIN\\$|MOD|MSG|MSG\\$|MSGBOX|NATIVE|NEWPAGE|NEXT|NOKEY|NONE|NOREC|NOT|OFLOW|ON|OPEN|OPTION|OR|ORD|OUTIN|OUTPUT|PAGEOFLOW|PAUSE|PI|PIC\\$|POS|PRINT|PROC|PROCIN|PROGRAM\\$|RANDOMIZE|READ|REC|RELATIVE|RELEASE|REM|REREAD|RESERVE|RESTORE|RESUME|RETAIN|RETRY|RETURN|REWRITE|RINPUT|RLN|RND|ROUND|RPAD\\$|RPT\\$|RTRM\\$|SEARCH|SELECT|SEQUENTIAL|SERIAL|SETENV|SGN|SHIFT|SIN|SLEEP|SOFLOW|SQR|SRCH|SREP\\$|STATUS|STEP|STOP|STR\\$|SUM|SYSTEM|TAN|TEXT|THEN|TIME\\$|TO|TRACE|UDIM|UNHEX\\$|UPRC\\$|USE|USING|VAL|VARIABLE\\$|VERSION|WBPLATFORM\\$|WBVERSION\\$|WRITE|WSID\\$|XLATE\\$|ZDIV)\\b",
+      "match": "\\b(?i:date\\((julian|serial|(mm|dd|cc|yy|m|d|c|y)(-|\\/|)(mm|dd|cc|yy|m|d|c|y)(-|\\/|)(mm|dd|cc|yy|m|d|c|y)(-|\\/|)(mm|dd|cc|yy|m|d|c|y|))\\))\\b",
       "name": "keyword.other.br"
-    },
-    {
-      "match": "#([\\w_]+)\\b",
-      "name": "constant.language.br"
-    },
-    {
-      "match": "\\b\\d+(\\.\\d+)?\\b",
-      "name": "constant.numeric.br"
-    },
-    {
-      "match": "^\\d{5}1?\\b",
-      "name": "constant.linenumber.br"
-    },
-    {
-      "match": "[^\\.](\\b\\w[\\w\\d]*|[^\\w]@[\\w+\\d]*)\\(",
-      "captures":
-      {
-        "1":
-        {
-          "name": "entity.name.function.br"
-        }
-      }
-    },
-    {
-      "match": "^((?i)def\\s \\bfn\\w+\\b)",
-      "captures":
-      {
-        "1":
-        {
-          "name": "entity.name.function.br"
-        }
-      }
     }
   ]
 }
