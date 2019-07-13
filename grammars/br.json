@@ -26,6 +26,10 @@
       "name": "string.quoted.double.br"
     },
     {
+      "match": "'[^']*'",
+      "name": "string.quoted.double.br"
+    },
+    {
       "match": "(!.*)$",
       "name": "comment.line.br"
     },
@@ -74,14 +78,6 @@
       "name": "constant.numeric.br"
     },
     {
-      "match": "(\\b(?i:fn)\\w[\\w\\d]*\\$)",
-      "name": "entity.name.function.br"
-    },
-    {
-      "match": "(\\b(?i:fn)\\w[\\w\\d]*\\b)",
-      "name": "entity.name.function.br"
-    },
-    {
       "match": "(\\b(?i:BR_FileName\\$|BRErr\\$|CForm\\$|Chr\\$|Cnvrt\\$|Date\\$|Decrypt\\$|Encrypt\\$|Env\\$|File\\$|Help\\$|Hex\\$|KStat\\$|Login_Name\\$|LPad\\$|LTrm\\$|Lwrc\\$|Max\\$|Min\\$|Msg\\$|OS_FileName\\$|Pic\\$|Program\\$|RPad\\$|Rpt\\$|RTrm\\$|Session\\$|SRep\\$|Str\\$|Time\\$|Trim\\$|UnHex\\$|UprC\\$|UserID\\$|Variable\\$|WBPlatform\\$|WBVersion\\$|WSID\\$|Xlate\\$))",
       "name": "entity.name.function.br"
     },
@@ -90,8 +86,36 @@
       "name": "entity.name.function.br"
     },
     {
-      "match": "\\b(?i:ALTERNATE|ATTR|BASE|BORDER|CHAIN|CLOSE|COLLATE|CONTINUE|CONV|DATA|DEF|DELETE|DIM|DISPLAY|DROP|DUPREC|END|EOF|EOL|ERROR|EVENT|EXECUTE|EXIT|EXP|EXTERNAL|FIELDS|FILENUM|FILES|FNEND|FORM|FREE|GOSUB|GOTO|HELP|IGNORE|INPUT|INTERNAL|INVP|IOERR|KEY|KEYED|LET|LIBRARY|LINPUT|LOCKED|MAT|NATIVE|NOKEY|NONE|NOREC|OFLOW|ON|OPEN|OPTION|OUTIN|OUTPUT|PAGEOFLOW|PAUSE|PRINT|PROC|RANDOMIZE|READ|RELATIVE|RELEASE|REREAD|RESERVE|RESTORE|RESUME|RETAIN|RETRY|RETURN|REWRITE|RINPUT|SEARCH|SELECT|SEQUENTIAL|SHIFT|SOFLOW|STATUS|STEP|STOP|SYSTEM|TO|TRACE|USE|USING|WRITE|ZDIV)\\b",
+      "match": "\\b(?i:ALTERNATE|ATTR|BASE|BORDER|DISPLAY|DROP|EVENT|EXTERNAL|FILES|IGNORE|INTERNAL|INVP|KEYED|NATIVE|NOKEY|NONE|OUTIN|OUTPUT|RELATIVE|RELEASE|RESERVE|RESUME|RETAIN|SELECT|SEQUENTIAL|SHIFT|TO|USE|USING)\\b",
       "name": "keyword.other.br"
+    },
+    {
+      "match": "\\b(?i:FREE|HELP|SEARCH|STATUS|STEP|SYSTEM|TRACE)\\b",
+      "name": "keyword.command.br"
+    },
+    {
+      "match": "\\b(?i:CONV|DUPREC|EOF|EOL|ERROR|IOERR|LOCKED|NOKEY|NOREC|OFLOW|PAGEOFLOW|SOFLOW|ZDIV)\\b",
+      "name": "keyword.errorcondition.br"
+    },
+    {
+      "match": "\\b(?i:CHAIN|CLOSE|COLLATE|CONTINUE|STOP|DATA|DEF|DELETE|DIM|END|EXECUTE|EXIT|FIELDS|FNEND|FORM|GOSUB|GOTO|INPUT|KEY|LET|LIBRARY|LINPUT|MAT|ON|OPEN|OPTION|PAUSE|PRINT|PROC|RANDOMIZE|READ|REREAD|RESTORE|RETRY|RETURN|REWRITE|RINPUT|WRITE)\\b",
+      "name": "keyword.statement.br"
+    },
+    {
+      "match": "(\\b(?i:fn)\\w[\\w\\d]*\\$)",
+      "name": "entity.name.function.br"
+    },
+    {
+      "match": "(\\b(?i:fn)\\w[\\w\\d]*\\b)",
+      "name": "entity.name.function.br"
+    },
+    {
+      "match": "(\\b(\\w[\\w\\d]*)\\$)",
+      "name": "variable.stringvar.br"
+    },
+    {
+      "match": "(\\b(\\w[\\w\\d]*)\\b)",
+      "name": "variable.numericvar.br"
     }
   ]
 }
