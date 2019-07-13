@@ -1,0 +1,11 @@
+".source.br":
+  "Def Fn ... fnend":
+    "prefix": "def"
+    "body": """
+    def fn$1($2)
+      $3
+    fnend
+    """
+    "description": "Define Function"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?title=Def"
+    "leftLabel": "Integer"
