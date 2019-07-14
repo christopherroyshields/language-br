@@ -259,189 +259,165 @@
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Mod",
     "leftLabel": "Integer"
-  "Msg":
+  "Msg(\"<KB>\",<string>)":
     "prefix": "Msg",
     "body": "Msg",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Msg",
     "leftLabel": "Integer"
-  "MsgBox":
-    "prefix": "MsgBox",
-    "body": "MsgBox",
+  "Msgbox(<PROMPT$>[, <TITLE$>][, <BUTTONS$>][, <ICON$>])":
+    "prefix": "msgbox",
+    "body": "msgbox('${1:what is my purpose?}','${2:Title}','${3:Yn}','${icon$}')",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=MsgBox",
     "leftLabel": "Integer"
-  "NewPage":
-    "prefix": "NewPage",
-    "body": "NewPage",
+  "Newpage":
+    "prefix": "newpage",
+    "body": "newpage",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=NewPage",
     "leftLabel": "Integer"
-  "Next":
-    "prefix": "Next",
-    "body": "Next",
-    "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Next",
-    "leftLabel": "Integer"
-  "NxtCol":
-    "prefix": "NxtCol",
-    "body": "NxtCol",
-    "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=NxtCol",
-    "leftLabel": "Integer"
-  "Nxtfld":
-    "prefix": "Nxtfld",
-    "body": "Nxtfld",
-    "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
-    "leftLabel": "Integer"
-  "NxtRow":
-    "prefix": "NxtRow",
-    "body": "NxtRow",
-    "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
-    "leftLabel": "Integer"
-  "Ord":
-    "prefix": "Ord",
-    "body": "Ord",
-    "description": "Builds key from record data.",
+  "Ord(<string>)":
+    "prefix": "ord",
+    "body": "ord(${string}$)$0",
+    "description": "ASCII ordinate value (from 0 to 255) of the first character in the string$.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
   "Pi":
-    "prefix": "Pi",
-    "body": "Pi",
+    "prefix": "pi",
+    "body": "pi",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
   "Pos":
-    "prefix": "Pos",
-    "body": "Pos",
+    "prefix": "pos",
+    "body": "pos",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
   "Printer_List":
-    "prefix": "Printer_List",
+    "prefix": "printer_list",
     "body": "abs",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs",
     "leftLabel": "Integer"
   "ProcIn":
-    "prefix": "ProcIn",
-    "body": "ProcIn",
+    "prefix": "procin",
+    "body": "procin",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=ProcIn",
     "leftLabel": "Integer"
   "Rec":
-    "prefix": "Rec",
-    "body": "Rec",
+    "prefix": "rec",
+    "body": "rec",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rec",
     "leftLabel": "Integer"
   "Rem":
-    "prefix": "Rem",
-    "body": "Rem",
+    "prefix": "rem",
+    "body": "rem",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rem",
     "leftLabel": "Integer"
   "RLn":
-    "prefix": "RLn",
-    "body": "RLn",
+    "prefix": "rln",
+    "body": "rln",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=RLn",
     "leftLabel": "Integer"
   "Rnd":
-    "prefix": "Rnd",
-    "body": "Rnd",
+    "prefix": "rnd",
+    "body": "rnd",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rnd",
     "leftLabel": "Integer"
   "Round":
-    "prefix": "Round",
-    "body": "Round",
+    "prefix": "round",
+    "body": "round",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Round",
     "leftLabel": "Integer"
   "Serial":
-    "prefix": "Serial",
-    "body": "Serial",
+    "prefix": "serial",
+    "body": "serial",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Serial",
     "leftLabel": "Integer"
   "SetEnv":
-    "prefix": "SetEnv",
-    "body": "SetEnv",
+    "prefix": "setenv",
+    "body": "setenv",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=SetEnv",
     "leftLabel": "Integer"
   "Sgn":
-    "prefix": "Sgn",
-    "body": "Sgn",
+    "prefix": "sgn",
+    "body": "sgn",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sgn",
     "leftLabel": "Integer"
   "Sin":
-    "prefix": "Sin",
-    "body": "Sin",
+    "prefix": "sin",
+    "body": "sin",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sin",
     "leftLabel": "Integer"
   "Sleep":
-    "prefix": "Sleep",
-    "body": "Sleep",
+    "prefix": "sleep",
+    "body": "sleep",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sleep",
     "leftLabel": "Integer"
   "Sqr":
-    "prefix": "Sqr",
-    "body": "Sqr",
+    "prefix": "sqr",
+    "body": "sqr",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sqr",
     "leftLabel": "Integer"
   "Srch":
-    "prefix": "Srch",
-    "body": "Srch",
+    "prefix": "srch",
+    "body": "srch",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Srch",
     "leftLabel": "Integer"
   "Str2Mat":
-    "prefix": "Str2Mat"
-    "body": "absStr2Mat",
+    "prefix": "str2mat"
+    "body": "absstr2mat",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=absStr2Mat",
     "leftLabel": "Integer"
   "Sum":
-    "prefix": "Sum",
-    "body": "Sum",
+    "prefix": "sum",
+    "body": "sum",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sum",
     "leftLabel": "Integer"
   "Tab":
-    "prefix": "Tab",
-    "body": "Tab",
+    "prefix": "tab",
+    "body": "tab",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Tab",
     "leftLabel": "Integer"
   "Tan":
-    "prefix": "Tan",
-    "body": "Tan",
+    "prefix": "tan",
+    "body": "tan",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Tan",
     "leftLabel": "Integer"
   "Timer":
-    "prefix": "Tim",
-    "body": "Tim",
+    "prefix": "tim",
+    "body": "tim",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Tim",
     "leftLabel": "Integer"
   "UDim":
-    "prefix": "UDim",
-    "body": "UDim",
+    "prefix": "udim",
+    "body": "udim",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=UDim",
     "leftLabel": "Integer"
   "Val":
-    "prefix": "Val",
-    "body": "Val",
+    "prefix": "val",
+    "body": "val",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Val",
     "leftLabel": "Integer"
