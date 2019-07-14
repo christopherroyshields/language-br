@@ -1,0 +1,128 @@
+".source.br":
+  "fnGetFileNumber(;start,count)":
+    "prefix": "fnGetFileNumber",
+    "body" : "fnGetFileNumber",
+    "description": "Returns the next available file handle.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnGetFileNumber",
+    "leftLabel": "Integer"
+
+  "open #(FileHandle:=fnGetFileNumber)":
+    "prefix": "OpenfnGetFileNumber",
+    "body" : "open #(${1:filehandle}:=fnGetFileNumber): ",
+    "description": "Returns the next available file handle.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnGetFileNumber",
+    "leftLabel": "Code Snippet"
+
+  "fnOpen(LayoutName$, Mat F$, Mat F, Mat Form$; Input, KeyNum)":
+    "prefix": "fnOpen",
+    "body": "fnOpen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)",
+    "description": "Opens file using Fileio, returning the file handle",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnOpen",
+    "leftLabel": "Integer"
+
+  "fnBuildKey$(\"layout\",mat F$,mat F,Keynum)":
+    "prefix": "fnBuildKey",
+    "body": "fnBuildKey$(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},${2:key})",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnBuildKey.24",
+    "leftLabel": "String"
+
+  "FnMakeUniqueKey$*255(FileNumber;Random,Prepend$)":
+    "prefix": "fnMakeUniqueKey",
+    "body": "FnMakeUniqueKey$(${1:filenum})",
+    "description": "Generate Unique Key For File",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnMakeUniqueKey.24",
+    "leftLabel": "String"
+
+  "fnOpen(LayoutName$, Mat F$, Mat F, Mat Form$; Input, KeyNum) with Dims":
+    "prefix": "fnOpenDims",
+    "body": """
+      dim ${1:layout}, ${1:layout}$(1)*${2:longest},${1:layout}(1)
+      let ${1:layout}=fnOpen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
+    """,
+    "description": "Opens file using Fileio, returning the file handle, and Dimming the necessary Variables.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnOpen",
+    "leftLabel": "Code Snippet"
+
+  "fnOpen() ... Read Loop":
+    "prefix": "fnOpenReadLoop",
+    "body": """
+      dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
+
+      let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
+      restore #${1:layout}: error IGNORE
+      do until File(${1:layout})
+         read #${1:layout}, using Form$(${1:layout}) : Mat ${1:layout}$,Mat ${1:layout} eof IGNORE
+         if File(${1:layout})=0 then
+            ${3:}
+         end if
+      loop
+      close #${1:layout}:
+    """,
+    "description": "Opens file using Fileio and reads all records of the file in a loop.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
+    "leftLabel": "Code Snippet"
+
+  "fnOpen() ... Read One":
+    "prefix": "fnOpenReadOne",
+    "body": """
+      dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
+      let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
+      read #${1:layout}, using Form$(${1:layout}), key=${1:layout}key$ : Mat ${1:layout}$,Mat ${1:layout}
+      close #${1:layout}:
+    """,
+    "description": "Opens file and reads the given record by Key",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
+    "leftLabel": "Code Snippet"
+
+  "FileIO Open Function":
+    "prefix": "FileIoOpenFunction",
+    "body": """
+      dim LinkageEstablished
+      def fnEstablishLinkage
+         if ~LinkageEstablished then
+            library "fileio" : fnOpenFile,Fnclosefile,Fngetfilenumber,Fnkey$,FnBuildKey$,Fnreadlayoutarrays,Fndoeslayoutexist,Fnreadallkeys,fnReadRelativeDescription$,fnReadRelUnopenedDescription$,fnReadRelUnopenedNumber,fnUpdateFile,fnLog,fnLogArray,fnErrLog,fnReadLayouts,Fnmakeuniquekey$,FnDisplayLength,FnLength,FnReadDescription$,FnReadUnopenedDescription$,fnReadRecordWhere$,fnUniqueKey,fnReadNumber,fnReadUnopenedNumber,fnReadRelativeNumber,fnNotInFile,fnDataCrawler,fnDataEdit
+            library "fileio" : fnMakeSubProc,fnReadMatchingKeys,fnReadAllNewKeys,fnReadFilterKeys,fnReadEntireLayout,fnReadLayoutHeader,fnReadSubs,fnReadLayoutPath$,fnReadKeyFiles, fnAskCombo$,fnRunProcFile,fnBuildProcFile,fnDataShow
+            library "screenio" : fnCallScreen$,fnFindSubscript,fnFm$,fnfm,fnDisplayScreen,fnGetUniqueName$,fnIsInputSpec,fnIsOutputSpec,fnDays,fnBR42
+            let linkageEstablished=1
+         end if
+      fnend
+      !
+      ! #Autonumber# 99000,10
+      OPEN: ! ***** Function To Call Library Openfile And Proc Subs
+           def Fnopen(Filename$*255, Mat F$, Mat F, Mat Form$; Inputonly, Keynum, Dont_Sort_Subs, Path$*255, Mat Descr$, Mat Field_Widths,Supress_Prompt,Ignore_Errors,___,Index)
+              dim _FileIOSubs$(1)*800, _Loadedsubs$(1)*80
+              let Fnopen=Fnopenfile(Filename$, Mat F$, Mat F, Mat Form$, Inputonly, Keynum, Dont_Sort_Subs, Path$, Mat Descr$, Mat Field_Widths, Mat _FileIOSubs$, Supress_Prompt,Ignore_Errors,Program$)
+              if Srch(_Loadedsubs$,Uprc$(Filename$))<=0 then : mat _Loadedsubs$(Udim(_Loadedsubs$)+1) : let _Loadedsubs$(Udim(_Loadedsubs$))=Uprc$(Filename$) : for Index=1 to Udim(Mat _Fileiosubs$) : execute (_Fileiosubs$(Index)) : next Index
+           fnend
+
+     Ignore: Continue
+    """,
+    "description": "The standard fnOpenFile function that needs to be included in all your programs when using FileIO.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnOpen_Function",
+    "leftLabel": "Code Snippet"
+
+  "fnOpen() ... Write":
+    "prefix": "fnOpenWrite",
+    "body": """
+       ! FileIO Dimensions
+       dim Form$(1)*255
+       dim ${1:layout}, ${1:layout}$(1)*256,${1:layout}(1)
+
+       ! Open the file
+       let ${1:layout}=Fnopen("${1:layout}",Mat ${1:layout}$,Mat ${1:layout},Mat Form$)
+
+       ! Set Values
+       let ${1:layout}$(${2:prefix}_${3:subscript})=${4:}
+       let ${1:layout}$(${2:prefix}_${3:subscript})=$0
+
+       ! Save The Record
+       write #${1:layout}, using Form$(${1:layout}) : Mat ${1:layout}$,Mat ${1:layout}
+
+       ! Close DataFile
+       let fnCloseFile(${1:layout},"${1:layout}")
+    """,
+    "description": "Opens file and updates a record.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
+    "leftLabel": "Code Snippet"
+  
