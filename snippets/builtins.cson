@@ -124,7 +124,7 @@
   "Exists(<filename>)":
     "prefix": "exists",
     "body": "exists($1:${filename$})",
-    "description": "Builds key from record data.",
+    "description": "The exists internal function returns a nonzero value if the specified file (PROC or program)exists and the user has read privileges. If one or both of these conditions is false, exists returns a value of zero. NOTE that on single-user systems, all files have read privileges for the current user.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Exists",
     "leftLabel": "Integer"
   "Exp(<numeric expression>)":
@@ -136,7 +136,15 @@
   "File(<file handle>)":
     "prefix": "file",
     "body": "file(${1:filenum})$0",
-    "description": "Builds key from record data.",
+    "description": """
+      The File internal function returns the numeric value that specifies the status of file associated with the File Handle.
+      -1 	File not opened.
+      0 	Operation performed successfully.
+      10 	End of file occurred during input.
+      11 	End of file occurred during output.
+      20 	Transmission error during input.
+      21 	Transmission error during output.
+    """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=File_(internal_function)",
     "leftLabel": "Integer"
   "Filenum":
@@ -202,7 +210,7 @@
   "Len(<string>)":
     "prefix": "len",
     "body": "len(${string}$)$0",
-    "description": "Builds key from record data.",
+    "description": "The Len(string$) internal function returns the number of characters in variable string$.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Len",
     "leftLabel": "Integer"
   "Line":
@@ -238,7 +246,7 @@
   "Mat2Str(MAT <Array Name>, <String Variable> [, [MAT] <Delimiter$>] [, \"<Quote-Type>] [:] [<trim>]\")":
     "prefix": "mat2str"
     "body": "mat2str( MAT ${1:array$}, ${2:str$}, \",\")",
-    "description": "Builds key from record data.",
+    "description": "Mat2Str internal function which converts an array to a string",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Mat2Str",
     "leftLabel": "Integer"
   "Max(<value>,<value>[,...])":
@@ -250,180 +258,209 @@
   "Min(<value>,<value>[,...])":
     "prefix": "Min",
     "body": "Min",
-    "description": "Builds key from record data.",
+    "description": "The Min internal function returns the smallest numeric value in the set of numbers inside parentheses (X1, X2 and so on). ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Min",
     "leftLabel": "Integer"
   "Mod(<numerator>, <denominator>)":
     "prefix": "Mod",
     "body": "Mod",
-    "description": "Builds key from record data.",
+    "description": "The Mod internal function returns the remainder of the numerator divided by the denominator. In other words, it is the remainder left after the division of one integer by another ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Mod",
     "leftLabel": "Integer"
   "Msg(\"<KB>\",<string>)":
     "prefix": "Msg",
     "body": "Msg",
-    "description": "Builds key from record data.",
+    "description": "The MSG internal function (without the dollar sign) is only available for Windows & CS versions. This should not be confused with Msg$.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Msg",
     "leftLabel": "Integer"
   "Msgbox(<PROMPT$>[, <TITLE$>][, <BUTTONS$>][, <ICON$>])":
     "prefix": "msgbox",
     "body": "msgbox('${1:what is my purpose?}','${2:Title}','${3:Yn}','${icon$}')",
-    "description": "Builds key from record data.",
+    "description": "The MsgBox Internal Function will display a Windows Message Box. It has four possible parameters:",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=MsgBox",
     "leftLabel": "Integer"
   "Newpage":
     "prefix": "newpage",
     "body": "newpage",
-    "description": "Builds key from record data.",
+    "description": "The NewPage internal function returns a character which, when printed, causes the printer to do a form feed or the screen to clear.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=NewPage",
     "leftLabel": "Integer"
   "Ord(<string>)":
     "prefix": "ord",
     "body": "ord(${string}$)$0",
     "description": "ASCII ordinate value (from 0 to 255) of the first character in the string$.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Ord",
     "leftLabel": "Integer"
   "Pi":
     "prefix": "pi",
     "body": "pi",
-    "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
+    "description": "Returns the mathematical constant of 3.14159265358979",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Pi",
     "leftLabel": "Integer"
-  "Pos":
+  "Pos(<string>,[^]<string>,[[-]<start>])":
     "prefix": "pos",
-    "body": "pos",
-    "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
+    "body": "Pos(${1:A$},${2:B$})$0",
+    "description": "Returns the position of the first character of a substring in str1$ that matches str2$.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Pos",
     "leftLabel": "Integer"
-  "Printer_List":
+  "Printer_List(<Mat array name>)":
     "prefix": "printer_list",
-    "body": "abs",
-    "description": "Builds key from record data.",
+    "body": "printer_list(mat ${1:A}$)$0",
+    "description": "Returns the number of elements in A$ after redimensioning A$ to the number of active Windows printers.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs",
     "leftLabel": "Integer"
   "ProcIn":
     "prefix": "procin",
     "body": "procin",
-    "description": "Builds key from record data.",
+    "description": "Returns 0 if input is from the screen. Returns 1 if input is from a procedure file.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=ProcIn",
     "leftLabel": "Integer"
-  "Rec":
+  "Rec(<file ref>)":
     "prefix": "rec",
-    "body": "rec",
-    "description": "Builds key from record data.",
+    "body": "rec(${1:filenum})$0",
+    "description": "Returns the number of the record last processed in file N.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rec",
     "leftLabel": "Integer"
-  "Rem":
+  "Rem(<numerator>, <denominator>)":
     "prefix": "rem",
-    "body": "rem",
-    "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rem",
+    "body": "rem(${1:numberator},${2:denominator})",
+    "description": "Returns the remainder of the numerator divided by the denominator.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Rem_(internal_function)",
     "leftLabel": "Integer"
-  "RLn":
+  "RLn(<file handle>[,<new record length>])":
     "prefix": "rln",
-    "body": "rln",
-    "description": "Builds key from record data.",
+    "body": "rln(${1:filenum},${2:newlength})$0",
+    "description": "returns the record length of an open file handle N.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=RLn",
     "leftLabel": "Integer"
-  "Rnd":
+  "RND[(<numeric expression>)]":
     "prefix": "rnd",
-    "body": "rnd",
-    "description": "Builds key from record data.",
+    "body": "int(rnd*${1:100}+1)$0",
+    "description": "Returns a random number between 0 and 1.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rnd",
     "leftLabel": "Integer"
-  "Round":
+  "Round(<numeric expression>,<decimals>)":
     "prefix": "round",
-    "body": "round",
-    "description": "Builds key from record data.",
+    "body": "round(${1:number})",
+    "description": "Calculates the value of the first value rounded to the specified number of decimal places. ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Round",
     "leftLabel": "Integer"
   "Serial":
     "prefix": "serial",
     "body": "serial",
-    "description": "Builds key from record data.",
+    "description": "returns the serial number assigned to this copy of Business Rules!. ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Serial",
     "leftLabel": "Integer"
-  "SetEnv":
+  "SetEnv(<field>,<value>)":
     "prefix": "setenv",
-    "body": "setenv",
-    "description": "Builds key from record data.",
+    "body": "setenv(${1:field},${2:value})$0",
+    "description": "Sets session based environmental variables in Business Rules!.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=SetEnv",
     "leftLabel": "Integer"
-  "Sgn":
+  "Sgn(<X>)":
     "prefix": "sgn",
-    "body": "sgn",
-    "description": "Builds key from record data.",
+    "body": "sgn(${1:number})$0",
+    "description": "Returns a value which identifies whether a numeric value is negative, positive or zero.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sgn",
     "leftLabel": "Integer"
   "Sin":
     "prefix": "sin",
-    "body": "sin",
-    "description": "Builds key from record data.",
+    "body": "sin(${1:number})$0",
+    "description": "Trigonometric function that returns the sine of X in radians.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sin",
     "leftLabel": "Integer"
-  "Sleep":
+  "Sleep(<seconds>)":
     "prefix": "sleep",
-    "body": "sleep",
-    "description": "Builds key from record data.",
+    "body": "sleep(${1:seconds})$0",
+    "description": "The Sleep internal function causes the processor to wait the specified number of seconds before continuing execution. It does not tie up the processor while waiting, which is especially important for multi-user systems.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sleep",
     "leftLabel": "Integer"
-  "Sqr":
+  "Sqr(<numeric expression>)":
     "prefix": "sqr",
-    "body": "sqr",
-    "description": "Builds key from record data.",
+    "body": "sqr(${1:number})$0",
+    "description": "Returns the square root of its argument.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sqr",
     "leftLabel": "Integer"
-  "Srch":
+  "Srch(<array-name$>,[^]<argument$>[,<row>])":
     "prefix": "srch",
-    "body": "srch",
-    "description": "Builds key from record data.",
+    "body": "srch(mat ${1:a}$,'^${2:search}')$0",
+    "description": """
+      Searches an array and returns the row number matching the argument.
+      If the argument is not found, then either 0 (BR 4.1 and below) or -1 (BR 4.2 and above).
+      The argument must be the same data type (string or numeric) as the array. The optional \"row\"
+      parameter defines the starting array element for the search.
+    """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Srch",
     "leftLabel": "Integer"
-  "Str2Mat":
+  "Str2Mat(<string variable>, MAT <array name>, [MAT] <delimiter$>, [<quote-type:trim>])":
     "prefix": "str2mat"
-    "body": "absstr2mat",
-    "description": "Builds key from record data.",
+    "body": "str2mat(${1:string}$,mat ${2:array}$,\"${3:,}\")$0",
+    "description": """
+      The Str2Mat Internal Function will split a string variable based on a
+      delimiter and place the resulting strings into an array which STR2MAT
+      dynamically re-dimensions. The string to mat and mat to string functions
+      have been extended to ease parsing of CSV and XML data (as of 4.3).
+    """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=absStr2Mat",
     "leftLabel": "Integer"
-  "Sum":
+  "Sum(<numeric array>)":
     "prefix": "sum",
-    "body": "sum",
-    "description": "Builds key from record data.",
+    "body": "sum(${1:NumberArray})$0",
+    "description": """
+      The Sum internal function returns the sum of all the elements in the numeric array named.
+      SUM also works with multi-dimensional matrices.
+    """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sum",
     "leftLabel": "Integer"
-  "Tab":
+  "Tab(<col>)":
     "prefix": "tab",
-    "body": "tab",
-    "description": "Builds key from record data.",
+    "body": "tab(${1:col})$0",
+    "description": """
+      The Tab(x) internal function positions the cursor at column x (similar to POS in a FORM statement), where x is any numeric expression.
+      If the current position of the line is greater than column x, the cursor is positioned at column x in the next line.
+      If x is negative, TAB(1) is assumed. If x is not an integer, it is rounded.
+      If x is greater than the record length, the cursor is positioned at column 1 in the next line.
+    """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Tab",
     "leftLabel": "Integer"
-  "Tan":
+  "Tan(<x>)":
     "prefix": "tan",
-    "body": "tan",
-    "description": "Builds key from record data.",
+    "body": "tan(${1:number})$0",
+    "description": "The Tan internal function is a mathematical trigonometric function that calculates the tangent of X in radians. ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Tan",
     "leftLabel": "Integer"
   "Timer":
-    "prefix": "tim",
-    "body": "tim",
-    "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Tim",
+    "prefix": "timer",
+    "body": "timer$0",
+    "description": """
+      The Timer internal function returns a \"Real Number\" with 5 decimal digits accuracy with the number of seconds elapsed since midnight, January 1, 1970.
+      This starting point is obtained from the operating system so it is only as accurate as your system time.
+      This value is used internally by the pro filer to monitor performance, but may be used within programs to measure the time very accurately
+    """,
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Timer",
     "leftLabel": "Integer"
-  "UDim":
+  "UDim(<array name> [,<dimension>])":
     "prefix": "udim",
-    "body": "udim",
-    "description": "Builds key from record data.",
+    "body": "udim(${1:array})$0",
+    "description": """
+      The UDim(A$,X) internal function returns the number of rows in the array if X=1. Returns the number of columns in the array if X=2. Returns the current size of dimensions 3, 4, 5, 6 or 7 when X is 3, 4, 5, 6 or 7. If the optional parameter X is omitted, UDIM returns the size of the first dimension.
+    """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=UDim",
     "leftLabel": "Integer"
-  "Val":
+  "VAL(<string>)":
     "prefix": "val",
-    "body": "val",
-    "description": "Builds key from record data.",
+    "body": "val(${1:string})$0",
+    "description": """
+      The Val(A$) internal function returns A$ expressed as a numeric value rather than a string.
+    """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Val",
     "leftLabel": "Integer"
-  "Version":
-    "prefix": "vers",
-    "body": "vers",
-    "description": "Builds key from record data.",
+  "Version(<file_handle>)":
+    "prefix": "version",
+    "body": "version(${1:filenum})$0",
+    "description": """
+      The Version internal function affects an open internal data file.
+      It will return the version of that file. It can also be used to set the version.
+    """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Version",
     "leftLabel": "Integer"
