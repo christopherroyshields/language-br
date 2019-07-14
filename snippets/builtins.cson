@@ -3,443 +3,449 @@
     "prefix": "abs",
     "body": "abs(${1:expression})",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
-  "AIdx":
-    "prefix": "aidx",
-    "body": "Mat ${1:indexedArray}(udim(${2:arrayToBeIndexed}))=aidx(${2:arrayToBeIndexed})",
+  "Mat <Array> ... Aidx(Array)":
+    "prefix": "aidxm",
+    "body": "Mat ${1:indexedArray}(udim(${2:}))=aidx(${2:})",
     "description": "Returns an array that is an ascending index obtained from sorting the array within parenthesis.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
-  "Atn":
+  "Aidx(Array)":
+    "prefix": "aidx",
+    "body": "aidx(${1:})",
+    "description": "Returns an array of Subscripts that is an ascending index obtained from sorting the array within parenthesis.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
+    "leftLabel": "Integer Array"
+  "Atn(<numeric expression>)":
     "prefix": "Atn",
-    "body": "abs($1)",
-    "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
-    "leftLabel": "Integer"
+    "body": "Atn(${1:<numeric expression>})",
+    "description": "A trigonometric function that calculates the arctangent of the numeric expression in radians.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Atn",
+    "leftLabel": "Float"
   "Bell":
     "prefix": "Bell",
-    "body": "abs($1)",
+    "body": "Bell",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Bell",
     "leftLabel": "Integer"
   "Ceil":
     "prefix": "Ceil",
-    "body": "abs($1)",
+    "body": "Ceil",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Ceil",
     "leftLabel": "Integer"
   "CmdKey":
     "prefix": "CmdKey",
-    "body": "abs($1)",
+    "body": "CmdKey",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CmdKey",
     "leftLabel": "Integer"
   "Cnt":
     "prefix": "Cnt",
-    "body": "abs($1)",
+    "body": "Cnt",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Cnt",
     "leftLabel": "Integer"
   "Code":
     "prefix": "Code",
-    "body": "abs($1)",
+    "body": "Code",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Code",
     "leftLabel": "Integer"
   "CoS":
     "prefix": "CoS",
-    "body": "abs($1)",
+    "body": "CoS",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CoS",
     "leftLabel": "Integer"
   "CurCol":
     "prefix": "CurCol",
-    "body": "abs($1)",
+    "body": "CurCol",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CurCol",
     "leftLabel": "Integer"
   "CurFld":
     "prefix": "CurFld",
-    "body": "abs($1)",
+    "body": "CurFld",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CurFld",
     "leftLabel": "Integer"
   "CurRow":
     "prefix": "CurRow",
-    "body": "abs($1)",
+    "body": "CurRow",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CurRow",
     "leftLabel": "Integer"
   "CurTab":
     "prefix": "CurTab",
-    "body": "abs($1)",
+    "body": "CurTab",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CurTab",
     "leftLabel": "Integer"
   "CurWindow":
     "prefix": "CurWindow"
-    "body": "abs($1)",
+    "body": "CurWindow",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CurWindow",
     "leftLabel": "Integer"
   "Date":
     "prefix": "Date",
-    "body": "abs($1)",
+    "body": "Date",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Date",
     "leftLabel": "Integer"
   "Days":
     "prefix": "Days",
-    "body": "abs($1)",
+    "body": "Days",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Days",
     "leftLabel": "Integer"
   "Debug_Str":
     "prefix": "Debug_Str"
-    "body": "abs($1)",
+    "body": "Debug_Str",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Debug_Str",
     "leftLabel": "Integer"
   "DIdx":
     "prefix": "DIdx",
-    "body": "abs($1)",
+    "body": "DIdx",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=DIdx",
     "leftLabel": "Integer"
   "Err":
     "prefix": "Err",
-    "body": "abs($1)",
+    "body": "Err",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Err",
     "leftLabel": "Integer"
   "Exists":
     "prefix": "Exists",
-    "body": "abs($1)",
+    "body": "Exists",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Exists",
     "leftLabel": "Integer"
   "Exp":
     "prefix": "Exp",
-    "body": "abs($1)",
+    "body": "Exp",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Exp",
     "leftLabel": "Integer"
   "File":
     "prefix": "File",
-    "body": "abs($1)",
+    "body": "File",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=File",
     "leftLabel": "Integer"
   "FileNum":
     "prefix": "FileNum",
-    "body": "abs($1)",
+    "body": "FileNum",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=FileNum",
     "leftLabel": "Integer"
   "FKey":
     "prefix": "FKey",
-    "body": "abs($1)",
+    "body": "FKey",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=FKey",
     "leftLabel": "Integer"
   "FP":
     "prefix": "FP",
-    "body": "abs($1)",
+    "body": "FP",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=FP",
     "leftLabel": "Integer"
   "FreeSp":
     "prefix": "FreeSp",
-    "body": "abs($1)",
+    "body": "FreeSp",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=FreeSp",
     "leftLabel": "Integer"
   "Inf":
     "prefix": "Inf",
-    "body": "abs($1)",
+    "body": "Inf",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Inf",
     "leftLabel": "Integer"
   "Int":
     "prefix": "Int",
-    "body": "abs($1)",
+    "body": "Int",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Int",
     "leftLabel": "Integer"
   "IP":
     "prefix": "IP",
-    "body": "abs($1)",
+    "body": "IP",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=IP",
     "leftLabel": "Integer"
   "KLn":
     "prefix": "KLn",
-    "body": "abs($1)",
+    "body": "KLn",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=KLn",
     "leftLabel": "Integer"
   "KPs":
     "prefix": "KPs",
-    "body": "abs($1)",
+    "body": "KPs",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=KPs",
     "leftLabel": "Integer"
   "KRec":
     "prefix": "KRec",
-    "body": "abs($1)",
+    "body": "KRec",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=KRec",
     "leftLabel": "Integer"
   "Len":
     "prefix": "Len",
-    "body": "abs($1)",
+    "body": "Len",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Len",
     "leftLabel": "Integer"
   "Line":
     "prefix": "Line",
-    "body": "abs($1)",
+    "body": "Line",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Line",
     "leftLabel": "Integer"
   "Lines":
     "prefix": "Lines",
-    "body": "abs($1)",
+    "body": "Lines",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
   "LineSPP":
     "prefix": "LineSPP",
-    "body": "abs($1)",
+    "body": "LineSPP",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=LineSPP",
     "leftLabel": "Integer"
   "Log":
     "prefix": "Log",
-    "body": "abs($1)",
+    "body": "Log",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Log",
     "leftLabel": "Integer"
   "LRec":
     "prefix": "LRec",
-    "body": "abs($1)",
+    "body": "LRec",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=LRec",
     "leftLabel": "Integer"
   "Mat2Str":
-    "prefix": "absMat2Str"
-    "body": "abs($1)",
+    "prefix": "Mat2Str"
+    "body": "Mat2Str",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Mat2Str",
     "leftLabel": "Integer"
   "Max":
     "prefix": "Max",
-    "body": "abs($1)",
+    "body": "Max",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Max",
     "leftLabel": "Integer"
   "Min":
     "prefix": "Min",
-    "body": "abs($1)",
+    "body": "Min",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Min",
     "leftLabel": "Integer"
   "Mod":
     "prefix": "Mod",
-    "body": "abs($1)",
+    "body": "Mod",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Mod",
     "leftLabel": "Integer"
   "Msg":
     "prefix": "Msg",
-    "body": "abs($1)",
+    "body": "Msg",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Msg",
     "leftLabel": "Integer"
   "MsgBox":
     "prefix": "MsgBox",
-    "body": "abs($1)",
+    "body": "MsgBox",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=MsgBox",
     "leftLabel": "Integer"
   "NewPage":
     "prefix": "NewPage",
-    "body": "abs($1)",
+    "body": "NewPage",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=NewPage",
     "leftLabel": "Integer"
   "Next":
     "prefix": "Next",
-    "body": "abs($1)",
+    "body": "Next",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Next",
     "leftLabel": "Integer"
   "NxtCol":
     "prefix": "NxtCol",
-    "body": "abs($1)",
+    "body": "NxtCol",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=NxtCol",
     "leftLabel": "Integer"
   "Nxtfld":
     "prefix": "Nxtfld",
-    "body": "abs($1)",
+    "body": "Nxtfld",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
   "NxtRow":
     "prefix": "NxtRow",
-    "body": "abs($1)",
+    "body": "NxtRow",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
   "Ord":
     "prefix": "Ord",
-    "body": "abs($1)",
+    "body": "Ord",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
   "Pi":
     "prefix": "Pi",
-    "body": "abs($1)",
+    "body": "Pi",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
   "Pos":
     "prefix": "Pos",
-    "body": "abs($1)",
+    "body": "Pos",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
   "Printer_List":
-    "prefix": "abs",
-    "Printer_List": "abs($1)",
+    "prefix": "Printer_List",
+    "body": "abs",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs",
     "leftLabel": "Integer"
   "ProcIn":
     "prefix": "ProcIn",
-    "body": "abs($1)",
+    "body": "ProcIn",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=ProcIn",
     "leftLabel": "Integer"
   "Rec":
     "prefix": "Rec",
-    "body": "abs($1)",
+    "body": "Rec",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rec",
     "leftLabel": "Integer"
   "Rem":
     "prefix": "Rem",
-    "body": "abs($1)",
+    "body": "Rem",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rem",
     "leftLabel": "Integer"
   "RLn":
     "prefix": "RLn",
-    "body": "abs($1)",
+    "body": "RLn",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=RLn",
     "leftLabel": "Integer"
   "Rnd":
     "prefix": "Rnd",
-    "body": "abs($1)",
+    "body": "Rnd",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rnd",
     "leftLabel": "Integer"
   "Round":
     "prefix": "Round",
-    "body": "abs($1)",
+    "body": "Round",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Round",
     "leftLabel": "Integer"
   "Serial":
     "prefix": "Serial",
-    "body": "abs($1)",
+    "body": "Serial",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Serial",
     "leftLabel": "Integer"
   "SetEnv":
     "prefix": "SetEnv",
-    "body": "abs($1)",
+    "body": "SetEnv",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=SetEnv",
     "leftLabel": "Integer"
   "Sgn":
     "prefix": "Sgn",
-    "body": "abs($1)",
+    "body": "Sgn",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sgn",
     "leftLabel": "Integer"
   "Sin":
     "prefix": "Sin",
-    "body": "abs($1)",
+    "body": "Sin",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sin",
     "leftLabel": "Integer"
   "Sleep":
     "prefix": "Sleep",
-    "body": "abs($1)",
+    "body": "Sleep",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sleep",
     "leftLabel": "Integer"
   "Sqr":
     "prefix": "Sqr",
-    "body": "abs($1)",
+    "body": "Sqr",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sqr",
     "leftLabel": "Integer"
   "Srch":
     "prefix": "Srch",
-    "body": "abs($1)",
+    "body": "Srch",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Srch",
     "leftLabel": "Integer"
   "Str2Mat":
     "prefix": "Str2Mat"
-    "body": "abs($1)",
+    "body": "absStr2Mat",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=absStr2Mat",
     "leftLabel": "Integer"
   "Sum":
     "prefix": "Sum",
-    "body": "abs($1)",
+    "body": "Sum",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sum",
     "leftLabel": "Integer"
   "Tab":
     "prefix": "Tab",
-    "body": "abs($1)",
+    "body": "Tab",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Tab",
     "leftLabel": "Integer"
   "Tan":
     "prefix": "Tan",
-    "body": "abs($1)",
+    "body": "Tan",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Tan",
     "leftLabel": "Integer"
   "Timer":
     "prefix": "Tim",
-    "body": "abs($1)",
+    "body": "Tim",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Tim",
     "leftLabel": "Integer"
   "UDim":
     "prefix": "UDim",
-    "body": "abs($1)",
+    "body": "UDim",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=UDim",
     "leftLabel": "Integer"
   "Val":
     "prefix": "Val",
-    "body": "val($1)",
+    "body": "Val",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Val",
     "leftLabel": "Integer"
   "Version":
     "prefix": "vers",
-    "body": "version($1)",
+    "body": "vers",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs&title=Special%3ASearch&go=Go",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Version",
     "leftLabel": "Integer"
