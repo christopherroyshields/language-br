@@ -3,13 +3,13 @@
     "prefix": "abs",
     "body": "abs(${1:expression})",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Aidx",
     "leftLabel": "Integer"
   "Mat <Array> ... Aidx(Array)":
     "prefix": "aidxm",
     "body": "Mat ${1:indexedArray}(udim(${2:}))=aidx(${2:})",
     "description": "Returns an array that is an ascending index obtained from sorting the array within parenthesis.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Aidx",
     "leftLabel": "Integer"
   "Aidx(Array)":
     "prefix": "aidx",
@@ -19,239 +19,241 @@
     "leftLabel": "Integer Array"
   "Atn(<numeric expression>)":
     "prefix": "Atn",
-    "body": "Atn(${1:<numeric expression>})",
+    "body": "Atn(${1:numeric expression})",
     "description": "A trigonometric function that calculates the arctangent of the numeric expression in radians.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Atn",
     "leftLabel": "Float"
   "Bell":
     "prefix": "Bell",
-    "body": "Bell",
-    "description": "Builds key from record data.",
+    "body": """
+      bell$0
+    """,
+    "description": "Returns a character which, when printed, sounds the printer's or terminal's bell. It is used mainly in PRINT statements.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Bell",
-    "leftLabel": "Integer"
-  "Ceil":
+    "leftLabel": ""
+  "Ceil(<numeric expression>)":
     "prefix": "Ceil",
-    "body": "Ceil",
-    "description": "Builds key from record data.",
+    "body": "Ceil(${1:Float})",
+    "description": "Calculates the smallest integer greater than or equal to X.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Ceil",
     "leftLabel": "Integer"
   "CmdKey":
     "prefix": "CmdKey",
     "body": "CmdKey",
-    "description": "Builds key from record data.",
+    "description": "Returns a value to identify the last command key (function key) used to terminate keyboard input, or returns 0 if <ENTER> was the last key pressed.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CmdKey",
     "leftLabel": "Integer"
   "Cnt":
     "prefix": "Cnt",
     "body": "Cnt",
-    "description": "Builds key from record data.",
+    "description": "Returns the number of data items successfully processed by the last I/O statement.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Cnt",
     "leftLabel": "Integer"
   "Code":
     "prefix": "Code",
-    "body": "Code",
-    "description": "Builds key from record data.",
+    "body": "code",
+    "description": "Indicates the termination status of a program as set by the STOP or END statement.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Code",
     "leftLabel": "Integer"
-  "CoS":
-    "prefix": "CoS",
-    "body": "CoS",
-    "description": "Builds key from record data.",
+  "CoS(<numeric expression>)":
+    "prefix": "cos",
+    "body": "cos(${1:Float})$0",
+    "description": "Trigonometric function that calculates the cosine of X in radians.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CoS",
     "leftLabel": "Integer"
   "CurCol":
     "prefix": "CurCol",
     "body": "CurCol",
-    "description": "Builds key from record data.",
+    "description": "Returns cursor column from the last INPUT FIELDS or RINPUT FIELDS statement.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CurCol",
     "leftLabel": "Integer"
   "CurFld":
     "prefix": "CurFld",
     "body": "CurFld",
-    "description": "Builds key from record data.",
+    "description": "Returns the number of the field containing the cursor from the last INPUT FIELDS.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CurFld",
     "leftLabel": "Integer"
   "CurRow":
     "prefix": "CurRow",
     "body": "CurRow",
-    "description": "Builds key from record data.",
+    "description": "Returns the cursor's row from last Input Fields or RInput Fields statement.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CurRow",
     "leftLabel": "Integer"
   "CurTab":
     "prefix": "CurTab",
     "body": "CurTab",
-    "description": "Builds key from record data.",
+    "description": "Returns the active tabbed window number.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CurTab",
     "leftLabel": "Integer"
   "CurWindow":
-    "prefix": "CurWindow"
+    "prefix": "CurWindow",
     "body": "CurWindow",
-    "description": "Builds key from record data.",
+    "description": "Returns the number of the window currently in focus.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CurWindow",
     "leftLabel": "Integer"
-  "Date":
+  "Date([<Integer>], [*<order_of_components$>])":
     "prefix": "Date",
-    "body": "Date",
-    "description": "Builds key from record data.",
+    "body": "Date(${1:mdy})",
+    "description": "Calculates and returns dates in numeric format, using no dashes or slashes as separators.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Date",
     "leftLabel": "Integer"
-  "Days":
-    "prefix": "Days",
-    "body": "Days",
-    "description": "Builds key from record data.",
+  "Days(<date>[,<format$>])":
+    "prefix": "days",
+    "body": "days(${1:date$},${2:mask$})$0",
+    "description": "Returns the absolute, sequential value which is assigned to dates after January 1, 1900.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Days",
     "leftLabel": "Integer"
-  "Debug_Str":
-    "prefix": "Debug_Str"
-    "body": "Debug_Str",
-    "description": "Builds key from record data.",
+  "Debug_Str(<message-level>, <string-value>)":
+    "prefix": "debug_str"
+    "body": "debug_str(${1:10},\"${2:String}\")",
+    "description": "Depending on loglevel (message-level must be equal or lower), send data to the logfile as well as to the debugger if it is attached, or optionally to the command console if the debugger is not attached and GUI is ON.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Debug_Str",
     "leftLabel": "Integer"
-  "DIdx":
-    "prefix": "DIdx",
-    "body": "DIdx",
-    "description": "Builds key from record data.",
+  "Didx(<array name>)":
+    "prefix": "didx",
+    "body": "mat ${1:indexArray}(udim(${2:arrayToBeIndexed}$))=aidx(${2:arrayToBeIndexed}$)",
+    "description": " returns an array that is a descending index obtained from sorting the array named.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=DIdx",
     "leftLabel": "Integer"
   "Err":
-    "prefix": "Err",
+    "prefix": "err",
     "body": "Err",
-    "description": "Builds key from record data.",
+    "description": "Returns the error code of the most recent error.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Err",
     "leftLabel": "Integer"
-  "Exists":
-    "prefix": "Exists",
-    "body": "Exists",
+  "Exists(<filename>)":
+    "prefix": "exists",
+    "body": "exists($1:${filename$})",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Exists",
     "leftLabel": "Integer"
-  "Exp":
-    "prefix": "Exp",
-    "body": "Exp",
-    "description": "Builds key from record data.",
+  "Exp(<numeric expression>)":
+    "prefix": "exp",
+    "body": "exp(${1:x})",
+    "description": "Calculates the exponential value of X.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Exp",
     "leftLabel": "Integer"
-  "File":
-    "prefix": "File",
-    "body": "File",
+  "File(<file handle>)":
+    "prefix": "file",
+    "body": "file(${1:filenum})$0",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=File",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=File_(internal_function)",
     "leftLabel": "Integer"
-  "FileNum":
-    "prefix": "FileNum",
-    "body": "FileNum",
-    "description": "Builds key from record data.",
+  "Filenum":
+    "prefix": "filenum",
+    "body": "filenum",
+    "description": "returns the number of the file that produced the most recent I/O error.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=FileNum",
     "leftLabel": "Integer"
-  "FKey":
-    "prefix": "FKey",
-    "body": "FKey",
-    "description": "Builds key from record data.",
+  "Fkey(<value>)":
+    "prefix": "fkey",
+    "body": "fkey(${1:fkey})$0",
+    "description": "Similar to CmdKey, but returns more information, particularly about how a field is exited.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=FKey",
     "leftLabel": "Integer"
-  "FP":
-    "prefix": "FP",
-    "body": "FP",
-    "description": "Builds key from record data.",
+  "Fp(<numeric expression>)":
+    "prefix": "fp",
+    "body": "fp(${1:number})",
+    "description": "Returns the fractional part of X. ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=FP",
     "leftLabel": "Integer"
-  "FreeSp":
-    "prefix": "FreeSp",
-    "body": "FreeSp",
-    "description": "Builds key from record data.",
+  "Freesp(<file name>)":
+    "prefix": "freesp",
+    "body": "freesp(${1:n})$0",
+    "description":  "Returns the number of free (unused) bytes on the drive containing file N.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=FreeSp",
     "leftLabel": "Integer"
   "Inf":
     "prefix": "Inf",
     "body": "Inf",
-    "description": "Builds key from record data.",
+    "description": "Returns the largest possible number in Business Rules! on the current system.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Inf",
     "leftLabel": "Integer"
-  "Int":
-    "prefix": "Int",
-    "body": "Int",
-    "description": "Builds key from record data.",
+  "Int(<numeric expression>)":
+    "prefix": "Int(${1:float})$0",
+    "body": "Int($)",
+    "description": "Returns the largest integer less than or equal to X.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Int",
     "leftLabel": "Integer"
-  "IP":
-    "prefix": "IP",
-    "body": "IP",
-    "description": "Builds key from record data.",
+  "Ip(<numeric expression>)":
+    "prefix": "ip",
+    "body": "ip(${1:float})",
+    "description": "Returns the integer part of X.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=IP",
     "leftLabel": "Integer"
-  "KLn":
-    "prefix": "KLn",
-    "body": "KLn",
-    "description": "Builds key from record data.",
+  "KLN(<file name>[,<numeric expression>])":
+    "prefix": "kln",
+    "body": "kln(${filename$})$0",
+    "description": "Returns the key length in bytes for master file specified by 'file name'.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=KLn",
     "leftLabel": "Integer"
-  "KPs":
-    "prefix": "KPs",
-    "body": "KPs",
-    "description": "Builds key from record data.",
+  "Kps(<file name> [,<numeric expression>])":
+    "prefix": "kps",
+    "body": "kps(${1:filename$})",
+    "description": "Returns the byte position where the key for master file named starts. With an optional second parameter, KPS can also return the position of a section of a key when split keys are used.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=KPs",
     "leftLabel": "Integer"
-  "KRec":
+  "KRec(N)":
     "prefix": "KRec",
-    "body": "KRec",
-    "description": "Builds key from record data.",
+    "body": "KRec(${1:filenum})",
+    "description": "When file N is a display file, KRec(N) acts as a line counter for lines output to the file. If file N is an internal file opened for Keyed processing, then KRec(N) returns the number of the last record accessed in the key file.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=KRec",
     "leftLabel": "Integer"
-  "Len":
-    "prefix": "Len",
-    "body": "Len",
+  "Len(<string>)":
+    "prefix": "len",
+    "body": "len(${string}$)$0",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Len",
     "leftLabel": "Integer"
   "Line":
-    "prefix": "Line",
-    "body": "Line",
-    "description": "Builds key from record data.",
+    "prefix": "line",
+    "body": "line",
+    "description": "Returns the line number of the most recent error. ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Line",
     "leftLabel": "Integer"
-  "Lines":
-    "prefix": "Lines",
-    "body": "Lines",
-    "description": "Builds key from record data.",
+  "Lines(<file number>)":
+    "prefix": "lines",
+    "body": "lines(${1:filenum})",
+    "description": "Returns the number of lines printed since the last new page.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=aidx",
     "leftLabel": "Integer"
-  "LineSPP":
-    "prefix": "LineSPP",
-    "body": "LineSPP",
-    "description": "Builds key from record data.",
+  "LineSPP(<file number>)":
+    "prefix": "linespp",
+    "body": "linespp(${1:filenum})$0",
+    "description": "Returns the current lines per page as set by a BRConfig.sys PRINTER spec's LPP parameter or 66 by default.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=LineSPP",
     "leftLabel": "Integer"
-  "Log":
-    "prefix": "Log",
-    "body": "Log",
-    "description": "Builds key from record data.",
+  "Log(<positive number>)":
+    "prefix": "log",
+    "body": "log(${1:number})$0",
+    "description": "Returns the natural logarithm of its argument.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Log",
     "leftLabel": "Integer"
-  "LRec":
-    "prefix": "LRec",
-    "body": "LRec",
-    "description": "Builds key from record data.",
+  "Lrec(<file handle>)":
+    "prefix": "lrec",
+    "body": "lrec(${1:filenum})$0",
+    "description": "Returns the number of the last record in the file.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=LRec",
     "leftLabel": "Integer"
-  "Mat2Str":
-    "prefix": "Mat2Str"
-    "body": "Mat2Str",
+  "Mat2Str(MAT <Array Name>, <String Variable> [, [MAT] <Delimiter$>] [, \"<Quote-Type>] [:] [<trim>]\")":
+    "prefix": "mat2str"
+    "body": "mat2str( MAT ${1:array$}, ${2:str$}, \",\")",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Mat2Str",
     "leftLabel": "Integer"
-  "Max":
-    "prefix": "Max",
-    "body": "Max",
-    "description": "Builds key from record data.",
+  "Max(<value>,<value>[,...])":
+    "prefix": "max",
+    "body": "max(${1:number},${2:number})",
+    "description": "Returns the largest numeric value in the set of numbers inside parentheses (X1, X2 and so on).",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Max",
     "leftLabel": "Integer"
-  "Min":
+  "Min(<value>,<value>[,...])":
     "prefix": "Min",
     "body": "Min",
     "description": "Builds key from record data.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Min",
     "leftLabel": "Integer"
-  "Mod":
+  "Mod(<numerator>, <denominator>)":
     "prefix": "Mod",
     "body": "Mod",
     "description": "Builds key from record data.",
