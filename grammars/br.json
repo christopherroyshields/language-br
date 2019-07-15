@@ -134,25 +134,8 @@
       "name": "variable.array.numeric.br"
     },
     {
-<<<<<<< HEAD
       "match": "\\b(?i:MAT)\\b",
       "name": "keyword.statement.br"
-=======
-      "match": "(\\bmat\\s+(\\w[\\w\\d]*)\\$)",
-      "name": "variable.stringarray.br"
-    },
-    {
-      "match": "(\\bmat\\s+(\\w[\\w\\d]*)\\b)",
-      "name": "variable.numericarray.br"
-    },
-    {
-      "match": "\\b(?i:MAT)\\b",
-      "name": "keyword.statement.br"
-    },
-    {
-      "match": "(\\b(\\w[\\w\\d]*)\\$)",
-      "name": "variable.stringvar.br"
->>>>>>> 904d632fa2ee8bd8cc426970658513b9c2ab8ad3
     },
     {
       "match": "(\\b(\\w[\\w\\d]*)\\b)",
