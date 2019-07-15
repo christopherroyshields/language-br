@@ -271,283 +271,295 @@
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnUniqueKey",
     "leftLabel": "Boolean"
 
+
+
+
+
+
+
+
+
+
+
+
+
   "fnReadAllKeys(FileNumber,mat F$,mat F,mat Form$,Sub1,mat Out1$;...)":
     "prefix": "fnReadALLKeys",
     "body" : "fnReadALLKeys(FL,mat F$,mat F,mat Form$,Sub1,mat Out1$)$0",
-    "description": "",
+    "description": "Reads all records from the file and puts their values in an array.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadAllKeys",
     "leftLabel": "Integer"
 
   "fnReadmatchingKeys(FileNumber,mat F$,mat F,mat Form$,Key$,KeyFld,Sub1,mat Out1$;Sub2,mat Out2$,Index)":
     "prefix": "fnReadmatchingKeys",
     "body" : "fnReadmatchingKeys(FL,mat F$,mat F,mat Form$,Key$,KeyFld,Sub1,mat Out1$;Sub2,mat Out2$,Index)$0",
-    "description": "",
+    "description": "Reads all records from the file that match the given filter information, and puts the requested values in the requested arrays. A complete search is preformed and the filter field doesn't have to be indexed.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadMatchingKeys",
     "leftLabel": "Integer"
 
   "fnReadAllNewKeys(FileNumber,mat F$,mat F,mat Form$,Sub1,mat Out1$;Dont_Reset,Sub2,mat Out2$,Index)":
     "prefix": "fnReadAllNewKeys",
     "body" : "fnReadAllNewKeys(FL,mat F$,mat F,mat Form$,Sub1,mat Out1$;Dont_Reset,Sub2,mat Out2$,Index)$0",
-    "description": "",
+    "description": "Reads any values from the file but doesn't double up values that already exist in the output arrays.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadAllNewKeys",
     "leftLabel": "Integer"
 
   "fnReadFilterKeys(FileNumber,mat F$,mat F,mat Form$,Key$,KeyFLD,Sub1,mat Out1$;Filter$,Filter_Sub,ReadLarger,Sub2,mat Out2$, Sub3, mat Out3$, Sub4,mat Out4$, Index)":
     "prefix": "fnReadFilterKeys",
     "body" : "fnReadFilterKeys(FL,mat F$,mat F,mat Form$,Key$,KeyFLD,Sub1,mat Out1$;Filter$,Filter_Sub,ReadLarger,Sub2,mat Out2$, Sub3, mat Out3$, Sub4,mat Out4$, Index)$0",
-    "description": "",
+    "description": "Reads all keys that match the given filters and outputs up to 4 arrays from the matching records.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadFilterKeys",
     "leftLabel": "Integer"
 
   "fnMakeUniqueKey$*255(FileNumber;RANDOM,PREPEND$)":
     "prefix": "fnMakeUniqueKey$",
     "body" : "fnMakeUniqueKey$*255(FL;RANDOM,PREPEND$)$0",
-    "description": "",
+    "description": "Generates a key that is unique in the given file.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnMakeUniqueKey.24",
     "leftLabel": "Integer"
 
   "fnReadLockedUsers(mat USERS$)":
     "prefix": "fnReadLockedUsers",
     "body" : "fnReadLockedUsers(mat USERS$)$0",
-    "description": "",
+    "description": "Returns an array listing all the users that have locks on the most recently locked file.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLockedUsers",
     "leftLabel": "Integer"
 
   "fnViewLogFile(;ShowQUIT,ShowColumns,ShowExport)":
     "prefix": "fnViewLogFile",
     "body" : "fnViewLogFile(;ShowQUIT,ShowColumns,ShowExport)$0",
-    "description": "",
+    "description": "Loads the FileIO Log File in a listview for viewing.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnViewLogFile",
     "leftLabel": "Integer"
 
   "fnErrLog(String$*255;CallingProgram$*255)":
     "prefix": "fnErrLog",
     "body" : "fnErrLog(String$*255;CallingProgram$*255)$0",
-    "description": "",
+    "description": "Logs an error message to the log file and also to the text log file.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnLog_.26_fnErrLog",
     "leftLabel": "Integer"
 
   "fnSetLogChanges(mat F$,mat F)":
     "prefix": "fnSetLogChanges",
     "body" : "fnSetLogChanges(mat F$,mat F)$0",
-    "description": "",
+    "description": "Records the given arrays so that differences can be logged later with fnLogChanges.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnSetLogChanges",
     "leftLabel": "Integer"
 
   "fnLogChanges(mat F$,mat F;String$*1048,CallingProgram$*255,Layout$)":
     "prefix": "fnLogChanges",
     "body" : "fnLogChanges(mat F$,mat F;String$*1048,CallingProgram$*255,Layout$)$0",
-    "description": "",
+    "description": "Examines the passed arrays and records a log message describing just the changes.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnLogChanges",
     "leftLabel": "Integer"
 
   "fnLogArray(mat F$,mat F;String$*512,CallingProgram$*255)":
     "prefix": "fnLogArray",
     "body" : "fnLogArray(mat F$,mat F;String$*512,CallingProgram$*255)$0",
-    "description": "",
+    "description": "Writes a log message to the Log that lists all details of the passed in Arrays.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnLogArray",
     "leftLabel": "Integer"
 
   "fnLog(String$*512;CallingProgram$*255,FORCETEXTFile)":
     "prefix": "fnLog",
     "body" : "fnLog(String$*512;CallingProgram$*255,FORCETEXTFile)$0",
-    "description": "",
+    "description": "Records a message to the log file.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnLog_.26_fnErrLog",
     "leftLabel": "Integer"
 
   "fnNotInFile(String$*100,FileName$,Sub;Path$,FileNumber)":
     "prefix": "fnNotInFile",
     "body" : "fnNotInFile(String$*100,FileName$,Sub;Path$,FileNumber)$0",
-    "description": "",
+    "description": "Returns true if the specified value is not found in the specified field of the file.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnNotInFile",
     "leftLabel": "Integer"
 
   "fnGetFileDateTime$(FileName$*255)=FNGetFileDT$(FileName$)":
     "prefix": "fnGetFileDateTime$",
     "body" : "fnGetFileDateTime$(FileName$*255)=FNGetFileDT$(FileName$)$0",
-    "description": "",
+    "description": "Reads the last modified date and time of the specified file from the filesystem.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnGetFileDateTime.24",
     "leftLabel": "Integer"
 
-  "fnReadLayouts(mat DirList$;OverrideExtension$)":
+  "fnReadLayouts(mat LayoutList$)":
     "prefix": "fnReadLayouts",
-    "body" : "fnReadLayouts(mat DirList$;OverrideExtension$)$0",
-    "description": "",
+    "body" : "fnReadLayouts(mat DirList$=)$0",
+    "description": "Reads the list of file layouts into the provided array.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayouts",
     "leftLabel": "Integer"
 
   "fnDirVersionHistoryFiles(Layout$,mat DirList$;BYPASSExtension$)":
     "prefix": "fnDirVersionHistoryFiles",
     "body" : "fnDirVersionHistoryFiles(Layout$,mat DirList$;BYPASSExtension$)$0",
-    "description": "",
+    "description": "Reads a list of all the version history files available for the given layout into the provided array.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnDirVersionHistoryFiles",
     "leftLabel": "Integer"
 
   "fnDoesLayoutExist(Layout$)":
     "prefix": "fnDoesLayoutExist",
     "body" : "fnDoesLayoutExist(Layout$)$0",
-    "description": "",
+    "description": "Returns true if the specified layout exists.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnDoesLayoutExist",
-    "leftLabel": "Integer"
+    "leftLabel": "Boolean"
 
   "fnReadLayoutPath$":
     "prefix": "fnReadLayoutPath$",
     "body" : "fnReadLayoutPath$$0",
-    "description": "",
+    "description": "Returns the path to the FileIO layout folder.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayoutPath.24",
     "leftLabel": "Integer"
 
   "fnReadLayoutExtension$":
     "prefix": "fnReadLayoutExtension$",
     "body" : "fnReadLayoutExtension$$0",
-    "description": "",
+    "description": "Returns the File Layout Extension",
     "descriptionMoreURL": "brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnLayoutExtension.24",
     "leftLabel": "Integer"
 
   "fnKey$*255(FileNumber, Key$*255)":
     "prefix": "fnKey$",
     "body" : "fnKey$*255(FileNumber, Key$*255)$0",
-    "description": "",
+    "description": "Takes the passed in value and ensures that its the proper size for the key of the given file number.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnKey.24",
     "leftLabel": "Integer"
 
   "fnSortKeys(mat Keys$,Layout$,DataFile,mat F$,mat F,mat Form$;KeyNUM)":
     "prefix": "fnSortKeys",
     "body" : "fnSortKeys(mat Keys$,Layout$,DataFile,mat F$,mat F,mat Form$;KeyNUM)$0",
-    "description": "",
+    "description": "Sorts the records indicated by mat Keys$ into an order speciied by the key identified by Keynum.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnSortKeys",
     "leftLabel": "Integer"
 
   "fnBeginAudit(;BackupFolder$*80,Path$*255,mat SelectedFiles$)":
     "prefix": "fnBeginAudit",
     "body" : "fnBeginAudit(;BackupFolder$*80,Path$*255,mat SelectedFiles$)$0",
-    "description": "",
+    "description": "Records the beginning point of the specified datafiles (defaults to all) so that a subsequent fnCompare operation can be performed to make a report showing all changes made.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=AuditBR#fnBeginAudit",
     "leftLabel": "Integer"
 
   "fnCompare(BackupFolder$*80;LogFile$*80,PRINTER,DontClose,Path$*255,mat SelectedLayouts$)":
     "prefix": "fnCompare",
     "body" : "fnCompare(BackupFolder$*80;LogFile$*80,PRINTER,DontClose,Path$*255,mat SelectedLayouts$)$0",
-    "description": "",
+    "description": "Run after running fnBeginAudit, to see a report of any changes made to the specified data files since the time of running fnBeginAudit.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=AuditBR#fnCompare",
     "leftLabel": "Integer"
 
   "fnCopyDataFiles(BackupFolder$*255;Path$*255,mat SelectedLayouts$,SKIPKeys)":
     "prefix": "fnCopyDataFiles",
     "body" : "fnCopyDataFiles(BackupFolder$*255;Path$*255,mat SelectedLayouts$,SKIPKeys)$0",
-    "description": "",
+    "description": "Copies all (or optionally some) of the data files defined in your file layouts to the folder specified as the BackupFolder.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCopyDataFiles",
     "leftLabel": "Integer"
 
   "fnCopyFile(FromFile$*255,ToFile$*255;NoProgressBar)":
     "prefix": "fnCopyFile",
     "body" : "fnCopyFile(FromFile$*255,ToFile$*255;NoProgressBar)$0",
-    "description": "",
+    "description": "Copies the specified file, even over the internet (using Client Server), showing a progress bar as the copy progresses.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCopyFile",
     "leftLabel": "Integer"
 
   "fnProgressBar(PERCENT;ColOR$, ... )":
     "prefix": "fnProgressBar",
     "body" : "fnProgressBar(Percent;Color$)$0",
-    "description": "",
+    "description": "Call in a loop of a slow progress to display a progress bar that runs during the process. Automatically opens a window for the progress bar that needs to be closed using fnCloseBar when done.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnProgressBar",
     "leftLabel": "Integer"
 
   "fnCloseBar":
     "prefix": "fnCloseBar",
     "body" : "fnCloseBar$0",
-    "description": "",
+    "description": "Closes the progress bar window when the task is done.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCloseBar",
     "leftLabel": "Integer"
 
   "fnShowMessage(Message$*54)":
     "prefix": "fnShowMessage",
     "body" : "fnShowMessage(Message$*54)$0",
-    "description": "",
+    "description": "Opens a child window and displays a message in it, returning the child window number, so that the window can be closed when done.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnShowMessage",
     "leftLabel": "Integer"
 
   "fnClientEnv$*255(EnvKey$)":
     "prefix": "fnClientEnv$",
     "body" : "fnClientEnv$*255(EnvKey$)$0",
-    "description": "",
+    "description": "Returns the value of an Environment variable on the Client, when running under Client Server. (Env$ on Client Server shows only Environment Variables on the Server).",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnClientEnv.24",
     "leftLabel": "Integer"
 
   "fnExportListViewCsv(Window,Spec$;GENFileName,DELIM$,FileName$*255)":
     "prefix": "fnExportListViewCsv",
     "body" : "fnExportListViewCsv(Window,Spec$;GENFileName,DELIM$,FileName$*255)$0",
-    "description": "",
+    "description": "Exports the specified listview in CSV format. ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnExportListViewCsv",
     "leftLabel": "Integer"
 
   "fnSendEmail(EmailAddress$*255,EmailMessage$*10000;Subject$*255,InvoiceFile$*255,NOPrompt,BccEmail$*255,mat CcEmailS$,CcAsTo)":
     "prefix": "fnSendEmail",
     "body" : "fnSendEmail(EmailAddress$*255,EmailMessage$*10000;Subject$*255,InvoiceFile$*255,NOPrompt,BccEmail$*255,mat CcEmailS$,CcAsTo)$0",
-    "description": "",
+    "description": "Sends an email to the specified address.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnSendEmail",
     "leftLabel": "Integer"
 
   "fnSubstituteStringCode(&String$,Code$*2048;SubstituteChar$)":
     "prefix": "fnSubstituteStringCode",
     "body" : "fnSubstituteStringCode(&String$,Code$*2048;SubstituteChar$)$0",
-    "description": "",
+    "description": "Substitutes the information in String according to the results of executing the code in Code$",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnSubstituteStringCode",
     "leftLabel": "Integer"
 
-  "fnStandardTime$(MT$;Seconds)":
+  "fnStandardTime$(MilitaryTime$;Seconds)":
     "prefix": "fnStandardTime$",
     "body" : "fnStandardTime$(MT$;Seconds)$0",
-    "description": "",
+    "description": "Converts Military Time (24 hr) to Standard Time (am/pm).",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnStandardTime.24",
     "leftLabel": "Integer"
 
   "fnMilitaryTime$(ST$;Seconds)":
     "prefix": "fnMilitaryTime$",
     "body" : "fnMilitaryTime$(ST$;Seconds)$0",
-    "description": "",
+    "description": "Converts Standard Time (am/pm) to Military Time (24 hr).",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnMilitaryTime.24",
     "leftLabel": "Integer"
 
   "fnCalculateHours(TimeIN$,TOut$,DaysIN,DaysOut)":
     "prefix": "fnCalculateHours",
     "body" : "fnCalculateHours(TimeIN$,TOut$,DaysIN,DaysOut)$0",
-    "description": "",
+    "description": "Calculates the amount of time that passed between Tin and Tout in Hours.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCalculateHours",
     "leftLabel": "Integer"
 
-  "fnBuildTime$(H,M,S,P;Military,Seconds)":
+  "fnBuildTime$(Hours,Minutes,Seconds,PM;Military,UseSeconds)":
     "prefix": "fnBuildTime$",
-    "body" : "fnBuildTime$(H,M,S,P;Military,Seconds)$0",
-    "description": "",
+    "body" : "fnBuildTime$(Hours,Minutes,Seconds,PM;Military,UseSeconds)$0",
+    "description": "Builds a time string from Hours, Minutes, and Seconds.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnBuildTime.24",
     "leftLabel": "Integer"
 
-  "fnParseTime(T$,&H,&M,&S,&P)":
+  "fnParseTime(TimeString$,&Hours,&Minutes,&Seconds,&PM)":
     "prefix": "fnParseTime",
     "body" : "fnParseTime(T$,&H,&M,&S,&P)$0",
-    "description": "",
+    "description": "Parses a time string and returns the Hours, Minutes, and Seconds.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnParseTime",
     "leftLabel": "Integer"
 
   "fnSubstituteString(&String$,Filelayout$,mat F$,mat F;SubstituteChar$)":
     "prefix": "fnSubstituteString",
     "body" : "fnSubstituteString(&String$,Filelayout$,mat F$,mat F;SubstituteChar$)$0",
-    "description": "",
+    "description": "Substitutes any File References in the passed String with their matches from the given record.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnSubstituteString",
     "leftLabel": "Integer"
 
   "fnReadScreenSize(&RowS,&Cols;ParentWindow)=FNReadScreenS(RowS,Cols,ParentWindow)":
     "prefix": "fnReadScreenSize",
     "body" : "fnReadScreenSize(&RowS,&Cols;ParentWindow)=FNReadScreenS(RowS,Cols,ParentWindow)$0",
-    "description": "",
+    "description": "Returns the size of the specified window in Rows and Columns.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadScreenSize",
     "leftLabel": "Integer"
 
   "open #(FileHandle:=fnGetFileNumber)":
     "prefix": "OpenfnGetFileNumber",
     "body" : "open #(${1:filehandle}:=fnGetFileNumber): $0",
-    "description": "",
+    "description": "Snippet to open a non-FileIO file using fnGetFileNumber to find a free file number.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
     "leftLabel": "Code Snippet"
 
