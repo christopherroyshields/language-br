@@ -2,9 +2,9 @@
   "Def Fn ... fnend":
     "prefix": "def"
     "body": """
-    def fn$1($2)
-      $3
-    fnend
+      def fn${1:name}(${2:params})
+        $3
+      fnend
     """
     "description": "Define Function"
     "descriptionMoreURL": "http://www.brwiki.com/index.php?title=Def"
