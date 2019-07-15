@@ -102,7 +102,7 @@
       "name": "keyword.errorcondition.br"
     },
     {
-      "match": "\\b(?i:CHAIN|CLOSE|CONTINUE|DATA|DEF|DELETE|DIM|DISPLAY|END|END DEF|EXECUTE|EXIT|FIELDS|FNEND|FORM|GOSUB|GOTO|INPUT|KEY|LET|LIBRARY|LINPUT|MAT|MENU|MENU TEXT|MENU DATA|MENU STATUS|ON ERROR|ON FKEY|ON|OPEN|OPTION|PAUSE|PRINT|USING|BORDER|RANDOMIZE|READ|REREAD|RESTORE|RETRY|RETURN|REWRITE|RINPUT|SCR_FREEZE|SCR_THAW|SELECT|STOP|WRITE|TRACE|USE)\\b",
+      "match": "\\b(?i:CHAIN|CLOSE|CONTINUE|DATA|DEF|DELETE|DIM|DISPLAY|END|END DEF|EXECUTE|EXIT|FIELDS|FNEND|FORM|GOSUB|GOTO|INPUT|KEY|LET|LIBRARY|LINPUT|MENU|MENU TEXT|MENU DATA|MENU STATUS|ON ERROR|ON FKEY|ON|OPEN|OPTION|PAUSE|PRINT|USING|BORDER|RANDOMIZE|READ|REREAD|RESTORE|RETRY|RETURN|REWRITE|RINPUT|SCR_FREEZE|SCR_THAW|SELECT|STOP|WRITE|TRACE|USE)\\b",
       "name": "keyword.statement.br"
     },
     {
@@ -116,6 +116,18 @@
     {
       "match": "(\\b(?i:fn)\\w[\\w\\d]*\\b)",
       "name": "entity.name.function.br"
+    },
+    {
+      "match": "(\\bmat\\s+(\\w[\\w\\d]*)\\$)",
+      "name": "variable.stringarray.br"
+    },
+    {
+      "match": "(\\bmat\\s+(\\w[\\w\\d]*)\\b)",
+      "name": "variable.numericarray.br"
+    },
+    {
+      "match": "\\b(?i:MAT)\\b",
+      "name": "keyword.statement.br"
     },
     {
       "match": "(\\b(\\w[\\w\\d]*)\\$)",
