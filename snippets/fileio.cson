@@ -97,18 +97,33 @@
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayoutHeader",
     "leftLabel": "Integer"
 
-  "<count> fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$,mat SSpec$, ...)":
+  "<count> fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$, ...)":
     "prefix": "fnReadLayoutArrays",
     "body" : "fnReadLayoutArrays(\"${1:layout}\",${2:&prefix}$,mat ${3:StringSubs}$,mat ${4:NumericSubs}$)$0"
     "description": "Reads the file layout and returns the Record Detail information in a bunch of arrays. Returns the field count.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayoutArrays",
     "leftLabel": "Integer"
 
-  "fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$,mat SSpec$, ...)":
+  "fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$)":
     "prefix": "fnReadLayoutArraySnippet",
     "body" : """
       dim S_${1:StringSubs}Subs$(1), mat N_${1:NumericSubs}Subs$(1), ${1:File}Prefix$
       fnReadLayoutArrays(\"${1:layout}\",${1:&prefix}Prefix$,mat S_${1:StringSubs}Subs$,mat N_${1:NumericSubs}Subs$)
+      $0
+    """,
+    "description": "Reads the file layout and returns the Record Detail information in a bunch of arrays. Returns the field count.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayoutArrays",
+    "leftLabel": "Code Snippet"
+
+  "fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$,mat SSpec$, ...)":
+    "prefix": "fnReadLayoutArraySnippetFull",
+    "body" : """
+      dim ${1:StringSubs}_S_Subs$(1), ${1:NumericSubs}_N_Subs$(1), ${1:File}_Prefix$
+      dim ${1:StringSpec}_S_Spec$(1), ${1:NumericSpec}_N_Spec$(1)
+      dim ${1:StringDescription}_S_Description$(1), ${1:NumericDescription}_N_Description$(1)
+      dim ${1:StringPos}_S_Pos(1), mat ${1:NumericPos}_N_Pos(1)
+
+      fnReadLayoutArrays(\"${1:layout}\",${1:&prefix}_Prefix$,mat ${1:StringSpec}_S_Spec$, mat ${1:NumericSpec}_N_Spec$,mat ${1:StringDescription}_S_Description$, mat ${1:NumericDescription}_N_Description$,mat ${1:StringPos}_S_Pos(1), mat ${1:NumericPos}_N_Pos
       $0
     """,
     "description": "Reads the file layout and returns the Record Detail information in a bunch of arrays. Returns the field count.",
