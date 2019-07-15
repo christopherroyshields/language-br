@@ -22,12 +22,20 @@
   "patterns":
   [
     {
+      "match": "(!:)",
+      "name": "keyword.operator.line_continuation.br"
+    },
+    {
       "match": "\\\"[^\"]*\\\"",
       "name": "string.quoted.double.br"
     },
     {
       "match": "'[^']*'",
       "name": "string.quoted.double.br"
+    },
+    {
+      "match": "(\\#(?i:include|define|select|end select|case|autonumber)\\#)",
+      "name": "constant.language.br"
     },
     {
       "match": "(!.*)$",
@@ -62,8 +70,16 @@
       "name": "keyword.operator.mathematical.br"
     },
     {
-      "match": "(\\b(?i:include|define|select|end select|case)\\b)",
-      "name": "constant.language.br"
+      "match": "(\\b(?i:fn)\\w[\\w\\d]*\\$)",
+      "name": "entity.name.function.br"
+    },
+    {
+      "match": "\\b(?i:mat\\s+(\\w[\\w\\d]*)\\$)",
+      "name": "variable.array.string.br"
+    },
+    {
+      "match": "(\\b(\\w[\\w\\d]*)\\$)",
+      "name": "variable.scalar.string.br"
     },
     {
       "match": "^\\d{5}\\b",
@@ -102,7 +118,7 @@
       "name": "keyword.errorcondition.br"
     },
     {
-      "match": "\\b(?i:CHAIN|CLOSE|CONTINUE|DATA|DEF|DELETE|DIM|DISPLAY|END|END DEF|EXECUTE|EXIT|FIELDS|FNEND|FORM|GOSUB|GOTO|INPUT|KEY|LET|LIBRARY|LINPUT|MAT|MENU|MENU TEXT|MENU DATA|MENU STATUS|ON ERROR|ON FKEY|ON|OPEN|OPTION|PAUSE|PRINT|USING|BORDER|RANDOMIZE|READ|REREAD|RESTORE|RETRY|RETURN|REWRITE|RINPUT|SCR_FREEZE|SCR_THAW|SELECT|STOP|WRITE|TRACE|USE)\\b",
+      "match": "\\b(?i:CHAIN|CLOSE|CONTINUE|DATA|DEF|DELETE|DIM|DISPLAY|END|END DEF|EXECUTE|EXIT|FIELDS|FNEND|FORM|GOSUB|GOTO|INPUT|KEY|LET|LIBRARY|LINPUT|MENU|MENU TEXT|MENU DATA|MENU STATUS|ON ERROR|ON FKEY|ON|OPEN|OPTION|PAUSE|PRINT|USING|BORDER|RANDOMIZE|READ|REREAD|RESTORE|RETRY|RETURN|REWRITE|RINPUT|SCR_FREEZE|SCR_THAW|SELECT|STOP|WRITE|TRACE|USE)\\b",
       "name": "keyword.statement.br"
     },
     {
@@ -110,20 +126,20 @@
       "name": "keyword.option.br"
     },
     {
-      "match": "(\\b(?i:fn)\\w[\\w\\d]*\\$)",
-      "name": "entity.name.function.br"
-    },
-    {
       "match": "(\\b(?i:fn)\\w[\\w\\d]*\\b)",
       "name": "entity.name.function.br"
     },
     {
-      "match": "(\\b(\\w[\\w\\d]*)\\$)",
-      "name": "variable.stringvar.br"
+      "match": "\\b(?i:mat\\s+(\\w[\\w\\d]*)\\b)",
+      "name": "variable.array.numeric.br"
+    },
+    {
+      "match": "\\b(?i:MAT)\\b",
+      "name": "keyword.statement.br"
     },
     {
       "match": "(\\b(\\w[\\w\\d]*)\\b)",
-      "name": "variable.numericvar.br"
+      "name": "variable.scalar.numeric.br"
     }
   ]
 }
