@@ -1,0 +1,278 @@
+  ".source.br":
+  "BR_FileName$":
+    "prefix": "BR_FileName$",
+    "body": "BR_FileName$",
+    "description": "Returns the BR Filename version of the specified OS filename (reversing out your Drive statements).",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=BR_FileName$",
+    "leftLabel": "String"
+
+  "BRErr$":
+    "prefix": "BRErr$",
+    "body": "BRErr$",
+    "description": "Returns a description of the most recent error encountered.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=BRErr$",
+    "leftLabel": "String"
+
+  "CForm$":
+    "prefix": "CForm$",
+    "body": "CForm$",
+    "description": "Compiles a form statement for faster use and a smaller size string.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CForm$",
+    "leftLabel": "String"
+
+  "Chr$":
+    "prefix": "Chr$",
+    "body": "Chr$",
+    "description": "Returns a Character from the ASCII table.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Chr$",
+    "leftLabel": "String"
+
+  "Cnvrt$":
+    "prefix": "Cnvrt$",
+    "body": "Cnvrt$",
+    "description": "Converts a number to a string, by packing it into the specified Form spec.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Cnvrt$",
+    "leftLabel": "String"
+
+  "Date$":
+    "prefix": "Date$",
+    "body": "Date$",
+    "description": "Returns the current date, or converts a specific Julain date to a string Date.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Date$",
+    "leftLabel": "String"
+
+  "Decrypt$":
+    "prefix": "Decrypt$",
+    "body": "Decrypt$",
+    "description": "Unencrypts data encrypted with the encrypt keyword. (doesn't work on MD5, which cannot be unencrypted.)",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Decrypt$",
+    "leftLabel": "String"
+
+  "Encrypt$":
+    "prefix": "Encrypt$",
+    "body": "Encrypt$",
+    "description": "Encrypts a string using one of a few common algorythms including MD5.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Encrypt$",
+    "leftLabel": "String"
+
+  "Env$":
+    "prefix": "Env$",
+    "body": "Env$",
+    "description": "Returns the contents of an Environment Variable.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Env$",
+    "leftLabel": "String"
+
+  "File$":
+    "prefix": "File$",
+    "body": "File$",
+    "description": "Returns the file name of the file specified.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=File$",
+    "leftLabel": "String"
+
+  "Help$":
+    "prefix": "Help$",
+    "body": "Help$",
+    "description": "",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Help$",
+    "leftLabel": "String"
+
+  "Hex$":
+    "prefix": "Hex$",
+    "body": "Hex$",
+    "description": "Converts the given string to Hexidecimal.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Hex$",
+    "leftLabel": "String"
+
+  "KStat$":
+    "prefix": "KStat$",
+    "body": "KStat$",
+    "description": "Returns keystrokes from the keyboard buffer.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=KStat$",
+    "leftLabel": "String"
+
+  "Login_Name$":
+    "prefix": "Login_Name$",
+    "body": "Login_Name$",
+    "description": "Contains the Windows User Name of the person logged in.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Login_Name$",
+    "leftLabel": "String"
+
+  "LPad$":
+    "prefix": "LPad$",
+    "body": "LPad$",
+    "description": "Pads a string on the left with spaces (or optionally, any other character).",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=LPad$",
+    "leftLabel": "String"
+
+  "LTrm$":
+    "prefix": "LTrm$",
+    "body": "LTrm$",
+    "description": "Trims off any spaces (or optionally any other specific character) from the left of the given string.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=LTrm$",
+    "leftLabel": "String"
+
+  "Lwrc$":
+    "prefix": "Lwrc$",
+    "body": "Lwrc$",
+    "description": "Lowercases the given string.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Lwrc$",
+    "leftLabel": "String"
+
+  "Max$":
+    "prefix": "Max$",
+    "body": "Max$",
+    "description": "Finds the String with the greatest ASCII value of the given strings.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Max$",
+    "leftLabel": "String"
+
+  "Min$":
+    "prefix": "Min$",
+    "body": "Min$",
+    "description": "Finds the String with the lowest ASCII value of the given strings.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Min$",
+    "leftLabel": "String"
+
+  "Msg$":
+    "prefix": "Msg$",
+    "body": "Msg$",
+    "description": "",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Msg$",
+    "leftLabel": "String"
+
+  "OS_FileName$":
+    "prefix": "OS_FileName$",
+    "body": "OS_FileName$",
+    "description": "Returns the OS file name of the Specified BR Filename, taking into account the Drive statements.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=OS_FileName$",
+    "leftLabel": "String"
+
+  "Pic$":
+    "prefix": "Pic$",
+    "body": "Pic$",
+    "description": "",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Pic$",
+    "leftLabel": "String"
+
+  "Program$":
+    "prefix": "Program$",
+    "body": "Program$",
+    "description": "Returns the currently active program.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Program$",
+    "leftLabel": "String"
+
+
+
+
+
+
+  "RPad$":
+    "prefix": "RPad$",
+    "body": "RPad$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=RPad$",
+    "leftLabel": "String"
+
+  "Rpt$":
+    "prefix": "Rpt$",
+    "body": "Rpt$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rpt$",
+    "leftLabel": "String"
+
+  "RTrm$":
+    "prefix": "RTrm$",
+    "body": "RTrm$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=RTrm$",
+    "leftLabel": "String"
+
+  "Session$":
+    "prefix": "Session$",
+    "body": "Session$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Session$",
+    "leftLabel": "String"
+
+  "SRep$":
+    "prefix": "SRep$",
+    "body": "SRep$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=SRep$",
+    "leftLabel": "String"
+
+  "Str$":
+    "prefix": "Str$",
+    "body": "Str$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Str$",
+    "leftLabel": "String"
+
+  "Time$":
+    "prefix": "Time$",
+    "body": "Time$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Time$",
+    "leftLabel": "String"
+
+  "Trim$":
+    "prefix": "Trim$",
+    "body": "Trim$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Trim$",
+    "leftLabel": "String"
+
+  "UnHex$":
+    "prefix": "UnHex$",
+    "body": "UnHex$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=UnHex$",
+    "leftLabel": "String"
+
+  "UprC$":
+    "prefix": "UprC$",
+    "body": "UprC$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=UprC$",
+    "leftLabel": "String"
+
+  "UserID$":
+    "prefix": "UserID$",
+    "body": "UserID$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=UserID$",
+    "leftLabel": "String"
+
+  "Variable$":
+    "prefix": "Variable$",
+    "body": "Variable$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Variable$",
+    "leftLabel": "String"
+
+  "WBPlatform$":
+    "prefix": "WBPlatform$",
+    "body": "WBPlatform$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=WBPlatform$",
+    "leftLabel": "String"
+
+  "WBVersion$":
+    "prefix": "WBVersion$",
+    "body": "WBVersion$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=WBVersion$",
+    "leftLabel": "String"
+
+  "WSID$":
+    "prefix": "WSID$",
+    "body": "WSID$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=WSID$",
+    "leftLabel": "String"
+
+  "Xlate$":
+    "prefix": "Xlate$",
+    "body": "Xlate$",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Xlate$",
+    "leftLabel": "String"

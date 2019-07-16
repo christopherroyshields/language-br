@@ -3,14 +3,14 @@
     "prefix": "abs",
     "body": "abs(${1:expression})",
     "description": "Builds key from record data.",
-    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Aidx",
-    "leftLabel": "Integer"
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Abs",
+    "leftLabel": "Float"
   "Mat <Array> ... Aidx(Array)":
     "prefix": "aidxm",
     "body": "Mat ${1:indexedArray}(udim(${2:}))=aidx(${2:})",
     "description": "Returns an array that is an ascending index obtained from sorting the array within parenthesis.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Aidx",
-    "leftLabel": "Integer"
+    "leftLabel": "None"
   "Aidx(Array)":
     "prefix": "aidx",
     "body": "aidx(${1:})",
@@ -30,7 +30,7 @@
     """,
     "description": "Returns a character which, when printed, sounds the printer's or terminal's bell. It is used mainly in PRINT statements.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Bell",
-    "leftLabel": ""
+    "leftLabel": "Special"
   "Ceil(<numeric expression>)":
     "prefix": "Ceil",
     "body": "Ceil(${1:Float})",
@@ -60,7 +60,7 @@
     "body": "cos(${1:Float})$0",
     "description": "Trigonometric function that calculates the cosine of X in radians.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CoS",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "CurCol":
     "prefix": "CurCol",
     "body": "CurCol",
@@ -108,13 +108,13 @@
     "body": "debug_str(${1:10},\"${2:String}\")",
     "description": "Depending on loglevel (message-level must be equal or lower), send data to the logfile as well as to the debugger if it is attached, or optionally to the command console if the debugger is not attached and GUI is ON.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Debug_Str",
-    "leftLabel": "Integer"
+    "leftLabel": "None"
   "Didx(<array name>)":
     "prefix": "didx",
     "body": "mat ${1:indexArray}(udim(${2:arrayToBeIndexed}$))=aidx(${2:arrayToBeIndexed}$)",
     "description": " returns an array that is a descending index obtained from sorting the array named.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=DIdx",
-    "leftLabel": "Integer"
+    "leftLabel": "Integer Array"
   "Err":
     "prefix": "err",
     "body": "Err",
@@ -132,7 +132,7 @@
     "body": "exp(${1:x})",
     "description": "Calculates the exponential value of X.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Exp",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "File(<file handle>)":
     "prefix": "file",
     "body": "file(${1:filenum})$0",
@@ -164,7 +164,7 @@
     "body": "fp(${1:number})",
     "description": "Returns the fractional part of X. ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=FP",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Freesp(<file name>)":
     "prefix": "freesp",
     "body": "freesp(${1:n})$0",
@@ -236,7 +236,7 @@
     "body": "log(${1:number})$0",
     "description": "Returns the natural logarithm of its argument.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Log",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Lrec(<file handle>)":
     "prefix": "lrec",
     "body": "lrec(${1:filenum})$0",
@@ -248,25 +248,25 @@
     "body": "mat2str( MAT ${1:array$}, ${2:str$}, \",\")",
     "description": "Mat2Str internal function which converts an array to a string",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Mat2Str",
-    "leftLabel": "Integer"
+    "leftLabel": "None"
   "Max(<value>,<value>[,...])":
     "prefix": "max",
     "body": "max(${1:number},${2:number})",
     "description": "Returns the largest numeric value in the set of numbers inside parentheses (X1, X2 and so on).",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Max",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Min(<value>,<value>[,...])":
     "prefix": "Min",
     "body": "Min",
     "description": "The Min internal function returns the smallest numeric value in the set of numbers inside parentheses (X1, X2 and so on). ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Min",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Mod(<numerator>, <denominator>)":
     "prefix": "Mod",
     "body": "Mod",
     "description": "The Mod internal function returns the remainder of the numerator divided by the denominator. In other words, it is the remainder left after the division of one integer by another ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Mod",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Msg(\"<KB>\",<string>)":
     "prefix": "Msg",
     "body": "Msg",
@@ -276,7 +276,7 @@
   "Msgbox(<PROMPT$>[, <TITLE$>][, <BUTTONS$>][, <ICON$>])":
     "prefix": "msgbox",
     "body": "msgbox('${1:what is my purpose?}','${2:Title}','${3:Yn}','${icon$}')",
-    "description": "The MsgBox Internal Function will display a Windows Message Box. It has four possible parameters:",
+    "description": "The MsgBox Internal Function will display a Windows Message Box. It has four possible parameters.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=MsgBox",
     "leftLabel": "Integer"
   "Newpage":
@@ -284,7 +284,7 @@
     "body": "newpage",
     "description": "The NewPage internal function returns a character which, when printed, causes the printer to do a form feed or the screen to clear.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=NewPage",
-    "leftLabel": "Integer"
+    "leftLabel": "Special"
   "Ord(<string>)":
     "prefix": "ord",
     "body": "ord(${string}$)$0",
@@ -296,7 +296,7 @@
     "body": "pi",
     "description": "Returns the mathematical constant of 3.14159265358979",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Pi",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Pos(<string>,[^]<string>,[[-]<start>])":
     "prefix": "pos",
     "body": "Pos(${1:A$},${2:B$})$0",
@@ -306,7 +306,7 @@
   "Printer_List(<Mat array name>)":
     "prefix": "printer_list",
     "body": "printer_list(mat ${1:A}$)$0",
-    "description": "Returns the number of elements in A$ after redimensioning A$ to the number of active Windows printers.",
+    "description": "Reads the list of available Windows printers into the provided array (mat a$). Returns the number of available printers.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=abs",
     "leftLabel": "Integer"
   "ProcIn":
@@ -314,7 +314,7 @@
     "body": "procin",
     "description": "Returns 0 if input is from the screen. Returns 1 if input is from a procedure file.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=ProcIn",
-    "leftLabel": "Integer"
+    "leftLabel": "Boolean"
   "Rec(<file ref>)":
     "prefix": "rec",
     "body": "rec(${1:filenum})$0",
@@ -326,7 +326,7 @@
     "body": "rem(${1:numberator},${2:denominator})",
     "description": "Returns the remainder of the numerator divided by the denominator.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Rem_(internal_function)",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "RLn(<file handle>[,<new record length>])":
     "prefix": "rln",
     "body": "rln(${1:filenum},${2:newlength})$0",
@@ -338,13 +338,13 @@
     "body": "int(rnd*${1:100}+1)$0",
     "description": "Returns a random number between 0 and 1.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rnd",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Round(<numeric expression>,<decimals>)":
     "prefix": "round",
     "body": "round(${1:number})",
     "description": "Calculates the value of the first value rounded to the specified number of decimal places. ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Round",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Serial":
     "prefix": "serial",
     "body": "serial",
@@ -356,7 +356,7 @@
     "body": "setenv(${1:field},${2:value})$0",
     "description": "Sets session based environmental variables in Business Rules!.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=SetEnv",
-    "leftLabel": "Integer"
+    "leftLabel": "None"
   "Sgn(<X>)":
     "prefix": "sgn",
     "body": "sgn(${1:number})$0",
@@ -368,19 +368,19 @@
     "body": "sin(${1:number})$0",
     "description": "Trigonometric function that returns the sine of X in radians.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sin",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Sleep(<seconds>)":
     "prefix": "sleep",
     "body": "sleep(${1:seconds})$0",
     "description": "The Sleep internal function causes the processor to wait the specified number of seconds before continuing execution. It does not tie up the processor while waiting, which is especially important for multi-user systems.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sleep",
-    "leftLabel": "Integer"
+    "leftLabel": "None"
   "Sqr(<numeric expression>)":
     "prefix": "sqr",
     "body": "sqr(${1:number})$0",
     "description": "Returns the square root of its argument.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sqr",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Srch(<array-name$>,[^]<argument$>[,<row>])":
     "prefix": "srch",
     "body": "srch(mat ${1:a}$,'^${2:search}')$0",
@@ -402,7 +402,7 @@
       have been extended to ease parsing of CSV and XML data (as of 4.3).
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=absStr2Mat",
-    "leftLabel": "Integer"
+    "leftLabel": "None"
   "Sum(<numeric array>)":
     "prefix": "sum",
     "body": "sum(${1:NumberArray})$0",
@@ -411,7 +411,7 @@
       SUM also works with multi-dimensional matrices.
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sum",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Tab(<col>)":
     "prefix": "tab",
     "body": "tab(${1:col})$0",
@@ -422,13 +422,13 @@
       If x is greater than the record length, the cursor is positioned at column 1 in the next line.
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Tab",
-    "leftLabel": "Integer"
+    "leftLabel": "None"
   "Tan(<x>)":
     "prefix": "tan",
     "body": "tan(${1:number})$0",
     "description": "The Tan internal function is a mathematical trigonometric function that calculates the tangent of X in radians. ",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Tan",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "Timer":
     "prefix": "timer",
     "body": "timer$0",
@@ -438,7 +438,7 @@
       This value is used internally by the pro filer to monitor performance, but may be used within programs to measure the time very accurately
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Timer",
-    "leftLabel": "Integer"
+    "leftLabel": "Float"
   "UDim(<array name> [,<dimension>])":
     "prefix": "udim",
     "body": "udim(${1:array})$0",
