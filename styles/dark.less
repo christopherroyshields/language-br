@@ -10,14 +10,31 @@
 }
 
 .occurence {
-  border: 1px solid yellow;
-  border-radius: 2px;
+  display: inline-block;
+  animation-name: zoom-in-out;
+  animation-duration: .5s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+.occurence-current-big {
+  display: inline-block;
+  animation-name: zoom-in-out-red;
+  animation-duration: .5s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
 }
 
 .occurence-current {
   display: inline-block;
-  animation-name: zoom-in-out;
-  animation-duration: .2s;
+  animation-name: zoom-in-out-bright;
+  animation-duration: .5s;
   animation-timing-function: ease-in;
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -27,12 +44,48 @@
 
 @keyframes zoom-in-out {
   0%{
-	   transform: scale(1);
-  }
+    outline: 1px solid yellow;
+    outline-width: 1px;
+    outline-color: fade(cyan,10%);
+    }
   50%{
-	   transform: scale(1.2);
+    outline-width: 6px;
+    outline-color: fade(cyan,20%);
   }
   100%{
-	   transform: scale(1);
+    outline-width: 1px;
+    outline-color: fade(cyan,10%);
+  }
+}
+
+@keyframes zoom-in-out-bright {
+  0%{
+    outline: 1px solid yellow;
+    outline-width: 1px;
+    outline-color: fade(yellow,10%);
+    }
+  50%{
+    outline-width: 6px;
+    outline-color: fade(yellow,50%);
+  }
+  100%{
+    outline-width: 1px;
+    outline-color: fade(yellow,10%);
+  }
+}
+
+@keyframes zoom-in-out-red {
+  0%{
+    outline: 1px solid red;
+    outline-width: 1px;
+    outline-color: fade(red,10%);
+    }
+  50%{
+    outline-width: 6px;
+    outline-color: fade(red,50%);
+  }
+  100%{
+    outline-width: 1px;
+    outline-color: fade(red,10%);
   }
 }

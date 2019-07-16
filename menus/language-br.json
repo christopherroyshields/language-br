@@ -1,6 +1,7 @@
 {
   "menu": [
     {
+
       "label": "Packages",
       "submenu": [
         {
@@ -27,6 +28,31 @@
               "command": "language-br:strip-line-numbers"
             }
           ]
+        }
+      ]
+    },
+    {
+      "label": "Lexi",
+      "submenu": [
+        {
+          "label": "Compile BR Program",
+          "command": "language-br:compile"
+        },
+        {
+          "label": "Debug BR Program",
+          "command": "language-br:debug"
+        },
+        {
+          "label": "Run BR Program",
+          "command": "language-br:run"
+        },
+        {
+          "label": "Add Line Numbers",
+          "command": "language-br:add-line-numbers"
+        },
+        {
+          "label": "Remove Line Numbers",
+          "command": "language-br:strip-line-numbers"
         }
       ]
     }
