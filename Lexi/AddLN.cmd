@@ -63,7 +63,7 @@ echo run >> "%cmd_home%convert.prc"
 echo system >> "%cmd_home%convert.prc"
 
 cd "%cmd_home%"
-lexitip
+start lexitip
 brnative proc convert.prc
 
 del convert.prc

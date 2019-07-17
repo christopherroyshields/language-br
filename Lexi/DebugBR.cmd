@@ -80,7 +80,7 @@ echo skip XIT >> "%cmd_home%convert.prc"
 echo :XIT >> "%cmd_home%convert.prc"
 echo system >> "%cmd_home%convert.prc"
 cd "%cmd_home%"
-lexitip
+start lexitip
 brnative proc convert.prc
 
 del "%cmd_home%convert.prc"
@@ -114,7 +114,7 @@ cd %folder%
 echo proc noecho >convert.$$$
 echo load "%npne_name%" >> convert.$$$
 echo debug connect >> convert.$$$
-lexitip
+start lexitip
 brnative proc convert.$$$
 goto END
 
