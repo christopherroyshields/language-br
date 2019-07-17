@@ -26,6 +26,18 @@
             {
               "label": "Remove Line Numbers",
               "command": "language-br:strip-line-numbers"
+            },
+            {
+              "label": "Set BR 4.2",
+              "command": "language-br:set-br-42"
+            },
+            {
+              "label": "Set BR 4.3",
+              "command": "language-br:set-br-43"
+            },
+            {
+              "label": "Search Wiki for Selected Text",
+              "command": "language-br:lookupwiki"
             }
           ]
         }

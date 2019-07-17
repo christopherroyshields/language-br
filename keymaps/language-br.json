@@ -4,6 +4,9 @@
     "ctrl-alt-2": "language-br:debug",
     "ctrl-alt-3": "language-br:run",
     "ctrl-alt-4": "language-br:add-line-numbers",
-    "ctrl-alt-5": "language-br:strip-line-numbers"
+    "ctrl-alt-5": "language-br:strip-line-numbers",
+    "ctrl-alt-6": "language-br:set-br-42",
+    "ctrl-alt-7": "language-br:set-br-43",
+    "ctrl-f1": "language-br:lookupwiki",
   }
 }
