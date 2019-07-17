@@ -83,6 +83,13 @@
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Execute"
     "leftLabel": "Statement"
 
+  "Execute \"System [-c -M] start <URL>\"":
+    "prefix": "ExecuteWeb"
+    "body": "Execute \"System -c -M start ${1:URL}\""
+    "description": "Launches a web URL in the default browser."
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Execute"
+    "leftLabel": "Statement"
+
   "Exit <error condition line ref>[,...]":
     "prefix": "Exit"
     "body": "Exit $0"
