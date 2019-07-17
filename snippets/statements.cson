@@ -1,11 +1,350 @@
 ".source.br":
-  "Def Fn ... fnend":
+  "DeFnfnend":
     "prefix": "def"
-    "body": """
-      def fn${1:name}(${2:params})
-        $3
-      fnend
-    """
+    "body": ""
     "description": "Define Function"
-    "descriptionMoreURL": "http://www.brwiki.com/index.php?title=Def"
-    "leftLabel": "Integer"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Def"
+    "leftLabel": "Statement"
+
+  "Chain":
+    "prefix": "Chain"
+    "body": "Chain"
+    "description": "Chain Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Chain"
+    "leftLabel": "Statement"
+
+  "Close":
+    "prefix": "Close"
+    "body": "Close"
+    "description": "Close Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Close"
+    "leftLabel": "Statement"
+
+  "Continue":
+    "prefix": "Continue"
+    "body": "Continue"
+    "description": "Continue Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Continue"
+    "leftLabel": "Statement"
+
+  "Data":
+    "prefix": "Data"
+    "body": "Data"
+    "description": "Data Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Data"
+    "leftLabel": "Statement"
+
+  "Delete":
+    "prefix": "Delete"
+    "body": "Delete"
+    "description": "Delete Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Delete"
+    "leftLabel": "Statement"
+
+  "Dim":
+    "prefix": "Dim"
+    "body": "Dim"
+    "description": "Dim Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Dim"
+    "leftLabel": "Statement"
+
+  "Display":
+    "prefix": "Display"
+    "body": "Display"
+    "description": "Display Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Display"
+    "leftLabel": "Statement"
+
+  "End":
+    "prefix": "End"
+    "body": "End"
+    "description": "End Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=End"
+    "leftLabel": "Statement"
+
+  "Execute":
+    "prefix": "Execute"
+    "body": "Execute"
+    "description": "Execute Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Execute"
+    "leftLabel": "Statement"
+
+  "Exit":
+    "prefix": "Exit"
+    "body": "Exit"
+    "description": "Exit Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Exit"
+    "leftLabel": "Statement"
+
+  "Print":
+    "prefix": "Print"
+    "body": "Print"
+    "description": "Print Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Print"
+    "leftLabel": "Statement"
+
+  "Print Fields":
+    "prefix": "Print Fields"
+    "body": "Print Fields"
+    "description": "Print Fields Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Print Fields"
+    "leftLabel": "Statement"
+
+  "Form":
+    "prefix": "Form"
+    "body": "Form"
+    "description": "Form Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Form"
+    "leftLabel": "Statement"
+
+  "Gosub":
+    "prefix": "Gosub"
+    "body": "Gosub"
+    "description": "Gosub Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Gosub"
+    "leftLabel": "Statement"
+
+  "Goto":
+    "prefix": "Goto"
+    "body": "Goto"
+    "description": "Goto Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Goto"
+    "leftLabel": "Statement"
+
+  "Input":
+    "prefix": "Input"
+    "body": "Input"
+    "description": "Input Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Input"
+    "leftLabel": "Statement"
+
+  "Input Fields":
+    "prefix": "Input Fields"
+    "body": "Input Fields"
+    "description": "Input Fields Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Input Fields"
+    "leftLabel": "Statement"
+
+  "Key":
+    "prefix": "Key"
+    "body": "Key"
+    "description": "Key Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Key"
+    "leftLabel": "Statement"
+
+  "Let":
+    "prefix": "Let"
+    "body": "Let"
+    "description": "Let Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Let"
+    "leftLabel": "Statement"
+
+  "Library":
+    "prefix": "Library"
+    "body": "Library"
+    "description": "Library Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Library"
+    "leftLabel": "Statement"
+
+  "Linput":
+    "prefix": "Linput"
+    "body": "Linput"
+    "description": "Linput Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Linput"
+    "leftLabel": "Statement"
+
+  "Mat":
+    "prefix": "Mat"
+    "body": "Mat"
+    "description": "Mat Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Mat"
+    "leftLabel": "Statement"
+
+  "Menu":
+    "prefix": "Menu"
+    "body": "Menu"
+    "description": "Menu Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Menu"
+    "leftLabel": "Statement"
+
+  "Menu Text":
+    "prefix": "Menu Text"
+    "body": "Menu Text"
+    "description": "Menu Text Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Menu Text"
+    "leftLabel": "Statement"
+
+  "Menu Data":
+    "prefix": "Menu Data"
+    "body": "Menu Data"
+    "description": "Menu Data Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Menu Data"
+    "leftLabel": "Statement"
+
+  "Menu Status":
+    "prefix": "Menu Status"
+    "body": "Menu Status"
+    "description": "Menu Status Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Menu Status"
+    "leftLabel": "Statement"
+
+  "On Error":
+    "prefix": "On Error"
+    "body": "On Error"
+    "description": "On Error Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=On Error"
+    "leftLabel": "Statement"
+
+  "On Fkey":
+    "prefix": "On Fkey"
+    "body": "On Fkey"
+    "description": "On Fkey Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=On Fkey"
+    "leftLabel": "Statement"
+
+  "On":
+    "prefix": "On"
+    "body": "On"
+    "description": "On Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=On"
+    "leftLabel": "Statement"
+
+  "Open":
+    "prefix": "Open"
+    "body": "Open"
+    "description": "Open Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Open"
+    "leftLabel": "Statement"
+
+  "Option":
+    "prefix": "Option"
+    "body": "Option"
+    "description": "Option Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Option"
+    "leftLabel": "Statement"
+
+  "Pause":
+    "prefix": "Pause"
+    "body": "Pause"
+    "description": "Pause Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Pause"
+    "leftLabel": "Statement"
+
+  "Print Using":
+    "prefix": "Print Using"
+    "body": "Print Using"
+    "description": "Print Using Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Print Using"
+    "leftLabel": "Statement"
+
+  "Print Border":
+    "prefix": "Print Border"
+    "body": "Print Border"
+    "description": "Print Border Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Print Border"
+    "leftLabel": "Statement"
+
+  "Randomize":
+    "prefix": "Randomize"
+    "body": "Randomize"
+    "description": "Randomize Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Randomize"
+    "leftLabel": "Statement"
+
+  "Read":
+    "prefix": "Read"
+    "body": "Read"
+    "description": "Read Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Read"
+    "leftLabel": "Statement"
+
+  "Reread":
+    "prefix": "Reread"
+    "body": "Reread"
+    "description": "Reread Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Reread"
+    "leftLabel": "Statement"
+
+  "Restore":
+    "prefix": "Restore"
+    "body": "Restore"
+    "description": "Restore Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Restore"
+    "leftLabel": "Statement"
+
+  "Retry":
+    "prefix": "Retry"
+    "body": "Retry"
+    "description": "Retry Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Retry"
+    "leftLabel": "Statement"
+
+  "Return":
+    "prefix": "Return"
+    "body": "Return"
+    "description": "Return Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Return"
+    "leftLabel": "Statement"
+
+  "Rewrite":
+    "prefix": "Rewrite"
+    "body": "Rewrite"
+    "description": "Rewrite Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Rewrite"
+    "leftLabel": "Statement"
+
+  "Rinput":
+    "prefix": "Rinput"
+    "body": "Rinput"
+    "description": "Rinput Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Rinput"
+    "leftLabel": "Statement"
+
+  "Scr_freeze":
+    "prefix": "Scr_freeze"
+    "body": "Scr_freeze"
+    "description": "Scr_freeze Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Scr_freeze"
+    "leftLabel": "Statement"
+
+  "Scr_thaw":
+    "prefix": "Scr_thaw"
+    "body": "Scr_thaw"
+    "description": "Scr_thaw Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Scr_thaw"
+    "leftLabel": "Statement"
+
+  "Select":
+    "prefix": "Select"
+    "body": "Select"
+    "description": "Select Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Select"
+    "leftLabel": "Statement"
+
+  "Stop":
+    "prefix": "Stop"
+    "body": "Stop"
+    "description": "Stop Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Stop"
+    "leftLabel": "Statement"
+
+  "Write":
+    "prefix": "Write"
+    "body": "Write"
+    "description": "Write Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Write"
+    "leftLabel": "Statement"
+
+  "Trace":
+    "prefix": "Trace"
+    "body": "Trace"
+    "description": "Trace Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Trace"
+    "leftLabel": "Statement"
+
+  "Use":
+    "prefix": "Use"
+    "body": "Use"
+    "description": "Use Statement"
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Use"
+    "leftLabel": "Statement"
