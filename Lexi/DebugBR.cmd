@@ -107,6 +107,7 @@ del "%cmd_home%%np_name%"
 goto RUNDEBUG
 
 :RUNDEBUG
+start lexitip
 rem Change Drive if needed
 %drive%
 rem Then run the program
@@ -114,7 +115,6 @@ cd %folder%
 echo proc noecho >convert.$$$
 echo load "%npne_name%" >> convert.$$$
 echo debug connect >> convert.$$$
-start lexitip
 brnative proc convert.$$$
 goto END
 
@@ -137,7 +137,7 @@ echo [np_name]    = the name with the extension but no path.
 echo [npne_name]  = name without path or extension
 echo [folder]     = just the path
 echo .
-echo NOTE: All parameters discussed above are for the source file.  
+echo NOTE: All parameters discussed above are for the source file.
 echo       The destination program file will be the same as the source file
 echo       only it will have a .br extension instead.
 goto END

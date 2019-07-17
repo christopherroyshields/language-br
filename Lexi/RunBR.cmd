@@ -106,6 +106,7 @@ del "%cmd_home%%np_name%"
 goto RUNDEBUG
 
 :RUNDEBUG
+start lexitip
 rem Change Drive if needed
 %drive%
 rem Then run the program
@@ -113,7 +114,6 @@ cd %folder%
 echo proc noecho >convert.$$$
 echo load "%npne_name%" >> convert.$$$
 echo run >> convert.$$$
-start lexitip
 brnative.exe proc convert.$$$
 goto END
 
