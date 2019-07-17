@@ -1,0 +1,98 @@
+".source.br":
+  "<Succed/Fail> fnfm(<layout>;key$)":
+    "prefix": "fnfm",
+    "body": "fnfm(\"${1:layout}\")",
+    "description": "Launches and runs the specified Screenio Screen. Returns True if the User Saved the Record, and False if they Cancelled.",
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?title=ScreenIO_Library#ScreenIO_Runtime_Engine_Library_Functions",
+    "leftLabel": "Boolean"
+
+  "<Key> fnfm$(<layout>;key$)":
+    "prefix": "fnfm$",
+    "body": "fnfm$(\"${1:layout}\")",
+    "description": "Launches and runs the specified Screenio Screen. Returns the Key$ or Record Number of the Saved Record, or an Empty String if the User Cancelled.",
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?title=ScreenIO_Library#ScreenIO_Runtime_Engine_Library_Functions",
+    "leftLabel": "String"
+
+  "<WindowNumber> fnDisplayScreen(<layout>;key$)":
+    "prefix": "fnDisplayScreen",
+    "body": "fnDisplayScreen(\"${1:layout}\")",
+    "description": "Launches and displays the specified ScreenIO Screen, returning the Window Handle of the displayed screen.",
+    "descriptionMoreURL": "http://www.brwiki.com/index.php?title=ScreenIO_Library#ScreenIO_Runtime_Engine_Library_Functions",
+    "leftLabel": "Integer"
+
+  "fnListSpec$(SpecIn$)":
+    "prefix": "fnListSpec$",
+    "body": "fnListSpec$(${1:ListviewSpec$})",
+    "description": "takes a given BR Fields listview spec, and strips off everything after the first 3 commas, used to calculated the spec needed to interact with the given listview.",
+    "descriptionMoreURL": "brwiki2.brulescorp.com/index.php?title=ScreenIO_Library#fnListSpec.24",
+    "leftLabel": "String"
+
+  "fnFunctionBase":
+    "prefix": "fnFunctionBase",
+    "body": "fnFunctionBase",
+    "description": "returns the Function Base of the current screen. Use it for interpreting which control was clicked on, in your Mainloop Event.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=ScreenIO_Library#fnFunctionBase",
+    "leftLabel": "Integer"
+
+  "fnFindSubscript":
+    "prefix": "fnFindSubscript",
+    "body": "fnFindSubscript(mat Subscripts$,${1:Prefix},${2:SubscriptName})",
+    "description": "returns the Subscript expressed in the given String by searching the standard ScreenIO or FileIO subscripts arrays.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=ScreenIO_Library#fnFindSubscript",
+    "leftLabel": "Integer"
+
+  "fnPrepareAnimation":
+    "prefix": "fnPrepareAnimation",
+    "body": "fnPrepareAnimation",
+    "description": "Run to initialize the loading animation.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=ScreenIO_Library#Animations",
+    "leftLabel": "None"
+
+  "fnAnimate":
+    "prefix": "fnAnimate",
+    "body": "fnAnimate(${1:OptionalMessage$})",
+    "description": "Run in your loop to display an animation during some slow task.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=ScreenIO_Library#Animations",
+    "leftLabel": "None"
+
+  "fnCloseAnimation":
+    "prefix": "fnCloseAnimation",
+    "body": "fnCloseAnimation",
+    "description": "Run at the end of your loop to close the Animation Window.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=ScreenIO_Library#Animations",
+    "leftLabel": "None"
+
+  "fnDays":
+    "prefix": "fnDays",
+    "body": "fnDays(${1:DateString$},${2:DateMask$})",
+    "description": "Call the ScreenIO Days Validation function that converts a User Entered date to Julian Format.",
+    "descriptionMoreURL": "brwiki2.brulescorp.com/index.php?title=ScreenIO_Library#fnDays",
+    "leftLabel": "Date (Julian)"
+
+  "fnBr42":
+    "prefix": "fnBr42",
+    "body": "fnBr42",
+    "description": "Returns True (nonzero) if Running in BR 4.2 or Higher.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=ScreenIO_Library#fnBr42_and_fnBr43",
+    "leftLabel": "Boolean"
+
+  "fnBr43":
+    "prefix": "fnBr43",
+    "body": "fnBr43",
+    "description": "Returns True (nonzero) if Running in BR 4.3 or Higher.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=ScreenIO_Library#fnBr42_and_fnBr43",
+    "leftLabel": "Boolean"
+
+  "fnDesignScreen(;ScreenName$)":
+    "prefix": "fnDesignScreen",
+    "body": "fnDesignScreen",
+    "description": "Calls the ScreenIO Designer and optionally loads a screen for editing.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=ScreenIO_Library#fnDesignScreen",
+    "leftLabel": "None"
+
+  "<Function> fnSelectEvent$(CurrentSelection$;&ReturnFkey)":
+    "prefix": "fnSelectEvent$",
+    "body": "fnSelectEvent$(${1:CurrentSelection$})",
+    "description": "Calls the ScreenIO Select Custom Function dialog window and returns the function the user selects.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=ScreenIO_Library#fnSelectEvent.24",
+    "leftLabel": "String"

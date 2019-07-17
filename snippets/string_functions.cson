@@ -1,0 +1,287 @@
+".source.br":
+  "BR_FileName$(<OS_Filename>)":
+    "prefix": "BR_FileName$",
+    "body": "BR_FileName$(${1:OS_Filename$})$0",
+    "description": "Returns the BR Filename version of the specified OS filename (reversing out your Drive statements).",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=BR_FileName$",
+    "leftLabel": "String"
+
+  "BRErr$":
+    "prefix": "BRErr$",
+    "body": "BRErr$$0",
+    "description": "Returns a description of the most recent error encountered.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=BRErr$",
+    "leftLabel": "String"
+
+  "CForm$(<Form>)":
+    "prefix": "CForm$",
+    "body": "CForm$(${1:Form$})$0",
+    "description": "Compiles a form statement for faster use and a smaller size string.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=CForm$",
+    "leftLabel": "String"
+
+  "Chr$(<Number>)":
+    "prefix": "Chr$",
+    "body": "Chr$(${1:Number})$0",
+    "description": "Returns a Character from the ASCII table.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Chr$",
+    "leftLabel": "String"
+
+  "Cnvrt$(<Spec>,<Number>)":
+    "prefix": "Cnvrt$",
+    "body": "Cnvrt$(${1:Spec$},(${2:Number})$0",
+    "description": "Converts a number to a string, by packing it into the specified Form spec.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Cnvrt$",
+    "leftLabel": "String"
+
+  "Date$(<days>,[<format$>])":
+    "prefix": "Date$",
+    "body": "Date$(${1:DaysJulian},\"${2:MMDDYY}\")$0",
+    "description": "Returns the current date, or converts a specific Julain date to a string Date.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Date$",
+    "leftLabel": "String"
+
+  "Decrypt$(<string>[,<Algorithm>])":
+    "prefix": "Decrypt$",
+    "body": "Decrypt$(${1:String$})$0",
+    "description": "Unencrypts data encrypted with the encrypt keyword. (doesn't work on MD5, which cannot be unencrypted.)",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Decrypt$",
+    "leftLabel": "String"
+
+  "Decrypt$(<string>,\"MD5\")":
+    "prefix": "Decrypt$ MD5",
+    "body": "Decrypt$(${1:String$},\"MD5\")$0",
+    "description": "Unencrypts data encrypted with the encrypt keyword. (doesn't work on MD5, which cannot be unencrypted.)",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Decrypt$",
+    "leftLabel": "String"
+
+  "Encrypt$(<string>[,<Algorithm>])":
+    "prefix": "Encrypt$",
+    "body": "Encrypt$(${1:String$})$0",
+    "description": "Encrypts a string using one of a few common algorythms including MD5.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Encrypt$",
+    "leftLabel": "String"
+
+  "Encrypt$(<string>,\"MD5\")":
+    "prefix": "Encrypt$ MD5",
+    "body": "Encrypt$(${1:String$},\"MD5\")$0",
+    "description": "Encrypts a string using one of a few common algorythms including MD5.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Encrypt$",
+    "leftLabel": "String"
+
+  "Env$(<VariableName>)":
+    "prefix": "Env$",
+    "body": "Env$(\"${1:VariableName}\")$0",
+    "description": "Returns the contents of an Environment Variable.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Env$",
+    "leftLabel": "String"
+
+  "File$(<Number>)":
+    "prefix": "File$",
+    "body": "File$(${1:Number})$0",
+    "description": "Returns the file name of the file specified.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=File$",
+    "leftLabel": "String"
+
+  "HELP$(<topic>[,<filename>])":
+    "prefix": "Help$",
+    "body": "Help$(\"${1:HelpTopic}\")$0",
+    "description": "Displays the requested Help Topic from the HelpFile specified by the HELPDFLT config specification.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Help$",
+    "leftLabel": "String"
+
+  "Hex$(<string>)":
+    "prefix": "Hex$",
+    "body": "Hex$(${1:String$})$0",
+    "description": "Converts the given string to Hexidecimal.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Hex$",
+    "leftLabel": "String"
+
+  "KStat$([<Integer>])":
+    "prefix": "KStat$",
+    "body": "KStat$$0",
+    "description": "Returns keystrokes from the keyboard buffer.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=KStat$",
+    "leftLabel": "String"
+
+  "Login_Name$([<UserName>])":
+    "prefix": "Login_Name$",
+    "body": "Login_Name$$0",
+    "description": "Returns the Windows User Name of the person logged in. The optional parameter can be used to Override Login_Name with another name.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Login_Name$",
+    "leftLabel": "String"
+
+  "LPad$(<string>)":
+    "prefix": "LPad$",
+    "body": "LPad$(${1:String$})$0",
+    "description": "Pads a string on the left with spaces (or optionally, any other character).",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=LPad$",
+    "leftLabel": "String"
+
+  "LTrm$(<string>)":
+    "prefix": "LTrm$",
+    "body": "LTrm$(${1:String$})$0",
+    "description": "Trims off any spaces (or optionally any other specific character) from the left of the given string.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=LTrm$",
+    "leftLabel": "String"
+
+  "Lwrc$(<string>)":
+    "prefix": "Lwrc$",
+    "body": "Lwrc$(${1:String$})$0",
+    "description": "Converts the given string to Lowercase.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Lwrc$",
+    "leftLabel": "String"
+
+  "Max$(<string>)":
+    "prefix": "Max$",
+    "body": "Max$(${1:String$})$0",
+    "description": "Finds the String with the greatest ASCII value of the given strings.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Max$",
+    "leftLabel": "String"
+
+  "Min$(<string>)":
+    "prefix": "Min$",
+    "body": "Min$(${1:String$})$0",
+    "description": "Finds the String with the lowest ASCII value of the given strings.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Min$",
+    "leftLabel": "String"
+
+  "Msg$(<string>)":
+    "prefix": "Msg$",
+    "body": "Msg$(${1:String$})$0",
+    "description": "Displays custom text in the Status Line at the bottom of the BR Command Console window.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Msg$",
+    "leftLabel": "String"
+
+  "OS_FileName$(<BR_FileName>)":
+    "prefix": "OS_FileName$",
+    "body": "OS_FileName$(${1:BR_FileName})$0",
+    "description": "Returns the OS file name of the Specified BR Filename, taking into account the Drive statements.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=OS_FileName$",
+    "leftLabel": "String"
+
+  "Pic$(<CurrencySymbol>)":
+    "prefix": "Pic$",
+    "body": "Pic$(${1:CurrencySymbol$})$0",
+    "description": "Sets or displays the Currency Symbol used by the PIC form statement.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Pic$",
+    "leftLabel": "String"
+
+  "Program$":
+    "prefix": "Program$",
+    "body": "Program$$0",
+    "description": "Returns the currently active program.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Program$",
+    "leftLabel": "String"
+
+  "RPad$(<string>)":
+    "prefix": "RPad$",
+    "body": "RPad$(${1:String$})$0",
+    "description": "Pads a string on the right with spaces (or optionally, any other character).",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=RPad$",
+    "leftLabel": "String"
+
+  "Rpt$(<string>,<repeat>)":
+    "prefix": "Rpt$",
+    "body": "Rpt$(${1:String$},${2:RepeatTimes})$0",
+    "description": "Repeat the given character or string the specified number of times.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Rpt$",
+    "leftLabel": "String"
+
+  "RTrm$(<string>)":
+    "prefix": "RTrm$",
+    "body": "RTrm$(${1:String$})$0",
+    "description": "Trims off any spaces (or optionally any other specific character) from the right of the given string.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=RTrm$",
+    "leftLabel": "String"
+
+  "Session$":
+    "prefix": "Session$",
+    "body": "Session$$0",
+    "description": "Returns the current Session$ number, which is 2 digits identifying the Workstation number, and 1 digit identifying the Session.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Session$",
+    "leftLabel": "String"
+
+  "SRep$<String$>[,<StartSearchPos>],<SearchFor$>,<ReplaceWith$>":
+    "prefix": "SRep$",
+    "body": "SRep$(${1:String$},${2:SearchFor$},${3:ReplaceWith$})$0",
+    "description": "Search the given string and replace all occurances of the first string with the second string.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=SRep$",
+    "leftLabel": "String"
+
+  "Str$(<number>)":
+    "prefix": "Str$",
+    "body": "Str$(${1:number$})$0",
+    "description": "Converts the given number to string.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Str$",
+    "leftLabel": "String"
+
+  "Time$":
+    "prefix": "Time$",
+    "body": "Time$$0",
+    "description": "Returns the current System Time.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Time$",
+    "leftLabel": "String"
+
+  "Trim$(<string>)":
+    "prefix": "Trim$",
+    "body": "Trim$(${1:String$})$0",
+    "description": "Trims all spaces off both ends of the given string.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Trim$",
+    "leftLabel": "String"
+
+  "UnHex$(<string>)":
+    "prefix": "UnHex$",
+    "body": "UnHex$(${1:String$})$0",
+    "description": "Converts Hexidecimal to Characters.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=UnHex$",
+    "leftLabel": "String"
+
+  "UprC$(<string>)":
+    "prefix": "UprC$",
+    "body": "UprC$(${1:String$})$0",
+    "description": "Converts the given string to Uppercase.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=UprC$",
+    "leftLabel": "String"
+
+  "UserID$":
+    "prefix": "UserID$",
+    "body": "UserID$$0",
+    "description": "Returns the licensee information from the BR logfile.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=UserID$",
+    "leftLabel": "String"
+
+  "Variable$":
+    "prefix": "Variable$",
+    "body": "Variable$$0",
+    "description": "Returns the Variable associated with the last Error, or if no error, the last variable processed by BR.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Variable$",
+    "leftLabel": "String"
+
+  "WBPlatform$":
+    "prefix": "WBPlatform$",
+    "body": "WBPlatform$$0",
+    "description": "Displays the Operating System that BR is running under.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=WBPlatform$",
+    "leftLabel": "String"
+
+  "WBVersion$":
+    "prefix": "WBVersion$",
+    "body": "WBVersion$$0",
+    "description": "Displays the current version of Business Rules.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=WBVersion$",
+    "leftLabel": "String"
+
+  "WSID$":
+    "prefix": "WSID$",
+    "body": "WSID$$0",
+    "description": "Displays the WSID$, a 2 digit unique identifier for this computer.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=WSID$",
+    "leftLabel": "String"
+
+  "Xlate$(<string>,<translation string>[,<position>])":
+    "prefix": "Xlate$",
+    "body": "Xlate$(${1:String$},${2:TranslationTable$})$0",
+    "description": "Returns a string translated using a second string as a translation table.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Xlate$",
+    "leftLabel": "String"

@@ -1,0 +1,29 @@
+".source.br":
+  "#AutoNumber# NewLine, NewLineCount":
+    "prefix": "AutoNumber",
+    "body" : "! #AutoNumber#$ ${1:NewLine}, ${2:NewLineCount} $0",
+    "description": "Directs Lexi to set the current line and line count to the ones expressed here.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Lexi#AutoNumber",
+    "leftLabel": "Lexi"
+
+  "#Define# [[Constant]] = \"Value\"":
+    "prefix": "Define",
+    "body" : "! #Define# [[${1:Constant}]] = \"${2:Value}\"$0",
+    "description": "Directs Lexi to replace any occurrance of [[Constant]] with Value.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Lexi#DEFINE",
+    "leftLabel": "Lexi"
+
+  "#Select# Variable$ #Case# \"Case\"":
+    "prefix": "Select Case",
+    "body" : """
+      #Select# ${1:Variable}$ #Case# \"${2:Case}\"
+         $0
+      #Case# \"${3:Case}\"
+
+      #Case Else#
+
+      #End Select#
+    """,
+    "description": "Select Case Statement. (Lexi translates it to ElseIfs for Compatibility with BR.)",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Lexi#SELECT_CASE",
+    "leftLabel": "Lexi"

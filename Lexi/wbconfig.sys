@@ -1,0 +1,10 @@
+drive c:,.,\,\
+wbserver c:\
+workstack 47500
+maxrecall 50
+flowstack 1250
+printscreen newpage
+break 8 1600
+rpnstack 3750
+style indent 3 keyword lower label upper expression mixed comment mixed
+gui off

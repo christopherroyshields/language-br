@@ -1,0 +1,690 @@
+".source.br":
+  "fnGetFileNumber(;start,count)":
+    "prefix": "fnGetFileNumber",
+    "body" : "fnGetFileNumber$0",
+    "description": "Returns the next available fidle handle.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnGetFileNumber",
+    "leftLabel": "Integer"
+
+  "fnShowData(Filelay$*128, ...)":
+    "prefix": "fnShowData",
+    "body" : "fnShowData(\"${1:layout}\")$0",
+    "description": "Loads the BR Data Crawler to View or Edit the current data file. Many options exist for filters and other options.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnShowData",
+    "leftLabel": "None"
+
+  "fnEmpty(mat A)":
+    "prefix": "fnEmpty",
+    "body" : "fnEmpty(mat ${1:array})$0",
+    "description": "Returns true if the passed array is empty.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnEmpty_.26_fnEmptyS",
+    "leftLabel": "Boolean"
+
+  "fnEmptyS(mat A$)":
+    "prefix": "fnEmptyS",
+    "body" : "fnEmptyS(mat ${1:array}$)$0",
+    "description": "Returns true if the passed array is empty.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnEmpty_.26_fnEmptyS",
+    "leftLabel": "Boolean"
+
+  "fnCsvImport(Layout$*64;SupressDialog,FileName$*300,ImportModeKey)":
+    "prefix": "fnCsvImport",
+    "body" : "fnCsvImport(\"${1:layout}\")$0",
+    "description": "Imports the specified file into the specified layout, showing or optionally suppressing the CSV File Import Dialog.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCSVImport",
+    "leftLabel": "None"
+
+  "fnCsvExport(Layout$*64;DialogType,FileName$*300,IncludeRecNums,KeyNumber, ...)":
+    "prefix": "fnCsvExport",
+    "body" : "fnCsvExport(\"${1:layout}\")$0",
+    "description": "Exports the specified file to CSV.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCSVExport",
+    "leftLabel": "None"
+
+  "fnAskCombo$*255(mat Description$;Caption$*60,Default$*255)":
+    "prefix": "fnAskCombo$",
+    "body" : "fnAskCombo$(mat ${1:Description}$)$0",
+    "description": "Displays a selection window to the user and allows them to select one option. Returns that selection.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnAskCombo",
+    "leftLabel": "String"
+
+  "fnBuildProcFile(String$*255)":
+    "prefix": "fnBuildProcFile",
+    "body" : "fnBuildProcFile(${1:Command})$0",
+    "description": "Builds a proc file to be run later",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnBuildProcFile",
+    "leftLabel": "None"
+
+  "fnRunProcFile(;NoWait)":
+    "prefix": "fnRunProcFile",
+    "body" : "fnRunProcFile$0",
+    "description": "Runs the proc file built previously.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnRunProcFile",
+    "leftLabel": "None"
+
+  "fnReIndexAllFiles":
+    "prefix": "fnReIndexAllFiles",
+    "body" : "fnReIndexAllFiles$0",
+    "description": "Reindexes all data files.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReIndexAllFiles",
+    "leftLabel": "None"
+
+  "fnReIndex(DataFile$*255;CallingProgram$*255,IndexNum,Path$*255)":
+    "prefix": "fnReIndex",
+    "body" : "fnReIndex(\"${1:layout}\")$0",
+    "description": "Reindexes the specified data file. If an optional IndexNum is passed, only that index is rebuilt.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReIndex",
+    "leftLabel": "None"
+
+  "<success/fail> fnRemoveDeletes(LayoutName$*255;Path$*255,CallingProgram$*255,DontError)":
+    "prefix": "fnRemoveDeletes",
+    "body" : "fnRemoveDeletes(\"${1:layout}\")$0",
+    "description": "Removes deleted records for the given data file, by copying it with the -D option.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnRemoveDeletes",
+    "leftLabel": "Boolean"
+
+  "<count> fnReadEntireLayout(LayoutName$*255;&FileName$,&Prefix$,mat Keys$, ...)":
+    "prefix": "fnReadEntireLayout",
+    "body" : "fnReadEntireLayout(\"${1:layout}\",${1:&filename}$,${1:&prefix}$,mat ${1:keys}$)$0",
+    "description": "Reads the file layout and returns the information in a bunch of arrays. Returns the field count.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadEntireLayout",
+    "leftLabel": "Integer"
+
+  "<count> fnReadLayoutHeader(LayoutName$*255;&FileName$,mat Keys$,mat KeyDescription$, ...)":
+    "prefix": "fnReadLayoutHeader",
+    "body" : "fnReadLayoutHeader(\"${1:layout}\",${2:&filename}$,mat ${3:keys}$)$0",
+    "description": "Reads the file layout and returns the Header information in a bunch of arrays. Returns the number of keys.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayoutHeader",
+    "leftLabel": "Integer"
+
+  "<count> fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$, ...)":
+    "prefix": "fnReadLayoutArrays",
+    "body" : "fnReadLayoutArrays(\"${1:layout}\",${2:&prefix}$,mat ${3:StringSubs}$,mat ${4:NumericSubs}$)$0"
+    "description": "Reads the file layout and returns the Record Detail information in a bunch of arrays. Returns the field count.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayoutArrays",
+    "leftLabel": "Integer"
+
+  "fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$)":
+    "prefix": "fnReadLayoutArraySnippet",
+    "body" : """
+      dim S_${1:StringSubs}Subs$(1), mat N_${1:NumericSubs}Subs$(1), ${1:File}Prefix$
+      fnReadLayoutArrays(\"${1:layout}\",${1:&prefix}Prefix$,mat S_${1:StringSubs}Subs$,mat N_${1:NumericSubs}Subs$)
+      $0
+    """,
+    "description": "Reads the file layout and returns the Record Detail information in a bunch of arrays. Returns the field count.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayoutArrays",
+    "leftLabel": "Code Snippet"
+
+  "fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$,mat SSpec$, ...)":
+    "prefix": "fnReadLayoutArraySnippetFull",
+    "body" : """
+      dim ${1:StringSubs}_S_Subs$(1), ${1:NumericSubs}_N_Subs$(1), ${1:File}_Prefix$
+      dim ${1:StringSpec}_S_Spec$(1), ${1:NumericSpec}_N_Spec$(1)
+      dim ${1:StringDescription}_S_Description$(1), ${1:NumericDescription}_N_Description$(1)
+      dim ${1:StringPos}_S_Pos(1), mat ${1:NumericPos}_N_Pos(1)
+
+      fnReadLayoutArrays(\"${1:layout}\",${1:&prefix}_Prefix$,mat ${1:StringSpec}_S_Spec$, mat ${1:NumericSpec}_N_Spec$,mat ${1:StringDescription}_S_Description$, mat ${1:NumericDescription}_N_Description$,mat ${1:StringPos}_S_Pos(1), mat ${1:NumericPos}_N_Pos
+      $0
+    """,
+    "description": "Reads the file layout and returns the Record Detail information in a bunch of arrays. Returns the field count.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayoutArrays",
+    "leftLabel": "Code Snippet"
+
+  "fnReadKeyFiles(Layout$,mat Keys$)":
+    "prefix": "fnReadKeyFiles",
+    "body" : "fnReadKeyFiles(\"${1:layout}\",mat ${2:keys}$)$0",
+    "description": "Reads the list of Keys for the given layout into the provided arrays.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadKeyFiles",
+    "leftLabel": "None"
+
+  "<key> fnBuildKey$*255(Layout$*30,mat F$,mat F;KeyNum)":
+    "prefix": "fnBuildKey$",
+    "body" : "fnBuildKey$(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout})$0",
+    "description": "Builds the key for the given record.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnBuildKey.24",
+    "leftLabel": "String"
+
+  "fnCloseFile(FileNumber, Filelay$*255; Path$*255,Out)":
+    "prefix": "fnCloseFile",
+    "body" : "fnCloseFile(${1:layout}, \"${1:layout}\")$0",
+    "description": "Closes the file, closing all indexes.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCloseFile",
+    "leftLabel": "None"
+
+  "fnMakeSubProc(FileName$*255;mat Subs$,mat F$,mat F)":
+    "prefix": "fnMakeSubProc",
+    "body" : """
+      dim Subscripts$(1)*1023
+
+      fnMakeSubProc(\"${1:layout}\",mat Subscripts$,mat ${1:layout}$,mat ${1:layout})
+      for ${2:Index}=1 to udim(mat Subscripts$)
+         execute Subscripts$(${2:Index})
+      next ${2:Index}
+      $0
+    """,
+    "description": "Sets the subscripts for a data file.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnMakeSubProc",
+    "leftLabel": "Code Snippet"
+
+  "<form statement> fnReadForm$*10000(FileLayout$)":
+    "prefix": "fnReadForm$",
+    "body" : "fnReadForm$(\"${1:layout}\")$0",
+    "description": "Returns the form statement for the given file.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadForm.24_.28uncompiled.29",
+    "leftLabel": "String"
+
+  "fnClearLayoutCache":
+    "prefix": "fnClearLayoutCache",
+    "body" : "fnClearLayoutCache$0",
+    "description": "Clears the current layout cache from memory, forcing FileIO to reread all layouts from the desk the next time they're used.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnClearLayoutCache",
+    "leftLabel": "None"
+
+  "fnLength(Spec$)":
+    "prefix": "fnLength",
+    "body" : "fnLength(${1:Spec})$0",
+    "description": "Checks the given Field Spec and returns its length on disk in bytes.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnLength",
+    "leftLabel": "Integer"
+
+  "fnDisplayLength(Spec$)":
+    "prefix": "fnDisplayLength",
+    "body" : "fnDisplayLength(${1:Spec})$0",
+    "description": "Checks the given Field Spec and returns the maximum length it could take on the screen in Characters.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnDisplayLength",
+    "leftLabel": "Integer"
+
+  "fnUpdateFile(Filelayout$)":
+    "prefix": "fnUpdateFile",
+    "body" : "fnUpdateFile(\"${1:layout}\")$0",
+    "description": "Checks the given file for updates to its layout, and triggers the update if there are any updates.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnUpdateFile",
+    "leftLabel": "None"
+
+  "fnReadDescription$*255(FileNumber,Subscript,Key$*255,mat F$,mat F,mat Form$)":
+    "prefix": "fnReadDescription$",
+    "body" : "fnReadDescription$*255(${1:filenumber},${2:Subscript},${3:Key},mat ${1:f}$,mat ${1:f},mat Form$)$0",
+    "description": "Reads the given open file, finds the record matching the given key, and returns the requested String Field.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadDescription.24",
+    "leftLabel": "String"
+
+  "fnReadUnOpenedDescription$*255(LayoutName$,Key$*255;Subscript)":
+    "prefix": "fnReadUnOpenedDescription$",
+    "body" : "fnReadUnOpenedDescription$*255(\"${1:layout}\",${2:Key},${3:OptionalSubscript})$0",
+    "description": "Opens and Reads the given file, finding the record matching the given key, and returning the requested String Field. Defaults to the Second (2nd) String field (usually the description field).",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadUnopenedDescription.24",
+    "leftLabel": "String"
+
+  "fnReadNumber(FileNumber,Subscript,Key$*255,mat F$,mat F,mat Form$)":
+    "prefix": "fnReadNumber",
+    "body" : "fnReadNumber(${1:filenumber},${2:Subscript},${3:Key},mat ${1:f}$,mat ${1:f},mat Form$)$0",
+    "description": "Reads the given open file, finds the record matching the given key, and returns the requested Numeric Field.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadNumber",
+    "leftLabel": "Float"
+
+  "fnReadUnOpenedNumber(LayoutName$,Key$*255;Field,DontChangeKey)":
+    "prefix": "fnReadUnOpenedNumber",
+    "body" : "fnReadUnOpenedNumber(\"${1:layout}\",${2:Key},${3:OptionalSubscript})$0",
+    "description": "Opens and Reads the given file, finding the record matching the given key, and returning the requested Numeric Field. Defaults to the First (1st) Numeric field.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadUnopenedNumber",
+    "leftLabel": "Float"
+
+  "fnReadRelativeDescription$*255(FileNumber,Subscript,RecordNumber,mat F$,mat F,mat Form$)":
+    "prefix": "fnReadRelativeDescription$",
+    "body" : "fnReadRelativeDescription$*255(${1:filenumber},${2:Subscript},${3:RecordNum},mat ${1:f}$,mat ${1:f},mat Form$)$0",
+    "description": "Reads the given open file, reads the specified record, and returns the requested String Field.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadRelativeDescription.24",
+    "leftLabel": "String"
+
+  "fnReadRelUnOpenedDescription$*255(LayoutName$,RecordNumber;Field)":
+    "prefix": "fnReadRelUnOpenedDescription$",
+    "body" : "fnReadRelUnOpenedDescription$*255(\"${1:layout}\",${2:Record},${3:OptionalSubscript})$0",
+    "description": "Opens and Reads the given file, reads the specified record, and returns the requested String Field. Defaults to the Second (2nd) String field (usually the description field).",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadRelUnopenedDescription.24",
+    "leftLabel": "String"
+
+  "fnReadRelativeNumber(FileNumber,Subscript,RecordNumber,mat F$,mat F,mat Form$)":
+    "prefix": "fnReadRelativeNumber",
+    "body" : "fnReadRelativeNumber(${1:filenumber},${2:Subscript},${3:RecordNum},mat ${1:f}$,mat ${1:f},mat Form$)$0",
+    "description": "Reads the given open file, reads the specified record, and returns the requested Numeric Field.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadRelativeNumber",
+    "leftLabel": "Float"
+
+  "fnReadRelUnOpenedNumber(LayoutName$,RecordNumber;Field)":
+    "prefix": "fnReadRelUnOpenedNumber",
+    "body" : "fnReadRelUnOpenedNumber(\"${1:layout}\",${2:Record},${3:OptionalSubscript})$0",
+    "description": "Opens and Reads the given file, reading the specified record, and returning the requested Numeric Field. Defaults to the First (1st) Numeric field.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadRelUnopenedNumber",
+    "leftLabel": "Float"
+
+  "fnReadRecordWhere$*255(LayoutName$,SearchSub,SearchKey$*255,ReturnSub)":
+    "prefix": "fnReadRecordWhere$",
+    "body" : "fnReadRecordWhere$*255(\"${1:layout}\",${2:SearchInSubscript},${3:SearchFor},${4:ReturnSubscript})$0",
+    "description": "Searches a file for a given value and reads the record where the specified subscript matches that value. Returns the Requested String from that Record.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadRecordWhere.24",
+    "leftLabel": "String"
+
+  "fnUniqueKey(FileNumber,Key$*255)":
+    "prefix": "fnUniqueKey",
+    "body" : "fnUniqueKey(${1:layout},${2:testKey})$0",
+    "description": "Checks to see if the given key would be unique in the given data file and returns true if it is.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnUniqueKey",
+    "leftLabel": "Boolean"
+
+  "fnReadAllKeys(FileNumber,mat F$,mat F,mat Form$,Sub1,mat Out1$;...)":
+    "prefix": "fnReadALLKeys",
+    "body" : "fnReadALLKeys(${1:filenumber},mat ${1:f}$,mat ${1:f},mat Form$,${2:Subscript1},mat ${2:Out1}$)$0",
+    "description": "Reads all records from the file and puts their values in an array.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadAllKeys",
+    "leftLabel": "None"
+
+  "fnReadMatchingKeys(FileNumber,mat F$,mat F,mat Form$,Key$,KeyFld,Sub1,mat Out1$;Sub2,mat Out2$,Index)":
+    "prefix": "fnReadmatchingKeys",
+    "body" : "fnReadmatchingKeys(${1:filenumber},mat ${1:f}$,mat ${1:f},mat Form$,${2:SearchString}$,${3:SearchField},${4:OutSub1},mat {4:Out1}$)$0",
+    "description": "Reads all records from the file that match the given filter information, and puts the requested values in the requested arrays. A complete search is preformed and the filter field doesn't have to be indexed.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadMatchingKeys",
+    "leftLabel": "None"
+
+  "fnReadAllNewKeys(FileNumber,mat F$,mat F,mat Form$,Sub1,mat Out1$;Dont_Reset,Sub2,mat Out2$,Index)":
+    "prefix": "fnReadAllNewKeys",
+    "body" : "fnReadAllNewKeys(${1:filenumber},mat ${1:f}$,mat ${1:f},mat Form$,${2:OutSub1},mat {2:Out1}$)$0",
+    "description": "Reads any values from the file but doesn't double up values that already exist in the output arrays.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadAllNewKeys",
+    "leftLabel": "None"
+
+  "fnReadFilterKeys(FileNumber,mat F$,mat F,mat Form$,Key$,KeyFLD,Sub1,mat Out1$;Filter$,Filter_Sub,ReadLarger,Sub2,mat Out2$, Sub3, mat Out3$, Sub4,mat Out4$, Index)":
+    "prefix": "fnReadFilterKeys",
+    "body" : "fnReadFilterKeys(${1:FileNumber},mat ${1:f}$,mat ${1:f},mat Form$,${2:Key}$,${3:KeyField},${4:OutSub1},mat {4:Out1}$)$0",
+    "description": "Reads all keys that match the given filters and outputs up to 4 arrays from the matching records.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadFilterKeys",
+    "leftLabel": "None"
+
+  "fnMakeUniqueKey$*255(FileNumber;Random,Prepend$)":
+    "prefix": "fnMakeUniqueKey$",
+    "body" : "fnMakeUniqueKey$*255(${1:FileNumber})$0",
+    "description": "Generates a key that is unique in the given file.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnMakeUniqueKey.24",
+    "leftLabel": "String"
+
+  "fnReadLockedUsers(mat Users$)":
+    "prefix": "fnReadLockedUsers",
+    "body" : "fnReadLockedUsers(mat ${1:Users}$)$0",
+    "description": "Returns an array listing all the users that have locks on the most recently locked file.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLockedUsers",
+    "leftLabel": "None"
+
+  "fnViewLogFile(;ShowQuit,ShowColumns,ShowExport)":
+    "prefix": "fnViewLogFile",
+    "body" : "fnViewLogFile$0",
+    "description": "Loads the FileIO Log File in a listview for viewing.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnViewLogFile",
+    "leftLabel": "None"
+
+  "fnErrLog(String$*255;CallingProgram$*255)":
+    "prefix": "fnErrLog",
+    "body" : "fnErrLog(\"${1:LogMessage}\",Program$)$0",
+    "description": "Logs an error message to the log file.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnLog_.26_fnErrLog",
+    "leftLabel": "None"
+
+  "fnSetLogChanges(mat F$,mat F)":
+    "prefix": "fnSetLogChanges",
+    "body" : "fnSetLogChanges(mat ${1:f}$,mat ${1:f})$0",
+    "description": "Records the given arrays so that differences can be logged later with fnLogChanges.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnSetLogChanges",
+    "leftLabel": "None"
+
+  "fnLogChanges(mat F$,mat F;String$*1048,CallingProgram$*255,Layout$)":
+    "prefix": "fnLogChanges",
+    "body" : "fnLogChanges(mat ${1:f}$,mat ${1:f})$0",
+    "description": "Examines the passed arrays and records a log message describing just the changes.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnLogChanges",
+    "leftLabel": "None"
+
+  "fnLogArray(mat F$,mat F;String$*512,CallingProgram$*255)":
+    "prefix": "fnLogArray",
+    "body" : "fnLogArray(mat ${1:f}$,mat ${1:f})$0",
+    "description": "Writes a log message to the Log that lists all details of the passed in Arrays.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnLogArray",
+    "leftLabel": "None"
+
+  "fnLog(String$*512;CallingProgram$*255,ForceTextFile)":
+    "prefix": "fnLog",
+    "body" : "fnLog(\"${1:LogMessage}\",Program$)$0",
+    "description": "Records a message to the log file.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnLog_.26_fnErrLog",
+    "leftLabel": "None"
+
+  "fnNotInFile(String$*100,FileName$,Sub;Path$,FileNumber)":
+    "prefix": "fnNotInFile",
+    "body" : "fnNotInFile(${1:SearchString},\"${1:layout}\",${3:SearchField})$0",
+    "description": "Returns true if the specified value is not found in the specified field of the file.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnNotInFile",
+    "leftLabel": "Boolean"
+
+  "fnGetFileDateTime$(FileName$*255)=FNGetFileDT$(FileName$)":
+    "prefix": "fnGetFileDateTime$",
+    "body" : "fnGetFileDateTime$(${1:FileName})$0",
+    "description": "Reads the last modified date and time of the specified file from the filesystem.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnGetFileDateTime.24",
+    "leftLabel": "String"
+
+  "fnReadLayouts(mat LayoutList$)":
+    "prefix": "fnReadLayouts",
+    "body" : "fnReadLayouts(mat DirList$=)$0",
+    "description": "Reads the list of file layouts into the provided array.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayouts",
+    "leftLabel": "None"
+
+  "fnReadLayouts(mat LayoutList$) with Dims":
+    "prefix": "fnReadLayoutsD",
+    "body" : """
+      dim ${1:LayoutList}$(1)
+      fnReadLayouts(mat ${1:LayoutList}$)
+      $0
+    """,
+    "description": "Reads the list of file layouts into the provided array.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayouts",
+    "leftLabel": "Code Snippet"
+
+  "fnDirVersionHistoryFiles(Layout$,mat DirList$;BypassExtension$)":
+    "prefix": "fnDirVersionHistoryFiles",
+    "body" : "fnDirVersionHistoryFiles(\"${1:layout}\",mat ${2:LayoutList}$)$0",
+    "description": "Reads a list of all the version history files available for the given layout into the provided array.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnDirVersionHistoryFiles",
+    "leftLabel": "None"
+
+  "fnDoesLayoutExist(Layout$)":
+    "prefix": "fnDoesLayoutExist",
+    "body" : "fnDoesLayoutExist(${1:layout}$)$0",
+    "description": "Returns true if the specified layout exists.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnDoesLayoutExist",
+    "leftLabel": "Boolean"
+
+  "fnReadLayoutPath$":
+    "prefix": "fnReadLayoutPath$",
+    "body" : "${1:layoutPath}$=fnReadLayoutPath$$0",
+    "description": "Returns the path to the FileIO layout folder.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayoutPath.24",
+    "leftLabel": "String"
+
+  "fnReadLayoutExtension$":
+    "prefix": "fnReadLayoutExtension$",
+    "body" : "${1:layoutExtension}$=fnReadLayoutExtension$$0",
+    "description": "Returns the File Layout Extension",
+    "descriptionMoreURL": "brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnLayoutExtension.24",
+    "leftLabel": "String"
+
+  "fnKey$*255(FileNumber, Key$*255)":
+    "prefix": "fnKey$",
+    "body" : "fnKey$*255(${1:FileNumber}, ${2:Key}$)$0",
+    "description": "Takes the passed in value and ensures that its the proper size for the key of the given file number.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnKey.24",
+    "leftLabel": "String"
+
+  "fnSortKeys(mat Keys$,Layout$,DataFile,mat F$,mat F,mat Form$;KeyNUM)":
+    "prefix": "fnSortKeys",
+    "body" : "fnSortKeys(mat ${1:Keys}$,\"${1:layout}\",${2:filenumber},mat ${3:f}$,mat ${3:f},mat Form$)$0",
+    "description": "Sorts the records indicated by mat Keys$ into an order speciied by the key identified by Keynum.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnSortKeys",
+    "leftLabel": "None"
+
+  "fnBeginAudit(;BackupFolder$*80,Path$*255,mat SelectedFiles$)":
+    "prefix": "fnBeginAudit",
+    "body" : "fnBeginAudit$0",
+    "description": "Records the beginning point of the specified datafiles (defaults to all) so that a subsequent fnCompare operation can be performed to make a report showing all changes made.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=AuditBR#fnBeginAudit",
+    "leftLabel": "None"
+
+  "fnCompare(;BackupFolder$*80,LogFile$*80,PRINTER,DontClose,Path$*255,mat SelectedLayouts$)":
+    "prefix": "fnCompare",
+    "body" : "fnCompare$0",
+    "description": "Run after running fnBeginAudit, to see a report of any changes made to the specified data files since the time of running fnBeginAudit.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=AuditBR#fnCompare",
+    "leftLabel": "None"
+
+  "fnCopyDataFiles(BackupFolder$*255;Path$*255,mat SelectedLayouts$,SKIPKeys)":
+    "prefix": "fnCopyDataFiles",
+    "body" : "fnCopyDataFiles(${1:BackupFolder}$)$0",
+    "description": "Copies all (or optionally some) of the data files defined in your file layouts to the folder specified as the BackupFolder.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCopyDataFiles",
+    "leftLabel": "None"
+
+  "fnCopyFile(FromFile$*255,ToFile$*255;NoProgressBar)":
+    "prefix": "fnCopyFile",
+    "body" : "fnCopyFile(${1:FromFile$},${2:ToFile$})$0",
+    "description": "Copies the specified file, even over the internet (using Client Server), showing a progress bar as the copy progresses.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCopyFile",
+    "leftLabel": "None"
+
+  "fnCopyFile Download from Server to Client":
+    "prefix": "fnCopyFileDownload",
+    "body" : "fnCopyFile(${1:FromFile$},\"@:\"&${1:ToFile$})$0",
+    "description": "Downloads the specified file, showing a progress bar as the copy progresses.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCopyFile",
+    "leftLabel": "None"
+
+  "fnCopyFile Upload from Client to Server":
+    "prefix": "fnCopyFileDownload",
+    "body" : "fnCopyFile(\"@:\"&${1:FromFile$},${1:ToFile$})$0",
+    "description": "Uploads the specified file, showing a progress bar as the copy progresses.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCopyFile",
+    "leftLabel": "None"
+
+  "fnProgressBar(Percent;Color$, ... )":
+    "prefix": "fnProgressBar",
+    "body" : "fnProgressBar(${1:CurrentRecord}/${2:LastRecord})$0",
+    "description": "Call in the MainLoop of a slow routine to display a progress bar that runs during the process. Automatically opens a window for the progress bar that needs to be closed using fnCloseBar when done.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnProgressBar",
+    "leftLabel": "None"
+
+  "fnProgressBar(Percent) of a DataFile":
+    "prefix": "fnProgressBarDatafile",
+    "body" : "fnProgressBar(rec(${1:DataFile})/lrec(${1:DataFile}))$0",
+    "description": "Call in the MainLoop of a slow routine to display a progress bar that runs during the process. Automatically opens a window for the progress bar that needs to be closed using fnCloseBar when done.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnProgressBar",
+    "leftLabel": "None"
+
+  "fnCloseBar":
+    "prefix": "fnCloseBar",
+    "body" : "fnCloseBar$0",
+    "description": "Closes the progress bar window when the task is done.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCloseBar",
+    "leftLabel": "None"
+
+  "fnShowMessage(Message$*54)":
+    "prefix": "fnShowMessage",
+    "body" : "fnShowMessage(\"${1:Message}\")$0",
+    "description": "Opens a child window and displays a message in it, returning the child window number, so that the window can be closed when done.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnShowMessage",
+    "leftLabel": "Integer"
+
+  "fnClientEnv$*255(EnvKey$)":
+    "prefix": "fnClientEnv$",
+    "body" : "fnClientEnv$(\"${1:EnvironmentVariable}\")$0",
+    "description": "Returns the value of an Environment variable on the Client, when running under Client Server. (Env$ on Client Server shows only Environment Variables on the Server).",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnClientEnv.24",
+    "leftLabel": "String"
+
+  "fnExportListViewCsv(Window,Spec$;GenFileName,Delimiter$,FileName$*255)":
+    "prefix": "fnExportListViewCsv",
+    "body" : "fnExportListViewCsv(${1:Window},${2:Spec}$)$0",
+    "description": "Exports the specified listview in CSV format. ",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnExportListViewCsv",
+    "leftLabel": "None"
+
+  "fnSendEmail(EmailAddress$*255,EmailMessage$*10000;Subject$*255,InvoiceFile$*255,NOPrompt,BccEmail$*255,mat CcEmailS$,CcAsTo)":
+    "prefix": "fnSendEmail",
+    "body" : "fnSendEmail(${1:EmailAddress}$,${2:EmailMessage$})$0",
+    "description": "Sends an email to the specified address. Returns a flag showing if it was successful or not.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnSendEmail",
+    "leftLabel": "Boolean"
+
+  "fnStandardTime$(MilitaryTime$;Seconds)":
+    "prefix": "fnStandardTime$",
+    "body" : "fnStandardTime$(${1:MilitaryTime}$)$0",
+    "description": "Converts Military Time (24 hr) to Standard Time (am/pm).",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnStandardTime.24",
+    "leftLabel": "String"
+
+  "fnMilitaryTime$(StandardTime$;Seconds)":
+    "prefix": "fnMilitaryTime$",
+    "body" : "fnMilitaryTime$(${1:StandardTime}$)$0",
+    "description": "Converts Standard Time (am/pm) to Military Time (24 hr).",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnMilitaryTime.24",
+    "leftLabel": "String"
+
+  "fnCalculateHours(TimeIn$,TimeOut$,DaysIN,DaysOut)":
+    "prefix": "fnCalculateHours",
+    "body" : "fnCalculateHours(${1:TimeIn},${2:TimeOut},${3:DaysIn},${4:DaysOut})$0",
+    "description": "Calculates the amount of time that passed between Tin and Tout in Hours.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnCalculateHours",
+    "leftLabel": "Float"
+
+  "fnBuildTime$(Hours,Minutes,Seconds,PM;Military,UseSeconds)":
+    "prefix": "fnBuildTime$",
+    "body" : "fnBuildTime$(${1:Hours},${2:Minutes},${3:Seconds},${4:PM})$0",
+    "description": "Builds a time string from Hours, Minutes, and Seconds.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnBuildTime.24",
+    "leftLabel": "String"
+
+  "fnParseTime(TimeString$,&Hours,&Minutes,&Seconds,&PM)":
+    "prefix": "fnParseTime",
+    "body" : "fnParseTime(${1:TimeString}$,${2:&Hours},${3:&Minutes},${4:&Seconds},${5:&PM})$0",
+    "description": "Parses a time string and returns the Hours, Minutes, and Seconds.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnParseTime",
+    "leftLabel": "None"
+
+  "fnSubstituteStringCode(&String$,Code$*2048;SubstituteChar$)":
+    "prefix": "fnSubstituteStringCode",
+    "body" : "fnSubstituteStringCode(${1:&String}$,${2:Code}$)$0",
+    "description": "Substitutes the information in String according to the results of executing the code in Code$",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnSubstituteStringCode",
+    "leftLabel": "None"
+
+  "fnSubstituteString(&String$,Filelayout$,mat F$,mat F;SubstituteChar$)":
+    "prefix": "fnSubstituteString",
+    "body" : "fnSubstituteString(${1:&String}$,\"${2:Filelayout}\",mat ${2:F}$,mat ${2:F})$0",
+    "description": "Substitutes any File References in the passed String with their matches from the given record.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnSubstituteString",
+    "leftLabel": "None"
+
+  "fnReadScreenSize(&RowS,&Cols;ParentWindow)":
+    "prefix": "fnReadScreenSize",
+    "body" : "fnReadScreenSize((${1:&RowS},${2:&Cols})$0",
+    "description": "Returns the size of the specified window in Rows and Columns.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadScreenSize",
+    "leftLabel": "None"
+
+  "open #(FileHandle:=fnGetFileNumber)":
+    "prefix": "OpenfnGetFileNumber",
+    "body" : "open #(${1:filehandle}:=fnGetFileNumber): $0",
+    "description": "Snippet to open a non-FileIO file using fnGetFileNumber to find a free file number.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
+    "leftLabel": "Code Snippet"
+
+  "fnOpen(LayoutName$, Mat F$, Mat F, Mat Form$; Input, KeyNum)":
+    "prefix": "fnOpen",
+    "body": "fnOpen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)$0",
+    "description": "Opens file using Fileio, returning the file handle",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnOpen",
+    "leftLabel": "Integer"
+
+  "fnBuildKey$(\"layout\",mat F$,mat F,Keynum)":
+    "prefix": "fnBuildKey",
+    "body": "fnBuildKey$(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},${2:key})$0",
+    "description": "Builds key from record data.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnBuildKey.24",
+    "leftLabel": "String"
+
+  "fnOpen(LayoutName$, Mat F$, Mat F, Mat Form$; Input, KeyNum) with Dims":
+    "prefix": "fnOpenDims",
+    "body": """
+      dim ${1:layout}, ${1:layout}$(1)*${2:longest},${1:layout}(1)
+      let ${1:layout}=fnOpen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
+    """,
+    "description": "Opens file using Fileio, returning the file handle, and Dimming the necessary Variables.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnOpen",
+    "leftLabel": "Code Snippet"
+
+  "fnOpen() ... Read Loop":
+    "prefix": "fnOpenReadLoop",
+    "body": """
+      dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
+
+      let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
+      restore #${1:layout}: error IGNORE
+      do until File(${1:layout})
+         read #${1:layout}, using Form$(${1:layout}) : Mat ${1:layout}$,Mat ${1:layout} eof IGNORE
+         if File(${1:layout})=0 then
+            ${3:}
+         end if
+      loop
+      close #${1:layout}:
+    """,
+    "description": "Opens file using Fileio and reads all records of the file in a loop.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
+    "leftLabel": "Code Snippet"
+
+  "fnOpen() ... Read One":
+    "prefix": "fnOpenReadOne",
+    "body": """
+      dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
+      let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
+      read #${1:layout}, using Form$(${1:layout}), key=${1:layout}key$ : Mat ${1:layout}$,Mat ${1:layout}
+      close #${1:layout}:
+    """,
+    "description": "Opens file and reads the given record by Key",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
+    "leftLabel": "Code Snippet"
+
+  "FileIO Open Function":
+    "prefix": "FileIoOpenFunction",
+    "body": """
+      dim LinkageEstablished
+      def fnEstablishLinkage
+         if ~LinkageEstablished then
+            library "fileio" : fnOpenFile,Fnclosefile,Fngetfilenumber,Fnkey$,FnBuildKey$,Fnreadlayoutarrays,Fndoeslayoutexist,Fnreadallkeys,fnReadRelativeDescription$,fnReadRelUnopenedDescription$,fnReadRelUnopenedNumber,fnUpdateFile,fnLog,fnLogArray,fnErrLog,fnReadLayouts,Fnmakeuniquekey$,FnDisplayLength,FnLength,FnReadDescription$,FnReadUnopenedDescription$,fnReadRecordWhere$,fnUniqueKey,fnReadNumber,fnReadUnopenedNumber,fnReadRelativeNumber,fnNotInFile,fnDataCrawler,fnDataEdit
+            library "fileio" : fnMakeSubProc,fnReadMatchingKeys,fnReadAllNewKeys,fnReadFilterKeys,fnReadEntireLayout,fnReadLayoutHeader,fnReadSubs,fnReadLayoutPath$,fnReadKeyFiles, fnAskCombo$,fnRunProcFile,fnBuildProcFile,fnDataShow
+            library "screenio" : fnCallScreen$,fnFindSubscript,fnFm$,fnfm,fnDisplayScreen,fnGetUniqueName$,fnIsInputSpec,fnIsOutputSpec,fnDays,fnBR42
+            let linkageEstablished=1
+         end if
+      fnend
+      !
+      ! #Autonumber# 99000,10
+      OPEN: ! ***** Function To Call Library Openfile And Proc Subs
+           def Fnopen(Filename$*255, Mat F$, Mat F, Mat Form$; Inputonly, Keynum, Dont_Sort_Subs, Path$*255, Mat Descr$, Mat Field_Widths,Supress_Prompt,Ignore_Errors,___,Index)
+              dim _FileIOSubs$(1)*800, _Loadedsubs$(1)*80
+              let Fnopen=Fnopenfile(Filename$, Mat F$, Mat F, Mat Form$, Inputonly, Keynum, Dont_Sort_Subs, Path$, Mat Descr$, Mat Field_Widths, Mat _FileIOSubs$, Supress_Prompt,Ignore_Errors,Program$)
+              if Srch(_Loadedsubs$,Uprc$(Filename$))<=0 then : mat _Loadedsubs$(Udim(_Loadedsubs$)+1) : let _Loadedsubs$(Udim(_Loadedsubs$))=Uprc$(Filename$) : for Index=1 to Udim(Mat _Fileiosubs$) : execute (_Fileiosubs$(Index)) : next Index
+           fnend
+
+     Ignore: Continue
+    """,
+    "description": "The standard fnOpenFile function that needs to be included in all your programs when using FileIO.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnOpen_Function",
+    "leftLabel": "Code Snippet"
+
+  "fnOpen() ... Write":
+    "prefix": "fnOpenWrite",
+    "body": """
+       ! FileIO Dimensions
+       dim Form$(1)*255
+       dim ${1:layout}, ${1:layout}$(1)*256,${1:layout}(1)
+
+       ! Open the file
+       let ${1:layout}=Fnopen("${1:layout}",Mat ${1:layout}$,Mat ${1:layout},Mat Form$)
+
+       ! Set Values
+       let ${1:layout}$(${2:prefix}_${3:subscript})=${4:}
+       let ${1:layout}$(${2:prefix}_${3:subscript})=$0
+
+       ! Save The Record
+       write #${1:layout}, using Form$(${1:layout}) : Mat ${1:layout}$,Mat ${1:layout}
+
+       ! Close DataFile
+       let fnCloseFile(${1:layout},"${1:layout}")
+    """,
+    "description": "Opens file and updates a record.",
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
+    "leftLabel": "Code Snippet"
