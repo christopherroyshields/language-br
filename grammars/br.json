@@ -34,7 +34,7 @@
       "name": "string.quoted.double.br"
     },
     {
-      "match": "(\\#(?i:include|define|select|end select|case|autonumber)\\#)",
+      "match": "(\\#(?i:include|define|select|case else|end select|case|autonumber)\\#)",
       "name": "constant.language.br"
     },
     {
