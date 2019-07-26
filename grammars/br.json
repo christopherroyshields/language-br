@@ -31,7 +31,48 @@
     },
     {
       "match": "'[^']*'",
-      "name": "string.quoted.double.br"
+      "name": "string.quoted.single.br"
+    },
+    {
+      "begin": "`",
+      "beginCaptures":
+      {
+        "0":
+        {
+          "name": "multiline.string.begin.br"
+        }
+      },
+      "end": "`",
+      "endCaptures":
+      {
+        "0":
+        {
+          "name": "multiline.string.end.br"
+        }
+      },
+      "name": "multiline.string.br",
+      "patterns":
+      [
+         {
+            "begin": "\\{",
+            "beginCaptures":
+            {
+              "0":
+              {
+                "name": "keyword.operator.interpolated.begin.br"
+              }
+            },
+            "end": "\\}",
+            "endCaptures":
+            {
+              "0":
+              {
+                "name": "keyword.operator.interpolated.end.br"
+              }
+            },
+            "name": "keyword.operator.interpolated.br"
+         }
+      ]
     },
     {
       "match": "(\\#(?i:include|define|select|case else|end select|case|autonumber)\\#)",
@@ -40,6 +81,25 @@
     {
       "match": "(!.*)$",
       "name": "comment.line.br"
+    },
+    {
+      "begin": "/\\*",
+      "beginCaptures":
+      {
+        "0":
+        {
+          "name": "multiline.comment.begin.br"
+        }
+      },
+      "end": "\\*/",
+      "endCaptures":
+      {
+        "0":
+        {
+          "name": "multiline.comment.end.br"
+        }
+      },
+      "name": "multiline.comment.br"
     },
     {
       "match": "(^\\d{5}\\s*rem.*)$",

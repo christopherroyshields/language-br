@@ -46,7 +46,7 @@
 00450                  linput #1: String2$ eof Ignore
 00460                  if file(1)=0 then
 00470                     let String$=String$&"""&hex$(""0d0a"")&"""&trim$(String2$)
-00475                     let SpecialPosition+=16
+00475                     let SpecialPosition+=15
 00480                  else
 00490                     ! This is an error, the string isn't completed. Exit and let BR give the error.
 00500                     let SpecialStringProcessing=0
@@ -65,11 +65,17 @@
 00620               else if String$(SpecialPosition:SpecialPosition)="{" then
 00630                  if (ReplacePosition:=pos(String$,"}",SpecialPosition)) then
 00640                     ! Replace everything from here to the } with "&contents&".
-00650                     let String$(ReplacePosition:ReplacePosition)="&"""
-00660                     let String$(SpecialPosition:SpecialPosition)="""&"
-00670                     let SpecialPosition=ReplacePosition+2
-00672                     ! if there's no $ inside, then add a str$() around it. (maybe)
-00675                  end if
+00642                     if pos(String$(SpecialPosition:ReplacePosition),"$") then
+00650                        let String$(ReplacePosition:ReplacePosition)="&"""
+00660                        let String$(SpecialPosition:SpecialPosition)="""&"
+00670                        let SpecialPosition=ReplacePosition+2
+00671                     else
+00672                        ! if there's no $ inside, then add a str$() around it.
+00673                        let String$(ReplacePosition:ReplacePosition)=")&"""
+00675                        let String$(SpecialPosition:SpecialPosition)="""&str$("
+00677                        let SpecialPosition=ReplacePosition+8
+00678                     end if
+00679                  end if
 00680               else if String$(SpecialPosition:SpecialPosition)="""" then
 00690                  ! if its a single double quote, replace it with 2 double quotes.
 00700                  let String$(SpecialPosition:SpecialPosition)=""""""
@@ -78,13 +84,13 @@
 00720            loop
 00730         end if
 00740      loop
-00760 !
-00770 ! While we're at it we should support multi-line comments using /* and */. Those will be easier.
-00780 !
-00790 ! At the position of the /* replace the /* with a !.
-00800 ! At every line in between there, add a ! to the beginning.
-00810 ! At the position of the */ Put all the stuff before it after it, and vice versa, and change it to a !
-00820 !
+00760      !
+00770      ! While we're at it we should support multi-line comments using /* and */. Those will be easier.
+00780      !
+00790      ! At the position of the /* replace the /* with a !.
+00800      ! At every line in between there, add a ! to the beginning.
+00810      ! At the position of the */ Put all the stuff before it after it, and vice versa, and change it to a !
+00820      !
 00830      if MultilineComment then
 00840         if (SpecialPosition:=pos(String$,"*/")) then
 00850            let MultilineComment=0
@@ -103,7 +109,7 @@
 02110      for Constindex=21 to Udim(Mat Const$)
 02120         if (Constantposition:=Pos(Uprc$(String$),Uprc$(Constname$(Constindex)))) then
 02130            let String$=String$(1:Constantposition-1) & Const$(Constindex) & String$(Constantposition+Len(Constname$(Constindex)):Len(String$))
-02140         END IF  ! end if
+02140         end if
 10000      next Constindex
 10010      if (Constantposition:=Pos(Uprc$(String$),"#DEFINE#")) then
 10020         let Constantposition+=8
