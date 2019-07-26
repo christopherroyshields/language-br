@@ -59,7 +59,7 @@
             {
               "0":
               {
-                "name": "keyword.operator.interpolated.begin.br"
+                "name": "punctuation.section.embedded"
               }
             },
             "end": "\\}",
@@ -67,10 +67,15 @@
             {
               "0":
               {
-                "name": "keyword.operator.interpolated.end.br"
+                "name": "punctuation.section.embedded"
               }
             },
-            "name": "keyword.operator.interpolated.br"
+            "name": "keyword.operator.interpolated.br",
+            "patterns": [
+              {
+                "include": "$self"
+              }
+            ]
          }
       ]
     },
