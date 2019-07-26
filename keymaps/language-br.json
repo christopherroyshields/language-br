@@ -9,7 +9,7 @@
     "ctrl-alt-7": "language-br:set-br-43",
     "ctrl-f1": "language-br:lookupwiki",
     "f1": "language-br:lookupwiki",
-    "ctrl-alt-z": "language-br:debug-console",
-    "ctrl-cmd-z": "language-br:debug-console"
+    "ctrl-alt-z": "language-br:toggle-console",
+    "ctrl-cmd-z": "language-br:toggle-console"
   }
 }
