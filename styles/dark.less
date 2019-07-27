@@ -1,6 +1,9 @@
+ @import 'ui-variables';
+
 .syntax--variable.syntax--array {
   font-weight: bold;
 }
+
 .syntax--variable.syntax--scalar {
   font-weight: normal;
 }
@@ -98,4 +101,12 @@
     outline-color: fade(red,50%);
     background-color: fade(red,0%);
   }
+}
+
+.br-autocompile.hidden {
+  display: none;
+}
+
+.br-autocompile.active {
+  color: @text-color-success;
 }
