@@ -54,7 +54,7 @@
       "patterns":
       [
          {
-            "begin": "\\{",
+            "begin": "\\{\\{",
             "beginCaptures":
             {
               "0":
@@ -62,7 +62,7 @@
                 "name": "punctuation.section.embedded"
               }
             },
-            "end": "\\}",
+            "end": "\\}\\}",
             "endCaptures":
             {
               "0":
@@ -71,7 +71,8 @@
               }
             },
             "name": "keyword.operator.interpolated.br",
-            "patterns": [
+            "patterns":
+            [
               {
                 "include": "$self"
               }

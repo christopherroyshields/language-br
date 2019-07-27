@@ -22,18 +22,19 @@
 00220 ! Check for a ` that is not inside "s .. so count from the beginning flagging if we're in "s
 00230 !  if so, we're in special character processing mode. loop until the end of the string,
 00240 !  which is a ` that is not immediately followed by another ` (we'll honor BR's normal stuff) ``
-00250
+00250 !
 00260 ! just like above, we put everything together on one line.
 00270 !  Each new line should add a "&hex$("0D0A")&" and then the rest of the string.
 00280 !   If a " is encountered, then turn it into a ""
 00290 !   If a {Variable$} is encountered then turn it into "&Variable$&"
 00300 !   If a {Variable} is encountered then turn it into "&str$(Variable)&"
 00310 !
-00320      let InQuotes=0 : let CheckPosition=0
+00320      let InQuotesSingle=0 : let InQuotesDouble=0 : let CheckPosition=0
 00330      do while CheckPosition<=len(String$)
 00340         let CheckPosition+=1
-00350         if pos("""'",String$(CheckPosition:CheckPosition)) then let InQuotes=~InQuotes
-00360         if String$(CheckPosition:CheckPosition)="`" and ~InQuotes then
+00350         if pos("""",String$(CheckPosition:CheckPosition)) and ~InQuotesSingle then let InQuotesDouble=~InQuotesDouble
+00355         if pos("'",String$(CheckPosition:CheckPosition)) and ~InQuotesDouble then let InQuotesSingle=~InQuotesSingle
+00360         if String$(CheckPosition:CheckPosition)="`" and ~InQuotesSingle and ~InQuotesDouble then
 00370            ! Enable Special String Processing.
 00380            ! Check from there to the end of the line.
 00385            let String$(CheckPosition:CheckPosition)=""""
@@ -56,23 +57,22 @@
 00540                  if len(String$)>=SpecialPosition+1 and String$(SpecialPosition+1:SpecialPosition+1)="`" then
 00550                     ! Replace it with a single one.
 00560                     let String$(SpecialPosition:SpecialPosition+1)="`"
-00565                     let SpecialPosition-=1
 00570                  else ! Otherwise
 00580                     ! Replace it with a " and turn off SpecialStringProcessing.
 00590                     let String$(SpecialPosition:SpecialPosition)=""""
 00600                     let SpecialStringProcessing=0
 00610                  end if
-00620               else if String$(SpecialPosition:SpecialPosition)="{" then
-00630                  if (ReplacePosition:=pos(String$,"}",SpecialPosition)) then
-00640                     ! Replace everything from here to the } with "&contents&".
+00620               else if String$(SpecialPosition:SpecialPosition+1)="{{" then
+00630                  if (ReplacePosition:=pos(String$,"}}",SpecialPosition)) then
+00640                     ! Replace everything from here to the }} with "&contents&".
 00642                     if pos(String$(SpecialPosition:ReplacePosition),"$") then
-00650                        let String$(ReplacePosition:ReplacePosition)="&"""
-00660                        let String$(SpecialPosition:SpecialPosition)="""&"
-00670                        let SpecialPosition=ReplacePosition+2
-00671                     else
+00650                        let String$(ReplacePosition:ReplacePosition+1)="&"""
+00660                        let String$(SpecialPosition:SpecialPosition+1)="""&"
+00665                        let SpecialPosition=ReplacePosition+2
+00670                     else
 00672                        ! if there's no $ inside, then add a str$() around it.
-00673                        let String$(ReplacePosition:ReplacePosition)=")&"""
-00675                        let String$(SpecialPosition:SpecialPosition)="""&str$("
+00673                        let String$(ReplacePosition:ReplacePosition+1)=")&"""
+00675                        let String$(SpecialPosition:SpecialPosition+1)="""&str$("
 00677                        let SpecialPosition=ReplacePosition+8
 00678                     end if
 00679                  end if
@@ -82,6 +82,7 @@
 00705                  let SpecialPosition+=1
 00710               end if
 00720            loop
+00725            let CheckPosition=SpecialPosition
 00730         end if
 00740      loop
 00760      !
@@ -142,7 +143,7 @@
 12080                  let Currentcasechunk=Nextcasechunk+1
 12090               else
 12100                  let Currentcase$(Caseindex)=String$(Currentcasechunk:Len(String$))
-12110               END IF  ! end if
+12110               END IF
 13000            loop While Nextcasechunk
 13010            let Afterstring$=" THEN  ! " & String$(SelectPosition:Len(String$))
 13020            let String$=String$(1:SelectPosition-1) & "IF "
@@ -153,7 +154,7 @@
 13070               let String$=String$ & Trim$(Currentselect$) & " = " & Trim$(Currentcase$(Caseindex))
 13080            next Caseindex
 13090            let String$ = String$ & Afterstring$
-13100         END IF  ! end if
+13100         END IF
 13110      else if (Caseposition:=Pos(Uprc$(String$),"#CASE#")) then
 13120         if Len(Trim$(Currentselect$)) then
 13130            let Caseindex=0
@@ -166,26 +167,26 @@
 13200                  let Currentcasechunk=Nextcasechunk+1
 13210               else
 13220                  let Currentcase$(Caseindex)=String$(Currentcasechunk:Len(String$))
-13230               END IF  ! end if
+13230               END IF
 13240            loop While Nextcasechunk
 13250            let Afterstring$=" THEN  ! " & String$(Caseposition:Len(String$))
 13260            let String$=String$(1:Caseposition-1) & "ELSE IF "
 13270            for Caseindex=1 to Udim(Mat Currentcase$)
 13280               if Caseindex>1 then
 13290                  let String$=String$ & " or "
-14000               END IF  ! end if
+14000               END IF
 14010               let String$=String$ & Trim$(Currentselect$) & " = " & Trim$(Currentcase$(Caseindex))
 14020            next Caseindex
 14030            let String$ = String$ & Afterstring$
-14040         END IF  ! end if
+14040         END IF
 14050      else if (Caseposition:=Pos(Uprc$(String$),"#CASE ELSE#")) then
 14060         if Len(Trim$(Currentselect$)) then
 14070            let String$ = String$(1:Caseposition-1) & "ELSE " & String$(Caseposition+11:Len(String$)) & " ! " & String$(Caseposition:Len(String$))
-14080         END IF  ! end if
+14080         END IF
 14090      else if (Endposition:=Pos(Uprc$(String$),"#END SELECT#")) then
 14100         let String$ = String$(1:EndPosition-1) & "END IF" & String$(EndPosition+12:len(String$)) & "  ! " & String$(EndPosition:len(String$))
 14110         let Currentselect$ = ""
-14120      END IF  ! end if
+14120      END IF
 14130      if (Newnumber:=Pos(Uprc$(String$),"#AUTONUMBER#")) then
 14140         let Temp=0
 14150         let Temp=Val(String$(Newnumber+12:Newincrement:=Pos(String$,",",Newnumber+12))) conv BADAUTONUMBER
@@ -195,7 +196,7 @@
 14190         let Lastlinecount=Linecount=Newlinecount
 14200         let Increment=Val(String$(Newincrement+1:4000)) conv BADAUTONUMBER
 14210         let Linecount-=Increment ! Decrement So Next Increment Is Correct
-14220      END IF  ! end if
+14220      END IF
 14230      if (Ltrm$(Uprc$(String$))(1:1)="L") And (Newnumber:=Pos(Ltrm$(Uprc$(String$))(1:7),":")) then
 14240         let Newlinecount=Val(Ltrm$(Uprc$(String$))(2:Newnumber-1)) conv BADAUTONUMBER
 14250         if (Newlinecount>Linecount) then
@@ -204,8 +205,8 @@
 14280            let Linecount-=Increment ! Decrement So Next Num Is Correct
 14290         else
 14300            let Increment=Max(Int(Increment/2),2) ! Cut Incr In Half To Catch Up
-14310         END IF  ! end if
-14320      END IF  ! end if
+14310         END IF
+14320      END IF
 14330   BADAUTONUMBER: ! Ignore Line Number Information
 14340      let X=0
 14350      let X = Val(String$(1:5)) conv ADDLINENUMBER
