@@ -1,20 +1,25 @@
  @import 'ui-variables';
+ @import 'syntax-variables';
 
 .syntax--variable.syntax--array {
   font-weight: bold;
 }
 
-.syntax--variable.syntax--stringvar {
-  // color:
+.syntax--variable.syntax--string.syntax--br {
+  color: @syntax-color-variable;
+  font-style: normal;
 }
 
-.syntax--variable.syntax--scalar {
-  font-weight: normal;
+.syntax--variable.syntax--br {
+  font-style: italic;
 }
+
 .syntax--operator.syntax--line_continuation.syntax--br {
   color: red;
   font-weight: bold;
 }
+
+
 
 .occurence {
   display: inline-block;
