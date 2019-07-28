@@ -4,6 +4,10 @@
   font-weight: bold;
 }
 
+.syntax--variable.syntax--stringvar {
+  // color:
+}
+
 .syntax--variable.syntax--scalar {
   font-weight: normal;
 }
@@ -16,7 +20,7 @@
   display: inline-block;
   animation-name: zoom-in-out;
   animation-duration: .5s;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
@@ -27,7 +31,7 @@
   display: inline-block;
   animation-name: zoom-in-out-red;
   animation-duration: .5s;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
@@ -38,7 +42,7 @@
   display: inline-block;
   animation-name: zoom-in-out-bright;
   animation-duration: .5s;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
@@ -47,59 +51,43 @@
 
 @keyframes zoom-in-out {
   0%{
-    outline: 1px solid cyan;
     outline-width: 0;
-    outline-color: fade(#3399ff,80%);
-    background-color: fade(#3399ff,15%);
-    }
-  50%{
-    outline-width: 6px;
-    outline-color: fade(#3399ff,80%);
-    background-color: fade(#3399ff,15%);
+    outline-style: solid;
+    outline-color: fade(@background-color-info,80%);
+    background-color: fade(@background-color-info,15%);
   }
   100%{
-    outline-width: 0;
-    outline-color: fade(#3399ff,80%);
-    background-color: fade(#3399ff,0%);
+    outline-width: 15px;
+    outline-color: fade(@background-color-info,0%);
+    background-color: fade(@background-color-info,0%);
   }
 }
 
 @keyframes zoom-in-out-bright {
   0%{
-    outline: 1px solid yellow;
     outline-width: 0;
-    outline-color: fade(yellow,70%);
-    background-color: fade(yellow,10%);
-  }
-  50%{
-    outline-width: 6px;
-    outline-color: fade(yellow,70%);
-    background-color: fade(yellow,10%);
+    outline-style: solid;
+    outline-color: fade(@background-color-warning,70%);
+    background-color: fade(@background-color-warning,10%);
   }
   100%{
-    outline-width: 0;
-    outline-color: fade(yellow,70%);
-    background-color: fade(yellow,0%);
-    //background-color: ;
+    outline-width: 15px;
+    outline-color: fade(@background-color-warning,0%);
+    background-color: fade(@background-color-warning,0%);
   }
 }
 
 @keyframes zoom-in-out-red {
   0%{
-    outline: 1px solid red;
     outline-width: 0;
-    outline-color: fade(red,50%);
-    background-color: fade(red,20%);
-    }
-  50%{
-    outline-width: 10px;
-    outline-color: fade(red,50%);
-    background-color: fade(red,20%);
+    outline-style: solid;
+    outline-color: @background-color-error;
+    background-color: fade(@background-color-error,20%);
   }
   100%{
-    outline-width: 0;
-    outline-color: fade(red,50%);
-    background-color: fade(red,0%);
+    outline-width: 15px;
+    outline-color: fade(@background-color-error,0%);
+    background-color: fade(@background-color-error,0%);
   }
 }
 
