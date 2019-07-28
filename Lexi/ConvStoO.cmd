@@ -1,4 +1,3 @@
-echo Found > test.txt
 @echo off
 rem   echo calling command: %0 %*
 rem   echo percent 1: %1
