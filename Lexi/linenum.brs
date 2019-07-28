@@ -107,7 +107,7 @@
 00970      end if
 00980 !
 02100      if not SkipNextOne and (ltrm$(String$)(1:1)="!" and pos(String$,"!")>3) then let String$(1:4)=" ! ."&ltrm$(string$(1:4))
-02110      for Constindex=21 to Udim(Mat Const$)
+02110      for Constindex=1 to Udim(Mat Const$)
 02120         if (Constantposition:=Pos(Uprc$(String$),Uprc$(Constname$(Constindex)))) then
 02130            let String$=String$(1:Constantposition-1) & Const$(Constindex) & String$(Constantposition+Len(Constname$(Constindex)):Len(String$))
 02140         end if
