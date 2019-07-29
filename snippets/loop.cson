@@ -1,6 +1,7 @@
 ".source.br":
   "For ... Next":
-    "prefix": "for"
+    "prefix": "For ... Next"
+    "rightLabelHTML":"",
     "body": """
       for ${2:i}=1 to udim(${1:array})
         $3
@@ -19,7 +20,8 @@
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=For"
     "leftLabel": "Integer"
   "Do ... Loop":
-    "prefix": "do"
+    "prefix": "Do ... Loop"
+    "rightLabelHTML":"",
     "body": """
       do
         $1
@@ -35,7 +37,8 @@
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Do"
     "leftLabel": "Integer"
   "Do While ... Loop":
-    "prefix": "dow"
+    "prefix": "Do While ... Loop"
+    "rightLabelHTML":"",
     "body": """
       do while ${1:expression}
         $2
@@ -51,7 +54,8 @@
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Do"
     "leftLabel": "Integer"
   "Do Until ... Loop":
-    "prefix": "dou"
+    "prefix": "Do Until ... Loop"
+    "rightLabelHTML":"",
     "body": """
       do until ${1:expression}
         $2

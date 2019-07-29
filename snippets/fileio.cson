@@ -1,6 +1,7 @@
 ".source.br":
   "fnGetFileNumber(;start,count)":
-    "prefix": "fnGetFileNumber",
+    "prefix": "fnGetFileNumber(;start,count)",
+    "rightLabelHTML":"",
     "body" : "fnGetFileNumber$0",
     "description": """
     Returns the next available file handle.
@@ -14,7 +15,8 @@
     "leftLabel": "Integer"
 
   "fnShowData(Filelay$*128, ...)":
-    "prefix": "fnShowData",
+    "prefix": "fnShowData(Filelay$*128, ...)",
+    "rightLabelHTML":"",
     "body" : "fnShowData(\"${1:layout}\")$0",
     "description": """
     Loads the BR Data Crawler to View or Edit the current data file. Many options exist for filters and other options.
@@ -34,7 +36,8 @@
     "leftLabel": "None"
 
   "fnEmpty(mat A)":
-    "prefix": "fnEmpty",
+    "prefix": "fnEmpty(mat A)",
+    "rightLabelHTML":"",
     "body" : "fnEmpty(mat ${1:array})$0",
     "description": """
     Returns true if the passed array is empty.
@@ -48,7 +51,8 @@
     "leftLabel": "Boolean"
 
   "fnEmptyS(mat A$)":
-    "prefix": "fnEmptyS",
+    "prefix": "fnEmptyS(mat A$)",
+    "rightLabelHTML":"",
     "body" : "fnEmptyS(mat ${1:array}$)$0",
     "description": """
     Returns true if the passed array is empty.
@@ -62,7 +66,8 @@
     "leftLabel": "Boolean"
 
   "fnCsvImport(Layout$*64;SupressDialog,FileName$*300,ImportModeKey)":
-    "prefix": "fnCsvImport",
+    "prefix": "fnCsvImport(Layout$*64;SupressDialog,FileName$*300,ImportModeKey)",
+    "rightLabelHTML":"",
     "body" : "fnCsvImport(\"${1:layout}\")$0",
     "description": """
     Imports the specified file into the specified layout, showing or optionally suppressing the CSV File Import Dialog.
@@ -79,7 +84,8 @@
     "leftLabel": "None"
 
   "fnCsvExport(Layout$*64;DialogType,FileName$*300,IncludeRecNums,KeyNumber, ...)":
-    "prefix": "fnCsvExport",
+    "prefix": "fnCsvExport(Layout$*64;DialogType,FileName$*300,IncludeRecNums,KeyNumber, ...)",
+    "rightLabelHTML":"",
     "body" : "fnCsvExport(\"${1:layout}\")$0",
     "description": """
     Exports the specified file to CSV.
@@ -96,7 +102,8 @@
     "leftLabel": "None"
 
   "fnAskCombo$*255(mat Description$;Caption$*60,Default$*255)":
-    "prefix": "fnAskCombo$",
+    "prefix": "fnAskCombo$*255(mat Description$;Caption$*60,Default$*255)",
+    "rightLabelHTML":"",
     "body" : "fnAskCombo$(mat ${1:Description}$)$0",
     "description": """
     Displays a selection window to the user and allows them to select one option. Returns that selection.
@@ -111,7 +118,8 @@
     "leftLabel": "String"
 
   "fnBuildProcFile(String$*255)":
-    "prefix": "fnBuildProcFile",
+    "prefix": "fnBuildProcFile(String$*255)",
+    "rightLabelHTML":"",
     "body" : "fnBuildProcFile(${1:Command})$0",
     "description": """
     Builds a proc file to be run later. See fnRunProcFile.
@@ -128,7 +136,8 @@
     "leftLabel": "None"
 
   "fnRunProcFile(;NoWait)":
-    "prefix": "fnRunProcFile",
+    "prefix": "fnRunProcFile(;NoWait)",
+    "rightLabelHTML":"",
     "body" : "fnRunProcFile$0",
     "description": """
     Runs the proc file built previously. See fnBuildProcFile.
@@ -145,6 +154,7 @@
 
   "fnReIndexAllFiles":
     "prefix": "fnReIndexAllFiles",
+    "rightLabelHTML":"",
     "body" : "fnReIndexAllFiles$0",
     "description": """
     Reindexes all data files.
@@ -155,7 +165,8 @@
     "leftLabel": "None"
 
   "fnReIndex(DataFile$*255;CallingProgram$*255,IndexNum,Path$*255)":
-    "prefix": "fnReIndex",
+    "prefix": "fnReIndex(DataFile$*255;CallingProgram$*255,IndexNum,Path$*255)",
+    "rightLabelHTML":"",
     "body" : "fnReIndex(\"${1:layout}\")$0",
     "description": """
     Reindexes the specified data file. If an optional IndexNum is passed, only that index is rebuilt.
@@ -170,7 +181,8 @@
     "leftLabel": "None"
 
   "<success/fail> fnRemoveDeletes(LayoutName$*255;Path$*255,CallingProgram$*255,DontError)":
-    "prefix": "fnRemoveDeletes",
+    "prefix": "<success/fail> fnRemoveDeletes(LayoutName$*255;Path$*255,CallingProgram$*255,DontError)",
+    "rightLabelHTML":"",
     "body" : "fnRemoveDeletes(\"${1:layout}\")$0",
     "description": """
     Removes deleted records for the given data file, by copying it with the -D option.
@@ -183,7 +195,8 @@
     "leftLabel": "Boolean"
 
   "<count> fnReadEntireLayout(LayoutName$*255;&FileName$,&Prefix$,mat Keys$, ...)":
-    "prefix": "fnReadEntireLayout",
+    "prefix": "<count> fnReadEntireLayout(LayoutName$*255;&FileName$,&Prefix$,mat Keys$, ...)",
+    "rightLabelHTML":"",
     "body" : "fnReadEntireLayout(\"${1:layout}\",${1:&filename}$,${1:&prefix}$,mat ${1:keys}$)$0",
     "description": """
     Reads the file layout and returns the information in a bunch of arrays. Returns the field count.
@@ -204,7 +217,8 @@
     "leftLabel": "Integer"
 
   "<count> fnReadLayoutHeader(LayoutName$*255;&FileName$,mat Keys$,mat KeyDescription$, ...)":
-    "prefix": "fnReadLayoutHeader",
+    "prefix": "<count> fnReadLayoutHeader(LayoutName$*255;&FileName$,mat Keys$,mat KeyDescription$, ...)",
+    "rightLabelHTML":"",
     "body" : "fnReadLayoutHeader(\"${1:layout}\",${2:&filename}$,mat ${3:keys}$)$0",
     "description": """
     Reads the file layout and returns the Header information in a bunch of arrays. Returns the number of keys.
@@ -220,7 +234,8 @@
     "leftLabel": "Integer"
 
   "<count> fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$, ...)":
-    "prefix": "fnReadLayoutArrays",
+    "prefix": "<count> fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$, ...)",
+    "rightLabelHTML":"",
     "body" : "fnReadLayoutArrays(\"${1:layout}\",${2:&prefix}$,mat ${3:StringSubs}$,mat ${4:NumericSubs}$)$0"
     "description": """
     Reads the file layout and returns the Record Detail information in a bunch of arrays. Returns the field count.
@@ -238,7 +253,8 @@
     "leftLabel": "Integer"
 
   "fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$)":
-    "prefix": "fnReadLayoutArraySnippet",
+    "prefix": "fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$)",
+    "rightLabelHTML":"",
     "body" : """
       dim S_${1:StringSubs}Subs$(1), mat N_${1:NumericSubs}Subs$(1), ${1:File}Prefix$
       fnReadLayoutArrays(\"${1:layout}\",${1:&prefix}Prefix$,mat S_${1:StringSubs}Subs$,mat N_${1:NumericSubs}Subs$)
@@ -260,7 +276,8 @@
     "leftLabel": "Code Snippet"
 
   "fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$,mat SSpec$, ...)":
-    "prefix": "fnReadLayoutArraySnippetFull",
+    "prefix": "fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$,mat SSpec$, ...)",
+    "rightLabelHTML":"",
     "body" : """
       dim ${1:StringSubs}_S_Subs$(1), ${1:NumericSubs}_N_Subs$(1), ${1:File}_Prefix$
       dim ${1:StringSpec}_S_Spec$(1), ${1:NumericSpec}_N_Spec$(1)
@@ -286,7 +303,8 @@
     "leftLabel": "Code Snippet"
 
   "fnReadKeyFiles(Layout$,mat Keys$)":
-    "prefix": "fnReadKeyFiles",
+    "prefix": "fnReadKeyFiles(Layout$,mat Keys$)",
+    "rightLabelHTML":"",
     "body" : "fnReadKeyFiles(\"${1:layout}\",mat ${2:keys}$)$0",
     "description": """
     Reads the list of Keys for the given layout into the provided arrays.
@@ -300,9 +318,10 @@
     "leftLabel": "None"
 
   "<key> fnBuildKey$*255(Layout$*30,mat F$,mat F;KeyNum)":
-    "prefix": "fnBuildKey$*255(Layout$*30,mat F$,mat F;KeyNum)",
+    "prefix": "<key> fnBuildKey$*255(Layout$*30,mat F$,mat F;KeyNum)",
+    "rightLabelHTML":"",
     "body" : "fnBuildKey$(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout})$0",
-    "rightLabelHTML":"<span></span>",
+    "rightLabelHTML":"",
     "description": """
     Builds the key for the given record.
 
@@ -317,7 +336,8 @@
     "leftLabel": "String"
 
   "fnCloseFile(FileNumber, Filelay$*255; Path$*255,Out)":
-    "prefix": "fnCloseFile",
+    "prefix": "fnCloseFile(FileNumber, Filelay$*255; Path$*255,Out)",
+    "rightLabelHTML":"",
     "body" : "fnCloseFile(${1:layout}, \"${1:layout}\")$0",
     "description": """
     Closes the file, closing all indexes.
@@ -331,7 +351,8 @@
     "leftLabel": "None"
 
   "fnMakeSubProc(FileName$*255;mat Subs$,mat F$,mat F)":
-    "prefix": "fnMakeSubProc",
+    "prefix": "fnMakeSubProc(FileName$*255;mat Subs$,mat F$,mat F)",
+    "rightLabelHTML":"",
     "body" : """
       dim Subscripts$(1)*1023
 
@@ -353,7 +374,8 @@
     "leftLabel": "Code Snippet"
 
   "<form statement> fnReadForm$*10000(FileLayout$)":
-    "prefix": "fnReadForm$",
+    "prefix": "<form statement> fnReadForm$*10000(FileLayout$)",
+    "rightLabelHTML":"",
     "body" : "fnReadForm$(\"${1:layout}\")$0",
     "description": """
     Returns the form statement for the given file.
@@ -365,6 +387,7 @@
 
   "fnClearLayoutCache":
     "prefix": "fnClearLayoutCache",
+    "rightLabelHTML":"",
     "body" : "fnClearLayoutCache$0",
     "description": """
     Clears the current layout cache from memory, forcing FileIO to reread all layouts from the desk the next time they're used.
@@ -374,7 +397,8 @@
     "leftLabel": "None"
 
   "fnLength(Spec$)":
-    "prefix": "fnLength",
+    "prefix": "fnLength(Spec$)",
+    "rightLabelHTML":"",
     "body" : "fnLength(${1:Spec})$0",
     "description": """
     Checks the given Field Spec and returns its length on disk in bytes.
@@ -387,7 +411,8 @@
     "leftLabel": "Integer"
 
   "fnDisplayLength(Spec$)":
-    "prefix": "fnDisplayLength",
+    "prefix": "fnDisplayLength(Spec$)",
+    "rightLabelHTML":"",
     "body" : "fnDisplayLength(${1:Spec})$0",
     "description": """
     Checks the given Field Spec and returns the maximum length it could take on the screen in Characters.
@@ -400,7 +425,8 @@
     "leftLabel": "Integer"
 
   "fnUpdateFile(Filelayout$)":
-    "prefix": "fnUpdateFile",
+    "prefix": "fnUpdateFile(Filelayout$)",
+    "rightLabelHTML":"",
     "body" : "fnUpdateFile(\"${1:layout}\")$0",
     "description": """
     Checks the given file for updates to its layout, and triggers the update if there are any updates.
@@ -413,7 +439,8 @@
     "leftLabel": "None"
 
   "fnReadDescription$*255(FileNumber,Subscript,Key$*255,mat F$,mat F,mat Form$)":
-    "prefix": "fnReadDescription$",
+    "prefix": "fnReadDescription$*255(FileNumber,Subscript,Key$*255,mat F$,mat F,mat Form$)",
+    "rightLabelHTML":"",
     "body" : "fnReadDescription$*255(${1:filenumber},${2:Subscript},${3:Key},mat ${1:f}$,mat ${1:f},mat Form$)$0",
     "description": """
     Reads the given open file, finds the record matching the given key, and returns the requested String Field.
@@ -430,7 +457,8 @@
     "leftLabel": "String"
 
   "fnReadUnOpenedDescription$*255(LayoutName$,Key$*255;Subscript)":
-    "prefix": "fnReadUnOpenedDescription$",
+    "prefix": "fnReadUnOpenedDescription$*255(LayoutName$,Key$*255;Subscript)",
+    "rightLabelHTML":"",
     "body" : "fnReadUnOpenedDescription$*255(\"${1:layout}\",${2:Key},${3:OptionalSubscript})$0",
     "description": """
     Opens and Reads the given file, finding the record matching the given key, and returning the requested String Field. Defaults to the Second (2nd) String field (usually the description field).
@@ -445,7 +473,8 @@
     "leftLabel": "String"
 
   "fnReadNumber(FileNumber,Subscript,Key$*255,mat F$,mat F,mat Form$)":
-    "prefix": "fnReadNumber",
+    "prefix": "fnReadNumber(FileNumber,Subscript,Key$*255,mat F$,mat F,mat Form$)",
+    "rightLabelHTML":"",
     "body" : "fnReadNumber(${1:filenumber},${2:Subscript},${3:Key},mat ${1:f}$,mat ${1:f},mat Form$)$0",
     "description": """
     Reads the given open file, finds the record matching the given key, and returns the requested Numeric Field.
@@ -462,7 +491,8 @@
     "leftLabel": "Float"
 
   "fnReadUnOpenedNumber(LayoutName$,Key$*255;Field,DontChangeKey)":
-    "prefix": "fnReadUnOpenedNumber",
+    "prefix": "fnReadUnOpenedNumber(LayoutName$,Key$*255;Field,DontChangeKey)",
+    "rightLabelHTML":"",
     "body" : "fnReadUnOpenedNumber(\"${1:layout}\",${2:Key},${3:OptionalSubscript})$0",
     "description": """
     Opens and Reads the given file, finding the record matching the given key, and returning the requested Numeric Field. Defaults to the First (1st) Numeric field.
@@ -477,7 +507,8 @@
     "leftLabel": "Float"
 
   "fnReadRelativeDescription$*255(FileNumber,Subscript,RecordNumber,mat F$,mat F,mat Form$)":
-    "prefix": "fnReadRelativeDescription$",
+    "prefix": "fnReadRelativeDescription$*255(FileNumber,Subscript,RecordNumber,mat F$,mat F,mat Form$)",
+    "rightLabelHTML":"",
     "body" : "fnReadRelativeDescription$*255(${1:filenumber},${2:Subscript},${3:RecordNum},mat ${1:f}$,mat ${1:f},mat Form$)$0",
     "description": """
     Reads the given open file, reads the specified record, and returns the requested String Field.
@@ -494,7 +525,8 @@
     "leftLabel": "String"
 
   "fnReadRelUnOpenedDescription$*255(LayoutName$,RecordNumber;Field)":
-    "prefix": "fnReadRelUnOpenedDescription$",
+    "prefix": "fnReadRelUnOpenedDescription$*255(LayoutName$,RecordNumber;Field)",
+    "rightLabelHTML":"",
     "body" : "fnReadRelUnOpenedDescription$*255(\"${1:layout}\",${2:Record},${3:OptionalSubscript})$0",
     "description": """
     Opens and Reads the given file, reads the specified record, and returns the requested String Field. Defaults to the Second (2nd) String field (usually the description field).
@@ -509,7 +541,8 @@
     "leftLabel": "String"
 
   "fnReadRelativeNumber(FileNumber,Subscript,RecordNumber,mat F$,mat F,mat Form$)":
-    "prefix": "fnReadRelativeNumber",
+    "prefix": "fnReadRelativeNumber(FileNumber,Subscript,RecordNumber,mat F$,mat F,mat Form$)",
+    "rightLabelHTML":"",
     "body" : "fnReadRelativeNumber(${1:filenumber},${2:Subscript},${3:RecordNum},mat ${1:f}$,mat ${1:f},mat Form$)$0",
     "description": """
     Reads the given open file, reads the specified record, and returns the requested Numeric Field.
@@ -525,7 +558,8 @@
     "leftLabel": "Float"
 
   "fnReadRelUnOpenedNumber(LayoutName$,RecordNumber;Field)":
-    "prefix": "fnReadRelUnOpenedNumber",
+    "prefix": "fnReadRelUnOpenedNumber(LayoutName$,RecordNumber;Field)",
+    "rightLabelHTML":"",
     "body" : "fnReadRelUnOpenedNumber(\"${1:layout}\",${2:Record},${3:OptionalSubscript})$0",
     "description": """
     Opens and Reads the given file, reading the specified record, and returning the requested Numeric Field. Defaults to the First (1st) Numeric field.
@@ -540,7 +574,8 @@
     "leftLabel": "Float"
 
   "fnReadRecordWhere$*255(LayoutName$,SearchSub,SearchKey$*255,ReturnSub)":
-    "prefix": "fnReadRecordWhere$",
+    "prefix": "fnReadRecordWhere$*255(LayoutName$,SearchSub,SearchKey$*255,ReturnSub)",
+    "rightLabelHTML":"",
     "body" : "fnReadRecordWhere$*255(\"${1:layout}\",${2:SearchInSubscript},${3:SearchFor},${4:ReturnSubscript})$0",
     "description": """
     Searches a file for a given value and reads the record where the specified subscript matches that value. Returns the Requested String from that Record.
@@ -556,7 +591,8 @@
     "leftLabel": "String"
 
   "fnUniqueKey(FileNumber,Key$*255)":
-    "prefix": "fnUniqueKey",
+    "prefix": "fnUniqueKey(FileNumber,Key$*255)",
+    "rightLabelHTML":"",
     "body" : "fnUniqueKey(${1:layout},${2:testKey})$0",
     "description": """
     Checks to see if the given key would be unique in the given data file and returns true if it is.
@@ -570,7 +606,8 @@
     "leftLabel": "Boolean"
 
   "fnReadAllKeys(FileNumber,mat F$,mat F,mat Form$,Sub1,mat Out1$;...)":
-    "prefix": "fnReadALLKeys",
+    "prefix": "fnReadAllKeys(FileNumber,mat F$,mat F,mat Form$,Sub1,mat Out1$;...)",
+    "rightLabelHTML":"",
     "body" : "fnReadALLKeys(${1:filenumber},mat ${1:f}$,mat ${1:f},mat Form$,${2:Subscript1},mat ${2:Out1}$)$0",
     "description": """
     Reads all records from the file and puts the value of 1 or 2 fields in an array(s).
@@ -587,7 +624,8 @@
     "leftLabel": "None"
 
   "fnReadMatchingKeys(FileNumber,mat F$,mat F,mat Form$,Key$,KeyFld,Sub1,mat Out1$;Sub2,mat Out2$,Index)":
-    "prefix": "fnReadmatchingKeys",
+    "prefix": "fnReadMatchingKeys(FileNumber,mat F$,mat F,mat Form$,Key$,KeyFld,Sub1,mat Out1$;Sub2,mat Out2$,Index)",
+    "rightLabelHTML":"",
     "body" : "fnReadmatchingKeys(${1:filenumber},mat ${1:f}$,mat ${1:f},mat Form$,${2:SearchString}$,${3:SearchField},${4:OutSub1},mat {4:Out1}$)$0",
     "description": """
     Reads all records from the file that match the given filter information, and puts the requested values in the requested arrays. A complete search is preformed and the filter field doesn't have to be indexed.
@@ -606,7 +644,8 @@
     "leftLabel": "None"
 
   "fnReadAllNewKeys(FileNumber,mat F$,mat F,mat Form$,Sub1,mat Out1$;Dont_Reset,Sub2,mat Out2$,Index)":
-    "prefix": "fnReadAllNewKeys",
+    "prefix": "fnReadAllNewKeys(FileNumber,mat F$,mat F,mat Form$,Sub1,mat Out1$;Dont_Reset,Sub2,mat Out2$,Index)",
+    "rightLabelHTML":"",
     "body" : "fnReadAllNewKeys(${1:filenumber},mat ${1:f}$,mat ${1:f},mat Form$,${2:OutSub1},mat {2:Out1}$)$0",
     "description": """
     Reads any values from the file but doesn't double up values that already exist in the output arrays.
@@ -623,7 +662,8 @@
     "leftLabel": "None"
 
   "fnReadFilterKeys(FileNumber,mat F$,mat F,mat Form$,Key$,KeyFLD,Sub1,mat Out1$;Filter$,Filter_Sub,ReadLarger,Sub2,mat Out2$, Sub3, mat Out3$, Sub4,mat Out4$, Index)":
-    "prefix": "fnReadFilterKeys",
+    "prefix": "fnReadFilterKeys(FileNumber,mat F$,mat F,mat Form$,Key$,KeyFLD,Sub1,mat Out1$;Filter$,Filter_Sub,ReadLarger,Sub2,mat Out2$, Sub3, mat Out3$, Sub4,mat Out4$, Index)",
+    "rightLabelHTML":"",
     "body" : "fnReadFilterKeys(${1:FileNumber},mat ${1:f}$,mat ${1:f},mat Form$,${2:Key}$,${3:KeyField},${4:OutSub1},mat {4:Out1}$)$0",
     "description": """
     Reads all keys that match the given filters and outputs up to 4 arrays from the matching records.
@@ -644,7 +684,8 @@
     "leftLabel": "None"
 
   "fnMakeUniqueKey$*255(FileNumber;Random,Prepend$)":
-    "prefix": "fnMakeUniqueKey$",
+    "prefix": "fnMakeUniqueKey$*255(FileNumber;Random,Prepend$)",
+    "rightLabelHTML":"",
     "body" : "fnMakeUniqueKey$*255(${1:FileNumber})$0",
     "description": """
     Generates a key that is unique in the given file.
@@ -657,7 +698,8 @@
     "leftLabel": "String"
 
   "fnReadLockedUsers(mat Users$)":
-    "prefix": "fnReadLockedUsers",
+    "prefix": "fnReadLockedUsers(mat Users$)",
+    "rightLabelHTML":"",
     "body" : "fnReadLockedUsers(mat ${1:Users}$)$0",
     "description": """
     Returns an array listing all the users that have locks on the most recently locked file.
@@ -670,7 +712,8 @@
     "leftLabel": "None"
 
   "fnViewLogFile(;ShowQuit,ShowColumns,ShowExport)":
-    "prefix": "fnViewLogFile",
+    "prefix": "fnViewLogFile(;ShowQuit,ShowColumns,ShowExport)",
+    "rightLabelHTML":"",
     "body" : "fnViewLogFile$0",
     "description": """
     Loads the FileIO Log File in a listview for viewing.
@@ -685,7 +728,8 @@
     "leftLabel": "None"
 
   "fnErrLog(String$*255;CallingProgram$*255)":
-    "prefix": "fnErrLog",
+    "prefix": "fnErrLog(String$*255;CallingProgram$*255)",
+    "rightLabelHTML":"",
     "body" : "fnErrLog(\"${1:LogMessage}\",Program$)$0",
     "description": """
     Logs an error message to the log file.
@@ -698,7 +742,8 @@
     "leftLabel": "None"
 
   "fnSetLogChanges(mat F$,mat F)":
-    "prefix": "fnSetLogChanges",
+    "prefix": "fnSetLogChanges(mat F$,mat F)",
+    "rightLabelHTML":"",
     "body" : "fnSetLogChanges(mat ${1:f}$,mat ${1:f})$0",
     "description": """
     Records the given arrays so that differences can be logged later with fnLogChanges.
@@ -708,7 +753,8 @@
     "leftLabel": "None"
 
   "fnLogChanges(mat F$,mat F;String$*1048,CallingProgram$*255,Layout$)":
-    "prefix": "fnLogChanges",
+    "prefix": "fnLogChanges(mat F$,mat F;String$*1048,CallingProgram$*255,Layout$)",
+    "rightLabelHTML":"",
     "body" : "fnLogChanges(mat ${1:f}$,mat ${1:f})$0",
     "description": """
     Examines the passed arrays and records a log message describing just the changes.
@@ -718,7 +764,8 @@
     "leftLabel": "None"
 
   "fnLogArray(mat F$,mat F;String$*512,CallingProgram$*255)":
-    "prefix": "fnLogArray",
+    "prefix": "fnLogArray(mat F$,mat F;String$*512,CallingProgram$*255)",
+    "rightLabelHTML":"",
     "body" : "fnLogArray(mat ${1:f}$,mat ${1:f})$0",
     "description": """
     Writes a log message to the Log that lists all details of the passed in Arrays.
@@ -728,7 +775,8 @@
     "leftLabel": "None"
 
   "fnLog(String$*512;CallingProgram$*255,ForceTextFile)":
-    "prefix": "fnLog",
+    "prefix": "fnLog(String$*512;CallingProgram$*255,ForceTextFile)",
+    "rightLabelHTML":"",
     "body" : "fnLog(\"${1:LogMessage}\",Program$)$0",
     "description": """
     Records a message to the log file.
@@ -741,7 +789,8 @@
     "leftLabel": "None"
 
   "fnNotInFile(String$*100,FileName$,Sub;Path$,FileNumber)":
-    "prefix": "fnNotInFile",
+    "prefix": "fnNotInFile(String$*100,FileName$,Sub;Path$,FileNumber)",
+    "rightLabelHTML":"",
     "body" : "fnNotInFile(${1:SearchString},\"${1:layout}\",${3:SearchField})$0",
     "description": """
     Returns true if the specified value is not found in the specified field of the file.
@@ -756,7 +805,8 @@
     "leftLabel": "Boolean"
 
   "fnGetFileDateTime$(FileName$*255)=FNGetFileDT$(FileName$)":
-    "prefix": "fnGetFileDateTime$",
+    "prefix": "fnGetFileDateTime$(FileName$*255)=FNGetFileDT$(FileName$)",
+    "rightLabelHTML":"",
     "body" : "fnGetFileDateTime$(${1:FileName})$0",
     "description": """
     Reads the last modified date and time of the specified file from the filesystem.
@@ -767,7 +817,8 @@
     "leftLabel": "String"
 
   "fnReadLayouts(mat LayoutList$)":
-    "prefix": "fnReadLayouts",
+    "prefix": "fnReadLayouts(mat LayoutList$)",
+    "rightLabelHTML":"",
     "body" : "fnReadLayouts(mat DirList$=)$0",
     "description": """
     Reads the list of file layouts into the provided array.
@@ -780,7 +831,8 @@
     "leftLabel": "None"
 
   "fnReadLayouts(mat LayoutList$) with Dims":
-    "prefix": "fnReadLayoutsD",
+    "prefix": "fnReadLayouts(mat LayoutList$) with Dims",
+    "rightLabelHTML":"",
     "body" : """
       dim ${1:LayoutList}$(1)
       fnReadLayouts(mat ${1:LayoutList}$)
@@ -797,7 +849,8 @@
     "leftLabel": "Code Snippet"
 
   "fnDirVersionHistoryFiles(Layout$,mat DirList$;BypassExtension$)":
-    "prefix": "fnDirVersionHistoryFiles",
+    "prefix": "fnDirVersionHistoryFiles(Layout$,mat DirList$;BypassExtension$)",
+    "rightLabelHTML":"",
     "body" : "fnDirVersionHistoryFiles(\"${1:layout}\",mat ${2:LayoutList}$)$0",
     "description": """
     Reads a list of all the version history files available for the given layout into the provided array.
@@ -811,7 +864,8 @@
     "leftLabel": "None"
 
   "fnDoesLayoutExist(Layout$)":
-    "prefix": "fnDoesLayoutExist",
+    "prefix": "fnDoesLayoutExist(Layout$)",
+    "rightLabelHTML":"",
     "body" : "fnDoesLayoutExist(${1:layout}$)$0",
     "description": """
     Returns true if the specified layout exists.
@@ -825,6 +879,7 @@
 
   "fnReadLayoutPath$":
     "prefix": "fnReadLayoutPath$",
+    "rightLabelHTML":"",
     "body" : "${1:layoutPath}$=fnReadLayoutPath$$0",
     "description": """
     Returns the path to the FileIO layout folder.
@@ -836,6 +891,7 @@
 
   "fnReadLayoutExtension$":
     "prefix": "fnReadLayoutExtension$",
+    "rightLabelHTML":"",
     "body" : "${1:layoutExtension}$=fnReadLayoutExtension$$0",
     "description": """
     Returns the File Layout Extension
@@ -844,7 +900,8 @@
     "leftLabel": "String"
 
   "fnKey$*255(FileNumber, Key$*255)":
-    "prefix": "fnKey$",
+    "prefix": "fnKey$*255(FileNumber, Key$*255)",
+    "rightLabelHTML":"",
     "body" : "fnKey$*255(${1:FileNumber}, ${2:Key}$)$0",
     "description": """
     Takes the passed in value and ensures that its the proper size for the key of the given file number.
@@ -857,7 +914,8 @@
     "leftLabel": "String"
 
   "fnSortKeys(mat Keys$,Layout$,DataFile,mat F$,mat F,mat Form$;KeyNUM)":
-    "prefix": "fnSortKeys",
+    "prefix": "fnSortKeys(mat Keys$,Layout$,DataFile,mat F$,mat F,mat Form$;KeyNUM)",
+    "rightLabelHTML":"",
     "body" : "fnSortKeys(mat ${1:Keys}$,\"${1:layout}\",${2:filenumber},mat ${3:f}$,mat ${3:f},mat Form$)$0",
     "description": """
     Sorts the records indicated by mat Keys$ into an order speciied by the key identified by Keynum.
@@ -874,7 +932,8 @@
     "leftLabel": "None"
 
   "fnBeginAudit(;BackupFolder$*80,Path$*255,mat SelectedFiles$)":
-    "prefix": "fnBeginAudit",
+    "prefix": "fnBeginAudit(;BackupFolder$*80,Path$*255,mat SelectedFiles$)",
+    "rightLabelHTML":"",
     "body" : "fnBeginAudit$0",
     "description": """
     Records the beginning point of the specified datafiles (defaults to all) so that a subsequent fnCompare operation can be performed to make a report showing all changes made.
@@ -887,7 +946,8 @@
     "leftLabel": "None"
 
   "fnCompare(;BackupFolder$*80,LogFile$*80,PRINTER,DontClose,Path$*255,mat SelectedLayouts$)":
-    "prefix": "fnCompare",
+    "prefix": "fnCompare(;BackupFolder$*80,LogFile$*80,PRINTER,DontClose,Path$*255,mat SelectedLayouts$)",
+    "rightLabelHTML":"",
     "body" : "fnCompare$0",
     "description": """
     Run after running fnBeginAudit, to see a report of any changes made to the specified data files since the time of running fnBeginAudit.
@@ -901,7 +961,8 @@
     "leftLabel": "None"
 
   "fnCopyDataFiles(BackupFolder$*255;Path$*255,mat SelectedLayouts$,SKIPKeys)":
-    "prefix": "fnCopyDataFiles",
+    "prefix": "fnCopyDataFiles(BackupFolder$*255;Path$*255,mat SelectedLayouts$,SKIPKeys)",
+    "rightLabelHTML":"",
     "body" : "fnCopyDataFiles(${1:BackupFolder}$)$0",
     "description": """
     Copies all (or optionally some) of the data files defined in your file layouts to the folder specified as the BackupFolder.
@@ -914,7 +975,8 @@
     "leftLabel": "None"
 
   "fnCopyFile(FromFile$*255,ToFile$*255;NoProgressBar)":
-    "prefix": "fnCopyFile",
+    "prefix": "fnCopyFile(FromFile$*255,ToFile$*255;NoProgressBar)",
+    "rightLabelHTML":"",
     "body" : "fnCopyFile(${1:FromFile$},${2:ToFile$})$0",
     "description": """
     Copies the specified file, even over the internet (using Client Server), showing a progress bar as the copy progresses.
@@ -928,7 +990,8 @@
     "leftLabel": "None"
 
   "fnCopyFile Download from Server to Client":
-    "prefix": "fnCopyFileDownload",
+    "prefix": "fnCopyFile Download from Server to Client",
+    "rightLabelHTML":"",
     "body" : "fnCopyFile(${1:FromFile$},\"@:\"&${1:ToFile$})$0",
     "description": """
     Downloads the specified file, showing a progress bar as the copy progresses.
@@ -942,7 +1005,8 @@
     "leftLabel": "None"
 
   "fnCopyFile Upload from Client to Server":
-    "prefix": "fnCopyFileDownload",
+    "prefix": "fnCopyFile Upload from Client to Server",
+    "rightLabelHTML":"",
     "body" : "fnCopyFile(\"@:\"&${1:FromFile$},${1:ToFile$})$0",
     "description": """
     Uploads the specified file, showing a progress bar as the copy progresses.
@@ -956,7 +1020,8 @@
     "leftLabel": "None"
 
   "fnProgressBar(Percent;Color$, ... )":
-    "prefix": "fnProgressBar",
+    "prefix": "fnProgressBar(Percent;Color$, ... )",
+    "rightLabelHTML":"",
     "body" : "fnProgressBar(${1:CurrentRecord}/${2:LastRecord})$0",
     "description": """
     Call in the MainLoop of a slow routine to display a progress bar that runs during the process. Automatically opens a window for the progress bar that needs to be closed using fnCloseBar when done.
@@ -970,7 +1035,8 @@
     "leftLabel": "None"
 
   "fnProgressBar(Percent) of a DataFile":
-    "prefix": "fnProgressBarDatafile",
+    "prefix": "fnProgressBar(Percent) of a DataFile",
+    "rightLabelHTML":"",
     "body" : "fnProgressBar(rec(${1:DataFile})/lrec(${1:DataFile}))$0",
     "description": """
     Call in the MainLoop of a slow routine to display a progress bar that runs during the process. Automatically opens a window for the progress bar that needs to be closed using fnCloseBar when done.
@@ -985,6 +1051,7 @@
 
   "fnCloseBar":
     "prefix": "fnCloseBar",
+    "rightLabelHTML":"",
     "body" : "fnCloseBar$0",
     "description": """
     Closes the progress bar window when the task is done.
@@ -995,7 +1062,8 @@
     "leftLabel": "None"
 
   "fnShowMessage(Message$*54)":
-    "prefix": "fnShowMessage",
+    "prefix": "fnShowMessage(Message$*54)",
+    "rightLabelHTML":"",
     "body" : "fnShowMessage(\"${1:Message}\")$0",
     "description": """
     Opens a child window and displays a message in it, returning the child window number, so that the window can be closed when done.
@@ -1008,7 +1076,8 @@
     "leftLabel": "Integer"
 
   "fnClientEnv$*255(EnvKey$)":
-    "prefix": "fnClientEnv$",
+    "prefix": "fnClientEnv$*255(EnvKey$)",
+    "rightLabelHTML":"",
     "body" : "fnClientEnv$(\"${1:EnvironmentVariable}\")$0",
     "description": """
     Returns the value of an Environment variable on the Client, when running under Client Server. (Env$ on Client Server shows only Environment Variables on the Server).
@@ -1021,7 +1090,8 @@
     "leftLabel": "String"
 
   "fnExportListViewCsv(Window,Spec$;GenFileName,Delimiter$,FileName$*255)":
-    "prefix": "fnExportListViewCsv",
+    "prefix": "fnExportListViewCsv(Window,Spec$;GenFileName,Delimiter$,FileName$*255)",
+    "rightLabelHTML":"",
     "body" : "fnExportListViewCsv(${1:Window},${2:Spec}$)$0",
     "description": """
     Exports the specified listview in CSV format.
@@ -1038,7 +1108,8 @@
     "leftLabel": "None"
 
   "fnSendEmail(EmailAddress$*255,EmailMessage$*10000;Subject$*255,InvoiceFile$*255,NOPrompt,BccEmail$*255,mat CcEmailS$,CcAsTo)":
-    "prefix": "fnSendEmail",
+    "prefix": "fnSendEmail(EmailAddress$*255,EmailMessage$*10000;Subject$*255,InvoiceFile$*255,NOPrompt,BccEmail$*255,mat CcEmailS$,CcAsTo)",
+    "rightLabelHTML":"",
     "body" : "fnSendEmail(${1:EmailAddress}$,${2:EmailMessage$})$0",
     "description": """
     Sends an email to the specified address. Returns a flag showing if it was successful or not.
@@ -1054,7 +1125,8 @@
     "leftLabel": "Boolean"
 
   "fnStandardTime$(MilitaryTime$;Seconds)":
-    "prefix": "fnStandardTime$",
+    "prefix": "fnStandardTime$(MilitaryTime$;Seconds)",
+    "rightLabelHTML":"",
     "body" : "fnStandardTime$(${1:MilitaryTime}$)$0",
     "description": """
     Converts Military Time (24 hr) to Standard Time (am/pm).
@@ -1067,7 +1139,8 @@
     "leftLabel": "String"
 
   "fnMilitaryTime$(StandardTime$;Seconds)":
-    "prefix": "fnMilitaryTime$",
+    "prefix": "fnMilitaryTime$(StandardTime$;Seconds)",
+    "rightLabelHTML":"",
     "body" : "fnMilitaryTime$(${1:StandardTime}$)$0",
     "description": """
     Converts Standard Time (am/pm) to Military Time (24 hr).
@@ -1080,7 +1153,8 @@
     "leftLabel": "String"
 
   "fnCalculateHours(TimeIn$,TimeOut$,DaysIN,DaysOut)":
-    "prefix": "fnCalculateHours",
+    "prefix": "fnCalculateHours(TimeIn$,TimeOut$,DaysIN,DaysOut)",
+    "rightLabelHTML":"",
     "body" : "fnCalculateHours(${1:TimeIn},${2:TimeOut},${3:DaysIn},${4:DaysOut})$0",
     "description": """
     Calculates the amount of time that passed between Tin and Tout in Hours.
@@ -1096,7 +1170,8 @@
     "leftLabel": "Float"
 
   "fnBuildTime$(Hours,Minutes,Seconds,PM;Military,UseSeconds)":
-    "prefix": "fnBuildTime$",
+    "prefix": "fnBuildTime$(Hours,Minutes,Seconds,PM;Military,UseSeconds)",
+    "rightLabelHTML":"",
     "body" : "fnBuildTime$(${1:Hours},${2:Minutes},${3:Seconds},${4:PM})$0",
     "description": """
     Builds a time string from Hours, Minutes, and Seconds.
@@ -1114,7 +1189,8 @@
     "leftLabel": "String"
 
   "fnParseTime(TimeString$,&Hours,&Minutes,&Seconds,&PM)":
-    "prefix": "fnParseTime",
+    "prefix": "fnParseTime(TimeString$,&Hours,&Minutes,&Seconds,&PM)",
+    "rightLabelHTML":"",
     "body" : "fnParseTime(${1:TimeString}$,${2:&Hours},${3:&Minutes},${4:&Seconds},${5:&PM})$0",
     "description": """
     Parses a time string and returns the Hours, Minutes, and Seconds.
@@ -1131,7 +1207,8 @@
     "leftLabel": "None"
 
   "fnSubstituteStringCode(&String$,Code$*2048;SubstituteChar$)":
-    "prefix": "fnSubstituteStringCode",
+    "prefix": "fnSubstituteStringCode(&String$,Code$*2048;SubstituteChar$)",
+    "rightLabelHTML":"",
     "body" : "fnSubstituteStringCode(${1:&String}$,${2:Code}$)$0",
     "description": """
     Substitutes the information in String according to the results of executing the code in Code$
@@ -1146,7 +1223,8 @@
     "leftLabel": "None"
 
   "fnSubstituteString(&String$,Filelayout$,mat F$,mat F;SubstituteChar$)":
-    "prefix": "fnSubstituteString",
+    "prefix": "fnSubstituteString(&String$,Filelayout$,mat F$,mat F;SubstituteChar$)",
+    "rightLabelHTML":"",
     "body" : "fnSubstituteString(${1:&String}$,\"${2:Filelayout}\",mat ${2:F}$,mat ${2:F})$0",
     "description": """
     Substitutes any File References in the passed String with their matches from the given record.
@@ -1163,7 +1241,8 @@
     "leftLabel": "None"
 
   "fnReadScreenSize(&RowS,&Cols;Window)":
-    "prefix": "fnReadScreenSize",
+    "prefix": "fnReadScreenSize(&RowS,&Cols;Window)",
+    "rightLabelHTML":"",
     "body" : "fnReadScreenSize((${1:&RowS},${2:&Cols})$0",
     "description": """
     Returns the size of the specified window in Rows and Columns.
@@ -1177,7 +1256,8 @@
     "leftLabel": "None"
 
   "open #(FileHandle:=fnGetFileNumber)":
-    "prefix": "OpenfnGetFileNumber",
+    "prefix": "open #(FileHandle:=fnGetFileNumber)",
+    "rightLabelHTML":"",
     "body" : "open #(${1:filehandle}:=fnGetFileNumber): $0",
     "description": """
     Snippet to open a non-FileIO file using fnGetFileNumber to find a free file number.
@@ -1194,7 +1274,8 @@
     "leftLabel": "Code Snippet"
 
   "fnOpen(LayoutName$, Mat F$, Mat F, Mat Form$; Input, KeyNum)":
-    "prefix": "fnOpen",
+    "prefix": "fnOpen(LayoutName$, Mat F$, Mat F, Mat Form$; Input, KeyNum)",
+    "rightLabelHTML":"",
     "body": "fnOpen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)$0",
     "description": """
     Opens file using Fileio, returning the file handle
@@ -1213,7 +1294,8 @@
     "leftLabel": "Integer"
 
   "fnOpen(LayoutName$, Mat F$, Mat F, Mat Form$; Input, KeyNum) with Dims":
-    "prefix": "fnOpenDims",
+    "prefix": "fnOpen(LayoutName$, Mat F$, Mat F, Mat Form$; Input, KeyNum) with Dims",
+    "rightLabelHTML":"",
     "body": """
       dim ${1:layout}, ${1:layout}$(1)*${2:longest},${1:layout}(1)
       let ${1:layout}=fnOpen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
@@ -1235,7 +1317,8 @@
     "leftLabel": "Code Snippet"
 
   "fnOpen() ... Read Loop":
-    "prefix": "fnOpenReadLoop",
+    "prefix": "fnOpen() ... Read Loop",
+    "rightLabelHTML":"",
     "body": """
       dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
 
@@ -1258,7 +1341,8 @@
     "leftLabel": "Code Snippet"
 
   "fnOpen() ... Read One":
-    "prefix": "fnOpenReadOne",
+    "prefix": "fnOpen() ... Read One",
+    "rightLabelHTML":"",
     "body": """
       dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
       let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
@@ -1274,7 +1358,8 @@
     "leftLabel": "Code Snippet"
 
   "FileIO Open Function":
-    "prefix": "FileIoOpenFunction",
+    "prefix": "FileIO Open Function",
+    "rightLabelHTML":"",
     "body": """
       dim LinkageEstablished
       def fnEstablishLinkage
@@ -1305,7 +1390,8 @@
     "leftLabel": "Code Snippet"
 
   "fnOpen() ... Write":
-    "prefix": "fnOpenWrite",
+    "prefix": "fnOpen() ... Write",
+    "rightLabelHTML":"",
     "body": """
        ! FileIO Dimensions
        dim Form$(1)*255

@@ -1,6 +1,7 @@
 ".source.br":
   "Def Fn ... fnend":
-    "prefix": "def"
+    "prefix": "Def Fn ... fnend"
+    "rightLabelHTML":"",
     "body": """
       def fn${1:name}(${2:params})
         $3
@@ -11,14 +12,16 @@
     "leftLabel": "Statement"
 
   "Chain {<program name>|\"PROC=<name>\"|\"SUPROC=<name>\"} ...":
-    "prefix": "Chain"
+    "prefix": "Chain {<program name>|\"PROC=<name>\"|\"SUPROC=<name>\"} ..."
+    "rightLabelHTML":"",
     "body": "Chain ${1:Program$}$0"
     "description": "Loads and Runs the target program, immediately ending the current program. Optionally passes variables and files into the called program."
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Chain"
     "leftLabel": "Statement"
 
   "Close {#<file/window number>} [,Free|Drop] [, ...] :":
-    "prefix": "Close"
+    "prefix": "Close {#<file/window number>} [,Free|Drop] [, ...] :"
+    "rightLabelHTML":"",
     "body": "Close ${1:FileNumber}:$0"
     "description": "Closes the current program."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Close"
@@ -26,6 +29,7 @@
 
   "Continue":
     "prefix": "Continue"
+    "rightLabelHTML":"",
     "body": """
       Continue
       $0
@@ -35,7 +39,8 @@
     "leftLabel": "Statement"
 
   "Data {\"<string constant>\"|<numeric constant>}[,...]":
-    "prefix": "Data"
+    "prefix": "Data {\"<string constant>\"|<numeric constant>}[,...]"
+    "rightLabelHTML":"",
     "body": "Data $0"
     "description": "The Data statement can be used to populate the values of variables."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Data"
@@ -43,6 +48,7 @@
 
   "Delete":
     "prefix": "Delete"
+    "rightLabelHTML":"",
     "body": "Delete \#${1:FileNumber}: $0"
     "description": "Deletes the currently locked record from the identified data file.."
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Delete_(statement)"
@@ -50,13 +56,15 @@
 
   "Dim":
     "prefix": "Dim"
+    "rightLabelHTML":"",
     "body": "Dim $0"
     "description": "Declares Variables and Arrays. Arrays must be declared if they have other then 10 messages."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Dim"
     "leftLabel": "Statement"
 
   "Display [Menu|Buttons] ...":
-    "prefix": "Display"
+    "prefix": "Display [Menu|Buttons] ..."
+    "rightLabelHTML":"",
     "body": "Display $0"
     "description": "Display or Update the Windows Menu, or the Button Rows."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Display"
@@ -64,34 +72,39 @@
 
   "End":
     "prefix": "End"
+    "rightLabelHTML":"",
     "body": "End$0"
     "description": "Ends your program (continuing with any proc files that ran your program, or stopping if your program wasn't run from a proc.)"
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=End"
     "leftLabel": "Statement"
 
   "Execute \"BR Command\"":
-    "prefix": "Execute"
+    "prefix": "Execute \"BR Command\""
+    "rightLabelHTML":"",
     "body": "Execute \"${1:BR Command}\"$0"
     "description": "Executes a Command from within one of your programs."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Execute"
     "leftLabel": "Statement"
 
   "Execute \"System [-c -M] <External Program>\"":
-    "prefix": "ExecuteSystem"
+    "prefix": "Execute \"System [-c -M] <External Program>\""
+    "rightLabelHTML":"",
     "body": "Execute \"System ${1:External Program}\""
     "description": "Launches an external program."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Execute"
     "leftLabel": "Statement"
 
   "Execute \"System [-c -M] start <URL>\"":
-    "prefix": "ExecuteWeb"
+    "prefix": "Execute \"System [-c -M] start <URL>\""
+    "rightLabelHTML":"",
     "body": "Execute \"System -c -M start ${1:URL}\""
     "description": "Launches a web URL in the default browser."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Execute"
     "leftLabel": "Statement"
 
   "Exit <error condition line ref>[,...]":
-    "prefix": "Exit"
+    "prefix": "Exit <error condition line ref>[,...]"
+    "rightLabelHTML":"",
     "body": "Exit $0"
     "description": "Works in conjunction with the Exit error condition to list a bunch of error handlers in one place. "
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Exit"
@@ -99,41 +112,47 @@
 
   "Exit Do":
     "prefix": "Exit Do"
+    "rightLabelHTML":"",
     "body": "Exit Do$0"
     "description": "Jumps out of a do loop to the line following the loop."
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Exit_do"
     "leftLabel": "Statement"
 
   "Print \"<String>\"":
-    "prefix": "Print"
+    "prefix": "Print \"<String>\""
+    "rightLabelHTML":"",
     "body": "print ${1:string}$0"
     "description": "Prints a line to the console, or to a specific file."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Print"
     "leftLabel": "Statement"
 
   "Input <Variables>":
-    "prefix": "Input"
+    "prefix": "Input <Variables>"
+    "rightLabelHTML":"",
     "body": "Input ${1:Variables}"
     "description": "Reads text from the user or from a display file (like a text file). It can also read text from a proc file, if the program is called from a proc."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Input"
     "leftLabel": "Statement"
 
   "Linput <StringVariable>":
-    "prefix": "Linput"
+    "prefix": "Linput <StringVariable>"
+    "rightLabelHTML":"",
     "body": "Linput \#${1:FileNumber} : ${2:Variable}$"
     "description": "Reads a line of text from a display file. This is useful for parsing CSV files and other files generated by external applications."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Linput"
     "leftLabel": "Statement"
 
   "Print \#<FileNumber/Printer> Using \"<Form Specs>\" : <String$>":
-    "prefix": "Print Using"
+    "prefix": "Print \#<FileNumber/Printer> Using \"<Form Specs>\" : <String$>"
+    "rightLabelHTML":"",
     "body": "Print Using$0"
     "description": "Prints formatted output using a form statement to format the provided variables."
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Print_Using"
     "leftLabel": "Statement"
 
   "Print #0 Border : <Application Title>":
-    "prefix": "Print Border"
+    "prefix": "Print #0 Border : <Application Title>"
+    "rightLabelHTML":"",
     "body": "Print \#0, Border: \"${1:Application Title}\"$0"
     "description": "Print Border Statement"
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Print_Border"
@@ -141,6 +160,7 @@
 
   "Print Fields":
     "prefix": "Print Fields"
+    "rightLabelHTML":"",
     "body": """
       print fields ${1:fieldspecs}: ${2:data}
       $0
@@ -151,6 +171,7 @@
 
   "Input Fields":
     "prefix": "Input Fields"
+    "rightLabelHTML":"",
     "body":  """
       input fields ${1:fieldspecs}: ${2:data}
       $0
@@ -161,6 +182,7 @@
 
   "Rinput Fields":
     "prefix": "Rinput Fields"
+    "rightLabelHTML":"",
     "body":   """
       rinput fields ${1:fieldspecs}: ${2:data}
       $0
@@ -171,6 +193,7 @@
 
   "Input Select":
     "prefix": "Input Select"
+    "rightLabelHTML":"",
     "body":  """
       rinput select ${1:fieldspecs}: ${2:data}
       $0
@@ -181,6 +204,7 @@
 
   "Rinput Select":
     "prefix": "Rinput Select"
+    "rightLabelHTML":"",
     "body":   """
       rinput fields ${1:fieldspecs}: ${2:data}
       $0
@@ -191,62 +215,71 @@
 
   "Form":
     "prefix": "Form"
+    "rightLabelHTML":"",
     "body": "Form ${1:formspecs}$0"
     "description": "The Form statement is used in conjunction with PRINT, WRITE, REWRITE, READ or REREAD statements to format input or output. FORM controls the size, location, field length and format of input or output."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Form"
     "leftLabel": "Statement"
 
   "Gosub <LineLabel/LineNumber>":
-    "prefix": "Gosub"
+    "prefix": "Gosub <LineLabel/LineNumber>"
+    "rightLabelHTML":"",
     "body": "Gosub ${1:LineLabel} $0"
     "description": "Calls a subroutine, which runs until it encounters a return statement, at which point it returns here."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Gosub"
     "leftLabel": "Statement"
 
   "Goto <LineLabel/LineNumber>":
-    "prefix": "Goto"
+    "prefix": "Goto <LineLabel/LineNumber>"
+    "rightLabelHTML":"",
     "body": "goto ${1:LineLabel}$0"
     "description": "Jumps to the target line and continues running from there. (Try not to use Goto Statements. This is not the 80s.)."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Goto"
     "leftLabel": "Statement"
 
   "Library \"<Library>\" : <fnFunction1> [, fnFunction2] [, ...]":
-    "prefix": "Library"
+    "prefix": "Library \"<Library>\" : <fnFunction1> [, fnFunction2] [, ...]"
+    "rightLabelHTML":"",
     "body": "library \"${1:Library}\" : ${2:fnFunction1} $0"
     "description": "Loads a BR Libary, allowing access to the library functions in it."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Library"
     "leftLabel": "Statement"
 
   "Mat <array name> [(<dimension>[,...])] = ....":
-    "prefix": "Mat"
+    "prefix": "Mat <array name> [(<dimension>[,...])] = ...."
+    "rightLabelHTML":"",
     "body": "mat  ${1:ArrayName}"
     "description": "The Mat statement is used for working with Arrays. Its used to resize arrays, sort them (in conjunction with AIDX or DIDX), copy them, and process them in lots of other ways."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Mat"
     "leftLabel": "Statement"
 
   "On <Error Condition> <action>":
-    "prefix": "On Error"
+    "prefix": "On <Error Condition> <action>"
+    "rightLabelHTML":"",
     "body": "On  ${1:ErrorCondition} ${2:Action}"
     "description": "Registers an error handler for an error condition."
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=On_Error"
     "leftLabel": "Statement"
 
   "On Fkey <integer> <action>":
-    "prefix": "On Fkey"
+    "prefix": "On Fkey <integer> <action>"
+    "rightLabelHTML":"",
     "body": "On Fkey ${1:FkeyValue} ${2:Action}"
     "description": "Registers a line of code to run and ties it to the pressing of a specific fkey button."
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=On_FKey"
     "leftLabel": "Statement"
 
   "On <variable> Gosub <LineLabel>[,LineLabel]...":
-    "prefix": "On"
+    "prefix": "On <variable> Gosub <LineLabel>[,LineLabel]..."
+    "rightLabelHTML":"",
     "body": "On ${1:variable} Gosub ${2:LineLabel}"
     "description": "Runs one of the subroutines based on the value in the variable."
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=On_GoSub"
     "leftLabel": "Statement"
 
   "Open \#<FileNumber> \"Name=...\"":
-    "prefix": "Open"
+    "prefix": "Open \#<FileNumber> \"Name=...\""
+    "rightLabelHTML":"",
     "body": "Open \#${1:FileNumber} : \"name=${2:FileName}\"${3:FileReadTypes}"
     "description": "Opens a file or window or http connection or comm port."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Open"
@@ -254,6 +287,7 @@
 
   "Pause":
     "prefix": "Pause"
+    "rightLabelHTML":"",
     "body": "Pause$0"
     "description": "Pauses program execution allows the programmer to interact with the program in the Command Console."
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Pause"
@@ -261,48 +295,55 @@
 
   "Randomize":
     "prefix": "Randomize"
+    "rightLabelHTML":"",
     "body": "Randomize$0"
     "description": "Generates a new Random Number Seed for the Random Number Generator (based on the system clock so as to be truly random)."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Randomize"
     "leftLabel": "Statement"
 
   "Read \#<file>, using form$(<file>) : <mat f$>, <mat f> eof Ignore":
-    "prefix": "ReadFileIO"
+    "prefix": "Read \#<file>, using form$(<file>) : <mat f$>, <mat f> eof Ignore"
+    "rightLabelHTML":"",
     "body": "Read \#${1:FileNumber}, using form$(${1:FileNumber}) : mat ${1:F}$, mat ${1:F} error Ignore $0"
     "description": "Reads the next record or line in the selected data file or data statements, storing the information in the variables provided."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Read"
     "leftLabel": "Statement"
 
   "Read \#<file number> [, USING {<formStatement>}] : <Variables> ":
-    "prefix": "Read"
+    "prefix": "Read \#<file number> [, USING {<formStatement>}] : <Variables> "
+    "rightLabelHTML":"",
     "body": "Read \#${1:FileNumber}, using ${2:FormSpec} : ${3:Variables}"
     "description": "Reads the next record or line in the selected data file or data statements, storing the information in the variables provided."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Read"
     "leftLabel": "Statement"
 
   "Reread  #<file number> [, USING {<formStatement>}] : <Variables> ":
-    "prefix": "Reread"
+    "prefix": "Reread  #<file number> [, USING {<formStatement>}] : <Variables> "
+    "rightLabelHTML":"",
     "body": "Reread \#${1:FileNumber}, using ${2:FormSpec} : ${3:Variables}"
     "description": "Rereads the previous record read again, in the selected data file or data statements, storing the information in the variables provided."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Reread"
     "leftLabel": "Statement"
 
   "Write  #<file number> [, USING {<formStatement>}] : <Variables> ":
-    "prefix": "Write"
+    "prefix": "Write  #<file number> [, USING {<formStatement>}] : <Variables> "
+    "rightLabelHTML":"",
     "body": "Write \#${1:FileNumber}, using ${2:FormSpec} : ${3:Variables}"
     "description": "Adds a record to the file containing the information from the variables you list."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Write"
     "leftLabel": "Statement"
 
   "Rewrite  #<file number> [, USING {<formStatement>}] : <Variables> ":
-    "prefix": "Rewrite"
+    "prefix": "Rewrite  #<file number> [, USING {<formStatement>}] : <Variables> "
+    "rightLabelHTML":"",
     "body": "Rewrite \#${1:FileNumber}, using ${2:FormSpec} : ${3:Variables}"
     "description": "Updates the record that is locked in the file (usually the last record read), with the data in the variables now."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Rewrite"
     "leftLabel": "Statement"
 
   "Restore  #<file number> [,<Key|Rec|Pos|Search> = <SearchValue|Position>: ":
-    "prefix": "Restore"
+    "prefix": "Restore  #<file number> [,<Key|Rec|Pos|Search> = <SearchValue|Position>: "
+    "rightLabelHTML":"",
     "body": "Restore \#${1:FileNumber}: $0"
     "description": "Jumps to the beginning (or other specified point) in the targeted file."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Restore"
@@ -310,6 +351,7 @@
 
   "Retry":
     "prefix": "Retry"
+    "rightLabelHTML":"",
     "body": "Retry$0"
     "description": "Jumps to the line that had the most recent error. Used to try again in an Error Handler."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Retry"
@@ -317,20 +359,23 @@
 
   "Return":
     "prefix": "Return"
+    "rightLabelHTML":"",
     "body": "Return$0"
     "description": "Exits a Subroutine and returns control back up to the code following the Gosub statement."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Return"
     "leftLabel": "Statement"
 
   "Scr_Freeze":
-    "prefix": "Scr_freeze"
+    "prefix": "Scr_Freeze"
+    "rightLabelHTML":"",
     "body": "scr_freeze$0"
     "description": "Stops the screen from updating, significantly increasing the speed of the programs. The screen starts running again at the next Input Statement or Scr_Thaw statement."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Scr_freeze"
     "leftLabel": "Statement"
 
   "Scr_Thaw":
-    "prefix": "scr_thaw"
+    "prefix": "Scr_Thaw"
+    "rightLabelHTML":"",
     "body": "scr_thaw$0"
     "description": "Causes the screen to refresh and begin updating again after it was frozen with a Scr_Freeze command."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Scr_thaw"
@@ -338,13 +383,15 @@
 
   "Stop":
     "prefix": "Stop"
+    "rightLabelHTML":"",
     "body": "Stop$0"
     "description": "Ends your program (continuing with any proc files that ran your program, or stopping if your program wasn't run from a proc.)"
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Stop"
     "leftLabel": "Statement"
 
   "Trace [On|Off|Print]":
-    "prefix": "Trace"
+    "prefix": "Trace [On|Off|Print]"
+    "rightLabelHTML":"",
     "body": "trace $0"
     "description": "Displays or outputs the line numbers as they're executed. Used for debugging code, but the modern debugging tools are much better."
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Trace"

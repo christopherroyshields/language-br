@@ -1,6 +1,7 @@
 ".source.br":
   "<Succed/Fail> fnfm(<layout>;key$)":
-    "prefix": "fnfm",
+    "prefix": "<Succed/Fail> fnfm(<layout>;key$)",
+    "rightLabelHTML":"",
     "body": "fnfm(\"${1:layout}\")",
     "description": """
     Launches and runs the specified Screenio Screen. Returns True if the User Saved the Record, and False if they Cancelled.
@@ -20,7 +21,8 @@
     "leftLabel": "Boolean"
 
   "<Key> fnfm$(<layout>;key$)":
-    "prefix": "fnfm$",
+    "prefix": "<Key> fnfm$(<layout>;key$)",
+    "rightLabelHTML":"",
     "body": "fnfm$(\"${1:layout}\")",
     "description": """
     Launches and runs the specified Screenio Screen. Returns the Key$ or Record Number of the Saved Record, or an Empty String if the User Cancelled.
@@ -40,7 +42,8 @@
     "leftLabel": "String"
 
   "<WindowNumber> fnDisplayScreen(<layout>;key$)":
-    "prefix": "fnDisplayScreen",
+    "prefix": "<WindowNumber> fnDisplayScreen(<layout>;key$)",
+    "rightLabelHTML":"",
     "body": "fnDisplayScreen(\"${1:layout}\")",
     "description": """
     Launches and displays the specified ScreenIO Screen, returning the Window Handle of the displayed screen.
@@ -57,7 +60,8 @@
     "leftLabel": "Integer"
 
   "fnListSpec$(SpecIn$)":
-    "prefix": "fnListSpec$",
+    "prefix": "fnListSpec$(SpecIn$)",
+    "rightLabelHTML":"",
     "body": "fnListSpec$(${1:ListviewSpec$})",
     "description": """
     Takes a given BR Fields listview spec, and strips off everything after the first 3 commas, used to calculated the spec needed to interact with the given listview.
@@ -71,6 +75,7 @@
 
   "fnFunctionBase":
     "prefix": "fnFunctionBase",
+    "rightLabelHTML":"",
     "body": "fnFunctionBase",
     "description": """
     Returns the Function Base of the current screen. Use it for interpreting which control was clicked on, in your Mainloop Event.
@@ -85,6 +90,7 @@
 
   "fnFindSubscript":
     "prefix": "fnFindSubscript",
+    "rightLabelHTML":"",
     "body": "fnFindSubscript(mat Subscripts$,${1:Prefix},${2:SubscriptName})",
     "description": """
     Returns the Subscript expressed in the given String by searching the standard ScreenIO or FileIO subscripts arrays.
@@ -100,6 +106,7 @@
 
   "fnPrepareAnimation":
     "prefix": "fnPrepareAnimation",
+    "rightLabelHTML":"",
     "body": "fnPrepareAnimation",
     "description": """
     Run to initialize the loading animation.
@@ -117,6 +124,7 @@
 
   "fnAnimate":
     "prefix": "fnAnimate",
+    "rightLabelHTML":"",
     "body": "fnAnimate(${1:OptionalMessage$})",
     "description": """
     Run in your loop to display an animation during some slow task.
@@ -134,6 +142,7 @@
 
   "fnCloseAnimation":
     "prefix": "fnCloseAnimation",
+    "rightLabelHTML":"",
     "body": "fnCloseAnimation",
     "description": """
     Run at the end of your loop to close the Animation Window.
@@ -151,6 +160,7 @@
 
   "fnDays":
     "prefix": "fnDays",
+    "rightLabelHTML":"",
     "body": "fnDays(${1:DateString$},${2:DateMask$})",
     "description": """
     Call the ScreenIO Days Validation function that converts a User Entered date to Julian Format.
@@ -165,6 +175,7 @@
 
   "fnBr42":
     "prefix": "fnBr42",
+    "rightLabelHTML":"",
     "body": "fnBr42",
     "description": """
     Returns True (nonzero) if Running in BR 4.2 or Higher.
@@ -179,6 +190,7 @@
 
   "fnBr43":
     "prefix": "fnBr43",
+    "rightLabelHTML":"",
     "body": "fnBr43",
     "description": """
     Returns True (nonzero) if Running in BR 4.3 or Higher.
@@ -194,7 +206,8 @@
     "leftLabel": "Boolean"
 
   "fnDesignScreen(;ScreenName$)":
-    "prefix": "fnDesignScreen",
+    "prefix": "fnDesignScreen(;ScreenName$)",
+    "rightLabelHTML":"",
     "body": "fnDesignScreen",
     "description": """
     Calls the ScreenIO Designer and optionally loads a screen for editing.
@@ -207,7 +220,8 @@
     "leftLabel": "None"
 
   "<Function> fnSelectEvent$(CurrentSelection$;&ReturnFkey)":
-    "prefix": "fnSelectEvent$",
+    "prefix": "<Function> fnSelectEvent$(CurrentSelection$;&ReturnFkey)",
+    "rightLabelHTML":"",
     "body": "fnSelectEvent$(${1:CurrentSelection$})",
     "description": """
     Calls the ScreenIO Select Custom Function dialog window and returns the function the user selects.
