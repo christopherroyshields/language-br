@@ -8,17 +8,6 @@
     "wb",
     "wbs"
   ],
-  "folds":[
-    {
-      "type": "if_statement",
-      "start": {
-        "type": "\"then\""
-      },
-      "end": {
-        "type": "\"end if\""
-      }
-    }
-  ],
   "patterns":
   [
     {
@@ -144,10 +133,6 @@
       "name": "variable.array.string.br"
     },
     {
-      "match": "(\\b(\\w[\\w\\d]*)\\$)",
-      "name": "variable.scalar.string.br"
-    },
-    {
       "match": "^\\d{5}\\b",
       "name": "constant.linenumber.br"
     },
@@ -204,8 +189,12 @@
       "name": "keyword.statement.br"
     },
     {
+      "match": "(\\b(\\w[\\w\\d]*)\\$)",
+      "name": "variable.string.br"
+    },
+    {
       "match": "(\\b(\\w[\\w\\d]*)\\b)",
-      "name": "variable.scalar.numeric.br"
+      "name": "variable.br"
     }
   ]
 }
