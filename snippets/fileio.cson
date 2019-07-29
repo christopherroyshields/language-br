@@ -300,8 +300,9 @@
     "leftLabel": "None"
 
   "<key> fnBuildKey$*255(Layout$*30,mat F$,mat F;KeyNum)":
-    "prefix": "fnBuildKey$",
+    "prefix": "fnBuildKey$*255(Layout$*30,mat F$,mat F;KeyNum)",
     "body" : "fnBuildKey$(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout})$0",
+    "rightLabelHTML":"<span></span>",
     "description": """
     Builds the key for the given record.
 
