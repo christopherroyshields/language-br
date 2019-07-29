@@ -1,5 +1,6 @@
  @import 'ui-variables';
  @import 'syntax-variables';
+ @import 'colors';
 
 .syntax--variable.syntax--array {
   font-weight: bold;
@@ -14,9 +15,9 @@
   font-style: italic;
 }
 
-.syntax--operator.syntax--line_continuation.syntax--br {
-  color: red;
-  font-weight: bold;
+.syntax--keyword.syntax--operator.syntax--br {
+  color: @hue-1;
+  // font-weight: bold;
 }
 
 
@@ -58,7 +59,7 @@
   0%{
     outline-width: 0;
     outline-style: solid;
-    outline-color: fade(@background-color-info,80%);
+    outline-color: @background-color-info;
     background-color: fade(@background-color-info,15%);
   }
   100%{
@@ -72,7 +73,7 @@
   0%{
     outline-width: 0;
     outline-style: solid;
-    outline-color: fade(@background-color-warning,70%);
+    outline-color: @background-color-warning;
     background-color: fade(@background-color-warning,10%);
   }
   100%{
