@@ -6,7 +6,16 @@
         $3
       next ${2:i}
     """
-    "description": "For Loop"
+    "description": """
+    For Index = Start to Maximum ; step Increment
+      ...
+    Next Index
+
+      Index - the counter variable
+      Start - the start for the count
+      Maximum - the stop for the count
+      Increment - the step to increment by
+    """
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=For"
     "leftLabel": "Integer"
   "Do ... Loop":
@@ -16,7 +25,13 @@
         $1
       loop
     """
-    "description": "Do Loop"
+    "description": """
+    Do [While | Until ] Condition
+      ...
+    loop [While | Until] Condition
+
+    Executes the code over and over until one of the conditions at either end of the loop pushes you out.
+    """
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Do"
     "leftLabel": "Integer"
   "Do While ... Loop":
@@ -26,7 +41,13 @@
         $2
       loop
     """
-    "description": "Do Loop"
+    "description": """
+    Do [While | Until ] Condition
+      ...
+    loop [While | Until] Condition
+
+    Executes the code over and over until one of the conditions at either end of the loop pushes you out.
+    """
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Do"
     "leftLabel": "Integer"
   "Do Until ... Loop":
@@ -36,6 +57,12 @@
         $2
       loop
     """
-    "description": "Do Loop"
+    "description": """
+    Do [While | Until ] Condition
+      ...
+    loop [While | Until] Condition
+
+    Executes the code over and over until one of the conditions at either end of the loop pushes you out.
+    """
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Do"
     "leftLabel": "Integer"

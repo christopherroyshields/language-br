@@ -2,14 +2,32 @@
   "#AutoNumber# NewLine, NewLineCount":
     "prefix": "AutoNumber",
     "body" : "! #AutoNumber#$ ${1:NewLine}, ${2:NewLineCount} $0",
-    "description": "Directs Lexi to set the current line and line count to the ones expressed here.",
+    "description": """
+    Directs Lexi to set the current line and line count to the ones expressed here.
+
+    #AutoNumber# Newline, NewLineCount
+
+      NewLine - the line number to start counting with
+      NewLineCount - the increment to use for the rest of the line numbers
+
+    Use this reserve certain line numbers for various sections of your code, if desired.
+    """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Lexi#AutoNumber",
     "leftLabel": "Lexi"
 
   "#Define# [[Constant]] = \"Value\"":
     "prefix": "Define",
     "body" : "! #Define# [[${1:Constant}]] = \"${2:Value}\"$0",
-    "description": "Directs Lexi to replace any occurrance of [[Constant]] with Value.",
+    "description": """
+    Directs Lexi to replace any occurrance of [[Constant]] with Value.
+
+    #Define# [[Constant]] = "A Bunch of Code"
+
+    Constant - a Reserved word that you will use to substitute in the specified code.
+    Code - Program code, for example, a list of arrays that make up some objects.
+
+    Anywhere after the Constant is defined, you can use it as a shortcut in the rest of your program for the specified code.
+    """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Lexi#DEFINE",
     "leftLabel": "Lexi"
 
@@ -24,6 +42,18 @@
 
       #End Select#
     """,
-    "description": "Select Case Statement. (Lexi translates it to ElseIfs for Compatibility with BR.)",
+    "description": """
+    Select Case Statement. (Lexi translates it to ElseIfs for Compatibility with BR.)
+
+    #Select# Variable #Case# Case1
+      Code Block 1
+    #Case# Case2
+      Code Block 2
+    #Case Else#
+      Code Block Other
+    #End Select#
+
+    This translates into a series of If statements where Variable is tested against the various Cases and the appropriate code block is executed.
+    """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=Lexi#SELECT_CASE",
     "leftLabel": "Lexi"
