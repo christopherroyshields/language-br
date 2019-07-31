@@ -2,7 +2,7 @@
   "fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$)":
     "prefix": "fnReadLayoutArrays",
     "body" : """
-      dim S_${1:StringSubs}Subs$(1), mat N_${1:NumericSubs}Subs$(1), ${1:File}Prefix$
+      dim S_${1:StringSubs}Subs$(1), N_${1:NumericSubs}Subs$(1), ${1:File}Prefix$
       fnReadLayoutArrays(\"${1:layout}\",${1:&prefix}Prefix$,mat S_${1:StringSubs}Subs$,mat N_${1:NumericSubs}Subs$)
       $0
     """,
@@ -15,6 +15,11 @@
       prefix$ - the return value for the prefix for the file
       mat SSubs$ - the return value for all the string subscripts in the layout
       mat NSubs$ - the return value for the numeric subscripts in the lay
+
+    Code Snippet:
+      dim S_FileNameSubs$, N_FileNameSubs$, FileNamePrefix$
+      fnReadLayoutArrays(\"FileName\",FileNamePrefix$,mat S_FileNameSubs$,mat N_FileNameSubs$)
+
     See the online documentation for a full description of all parameters.
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayoutArrays",
@@ -34,12 +39,20 @@
     "description": """
     Reads the file layout and returns the Record Detail information in a bunch of arrays. Returns the field count.
 
-    fnReadLayoutArrays(filelay$,&prefix$;mat SSubs$, mat NSubs$, mat SSpec$, mat NSpec$,mat SDescription$, mat NDescription$,Mat Spos,Mat Npos)
+      fnReadLayoutArrays(filelay$,&prefix$;mat SSubs$, mat NSubs$, mat SSpec$, mat NSpec$,mat SDescription$, mat NDescription$,Mat Spos,Mat Npos)
 
       filelay$ - the name of the layout to read
       prefix$ - the return value for the prefix for the file
       mat SSubs$ - the return value for all the string subscripts in the layout
       mat NSubs$ - the return value for the numeric subscripts in the layout
+
+    Code Snippet:
+      let dim FileName_S_Subs$(1), FileName_N_Subs$(1), FileName_Prefix$
+      dim FileName_S_Spec$(1), FileName_N_Spec$(1)
+      dim FileName_S_Description$(1), FileName_N_Description$(1)
+      dim FileName_S_Pos(1), mat FileName_N_Pos(1)
+
+      fnReadLayoutArrays("FileName",FileName_Prefix$,mat FileName_S_Spec$, mat FileName_N_Spec$,mat FileName_S_Description$, mat FileName_N_Description$,mat FileName_S_Pos(1), mat FileName_N_Pos
 
     See the online documentation for a full description of all parameters.
     """,
@@ -64,6 +77,12 @@
 
       FileLay$ - The name of the file layout from which to read the subscripts.
       mat Subscripts$ - If you give this optional array, fnMakeSubProc passes the subscripts back in this array rather then in the subs.$$$ file.
+
+    Code Snippet:
+      fnMakeSubProc("DataFile",mat Subscripts$,mat DataFile$,mat DataFile)
+      for Index=1 to udim(mat Subscripts$)
+         execute Subscripts$(Index)
+      next Index
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnMakeSubProc",
     "leftLabel": "Code Snippet"
@@ -81,6 +100,10 @@
     FnReadLayouts(mat Dirlist$)
 
       Mat Dirlist$ - After running the function, mat Dirlist$ will contain a list of all the file layouts that FileIO can find.
+
+    Code Snippet:
+      dim LayoutList$(1)
+      fnReadLayouts(mat LayoutList$)
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnReadLayouts",
     "leftLabel": "Code Snippet"
@@ -120,6 +143,10 @@
       InputOnly – 1 means open for input only.
 
       See the online documentation for a complete description of all optional parameters.
+
+    Code Snippet:
+      dim layout, layout$(1)*longest,layout(1)
+      let layout=fnOpen("layout",mat layout$,mat layout,mat form$,0,1)
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnOpen",
     "leftLabel": "Code Snippet"
@@ -143,6 +170,19 @@
     Opens file using Fileio and reads all records of the file in a loop.
 
     Layout$ - the name of the layout you're trying to read. The snippet does the rest.
+
+  Code Snippet:
+    dim layout, layout$(1)*1024,layout(1)
+
+    let layout=fnopen("layout",mat layout$,mat layout,mat form$,0,1)
+    restore #layout: error IGNORE
+    do until File(layout)
+       read #layout, using Form$(layout) : Mat layout$,Mat layout eof IGNORE
+       if File(layout)=0 then
+
+       end if
+    loop
+    close #layout:
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
     "leftLabel": "Code Snippet"
@@ -159,6 +199,12 @@
     Opens file and reads the given record by Key
 
     Layout$ - the name of the layout you're trying to read. The snippet does the rest.
+
+  Code Snippet:
+    dim layout, layout$(1)*1024,layout(1)
+    let layout=fnopen("layout",mat layout$,mat layout,mat form$,0,1)
+    read #layout, using Form$(layout), key=layoutkey$ : Mat layout$,Mat layout
+    close #layout:
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
     "leftLabel": "Code Snippet"
@@ -223,6 +269,24 @@
     Subscript - the Subscript for the field you're trying to set
 
     The snippet does the rest.
+
+  Code Snippet:
+    ! FileIO Dimensions
+    dim Form$(1)*255
+    dim layout, layout$(1)*256,layout(1)
+
+    ! Open the file
+    let layout=Fnopen("layout",Mat layout$,Mat layout,Mat Form$)
+
+    ! Set Values
+    let layout$(prefix_subscript)=
+    let layout$(prefix_subscript)=
+
+    ! Save The Record
+    write #layout, using Form$(layout) : Mat layout$,Mat layout
+
+    ! Close DataFile
+    let fnCloseFile(layout,"layout")
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
     "leftLabel": "Code Snippet"
