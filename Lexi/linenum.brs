@@ -15,7 +15,7 @@
 00150      do while (WrapPosition:=pos(String$,"!_"))
 00160         linput #1: String2$ eof Ignore
 00170         if file(1)=0 then
-00180            let String$=rtrm$(String$(1:WrapPosition-1))&trim$(String2$)
+00180            let String$=rtrm$(String$(1:WrapPosition-1))&" "&trim$(String2$)
 00190         end if
 00200      loop until file(1)
 00210 !
