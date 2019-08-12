@@ -30,10 +30,18 @@ def library fnApplyLexi(&InFile$,&OutFile$)
    let Labelincrement=10
    mat Constname$(0)
    mat Const$(0)
-   str2mat('!_|=|+|-|+=|-=|*|/|,|&|(| and| or',mat continuations$,'|')
+   str2mat('=|+|-|+=|-=|*|/|,|&|(| and| or',mat continuations$,'|')
    open #1: "name="&Infile$, display, input
    open #2: "name="&Outfile$&", recl=800, replace", display, output
    READLINE: linput #1: String$ eof DONEREADING
+
+      do while (WrapPosition:=pos(String$,"!_"))
+         linput #1: String2$ eof Ignore
+         if file(1)=0 then
+            let String$=rtrm$(String$(1:WrapPosition-1))&" "&trim$(String2$)
+         end if
+      loop until file(1)
+      
       backstring$ = string$
       multicomment$=''
       continuationfound = 0
