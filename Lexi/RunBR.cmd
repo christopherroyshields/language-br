@@ -48,33 +48,31 @@ rem   pause
 
 Rem copy /y %name% %name%.Pre_%~n0.bak
 
-rem origional     copy %name% %cmd_home%%np_name%
+rem original     copy %name% %cmd_home%%np_name%
 rem echo "%name%"
 rem echo "%cmd_home%%np_name%"
 
-copy %name% "%cmd_home%%np_name%"
+copy %name% "%cmd_home%tmp\%np_name%"
 rem pause
 
 echo proc noecho > "%cmd_home%convert.prc"
 rem echo %cmd_home%convert.prc
 rem pause
-echo 00001 dim Infile$*256,Outfile$*256 >> "%cmd_home%convert.prc"
-echo 00002 Infile$="%np_name%" >> "%cmd_home%convert.prc"
-echo 00003 Outfile$="tempfile" >> "%cmd_home%convert.prc"
+echo 00002 Infile$="tmp\%np_name%" >> "%cmd_home%convert.prc"
+echo 00003 Outfile$="tmp\tempfile" >> "%cmd_home%convert.prc"
 echo subproc linenum.brs >> "%cmd_home%convert.prc"
 echo run >> "%cmd_home%convert.prc"
 echo clear >> "%cmd_home%convert.prc"
-echo subproc tempfile >>"%cmd_home%convert.prc"
+echo subproc tmp\tempfile >>"%cmd_home%convert.prc"
 
-echo skip PROGRAM_REPLACE if exists("%npne_name%") >> "%cmd_home%convert.prc"
-echo skip PROGRAM_REPLACE if exists("%npne_name%%extout%") >> "%cmd_home%convert.prc"
-rem origional   echo Save %cmd_home%%npne_name% >> %cmd_home%convert.prc
+echo skip PROGRAM_REPLACE if exists("tmp\%npne_name%") >> "%cmd_home%convert.prc"
+echo skip PROGRAM_REPLACE if exists("tmp\%npne_name%%extout%") >> "%cmd_home%convert.prc"
 
-echo save "%npne_name%%extout%" >> "%cmd_home%convert.prc"
+echo save "tmp\%npne_name%%extout%" >> "%cmd_home%convert.prc"
 echo skip XIT >> "%cmd_home%convert.prc"
 echo :PROGRAM_REPLACE >> "%cmd_home%convert.prc"
-rem origional    echo Replace %cmd_home%%npne_name% >> %cmd_home%convert.prc
-echo replace "%npne_name%%extout%" >> "%cmd_home%convert.prc"
+
+echo replace "tmp\%npne_name%%extout%" >> "%cmd_home%convert.prc"
 echo skip XIT >> "%cmd_home%convert.prc"
 echo :XIT >> "%cmd_home%convert.prc"
 echo system >> "%cmd_home%convert.prc"
@@ -83,7 +81,7 @@ start lexitip
 brnative proc convert.prc
 
 del "%cmd_home%convert.prc"
-del "%cmd_home%tempfile"
+del "%cmd_home%tmp\tempfile"
 
 rem copy /y %cmd_home%%npne_name% %folder%\*.*
 rem origional     if exist "%cmd_home%%npne_name%.br" (
@@ -94,15 +92,15 @@ rem origional       copy /y %cmd_home%%npne_name% %folder%*.*
 rem origional       del %cmd_home%%npne_name%
 rem origional     )
 
-if exist "%cmd_home%%npne_name%%extout%" (
-  copy /y "%cmd_home%%npne_name%%extout%" "%folder%*.*"
-  del "%cmd_home%%npne_name%%extout%"
+if exist "%cmd_home%tmp\%npne_name%%extout%" (
+  copy /y "%cmd_home%tmp\%npne_name%%extout%" "%folder%*.*"
+  del "%cmd_home%tmp\%npne_name%%extout%"
 ) else (
-  copy /y "%cmd_home%%npne_name%" "%folder%*.*"
-  del "%cmd_home%%npne_name%"
+  copy /y "%cmd_home%tmp\%npne_name%" "%folder%*.*"
+  del "%cmd_home%tmp\%npne_name%"
 )
-rem origional     del %cmd_home%%np_name%
-del "%cmd_home%%np_name%"
+
+del "%cmd_home%tmp\%np_name%"
 goto RUNDEBUG
 
 :RUNDEBUG
