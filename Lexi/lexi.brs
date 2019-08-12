@@ -23,7 +23,7 @@ dim multicomment$*5000,backstring$*5000
 
 dim BRProgram$(1)*2000
 
-def library fnApplyLexi(&InFile$,&OutFile$)
+def library fnApplyLexi(&InFile$,&OutFile$;DontAddLineNumbers)
    let fnSetLexiConstants
 
    let Increment=1
@@ -228,6 +228,7 @@ def library fnApplyLexi(&InFile$,&OutFile$)
          let String$ = String$(1:EndPosition-1) & "end if" & String$(EndPosition+12:len(String$)) & "  ! " & String$(EndPosition:len(String$))
          let Currentselect$ = ""
       end if
+      if DontAddLineNumbers then goto PrintLine ! Skip down to PrintLine
       if (Newnumber:=Pos(Uprc$(String$),AutonumberCommand$)) then
          let Temp=0
          let Temp=Val(String$(Newnumber+12:Newincrement:=Pos(String$,",",Newnumber+12))) conv BADAUTONUMBER
