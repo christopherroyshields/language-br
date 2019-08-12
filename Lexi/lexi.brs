@@ -23,7 +23,7 @@ dim multicomment$*5000,backstring$*5000
 
 dim BRProgram$(1)*2000
 
-def library fnApplyLexi(&InFile$,&OutFile$)
+def library fnApplyLexi(&InFile$,&OutFile$;DontAddLineNumbers)
    let fnSetLexiConstants
 
    let Increment=1
@@ -35,13 +35,13 @@ def library fnApplyLexi(&InFile$,&OutFile$)
    open #2: "name="&Outfile$&", recl=800, replace", display, output
    READLINE: linput #1: String$ eof DONEREADING
 
-      do while (WrapPosition:=pos(String$,"!_"))
+      do while (WrapPosition:=pos(String$,LineWrapCommand$))
          linput #1: String2$ eof Ignore
          if file(1)=0 then
             let String$=rtrm$(String$(1:WrapPosition-1))&" "&trim$(String2$)
          end if
       loop until file(1)
-      
+
       backstring$ = string$
       multicomment$=''
       continuationfound = 0
@@ -228,6 +228,7 @@ def library fnApplyLexi(&InFile$,&OutFile$)
          let String$ = String$(1:EndPosition-1) & "end if" & String$(EndPosition+12:len(String$)) & "  ! " & String$(EndPosition:len(String$))
          let Currentselect$ = ""
       end if
+      if DontAddLineNumbers then goto PrintLine ! Skip down to PrintLine
       if (Newnumber:=Pos(Uprc$(String$),AutonumberCommand$)) then
          let Temp=0
          let Temp=Val(String$(Newnumber+12:Newincrement:=Pos(String$,",",Newnumber+12))) conv BADAUTONUMBER
@@ -303,7 +304,6 @@ def fncontinuationpos( &strng$, &multicomment$, mat continuations$;___,exclsrchs
    do while i <= udim(continuations$)
       continuationpos = pos(uprc$(strng$),uprc$(continuations$(i)), len(strng$)-len(continuations$(i))+1)
       if continuationpos then
-         if continuations$(i)='!_' then strng$=srep$(strng$,'!_','')
          exit do
       end if
       i += 1
@@ -313,6 +313,7 @@ def fncontinuationpos( &strng$, &multicomment$, mat continuations$;___,exclsrchs
 fnend
 
 def fnSetLexiConstants
+   let LineWrapCommand$="!"&"_"
    let DefineCommand$="#DEF"&"INE#"
    let SelectCommand$="#SEL"&"ECT#"
    let CaseCommand$="#CA"&"SE#"
