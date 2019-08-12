@@ -2,12 +2,21 @@
  @import 'syntax-variables';
  // @import 'colors';
 
+.syntax--br {
+  .syntax--variable {
+    color: @syntax-text-color
+  }
+  .syntax--linenumber {
+    color: @syntax-color-constant
+  }
+}
+
 .syntax--variable.syntax--array {
   font-weight: bold;
 }
 
 .syntax--variable.syntax--string.syntax--br {
-  color: @syntax-color-variable;
+  // color: @syntax-color-variable;
   font-style: normal;
 }
 
@@ -20,7 +29,9 @@
   // font-weight: bold;
 }
 
-
+.syntax--line-label.syntax--br {
+  color: @syntax-color-tag
+}
 
 .occurence {
   display: inline-block;
