@@ -1,4 +1,7 @@
-! Lexi.br ! Primary Library for Lexi for adding and removing the line numbers and Implementing special Lexi commands
+! Lexi.br ! #Autonumber# 10,10
+!  Primary Library for Lexi for adding and removing the line numbers
+!    and Implementing special Lexi commands
+!
 !  Copyright 2003 Gabriel Bakker
 !  Copyright 2007 Sage AX, LLC and Gabriel Bakker
 !
@@ -9,7 +12,7 @@
 !    Lexi makes line numbers optional, and adds Select Case, and Multiline Strings and Multiline Comments
 !     and much much more, to Business Rules.
 !
-dim String$*4000,String2$*4000 ! #Autonumber# 10,10
+dim String$*4000,String2$*4000
 dim Infile$*255
 dim Const$(1)*800
 dim Constname$(1)*30
@@ -58,12 +61,13 @@ def library fnApplyLexi(&InFile$,&OutFile$)
       !   If a {Variable$} is encountered then turn it into "&Variable$&"
       !   If a {Variable} is encountered then turn it into "&str$(Variable)&"
       !
-      let InQuotesSingle=0 : let InQuotesDouble=0 : let CheckPosition=0
+      let InQuotesSingle=0 : let InQuotesDouble=0 : let CheckPosition=0 : InComment=0
       do while CheckPosition<=len(String$)
          let CheckPosition+=1
          if pos("""",String$(CheckPosition:CheckPosition)) and ~InQuotesSingle then let InQuotesDouble=~InQuotesDouble
          if pos("'",String$(CheckPosition:CheckPosition)) and ~InQuotesDouble then let InQuotesSingle=~InQuotesSingle
-         if String$(CheckPosition:CheckPosition)="`" and ~InQuotesSingle and ~InQuotesDouble then
+         if pos("!",String$(CheckPosition:CheckPosition)) and ~InQuotesDouble and ~InQuotesSingle then let InComment=1
+         if String$(CheckPosition:CheckPosition)="`" and ~InQuotesSingle and ~InQuotesDouble and ~InComment then
             ! Enable Special String Processing.
             ! Check from there to the end of the line.
             let String$(CheckPosition:CheckPosition)=""""
@@ -116,20 +120,20 @@ def library fnApplyLexi(&InFile$,&OutFile$)
       loop
       !
       ! While we're at it we should support multi-line comments using /* and */. Those will be easier.
-      !
-      ! At the position of the /* replace the /* with a !.
-      ! At every line in between there, add a ! to the beginning.
-      ! At the position of the */ Put all the stuff before it after it, and vice versa, and change it to a !
-      !
+      /*
+      At the position of the BeginningCommentMark replace it with a !.
+      At every line in between there, add a ! to the beginning.
+      At the position of the EndCommentMark Put all the stuff before it after it, and vice versa, and change it to a !
+      */
       if MultilineComment then
-         if (SpecialPosition:=pos(String$,"*/")) then
+         if (SpecialPosition:=pos(String$,CommentEndCommand$)) then
             let MultilineComment=0
             let String$=String$(SpecialPosition+2:len(String$))&" ! "&String$(1:SpecialPosition-1)
          else
             let String$(1:0)=" ! "
          end if
       else
-         if (ReplacePosition:=pos(String$,"/*")) then
+         if (ReplacePosition:=pos(String$,CommentStartCommand$)) then
             let MultilineComment=1
             let String$(ReplacePosition:ReplacePosition+1)="!"
          end if
@@ -307,6 +311,8 @@ def fnSetLexiConstants
    let CaseElseCommand$="#CASE"&" ELSE#"
    let EndSelectCommand$="#END"&" SELECT#"
    let AutonumberCommand$="#AUTO"&"NUMBER#"
+   let CommentStartCommand$="/"&"*"
+   let CommentEndCommand$="*"&"/"
 fnend
 
 def library fnUndoLexi(&InFile$,&OutFile$)
