@@ -50,14 +50,13 @@ rem origional     copy %name% %cmd_home%%np_name%
 rem echo "%name%"
 rem echo "%cmd_home%%np_name%"
 
-copy %name% "%cmd_home%%np_name%"
+copy %name% "%cmd_home%tmp\%np_name%"
 
 echo proc noecho > "%cmd_home%convert.prc"
 rem echo %cmd_home%convert.prc
 rem pause
-echo 00001 dim Infile$*256,Outfile$*256 >> "%cmd_home%convert.prc"
-echo 00002 Infile$="%np_name%" >> "%cmd_home%convert.prc"
-echo 00003 Outfile$="tempfile" >> "%cmd_home%convert.prc"
+echo 00002 Infile$="tmp\%np_name%" >> "%cmd_home%convert.prc"
+echo 00003 Outfile$="tmp\tempfile" >> "%cmd_home%convert.prc"
 echo subproc linenum.brs >> "%cmd_home%convert.prc"
 echo run >> "%cmd_home%convert.prc"
 echo system >> "%cmd_home%convert.prc"
@@ -67,11 +66,9 @@ start lexitip
 brnative proc convert.prc
 
 del convert.prc
-copy tempfile "%np_name%"
-del tempfile
-
-copy /y "%np_name%" "%folder%*.*"
-del "%np_name%"
+move tmp\tempfile "tmp\%np_name%"
+copy /y "tmp\%np_name%" "%folder%*.*"
+del "tmp\%np_name%"
 
 goto END
 
@@ -94,7 +91,7 @@ echo [np_name]    = the name with the extension but no path.
 echo [npne_name]  = name without path or extension
 echo [folder]     = just the path
 echo .
-echo NOTE: All parameters discussed above are for the source file.  
+echo NOTE: All parameters discussed above are for the source file.
 echo       The destination program file will be the same as the source file
 echo       only it will have a .br extension instead.
 :END
