@@ -133,15 +133,19 @@
       "name": "variable.array.string.br"
     },
     {
-      "match": "^(\\d{0,5}\\s)?\\s*([\\w\\d]+:)?",
+      "match": "^\\s*?(\\d{0,5})(?:\\s*)?([\\w\\d]+:)",
       "captures": {
         "1": {
-          "name":"constant.linenumber.br"
+          "name":"linenumber.br"
         },
         "2": {
           "name":"line-label.br"
         }
       }
+    },
+    {
+      "match": "^\\s*(\\d{1,5})",
+      "name": "linenumber.br"
     },
     {
       "match": "\\b\\d+(\\.\\d+)?\\b",
