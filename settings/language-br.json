@@ -1,9 +1,9 @@
 {
   ".source.br": {
     "editor": {
-      "tabLength": 3,
+      "tabLength": 2,
       "tabType": "soft",
-      "commentStart": "!"
+      "nonWordCharacters": "/\\()\"':,.;<>~!@#%^&*|+=[]{}`?-…"
     }
   }
 }
