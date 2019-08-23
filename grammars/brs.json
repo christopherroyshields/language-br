@@ -1,0 +1,209 @@
+{
+  "scopeName": "source.br",
+  "name": "Business Rules",
+  "fileTypes":
+  [
+    "brs",
+    "wbs"
+  ],
+  "patterns":
+  [
+    {
+      "match": "(!:)",
+      "name": "keyword.operator.line_continuation.br"
+    },
+    {
+      "match": "\\\"[^\"]*\\\"",
+      "name": "string.quoted.double.br"
+    },
+    {
+      "match": "'[^']*'",
+      "name": "string.quoted.single.br"
+    },
+    {
+      "begin": "`",
+      "beginCaptures":
+      {
+        "0":
+        {
+          "name": "multiline.string.begin.br"
+        }
+      },
+      "end": "`",
+      "endCaptures":
+      {
+        "0":
+        {
+          "name": "multiline.string.end.br"
+        }
+      },
+      "name": "multiline.string.br",
+      "patterns":
+      [
+         {
+            "begin": "\\{\\{",
+            "beginCaptures":
+            {
+              "0":
+              {
+                "name": "punctuation.section.embedded"
+              }
+            },
+            "end": "\\}\\}",
+            "endCaptures":
+            {
+              "0":
+              {
+                "name": "punctuation.section.embedded"
+              }
+            },
+            "name": "keyword.operator.interpolated.br",
+            "patterns":
+            [
+              {
+                "include": "$self"
+              }
+            ]
+         }
+      ]
+    },
+    {
+      "match": "(\\#(?i:include|define|select|case else|end select|case|autonumber)\\#)",
+      "name": "constant.language.br"
+    },
+    {
+      "match": "(!.*)$",
+      "name": "comment.line.br"
+    },
+    {
+      "begin": "/\\*",
+      "beginCaptures":
+      {
+        "0":
+        {
+          "name": "multiline.comment.begin.br"
+        }
+      },
+      "end": "\\*/",
+      "endCaptures":
+      {
+        "0":
+        {
+          "name": "multiline.comment.end.br"
+        }
+      },
+      "name": "multiline.comment.br"
+    },
+    {
+      "match": "(^\\d{5}\\s*rem.*)$",
+      "name": "comment.line.br"
+    },
+    {
+      "match": "(^\\s*rem.*)$",
+      "name": "comment.line.br"
+    },
+    {
+      "match": "(:=|\\+=|\\-=|\\*=|\\/=)",
+      "name": "keyword.operator.assignment.br"
+    },
+    {
+      "match": "\\b(?i:And|Not|Or)\\b",
+      "name": "keyword.operator.logical.br"
+    },
+    {
+      "match": "(\\~)",
+      "name": "keyword.operator.logical.br"
+    },
+    {
+      "match": "(<|>|<>|<=|>=|~=|==|=)",
+      "name": "keyword.operator.comparison.br"
+    },
+    {
+      "match": "(\\+|\\-|\\*|\\/|\\&)",
+      "name": "keyword.operator.mathematical.br"
+    },
+    {
+      "match": "(\\b(?i:fn)\\w[\\w\\d]*\\$)",
+      "name": "entity.name.function.br"
+    },
+    {
+      "match": "\\b(?i:mat\\s+(\\w[\\w\\d]*)\\$)",
+      "name": "variable.array.string.br"
+    },
+    {
+      "match": "^\\s*?(\\d{0,5})(?:\\s*)?([\\w\\d]+:)",
+      "captures": {
+        "1": {
+          "name":"linenumber.br"
+        },
+        "2": {
+          "name":"line-label.br"
+        }
+      }
+    },
+    {
+      "match": "^\\s*(\\d{1,5})",
+      "name": "linenumber.br"
+    },
+    {
+      "match": "\\b\\d+(\\.\\d+)?\\b",
+      "name": "constant.numeric.br"
+    },
+    {
+      "match": "\\b(?i:if|then|else|end if|for|next|do|while|loop|until|exit do)\\b",
+      "name": "keyword.control.br"
+    },
+    {
+      "match": "\\b(?i:ON FKEY)\\b",
+      "name": "keyword.command.br"
+    },
+    {
+      "match": "(\\b(?i:BR_FileName\\$|BRErr\\$|CForm\\$|Chr\\$|Cnvrt\\$|Date\\$|Decrypt\\$|Encrypt\\$|Env\\$|File\\$|Help\\$|Hex\\$|KStat\\$|Login_Name\\$|LPad\\$|LTrm\\$|Lwrc\\$|Max\\$|Min\\$|Msg\\$|OS_FileName\\$|Pic\\$|Program\\$|RPad\\$|Rpt\\$|RTrm\\$|Session\\$|SRep\\$|Str\\$|Time\\$|Trim\\$|UnHex\\$|UprC\\$|UserID\\$|Variable\\$|WBPlatform\\$|WBVersion\\$|WSID\\$|Xlate\\$))",
+      "name": "entity.name.function.br"
+    },
+    {
+      "match": "(\\b(?i:Abs|AIdx|Atn|Bell|Ceil|CmdKey|Cnt|Code|CoS|CurCol|CurFld|CurPos|CurRow|CurTab|CurWindow|Date|Days|Debug_Str|DIdx|Err|Exists|Exp|File|FileNum|FKey|FP|FreeSp|Inf|Int|IP|KLn|KPs|KRec|Len|Line|Lines|LineSPP|Log|LRec|Mat2Str|Max|Min|Mod|Msg|MsgBox|NewPage|Next|NxtCol|Nxtfld|NxtRow|Ord|Pi|Pos|Printer_List|ProcIn|Rec|Rem|RLn|Rnd|Round|Serial|SetEnv|Sgn|Sin|Sleep|Sqr|Srch|Str2Mat|Sum|Tab|Tan|Timer|UDim|Val|Version)\\b)",
+      "name": "entity.name.function.br"
+    },
+    {
+      "match": "\\b(?i:ALTERNATE|ATTR|BASE|BORDER|DROP|EVENT|EXTERNAL|FILES|INTERNAL|INVP|KEYED|NATIVE|NOKEY|NONE|OUTIN|OUTPUT|RELATIVE|RELEASE|RESERVE|RESUME|RETAIN|SEARCH|SELECT|SEQUENTIAL|SHIFT|TO|USE|USING)\\b",
+      "name": "keyword.other.br"
+    },
+    {
+      "match": "\\b(?i:ALERT|AUTO|BREAK|ChDIR|CLEAR|CONFIG|COPY|DATE|DEBUG CONNECT|DELETE|DIR|DISPLAY|DROP|EDIT|FREE|GO|GO END|INDEX|LIST|LOAD|MERGE|MKDIR|PROC|PROCERR RETURN|PROCERR STOP|PROTECT|RENAME|RENUM|REPLACE|RMDIR|RUN|SAVE|SKIP|SORT|STATUS|SUBPROC|SYSTEM|TIME|TYPE|VERIFY)\\b",
+      "name": "keyword.command.br"
+    },
+    {
+      "match": "\\b(?i:CONV|DUPREC|EOF|EOL|ERROR|IOERR|LOCKED|NOKEY|NOREC|IGNORE|OFLOW|PAGEOFLOW|SOFLOW|ZDIV)\\b",
+      "name": "keyword.errorcondition.br"
+    },
+    {
+      "match": "\\b(?i:CHAIN|CLOSE|CONTINUE|DATA|DEF|DELETE|DIM|DISPLAY|END|END DEF|EXECUTE|EXIT|FIELDS|FNEND|FORM|GOSUB|GOTO|INPUT|KEY|LET|LIBRARY|LINPUT|MENU|MENU TEXT|MENU DATA|MENU STATUS|ON ERROR|ON FKEY|ON|OPEN|OPTION|PAUSE|PRINT|USING|BORDER|RANDOMIZE|READ|REREAD|RESTORE|RETRY|RETURN|REWRITE|RINPUT|SCR_FREEZE|SCR_THAW|SELECT|STOP|WRITE|TRACE|USE)\\b",
+      "name": "keyword.statement.br"
+    },
+    {
+      "match": "\\b(?i:COLLATE|OPTION)\\b",
+      "name": "keyword.option.br"
+    },
+    {
+      "match": "(\\b(?i:fn)\\w[\\w\\d]*\\b)",
+      "name": "entity.name.function.br"
+    },
+    {
+      "match": "\\b(?i:mat\\s+(\\w[\\w\\d]*)\\b)",
+      "name": "variable.array.numeric.br"
+    },
+    {
+      "match": "\\b(?i:MAT)\\b",
+      "name": "keyword.statement.br"
+    },
+    {
+      "match": "(\\b(\\w[\\w\\d]*)\\$)",
+      "name": "variable.string.br"
+    },
+    {
+      "match": "(\\b(\\w[\\w\\d]*)\\b)",
+      "name": "variable.br"
+    }
+  ]
+}
