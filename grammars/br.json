@@ -121,6 +121,10 @@
       "name": "keyword.operator.comparison.br"
     },
     {
+      "match": "(#)",
+      "name": "keyword.operator.filenumber.br"
+    },
+    {
       "match": "(\\+|\\-|\\*|\\/|\\&)",
       "name": "keyword.operator.mathematical.br"
     },
@@ -205,7 +209,7 @@
     },
     {
       "match": "(\\b(\\w[\\w\\d]*)\\b)",
-      "name": "variable.br"
+      "name": "variable.numeric.br"
     }
   ]
 }
