@@ -7,6 +7,7 @@
     "ctrl-alt-5": "language-br:strip-line-numbers",
     "ctrl-alt-6": "language-br:set-br-42",
     "ctrl-alt-7": "language-br:set-br-43",
+    "ctrl-alt-8": "language-br:fix-tabs",
     "ctrl-f1": "language-br:lookupwiki",
     "f1": "language-br:lookupwiki",
     "ctrl-shift-X": "language-br:toggle-auto-compile"

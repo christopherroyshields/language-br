@@ -38,7 +38,11 @@
             {
               "label": "Search Wiki for Selected Text",
               "command": "language-br:lookupwiki"
-            }
+            },
+            {
+              "label": "Fix Tab Spacing",
+              "command": "language-br:fix-tabs"
+            }            
           ]
         }
       ]
