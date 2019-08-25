@@ -131,6 +131,10 @@
       "name": "variable.array.string.br"
     },
     {
+      "match": "(\\b(\\w[\\w\\d]*)\\$)",
+      "name": "variable.string.br"
+    },
+    {
       "match": "^\\s*?(\\d{0,5})(?:\\s*)?([\\w\\d]+:)",
       "captures": {
         "1": {
@@ -198,12 +202,8 @@
       "name": "keyword.statement.br"
     },
     {
-      "match": "(\\b(\\w[\\w\\d]*)\\$)",
-      "name": "variable.string.br"
-    },
-    {
       "match": "(\\b(\\w[\\w\\d]*)\\b)",
-      "name": "variable.br"
+      "name": "variable.numeric.br"
     }
   ]
 }
