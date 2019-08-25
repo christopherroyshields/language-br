@@ -9,6 +9,18 @@
   "patterns":
   [
     {
+      "name": "string.quoted.double.br",
+      "match": "(?<=execute )\\s+([\"](?:[^\"]*|[\"]{2})+[\"])",
+      "captures": {
+        "0": {
+          "patterns": [{
+            "match": "\\b(?i:ALERT|AUTO|BREAK|ChDIR|CLEAR|CONFIG|COPY|DATE|DEBUG CONNECT|DELETE|DIR|DISPLAY|DROP|EDIT|FREE|GO|GO END|INDEX|LIST|LOAD|MERGE|MKDIR|PROC|PROCERR RETURN|PROCERR STOP|PROTECT|RENAME|RENUM|REPLACE|RMDIR|RUN|SAVE|SKIP|SORT|STATUS|SUBPROC|SYSTEM|TIME|TYPE|VERIFY)\\b",
+            "name": "command.br"
+          }]
+        }
+      }
+    },
+    {
       "match": "(!:)",
       "name": "keyword.operator.line_continuation.br"
     },
@@ -172,10 +184,6 @@
     {
       "match": "\\b(?i:ALTERNATE|ATTR|BASE|BORDER|DROP|EVENT|EXTERNAL|FILES|INTERNAL|INVP|KEYED|NATIVE|NOKEY|NONE|OUTIN|OUTPUT|RELATIVE|RELEASE|RESERVE|RESUME|RETAIN|SEARCH|SELECT|SEQUENTIAL|SHIFT|TO|USE|USING)\\b",
       "name": "keyword.other.br"
-    },
-    {
-      "match": "\\b(?i:ALERT|AUTO|BREAK|ChDIR|CLEAR|CONFIG|COPY|DATE|DEBUG CONNECT|DELETE|DIR|DISPLAY|DROP|EDIT|FREE|GO|GO END|INDEX|LIST|LOAD|MERGE|MKDIR|PROC|PROCERR RETURN|PROCERR STOP|PROTECT|RENAME|RENUM|REPLACE|RMDIR|RUN|SAVE|SKIP|SORT|STATUS|SUBPROC|SYSTEM|TIME|TYPE|VERIFY)\\b",
-      "name": "keyword.command.br"
     },
     {
       "match": "\\b(?i:CONV|DUPREC|EOF|EOL|ERROR|IOERR|LOCKED|NOKEY|NOREC|IGNORE|OFLOW|PAGEOFLOW|SOFLOW|ZDIV)\\b",

@@ -3,29 +3,32 @@
  // @import 'colors';
 
 .syntax--br {
-  .syntax--variable {
-    color: @syntax-text-color
+
+  &.syntax--variable {
+
+    color: @syntax-text-color;
+
+    &.syntax--array {
+      font-weight: bold;
+    }
+
+    &.syntax--numeric {
+      font-style: italic;
+    }
+
   }
-  .syntax--linenumber {
+
+  &.syntax--linenumber {
     color: @syntax-color-constant
   }
-}
 
-.syntax--variable.syntax--array {
-  font-weight: bold;
-}
+  &.syntax--line-label {
+    color: @syntax-color-tag
+  }
 
-.syntax--variable.syntax--numeric.syntax--br {
-  font-style: italic;
-}
-
-.syntax--keyword.syntax--operator.syntax--br {
-  // color: @hue-1;
-  // font-weight: bold;
-}
-
-.syntax--line-label.syntax--br {
-  color: @syntax-color-tag
+  &.syntax--command {
+    color: @syntax-color-tag
+  }
 }
 
 .occurence {
