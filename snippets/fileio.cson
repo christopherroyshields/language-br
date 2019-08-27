@@ -128,7 +128,7 @@
   "fnOpen(LayoutName$, Mat F$, Mat F, Mat Form$; Input, KeyNum) with Dims":
     "prefix": "fnOpenDims",
     "body": """
-      dim ${1:layout}, ${1:layout}$(1)*${2:longest},${1:layout}(1)
+      dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
       let ${1:layout}=fnOpen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
     """,
     "description": """
@@ -230,7 +230,7 @@
               if Srch(_Loadedsubs$,Uprc$(Filename$))<=0 then : mat _Loadedsubs$(Udim(_Loadedsubs$)+1) : let _Loadedsubs$(Udim(_Loadedsubs$))=Uprc$(Filename$) : for Index=1 to Udim(Mat _Fileiosubs$) : execute (_Fileiosubs$(Index)) : next Index
            fnend
 
-     Ignore: Continue
+      Ignore: Continue
     """,
     "description": """
     The standard fnOpenFile function that needs to be included in all your programs when using FileIO.
