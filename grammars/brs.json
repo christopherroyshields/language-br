@@ -81,7 +81,7 @@
     },
     {
       "match": "(\\#(?i:include|define|select|case else|end select|case|autonumber)\\#)",
-      "name": "constant.language.br"
+      "name": "keyword.statement.lexi.br"
     },
     {
       "match": "(!.*)$",
