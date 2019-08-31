@@ -182,7 +182,7 @@ module.exports = [
     "type": "function"
   },
   {
-    "text": "<success",
+    "text": "fnRemoveDeletes",
     "displayText": "<success/fail> fnRemoveDeletes(LayoutName$*255;Path$*255,CallingProgram$*255,DontError)",
     "snippet": "fnRemoveDeletes(\"${1:layout}\")$0",
     "description": `
@@ -196,7 +196,7 @@ module.exports = [
     "type": "function"
   },
   {
-    "text": "<count",
+    "text": "fnReadEntireLayout",
     "displayText": "<count> fnReadEntireLayout(LayoutName$*255;&FileName$,&Prefix$,mat Keys$, ...)",
     "snippet": "fnReadEntireLayout(\"${1:layout}\",${1:&filename}$,${1:&prefix}$,mat ${1:keys}$)$0",
     "description": `
@@ -218,7 +218,7 @@ module.exports = [
     "type": "function"
   },
   {
-    "text": "<count",
+    "text": "fnReadLayoutHeader",
     "displayText": "<count> fnReadLayoutHeader(LayoutName$*255;&FileName$,mat Keys$,mat KeyDescription$, ...)",
     "snippet": "fnReadLayoutHeader(\"${1:layout}\",${2:&filename}$,mat ${3:keys}$)$0",
     "description": `
@@ -235,7 +235,7 @@ module.exports = [
     "type": "function"
   },
   {
-    "text": "<count",
+    "text": "fnReadLayoutArrays",
     "displayText": "<count> fnReadLayoutArrays(LayoutName$*255,&Prefix$;mat SSubs$,mat NSubs$, ...)",
     "snippet": "fnReadLayoutArrays(\"${1:layout}\",${2:&prefix}$,mat ${3:StringSubs}$,mat ${4:NumericSubs}$)$0",
     "description": `
@@ -270,7 +270,7 @@ module.exports = [
     "type": "function"
   },
   {
-    "text": "<key",
+    "text": "fnBuildKey$",
     "displayText": "<key> fnBuildKey$*255(Layout$*30,mat F$,mat F;KeyNum)",
     "snippet": "fnBuildKey$(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout})$0",
     "description": `
@@ -302,7 +302,7 @@ module.exports = [
     "type": "function"
   },
   {
-    "text": "<form",
+    "text": "fnReadForm$",
     "displayText": "<form statement> fnReadForm$*10000(FileLayout$)",
     "snippet": "fnReadForm$(\"${1:layout}\")$0",
     "description": `
