@@ -2,7 +2,7 @@
   "name": "language-br",
   "main": "./lib/language-br",
   "version": "0.0.1",
-  "description": "Adds syntax highlighting and snippets to BR files in Atom.",
+  "description": "Language support for the Business Rules! programming language.",
   "keywords": [
     "Business Rules",
     "Workstation Basic"
