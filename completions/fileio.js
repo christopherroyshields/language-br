@@ -369,7 +369,7 @@ module.exports = [
   {
     "text": "fnReadDescription$",
     "displayText": "fnReadDescription$*255(FileNumber,Subscript,Key$*255,mat F$,mat F,mat Form$)",
-    "snippet": "fnReadDescription$*255(${1:filenumber},${2:Subscript},${3:Key},mat ${1:f}$,mat ${1:f},mat Form$)$0",
+    "snippet": "fnReadDescription$(${1:filenumber},${2:Subscript},${3:Key},mat ${1:f}$,mat ${1:f},mat Form$)$0",
     "description": `
     Reads the given open file, finds the record matching the given key, and returns the requested String Field.
 
@@ -387,7 +387,7 @@ module.exports = [
   {
     "text": "fnReadUnOpenedDescription$",
     "displayText": "fnReadUnOpenedDescription$*255(LayoutName$,Key$*255;Subscript)",
-    "snippet": "fnReadUnOpenedDescription$*255(\"${1:layout}\",${2:Key},${3:OptionalSubscript})$0",
+    "snippet": "fnReadUnOpenedDescription$(\"${1:layout}\",${2:Key},${3:OptionalSubscript})$0",
     "description": `
     Opens and Reads the given file, finding the record matching the given key, and returning the requested String Field. Defaults to the Second (2nd) String field (usually the description field).
 
@@ -437,7 +437,7 @@ module.exports = [
   {
     "text": "fnReadRelativeDescription$",
     "displayText": "fnReadRelativeDescription$*255(FileNumber,Subscript,RecordNumber,mat F$,mat F,mat Form$)",
-    "snippet": "fnReadRelativeDescription$*255(${1:filenumber},${2:Subscript},${3:RecordNum},mat ${1:f}$,mat ${1:f},mat Form$)$0",
+    "snippet": "fnReadRelativeDescription$(${1:filenumber},${2:Subscript},${3:RecordNum},mat ${1:f}$,mat ${1:f},mat Form$)$0",
     "description": `
     Reads the given open file, reads the specified record, and returns the requested String Field.
 
@@ -455,7 +455,7 @@ module.exports = [
   {
     "text": "fnReadRelUnOpenedDescription$",
     "displayText": "fnReadRelUnOpenedDescription$*255(LayoutName$,RecordNumber;Field)",
-    "snippet": "fnReadRelUnOpenedDescription$*255(\"${1:layout}\",${2:Record},${3:OptionalSubscript})$0",
+    "snippet": "fnReadRelUnOpenedDescription$(\"${1:layout}\",${2:Record},${3:OptionalSubscript})$0",
     "description": `
     Opens and Reads the given file, reads the specified record, and returns the requested String Field. Defaults to the Second (2nd) String field (usually the description field).
 
@@ -504,7 +504,7 @@ module.exports = [
   {
     "text": "fnReadRecordWhere$",
     "displayText": "fnReadRecordWhere$*255(LayoutName$,SearchSub,SearchKey$*255,ReturnSub)",
-    "snippet": "fnReadRecordWhere$*255(\"${1:layout}\",${2:SearchInSubscript},${3:SearchFor},${4:ReturnSubscript})$0",
+    "snippet": "fnReadRecordWhere$(\"${1:layout}\",${2:SearchInSubscript},${3:SearchFor},${4:ReturnSubscript})$0",
     "description": `
     Searches a file for a given value and reads the record where the specified subscript matches that value. Returns the Requested String from that Record.
 
@@ -614,7 +614,7 @@ module.exports = [
   {
     "text": "fnMakeUniqueKey$",
     "displayText": "fnMakeUniqueKey$*255(FileNumber;Random,Prepend$)",
-    "snippet": "fnMakeUniqueKey$*255(${1:FileNumber})$0",
+    "snippet": "fnMakeUniqueKey$(${1:FileNumber})$0",
     "description": `
     Generates a key that is unique in the given file.
 
@@ -812,7 +812,7 @@ FnLog(string$)
   {
     "text": "fnKey$",
     "displayText": "fnKey$*255(FileNumber, Key$*255)",
-    "snippet": "fnKey$*255(${1:FileNumber}, ${2:Key}$)$0",
+    "snippet": "fnKey$(${1:FileNumber}, ${2:Key}$)$0",
     "description": `
     Takes the passed in value and ensures that its the proper size for the key of the given file number.
     let Key$=FnKey$(FileNumber, Key$)
