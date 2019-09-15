@@ -128,7 +128,7 @@
   "fnOpen(LayoutName$, Mat F$, Mat F, Mat Form$; Input, KeyNum) with Dims":
     "prefix": "fnOpenDims",
     "body": """
-      dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
+      dim ${1:layout}, ${1:layout}$(1)*${2:1024}, ${1:layout}(1)
       let ${1:layout}=fnOpen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$)
     """,
     "description": """
@@ -252,8 +252,7 @@
        let ${1:layout}=Fnopen("${1:layout}",Mat ${1:layout}$,Mat ${1:layout},Mat Form$)
 
        ! Set Values
-       let ${1:layout}$(${2:prefix}_${3:subscript})=${4:}
-       let ${1:layout}$(${2:prefix}_${3:subscript})=$0
+       let ${1:layout}$(${2:subscript})=${3:}
 
        ! Save The Record
        write #${1:layout}, using Form$(${1:layout}) : Mat ${1:layout}$,Mat ${1:layout}

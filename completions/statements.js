@@ -344,7 +344,7 @@ module.exports = [
   {
     "text": "Write",
     "displayText": "Write  #<file number> [, USING {<formStatement>}] : <Variables> ",
-    "snippet": "Write #${1:FileNumber}, using ${2:FormSpec} : ${3:Variables}",
+    "snippet": "write #${1:layout}, using Form$(${1:layout}) : Mat ${1:layout}$,Mat ${1:layout}",
     "description": "Adds a record to the file containing the information from the variables you list.",
     "descriptionMoreURL": "http://www.brwiki.com/index.php?search=Write",
     "leftLabel": "Statement",
