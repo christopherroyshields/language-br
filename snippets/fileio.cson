@@ -129,7 +129,7 @@
     "prefix": "fnOpenDims",
     "body": """
       dim ${1:layout}, ${1:layout}$(1)*${2:1024}, ${1:layout}(1)
-      let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
+      let ${1:layout}=fnOpen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$)
     """,
     "description": """
     Opens file using Fileio, returning the file handle, and Dimming the necessary Variables.
@@ -146,7 +146,7 @@
 
     Code Snippet:
       dim layout, layout$(1)*longest,layout(1)
-      let layout=fnOpen("layout",mat layout$,mat layout,mat form$,0,1)
+      let layout=fnOpen("layout",mat layout$,mat layout,mat form$)
     """,
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library#fnOpen",
     "leftLabel": "Code Snippet"
@@ -156,7 +156,7 @@
     "body": """
       dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
 
-      let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
+      let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,1)
       restore #${1:layout}: error IGNORE
       do until File(${1:layout})
          read #${1:layout}, using Form$(${1:layout}) : Mat ${1:layout}$,Mat ${1:layout} eof IGNORE
@@ -174,7 +174,7 @@
   Code Snippet:
     dim layout, layout$(1)*1024,layout(1)
 
-    let layout=fnopen("layout",mat layout$,mat layout,mat form$,0,1)
+    let layout=fnopen("layout",mat layout$,mat layout,mat form$,1)
     restore #layout: error IGNORE
     do until File(layout)
        read #layout, using Form$(layout) : Mat layout$,Mat layout eof IGNORE
@@ -191,7 +191,7 @@
     "prefix": "fnOpenReadOne",
     "body": """
       dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
-      let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,0,1)
+      let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$,1)
       read #${1:layout}, using Form$(${1:layout}), key=${1:layout}key$ : Mat ${1:layout}$,Mat ${1:layout}
       close #${1:layout}:
     """,
@@ -202,7 +202,7 @@
 
   Code Snippet:
     dim layout, layout$(1)*1024,layout(1)
-    let layout=fnopen("layout",mat layout$,mat layout,mat form$,0,1)
+    let layout=fnopen("layout",mat layout$,mat layout,mat form$,1)
     read #layout, using Form$(layout), key=layoutkey$ : Mat layout$,Mat layout
     close #layout:
     """,
