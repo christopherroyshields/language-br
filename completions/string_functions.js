@@ -38,7 +38,7 @@ module.exports = [
   {
     "text": "Cnvrt$",
     "displayText": "Cnvrt$(<Spec>,<Number>)",
-    "snippet": "Cnvrt$(${1:Spec$},(${2:Number})$0",
+    "snippet": "cnvrt$(${1:Spec$},${2:Number})$0",
     "description": "Converts a number to a string, by packing it into the specified Form spec.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Cnvrt$",
     "leftLabel": "String",

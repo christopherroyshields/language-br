@@ -187,6 +187,42 @@
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
     "leftLabel": "Code Snippet"
 
+  "fnOpen() ... Read By Key":
+    "prefix": "fnOpenReadLoop",
+    "body": """
+      dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
+      let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$)
+      restore #${1:layout}>=${1:layout}key$: error IGNORE
+      do until File(${1:layout})
+         read #${1:layout}, using Form$(${1:layout}) : Mat ${1:layout}$,Mat ${1:layout} eof IGNORE
+         let ${1:layout}rec_key$ = fnBuildKey$("poitem",mat ${1:layout}$,mat ${1:layout})
+         if File(${1:layout})=0 and ${1:layout}rec_key$ == ${1:layout}key$ then
+            ${3:}
+         end if
+      loop
+      close #${1:layout}:
+    """,
+    "description": """
+    Opens file using Fileio and reads all records of the file in a loop.
+
+    Layout$ - the name of the layout you're trying to read. The snippet does the rest.
+
+  Code Snippet:
+    dim layout, layout$(1)*1024,layout(1)
+
+    let layout=fnopen("layout",mat layout$,mat layout,mat form$,1)
+    restore #layout: error IGNORE
+    do until File(layout)
+       read #layout, using Form$(layout) : Mat layout$,Mat layout eof IGNORE
+       if File(layout)=0 then
+
+       end if
+    loop
+    close #layout:
+    """,
+    "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?title=FileIO_Library",
+    "leftLabel": "Code Snippet"
+
   "fnOpen() ... Read One":
     "prefix": "fnOpenReadOne",
     "body": """
