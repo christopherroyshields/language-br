@@ -147,14 +147,14 @@ def library fnApplyLexi(InFile$*255,OutFile$*255;DontAddLineNumbers,SourceMapFil
       At the position of the EndCommentMark Put all the stuff before it after it, and vice versa, and change it to a !
       */
       if MultilineComment then
-         if (SpecialPosition:=pos(String$,CommentEndCommand$)) then
+         if (SpecialPosition:=fnPosNotInString(String$,CommentEndCommand$)) then
             let MultilineComment=0
             let String$=String$(SpecialPosition+2:len(String$))&" ! "&String$(1:SpecialPosition-1)
          else
             let String$(1:0)=" ! "
          end if
       else
-         if (ReplacePosition:=pos(String$,CommentStartCommand$)) then
+         if (ReplacePosition:=fnPosNotInString(String$,CommentStartCommand$)) then
             let MultilineComment=1
             let String$(ReplacePosition:ReplacePosition+1)="!"
          end if
@@ -352,7 +352,6 @@ fnend
 
 def library fnUndoLexi(InFile$*255,OutFile$*255)
    let fnSetLexiConstants
-
    open #(InFile:=FngetfileNo): "name="&Infile$&", recl=800", display, input
    open #(OutFile:=fnGetFileNo): "name="&Outfile$&", recl=800, replace", display, output
 
@@ -417,6 +416,21 @@ NOLINENUMBER: ! A Line Has No Line Number At This Point
 DONEREADINGUNDO: !
    close #OutFile:
    close #InFile:
+fnend
+
+def fnPosNotInString(&String$,Thing$*32;CaseInsensitive,___,InQuotesSingle,InQuotesDouble,InComment,CheckPosition,Found)
+   do while CheckPosition<=len(String$)
+      let CheckPosition+=1
+      if pos("""",String$(CheckPosition:CheckPosition)) and ~InQuotesSingle then let InQuotesDouble=~InQuotesDouble
+      if pos("'",String$(CheckPosition:CheckPosition)) and ~InQuotesDouble then let InQuotesSingle=~InQuotesSingle
+      ! if pos("!",String$(CheckPosition:CheckPosition)) and ~InQuotesDouble and ~InQuotesSingle then let InComment=1
+      if ~InQuotesSingle and ~InQuotesDouble then
+         if (CaseInsensitive and uprc$(Thing$)=uprc$(String$(CheckPosition:CheckPosition+len(Thing$)-1))) or (~CaseInsensitive and Thing$=String$(CheckPosition:CheckPosition+len(Thing$)-1)) then
+            let Found=CheckPosition
+         end if
+      end if
+   loop until Found
+   let fnPosNotInString=Found
 fnend
 
 Ignore: Continue
