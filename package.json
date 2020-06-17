@@ -10,7 +10,7 @@
   "activationHooks": [
     "language-br:grammar-used"
   ],
-  "repository": "https://github.com/snafoo972/language-br",
+  "repository": "https://github.com/christopherroyshields/language-br",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
