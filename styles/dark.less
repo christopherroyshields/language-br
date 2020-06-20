@@ -3,7 +3,26 @@
  // @import 'colors';
 
 .error-marker {
-  border: 1px solid red;
+  border-bottom: 1px dotted @text-color-error;
+}
+
+.compileStatus.rotating::before {
+  color: @text-color-success;
+  animation: rotating 2s linear infinite;
+}
+
+.compileStatus::before {
+  color: @syntax-text-color;
+}
+
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .syntax--br {
