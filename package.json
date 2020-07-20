@@ -15,6 +15,9 @@
   "engines": {
     "atom": ">0.50.0"
   },
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "p-queue": "^6.1.1",
     "request": "^2.88.0",
@@ -33,5 +36,8 @@
         "^1.0.0": "consumeStatusBar"
       }
     }
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1"
   }
 }
