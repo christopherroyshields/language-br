@@ -564,7 +564,8 @@ module.exports = [
     "description": "Searches an array and returns the row number matching the argument.\nIf the argument is not found, then either 0 (BR 4.1 and below) or -1 (BR 4.2 and above).\nThe argument must be the same data type (string or numeric) as the array. The optional \"row\"\nparameter defines the starting array element for the search.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Srch",
     "leftLabel": "Integer",
-    "type": "function"
+    "type": "function",
+    "params": ["mat array$", "argument$", "start"]
   },
   {
     "text": "Str2Mat",
