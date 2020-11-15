@@ -583,7 +583,8 @@ module.exports = [
     "description": "The Sum internal function returns the sum of all the elements in the numeric array named.\nSUM also works with multi-dimensional matrices.",
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Sum",
     "leftLabel": "Float",
-    "type": "function"
+    "type": "function",
+    "params": ["mat numberarray"]
   },
   {
     "text": "Tab",

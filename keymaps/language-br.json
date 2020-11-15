@@ -11,6 +11,6 @@
     "ctrl-f1": "language-br:lookupwiki",
     "f1": "language-br:lookupwiki",
     "ctrl-shift-X": "language-br:toggle-auto-compile",
-    "ctrl-h": "language-br:show-function-hint"
+    "ctrl-h": "language-br:toggle-function-hint"
   }
 }
