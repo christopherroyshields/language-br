@@ -87,7 +87,7 @@ module.exports = [
     "descriptionMoreURL": "http://brwiki2.brulescorp.com/index.php?search=Encrypt$",
     "leftLabel": "String",
     "type": "function",
-    "params": ["<string>","[<Algorithm>]"]]
+    "params": ["<string>","[<Algorithm>]"]
   },
   {
     "text": "Env$",
