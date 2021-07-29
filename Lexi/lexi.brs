@@ -42,7 +42,7 @@ def library fnApplyLexi(InFile$*255,OutFile$*255;DontAddLineNumbers,SourceMapFil
    READLINE: linput #InFile: String$ eof DONEREADING
       ! String Concatenation
       do while (CheckPosition:=fnPosNotInString(String$,StringConcatCommand$))
-         let String$(CheckPosition:CheckPosition)="(99999999)"
+         let String$(CheckPosition:CheckPosition)="(inf:0)"
       loop
 
       ! Line Continuation
