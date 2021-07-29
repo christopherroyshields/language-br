@@ -40,6 +40,10 @@ def library fnApplyLexi(InFile$*255,OutFile$*255;DontAddLineNumbers,SourceMapFil
    end if
 
    READLINE: linput #InFile: String$ eof DONEREADING
+      ! String Concatenation
+      do while (CheckPosition:=fnPosNotInString(String$,StringConcatCommand$))
+         let String$(CheckPosition:CheckPosition)="(99999999)"
+      loop
 
       ! Line Continuation
       do while (WrapPosition:=fnPosNotInString(String$,LineWrapCommand$))
@@ -351,6 +355,7 @@ fnend
 
 def fnSetLexiConstants
    let LineWrapCommand$="!"&"_"
+   let StringConcatCommand$="&"&"="
    let DefineCommand$="#DEF"&"INE#"
    let SelectCommand$="#SEL"&"ECT#"
    let CaseCommand$="#CA"&"SE#"
