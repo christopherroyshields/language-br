@@ -186,7 +186,7 @@
       "name": "keyword.other.br"
     },
     {
-      "match": "\\b(?i:CONV|DUPREC|EOF|EOL|ERROR|IOERR|LOCKED|NOKEY|NOREC|IGNORE|OFLOW|PAGEOFLOW|SOFLOW|ZDIV)\\b",
+      "match": "\\b(?i:CONV|DUPREC|EOF|EOL|ERROR|IOERR|LOCKED|NOKEY|NOREC|IGNORE|OFLOW|PAGEOFLOW|SOFLOW|ZDIV|TIMEOUT)\\b",
       "name": "keyword.errorcondition.br"
     },
     {
