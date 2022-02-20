@@ -10,6 +10,7 @@
     "ctrl-alt-8": "language-br:fix-tabs",
     "ctrl-f1": "language-br:lookupwiki",
     "f1": "language-br:lookupwiki",
-    "ctrl-shift-X": "language-br:toggle-auto-compile"
+    "ctrl-shift-X": "language-br:toggle-auto-compile",
+    "ctrl-h": "language-br:toggle-function-hint"
   }
 }
