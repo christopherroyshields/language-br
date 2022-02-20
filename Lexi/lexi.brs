@@ -40,6 +40,10 @@ def library fnApplyLexi(InFile$*255,OutFile$*255;DontAddLineNumbers,SourceMapFil
    end if
 
    READLINE: linput #InFile: String$ eof DONEREADING
+      ! String Concatenation
+      do while (CheckPosition:=fnPosNotInString(String$,StringConcatCommand$))
+         let String$(CheckPosition:CheckPosition)="(inf:0)"
+      loop
 
       ! Line Continuation
       do while (WrapPosition:=fnPosNotInString(String$,LineWrapCommand$))
@@ -292,13 +296,13 @@ def library fnApplyLexi(InFile$*255,OutFile$*255;DontAddLineNumbers,SourceMapFil
          else
             let String$=Cnvrt$("PIC(#####)",(Linecount:=Linecount+Increment)) & " " & String$
          end if
-         let RealCount+=1
-         if SourceMap then
-            print #SourceMapFile: str$(LineCount)&","&str$(RealCount)
-         end if
       else
          let String$="      "&String$
          let Skipnextone=0
+      end if
+      let RealCount+=1
+      if SourceMap then
+         print #SourceMapFile: str$(LineCount)&","&str$(RealCount)
       end if
    PRINTLINE: !
       if Trim$(String$)(Len(Trim$(String$))-1:Len(Trim$(String$))) = "!:" then let Skipnextone=1
@@ -351,6 +355,7 @@ fnend
 
 def fnSetLexiConstants
    let LineWrapCommand$="!"&"_"
+   let StringConcatCommand$="&"&"="
    let DefineCommand$="#DEF"&"INE#"
    let SelectCommand$="#SEL"&"ECT#"
    let CaseCommand$="#CA"&"SE#"

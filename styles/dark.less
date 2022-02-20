@@ -15,7 +15,6 @@
   color: @syntax-text-color;
 }
 
-
 @keyframes rotating {
   from {
     transform: rotate(0deg);
@@ -23,6 +22,36 @@
   to {
     transform: rotate(360deg);
   }
+
+.current-param {
+  font-weight: bold;
+}
+
+.error-marker {
+  border: 1px solid red;
+}
+
+function-hint {
+  display: block;
+  background: darken(@overlay-background-color, 4%);
+  line-height: 2em;
+  padding: 0 .75em;
+  border-radius: @component-border-radius;
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.3);
+  font-weight: lighter;
+}
+
+autocomplete-suggestion-list function-hint {
+  border-radius: 0;
+  box-shadow: 0;
+}
+
+.autocomplete-active {
+
+  .detached-function-hint {
+    display: none;
+  }
+
 }
 
 .syntax--br {

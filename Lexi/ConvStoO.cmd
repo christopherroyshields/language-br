@@ -36,6 +36,7 @@ set cmd_home=%~dp0
 goto AFTER_SET
 
 :AFTER_SET
+set npne_name=%npne_name:.br=%
 rem    @echo AFTER_SET
 rem    @echo       cmd_home: %cmd_home%
 rem    @echo        np_name: %np_name%

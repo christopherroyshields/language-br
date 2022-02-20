@@ -188,14 +188,14 @@
     "leftLabel": "Code Snippet"
 
   "fnOpen() ... Read By Key":
-    "prefix": "fnOpenReadLoop",
+    "prefix": "fnOpenReadLoopKey",
     "body": """
       dim ${1:layout}, ${1:layout}$(1)*${2:1024},${1:layout}(1)
       let ${1:layout}=fnopen(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout},mat form$)
       restore #${1:layout}>=${1:layout}key$: error IGNORE
       do until File(${1:layout})
          read #${1:layout}, using Form$(${1:layout}) : Mat ${1:layout}$,Mat ${1:layout} eof IGNORE
-         let ${1:layout}rec_key$ = fnBuildKey$("poitem",mat ${1:layout}$,mat ${1:layout})
+         let ${1:layout}rec_key$ = fnBuildKey$(\"${1:layout}\",mat ${1:layout}$,mat ${1:layout})
          if File(${1:layout})=0 and ${1:layout}rec_key$ == ${1:layout}key$ then
             ${3:}
          end if
