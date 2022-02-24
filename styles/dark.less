@@ -2,8 +2,15 @@
  @import 'syntax-variables';
  // @import 'colors';
 
+// .error-marker {
+//   border: 1px solid red;
+// }
+//
 .region.error-marker {
-  border-bottom: 1px dotted @text-color-error;
+  background-color: @text-color-error;
+  width: auto !important;
+  right: 0;
+  opacity: 0.1;
 }
 
 .compileStatus.rotating::before {
@@ -26,10 +33,6 @@
 
 .current-param {
   font-weight: bold;
-}
-
-.error-marker {
-  border: 1px solid red;
 }
 
 function-hint {
